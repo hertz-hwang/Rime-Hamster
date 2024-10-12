@@ -1,5 +1,7 @@
 ## Themes & Layouts
 
+主题&布局设计工具：[hamster-tools](https://hertz-hwang.github.io/hamster-tools/) （Forked from [饼干](https://github.com/lost-melody/Lost-Melody.github.io)）
+
 ### Dark - I Love Candy
 
 ![dark](/assets/pic_candy-dark.jpg)
