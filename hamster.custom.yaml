@@ -1,0 +1,80 @@
+patch:
+  "keyboards":
+    __include: hamster_keyboards_candy:/keyboards
+  "keyboard/colorSchemas":
+    __include: hamster_keyboards_candy:/colorSchemas
+  "keyboard/chineseEnglishSwitchButtonIsOnLeftOfSpaceButton": false
+  "keyboard/disableSwipeLabel": false  # 划动文本显示关闭
+  "keyboard/displayButtonBubbles": true  # 显示按键气泡
+  "keyboard/displayClassifySymbolButton": false
+  "keyboard/displayInputMethodsSwitchKey": false  # 显示系统输入法切换键
+  "keyboard/displaySemicolonButton": false
+  "keyboard/displaySpaceLeftButton": false
+  "keyboard/displaySpaceRightButton": false
+  #"keyboard/doubleTapThreshold": 0.300  # 双击空格输入句号间隔阈值（秒）
+  "keyboard/dynamicallyAdjustPositionOfKeyLabel": false  # 动态调整按键文本显示位置
+  "keyboard/enableButtonUnderBorder": false  # 显示按键底部边框
+  "keyboard/enableChineseWordSegmentationByShift": false  # Shift中文分词
+  "keyboard/enableColorSchema": true
+  "keyboard/enableCommaButton": true
+  #"keyboard/enableEmbeddedInputMode": true  # 启用内嵌模式，建议调整工具栏高度40
+  "keyboard/enableInputPeriodBySpaceDoubleTap": false  # 双击空格输入句号
+  #"keyboard/enableLoadingTextForSpaceButton": true  # 启用空格加载文字
+  "keyboard/enableNineGridOfNumericKeyboard": false
+  "keyboard/enableRimeOptionState": true  # 启用 RIME Option State
+  "keyboard/enableSpaceCursorDrag": true  # 空格长按移动光标
+  "keyboard/enableSymbolKeyboard": false  # 启用分类符号键盘
+  "keyboard/enableSystemClipboardListener": true
+  "keyboard/keyValueOfSpaceLeftButton": "，"
+  "keyboard/keyValueOfSpaceRightButton": "。"
+  "keyboard/lockShiftState": false  # Shift状态锁定
+  "keyboard/pairsOfSymbols":
+    []
+  "keyboard/showUppercasedCharacterOnChineseKeyboard": true
+  "swipe/spaceDragSensitivity": 15  # 移动光标灵敏度
+  "keyboard/spaceLeftButtonProcessByRIME": true
+  "keyboard/spaceRightButtonProcessByRIME": true
+  "keyboard/style/fontFace":
+    - {url: "ziti.ttf"}
+    - {url: "Segoe UI Emoji.ttf"}
+    - {url: "NotoColorEmoji-Regular.ttf"}
+    - {url: "SymbolsNerdFontMono-Regular.ttf"}
+    - {url: "SarasaUiSC-Bold.ttf"}
+    - {url: "SarasaUiTC-Bold.ttf"}
+    - {url: "SarasaUiJ-Bold.ttf"}
+    - {url: "SarasaUiK-Bold.ttf"}
+    - {url: "SarasaUiCL-Bold.ttf"}
+    - {url: "SarasaUiHC-Bold.ttf"}
+    - {url: "LXGWWenKaiGBScreen.ttf"}
+    - {url: "TH-Tshyn-P0.ttf"}
+    - {url: "TH-Tshyn-P1.ttf"}
+    - {url: "TH-Tshyn-P2.ttf"}
+    - {url: "TH-Tshyn-P16.ttf"}
+  "keyboard/swipeLabelUpAndDownIrregularLayout": false  # 不规则显示划动文本
+  "keyboard/swipeLabelUpAndDownLayout": true  # 划动文本上下显示
+  "keyboard/upSwipeOnLeft": true  # 上划显示位置-左上侧
+  "keyboard/useColorSchemaForDark": "I Love Candy - Dark"  # 暗色主题
+  "keyboard/useColorSchemaForLight": "I Love Candy - Light"  # 亮色主题
+  "keyboard/useKeyboardType": "Candy-中文"  # 键盘布局
+  "rime/overrideDictFiles": true
+  "rime/switchSimplifiedOrTraditionalOption": simplification
+  "toolbar/candidateCommentFontSize": 11
+  "toolbar/candidateOnTop": true
+  "toolbar/candidateTextFontSize": 18
+  "toolbar/codingAreaFontSize": 12
+  "toolbar/displayCommentOfCandidate": true
+  "toolbar/displayIndexOfCandidate": false
+  "toolbar/heightOfCodingArea": 15
+  #"toolbar/heightOfToolbar": 40
+
+  # 候选栏设置
+  "toolbar/displayAppIconButton": false  # 显示应用图标-R
+  "toolbar/displayCommentOfCandidate": true  # 显示候选Comment
+  "toolbar/displayIndexOfCandidate": false  # 显示候选项序号
+  "toolbar/displayKeyboardDismissButton": false  # 显示键盘收起图标
+  "toolbar/enableToolbar": true  # 启用候选工具栏
+  "toolbar/swipePaging": false  # 划动分页模式
+
+  # 声音与震动
+  "keyboard/enableHapticFeedback": true
+  "keyboard/hapticIntensity": 0.50

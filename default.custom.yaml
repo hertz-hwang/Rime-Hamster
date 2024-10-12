@@ -1,0 +1,11 @@
+customization:
+  distribution_code_name: hamster
+  distribution_version: ""
+  generator: "Rime::SwitcherSettings"
+  modified_time: "Sun Oct  6 09:06:15 2024"
+  rime_version: 1.11.2
+patch:
+  schema_list:
+    - {schema: tiger}
+    - {schema: tigress}
+    - {schema: PY_c}
