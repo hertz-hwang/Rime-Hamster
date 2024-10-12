@@ -2695,14 +2695,15 @@ keyboards:
           landscape: 40
       - keys:
           - action:
-              symbol:
+              character:
                 char: q
             processByRIME: false
             width:
               portrait:
                 percentage: 0.1
               landscape: available
-            label: q
+            label:
+              text: ""
             swipe:
               - action:
                   character:
@@ -2715,14 +2716,15 @@ keyboards:
             lightModeStyleName: key-1
             darkModeStyleName: key-1-dark
           - action:
-              symbol:
+              character:
                 char: w
             processByRIME: false
             width:
               portrait:
                 percentage: 0.1
               landscape: available
-            label: w
+            label:
+              text: ""
             swipe:
               - action:
                   character:
@@ -2735,14 +2737,15 @@ keyboards:
             lightModeStyleName: key-2
             darkModeStyleName: key-2-dark
           - action:
-              symbol:
+              character:
                 char: e
             processByRIME: false
             width:
               portrait:
                 percentage: 0.1
               landscape: available
-            label: e
+            label:
+              text: ""
             swipe:
               - action:
                   character:
@@ -2755,14 +2758,15 @@ keyboards:
             lightModeStyleName: key-3
             darkModeStyleName: key-3-dark
           - action:
-              symbol:
+              character:
                 char: r
             processByRIME: false
             width:
               portrait:
                 percentage: 0.1
               landscape: available
-            label: r
+            label:
+              text: ""
             swipe:
               - action:
                   character:
@@ -2775,14 +2779,15 @@ keyboards:
             lightModeStyleName: key-4
             darkModeStyleName: key-4-dark
           - action:
-              symbol:
+              character:
                 char: t
             processByRIME: false
             width:
               portrait:
                 percentage: 0.1
               landscape: available
-            label: t
+            label:
+              text: ""
             swipe:
               - action:
                   character:
@@ -2795,14 +2800,15 @@ keyboards:
             lightModeStyleName: key-4
             darkModeStyleName: key-4-dark
           - action:
-              symbol:
+              character:
                 char: y
             processByRIME: false
             width:
               portrait:
                 percentage: 0.1
               landscape: available
-            label: y
+            label:
+              text: ""
             swipe:
               - action:
                   character:
@@ -2815,14 +2821,15 @@ keyboards:
             lightModeStyleName: key-5
             darkModeStyleName: key-5-dark
           - action:
-              symbol:
+              character:
                 char: u
             processByRIME: false
             width:
               portrait:
                 percentage: 0.1
               landscape: available
-            label: u
+            label:
+              text: ""
             swipe:
               - action:
                   character:
@@ -2835,14 +2842,15 @@ keyboards:
             lightModeStyleName: key-6
             darkModeStyleName: key-6-dark
           - action:
-              symbol:
+              character:
                 char: i
             processByRIME: false
             width:
               portrait:
                 percentage: 0.1
               landscape: available
-            label: i
+            label:
+              text: ""
             swipe:
               - action:
                   character:
@@ -2855,14 +2863,15 @@ keyboards:
             lightModeStyleName: key-7
             darkModeStyleName: key-7-dark
           - action:
-              symbol:
+              character:
                 char: o
             processByRIME: false
             width:
               portrait:
                 percentage: 0.1
               landscape: available
-            label: o
+            label:
+              text: ""
             swipe:
               - action:
                   character:
@@ -2875,11 +2884,12 @@ keyboards:
             lightModeStyleName: key-8
             darkModeStyleName: key-8-dark
           - action:
-              symbol:
+              character:
                 char: p
             processByRIME: false
             width: available
-            label: p
+            label:
+              text: ""
             swipe:
               - action:
                   character:
@@ -2905,14 +2915,15 @@ keyboards:
             label:
               text: ""
           - action:
-              symbol:
+              character:
                 char: a
             processByRIME: false
             width:
               portrait:
                 percentage: 0.1
               landscape: available
-            label: a
+            label:
+              text: ""
             swipe:
               - action:
                   character:
@@ -2931,14 +2942,15 @@ keyboards:
             lightModeStyleName: key-1
             darkModeStyleName: key-1-dark
           - action:
-              symbol:
+              character:
                 char: s
             processByRIME: false
             width:
               portrait:
                 percentage: 0.1
               landscape: available
-            label: s
+            label:
+              text: ""
             swipe:
               - action:
                   character:
@@ -2951,14 +2963,15 @@ keyboards:
             lightModeStyleName: key-2
             darkModeStyleName: key-2-dark
           - action:
-              symbol:
+              character:
                 char: d
             processByRIME: false
             width:
               portrait:
                 percentage: 0.1
               landscape: available
-            label: d
+            label:
+              text: ""
             swipe:
               - action:
                   character:
@@ -2971,14 +2984,15 @@ keyboards:
             lightModeStyleName: key-3
             darkModeStyleName: key-3-dark
           - action:
-              symbol:
+              character:
                 char: f
             processByRIME: false
             width:
               portrait:
                 percentage: 0.1
               landscape: available
-            label: f
+            label:
+              text: ""
             swipe:
               - action:
                   character:
@@ -2997,14 +3011,15 @@ keyboards:
             lightModeStyleName: key-fj
             darkModeStyleName: key-fj-dark
           - action:
-              symbol:
+              character:
                 char: g
             processByRIME: false
             width:
               portrait:
                 percentage: 0.1
               landscape: available
-            label: g
+            label:
+              text: ""
             swipe:
               - action:
                   character:
@@ -3017,14 +3032,15 @@ keyboards:
             lightModeStyleName: key-4
             darkModeStyleName: key-4-dark
           - action:
-              symbol:
+              character:
                 char: h
             processByRIME: false
             width:
               portrait:
                 percentage: 0.1
               landscape: available
-            label: h
+            label:
+              text: ""
             swipe:
               - action:
                   character:
@@ -3037,14 +3053,15 @@ keyboards:
             lightModeStyleName: key-5
             darkModeStyleName: key-5-dark
           - action:
-              symbol:
+              character:
                 char: j
             processByRIME: false
             width:
               portrait:
                 percentage: 0.1
               landscape: available
-            label: j
+            label:
+              text: ""
             swipe:
               - action:
                   character:
@@ -3057,14 +3074,15 @@ keyboards:
             lightModeStyleName: key-fj
             darkModeStyleName: key-fj-dark
           - action:
-              symbol:
+              character:
                 char: k
             processByRIME: false
             width:
               portrait:
                 percentage: 0.1
               landscape: available
-            label: k
+            label:
+              text: ""
             swipe:
               - action:
                   character:
@@ -3077,14 +3095,15 @@ keyboards:
             lightModeStyleName: key-7
             darkModeStyleName: key-7-dark
           - action:
-              symbol:
+              character:
                 char: l
             processByRIME: false
             width:
               portrait:
                 percentage: 0.1
               landscape: available
-            label: l
+            label:
+              text: ""
             swipe:
               - action:
                   character:
@@ -3135,14 +3154,15 @@ keyboards:
             label:
               text: ""
           - action:
-              symbol:
+              character:
                 char: z
             processByRIME: false
             width:
               portrait:
                 percentage: 0.1
               landscape: available
-            label: z
+            label:
+              text: ""
             swipe:
               - action:
                   character:
@@ -3161,14 +3181,15 @@ keyboards:
             lightModeStyleName: key-1
             darkModeStyleName: key-1-dark
           - action:
-              symbol:
+              character:
                 char: x
             processByRIME: false
             width:
               portrait:
                 percentage: 0.1
               landscape: available
-            label: x
+            label:
+              text: ""
             swipe:
               - action:
                   character:
@@ -3187,14 +3208,15 @@ keyboards:
             lightModeStyleName: key-2
             darkModeStyleName: key-2-dark
           - action:
-              symbol:
+              character:
                 char: c
             processByRIME: false
             width:
               portrait:
                 percentage: 0.1
               landscape: available
-            label: c
+            label:
+              text: ""
             swipe:
               - action:
                   character:
@@ -3217,14 +3239,15 @@ keyboards:
             lightModeStyleName: key-3
             darkModeStyleName: key-3-dark
           - action:
-              symbol:
+              character:
                 char: v
             processByRIME: false
             width:
               portrait:
                 percentage: 0.1
               landscape: available
-            label: v
+            label:
+              text: ""
             swipe:
               - action:
                   character:
@@ -3247,14 +3270,15 @@ keyboards:
             lightModeStyleName: key-4
             darkModeStyleName: key-4-dark
           - action:
-              symbol:
+              character:
                 char: b
             processByRIME: false
             width:
               portrait:
                 percentage: 0.1
               landscape: available
-            label: b
+            label:
+              text: ""
             swipe:
               - action:
                   character:
@@ -3267,14 +3291,15 @@ keyboards:
             lightModeStyleName: key-4
             darkModeStyleName: key-4-dark
           - action:
-              symbol:
+              character:
                 char: n
             processByRIME: false
             width:
               portrait:
                 percentage: 0.1
               landscape: available
-            label: n
+            label:
+              text: ""
             swipe:
               - action:
                   character:
@@ -3287,14 +3312,15 @@ keyboards:
             lightModeStyleName: key-5
             darkModeStyleName: key-5-dark
           - action:
-              symbol:
+              character:
                 char: m
             processByRIME: false
             width:
               portrait:
                 percentage: 0.1
               landscape: available
-            label: m
+            label:
+              text: ""
             swipe:
               - action:
                   character:
