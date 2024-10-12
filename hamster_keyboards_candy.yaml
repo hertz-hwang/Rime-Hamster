@@ -1921,7 +1921,7 @@ keyboards:
             lightModeStyleName: number
             darkModeStyleName: number-dark
           - action:
-              symbol:
+              character:
                 char: =
             width:
               percentage: 0.16
@@ -3755,7 +3755,7 @@ keyboards:
             lightModeStyleName: number
             darkModeStyleName: number-dark
           - action:
-              symbol:
+              character:
                 char: =
             width:
               percentage: 0.16
