@@ -77,4 +77,6 @@ patch:
 
   # 声音与震动
   "keyboard/enableHapticFeedback": true
-  "keyboard/hapticIntensity": 0.50
+  "keyboard/enableKeySounds": false
+  "keyboard/hapticFeedbackIntensity": 1
+  "keyboard/hapticIntensity": 1.000
