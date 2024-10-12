@@ -3599,8 +3599,8 @@ keyboards:
             width: available
             label:
               text: ""
-            lightModeStyleName: cn_en
-            darkModeStyleName: cn_en-dark
+            lightModeStyleName: shift
+            darkModeStyleName: shift-dark
           - action:
               character:
                 char: "-"
@@ -3608,8 +3608,8 @@ keyboards:
               percentage: 0.16
             label:
               text: ""
-            lightModeStyleName: cn_en
-            darkModeStyleName: cn_en-dark
+            lightModeStyleName: shift
+            darkModeStyleName: shift-dark
           - action:
               character:
                 char: "1"
@@ -3665,8 +3665,8 @@ keyboards:
             width: available
             label:
               text: ""
-            lightModeStyleName: cn_en
-            darkModeStyleName: cn_en-dark
+            lightModeStyleName: shift
+            darkModeStyleName: shift-dark
           - action:
               character:
                 char: /
@@ -3674,8 +3674,8 @@ keyboards:
               percentage: 0.16
             label:
               text: ""
-            lightModeStyleName: cn_en
-            darkModeStyleName: cn_en-dark
+            lightModeStyleName: shift
+            darkModeStyleName: shift-dark
           - action:
               character:
                 char: "4"
@@ -3719,8 +3719,8 @@ keyboards:
             width: available
             label:
               text: ""
-            lightModeStyleName: cn_en
-            darkModeStyleName: cn_en-dark
+            lightModeStyleName: shift
+            darkModeStyleName: shift-dark
           - action:
               character:
                 char: )
@@ -3728,8 +3728,8 @@ keyboards:
               percentage: 0.16
             label:
               text: ""
-            lightModeStyleName: cn_en
-            darkModeStyleName: cn_en-dark
+            lightModeStyleName: shift
+            darkModeStyleName: shift-dark
           - action:
               character:
                 char: "7"
@@ -3779,8 +3779,8 @@ keyboards:
             width: available
             label:
               text: ""
-            lightModeStyleName: cn_en
-            darkModeStyleName: cn_en-dark
+            lightModeStyleName: shift
+            darkModeStyleName: shift-dark
           - action:
               keyboardType: Candy-中文
             width:
@@ -3842,16 +3842,16 @@ keyboards:
     keyStyle:
       function: *a1
       function-dark: *a2
-      cn_en: *a11
-      cn_en-dark: *a12
+      shift: *a3
+      shift-dark: *a4
       number: *a5
       number-dark: *a6
       backspace: *a7
       backspace-dark: *a8
       key-fj: *a9
       key-fj-dark: *a10
-      shift: *a3
-      shift-dark: *a4
+      cn_en: *a11
+      cn_en-dark: *a12
       space: *a13
       space-dark: *a14
       enter: *a15
