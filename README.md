@@ -1,3 +1,9 @@
+## 使用方法
+
+下载最新[hamster_keyboards_candy.yaml](https://github.com/hertz-hwang/Rime-Hamster/release/hamster_keyboards_candy.yaml)后，下面方法二选一：
+    - a. 通过仓输入法“键盘布局”-“+”来导入；
+    - b. 写入自定义配置 hamster.custom.yaml 来引入。
+
 ## Themes & Layouts
 
 主题&布局设计工具：[hamster-tools](https://hertz-hwang.github.io/hamster-tools/) （Forked from [饼干](https://github.com/lost-melody/Lost-Melody.github.io)）
