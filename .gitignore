@@ -2,5 +2,8 @@
 /build
 /Fonts
 /theme
+default.caf
+installation.yaml
 iRime.custom.yaml
+user.yaml
 .DS_Store
