@@ -2,9 +2,9 @@
 
 下载最新[hamster_keyboards_candy.yaml](https://github.com/hertz-hwang/Rime-Hamster/releases/latest/download/hamster_keyboards_candy.yaml)后，下面方法二选一：
 
-    - a. 通过仓输入法“键盘布局”-“+”来导入；
+- a. 通过仓输入法“键盘布局”-“+”来导入；
 
-    - b. 写入自定义配置 hamster.custom.yaml 来引入。（[参考](https://github.com/hertz-hwang/Rime-Hamster/blob/3acea50b60caa20fa5e98c0e5ec624d81f31df63/hamster.custom.yaml#L2-L3)）
+- b. 写入自定义配置 hamster.custom.yaml 来引入。（[参考](https://github.com/hertz-hwang/Rime-Hamster/blob/3acea50b60caa20fa5e98c0e5ec624d81f31df63/hamster.custom.yaml#L2-L3)）
 
 ## Themes & Layouts
 
