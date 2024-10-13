@@ -1867,14 +1867,14 @@ keyboards:
             lightModeStyleName: number
             darkModeStyleName: number-dark
           - action:
-              character:
-                char: .
+              symbol:
+                char: ":"
             width:
               percentage: 0.16
             label:
               text: ""
-            lightModeStyleName: cn_en
-            darkModeStyleName: cn_en-dark
+            lightModeStyleName: shift
+            darkModeStyleName: shift-dark
         rowHeight:
           portrait: 54
           landscape: 58
@@ -1940,26 +1940,28 @@ keyboards:
           landscape: 58
       - keys:
           - action:
-              character:
-                char: ":"
-            width: available
-            label:
-              text: ""
-            lightModeStyleName: shift
-            darkModeStyleName: shift-dark
-          - action:
-              keyboardType: Candy-英文
-            width:
-              percentage: 0.16
-            label: 英文
-            lightModeStyleName: cn_en
-            darkModeStyleName: cn_en-dark
-          - action:
               keyboardType: Candy-中文
             width: available
             label: 󱞱
             lightModeStyleName: cn_en
             darkModeStyleName: cn_en-dark
+          - action:
+              character:
+                char: "%"
+            width:
+              percentage: 0.16
+            label:
+              text: ""
+            lightModeStyleName: shift
+            darkModeStyleName: shift-dark
+          - action:
+              character:
+                char: .
+            width: available
+            label:
+              text: ""
+            lightModeStyleName: shift
+            darkModeStyleName: shift-dark
           - action:
               character:
                 char: "0"
@@ -3702,13 +3704,13 @@ keyboards:
             darkModeStyleName: number-dark
           - action:
               character:
-                char: .
+                char: ":"
             width:
               percentage: 0.16
             label:
               text: ""
-            lightModeStyleName: cn_en
-            darkModeStyleName: cn_en-dark
+            lightModeStyleName: shift
+            darkModeStyleName: shift-dark
         rowHeight:
           portrait: 54
           landscape: 58
@@ -3774,26 +3776,28 @@ keyboards:
           landscape: 58
       - keys:
           - action:
-              character:
-                char: ":"
-            width: available
-            label:
-              text: ""
-            lightModeStyleName: shift
-            darkModeStyleName: shift-dark
-          - action:
-              keyboardType: Candy-中文
-            width:
-              percentage: 0.16
-            label: 中文
-            lightModeStyleName: cn_en
-            darkModeStyleName: cn_en-dark
-          - action:
               keyboardType: Candy-英文
             width: available
             label: 󱞱
             lightModeStyleName: cn_en
             darkModeStyleName: cn_en-dark
+          - action:
+              character:
+                char: "%"
+            width:
+              percentage: 0.16
+            label:
+              text: ""
+            lightModeStyleName: shift
+            darkModeStyleName: shift-dark
+          - action:
+              character:
+                char: .
+            width: available
+            label:
+              text: ""
+            lightModeStyleName: shift
+            darkModeStyleName: shift-dark
           - action:
               character:
                 char: "0"
