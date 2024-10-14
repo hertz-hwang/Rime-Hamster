@@ -117,8 +117,7 @@ keyboards:
             lightModeStyleName: function
             darkModeStyleName: function-dark
           - action:
-              character:
-                char: ""
+              keyboardType: Candy-中文助记
             width: available
             label: 果
             lightModeStyleName: function
@@ -319,7 +318,7 @@ keyboards:
               - action:
                   character:
                     char: "&"
-                label: 😂
+                label: 
                 display: true
                 processByRIME: true
                 direction: down
@@ -574,7 +573,7 @@ keyboards:
           - action: shift
             width:
               portrait:
-                percentage: 0.13
+                percentage: 0.1
               landscape: available
             label:
               text: ""
@@ -787,7 +786,7 @@ keyboards:
           - action: backspace
             width:
               portrait:
-                percentage: 0.14
+                percentage: 0.18
               landscape: available
             label: 󰁮
             swipe:
@@ -962,15 +961,15 @@ keyboards:
     keyStyle:
       function: &a1
         name: function
-        buttonBackgroundColor: "0xACD7EC"
+        buttonBackgroundColor: "0x8BB8EE"
         pressedButtonBackgroundColor: "0xEEEEEE"
         buttonForegroundColor: "0xFFFFFF"
-        pressedButtonForegroundColor: "0xACD7EC"
+        pressedButtonForegroundColor: "0x8BB8EE"
         swipeForegroundColor: "0xFFFFFF"
-        pressedSwipeForegroundColor: "0xACD7EC"
+        pressedSwipeForegroundColor: "0x8BB8EE"
         buttonBubbleBackgroundColor: "0xFFFFFF"
-        actionCalloutBackgroundColor: "0xACD7EC"
-        actionCalloutSelectedBackgroundColor: "0xD9EDF7"
+        actionCalloutBackgroundColor: "0x8BB8EE"
+        actionCalloutSelectedBackgroundColor: "0x8BB8EE"
         actionCalloutSelectedForegroundColor: "0xFFFFFF"
         cornerRadius: 11
         borderSize: 2
@@ -982,15 +981,15 @@ keyboards:
         swipeFontSize: 12
       function-dark: &a2
         name: function-dark
-        buttonBackgroundColor: "0x5E8FC9"
+        buttonBackgroundColor: "0x70A3E1"
         pressedButtonBackgroundColor: "0xEEEEEE"
         buttonForegroundColor: "0xFFFFFF"
-        pressedButtonForegroundColor: "0x5E8FC9"
+        pressedButtonForegroundColor: "0x70A3E1"
         swipeForegroundColor: "0xFFFFFF"
-        pressedSwipeForegroundColor: "0x5E8FC9"
+        pressedSwipeForegroundColor: "0x70A3E1"
         buttonBubbleBackgroundColor: "0x3E3E3E"
         actionCalloutBackgroundColor: "0x3E3E3E"
-        actionCalloutSelectedBackgroundColor: "0x98B9E2"
+        actionCalloutSelectedBackgroundColor: "0x70A3E1"
         actionCalloutSelectedForegroundColor: "0xFFFFFF"
         cornerRadius: 11
         borderSize: 2
@@ -1000,7 +999,7 @@ keyboards:
         shadowSize: 2
         fontSize: 18
         swipeFontSize: 12
-      key-1: &a17
+      key-1: &a15
         name: key-1
         buttonBackgroundColor: "0xFFFFFF"
         pressedButtonBackgroundColor: "0xABAB64"
@@ -1020,7 +1019,7 @@ keyboards:
         shadowSize: 2
         fontSize: 16
         swipeFontSize: 8
-      key-1-dark: &a18
+      key-1-dark: &a16
         name: key-1-dark
         buttonBackgroundColor: "0x3E3E3E"
         pressedButtonBackgroundColor: "0xDBD9AB"
@@ -1040,7 +1039,7 @@ keyboards:
         shadowSize: 2
         fontSize: 16
         swipeFontSize: 7
-      key-2: &a19
+      key-2: &a17
         name: key-2
         buttonBackgroundColor: "0xFFFFFF"
         pressedButtonBackgroundColor: "0xABAB64"
@@ -1060,7 +1059,7 @@ keyboards:
         shadowSize: 2
         fontSize: 16
         swipeFontSize: 8
-      key-2-dark: &a20
+      key-2-dark: &a18
         name: key-2-dark
         buttonBackgroundColor: "0x3E3E3E"
         pressedButtonBackgroundColor: "0xDBD9AB"
@@ -1080,7 +1079,7 @@ keyboards:
         shadowSize: 2
         fontSize: 16
         swipeFontSize: 7
-      key-3: &a21
+      key-3: &a19
         name: key-3
         buttonBackgroundColor: "0xFFFFFF"
         pressedButtonBackgroundColor: "0xABAB64"
@@ -1100,7 +1099,7 @@ keyboards:
         shadowSize: 2
         fontSize: 16
         swipeFontSize: 8
-      key-3-dark: &a22
+      key-3-dark: &a20
         name: key-3-dark
         buttonBackgroundColor: "0x3E3E3E"
         pressedButtonBackgroundColor: "0xDBD9AB"
@@ -1120,7 +1119,7 @@ keyboards:
         shadowSize: 2
         fontSize: 16
         swipeFontSize: 7
-      key-4: &a23
+      key-4: &a21
         name: key-4
         buttonBackgroundColor: "0xFFFFFF"
         pressedButtonBackgroundColor: "0xABAB64"
@@ -1140,7 +1139,7 @@ keyboards:
         shadowSize: 2
         fontSize: 16
         swipeFontSize: 8
-      key-4-dark: &a24
+      key-4-dark: &a22
         name: key-4-dark
         buttonBackgroundColor: "0x3E3E3E"
         pressedButtonBackgroundColor: "0xDBD9AB"
@@ -1160,7 +1159,7 @@ keyboards:
         shadowSize: 2
         fontSize: 16
         swipeFontSize: 7
-      key-5: &a25
+      key-5: &a23
         name: key-5
         buttonBackgroundColor: "0xFFFFFF"
         pressedButtonBackgroundColor: "0xABAB64"
@@ -1180,7 +1179,7 @@ keyboards:
         shadowSize: 2
         fontSize: 16
         swipeFontSize: 8
-      key-5-dark: &a26
+      key-5-dark: &a24
         name: key-5-dark
         buttonBackgroundColor: "0x3E3E3E"
         pressedButtonBackgroundColor: "0xDBD9AB"
@@ -1200,7 +1199,7 @@ keyboards:
         shadowSize: 2
         fontSize: 16
         swipeFontSize: 7
-      key-6: &a27
+      key-6: &a25
         name: key-6
         buttonBackgroundColor: "0xFFFFFF"
         pressedButtonBackgroundColor: "0xABAB64"
@@ -1220,7 +1219,7 @@ keyboards:
         shadowSize: 2
         fontSize: 16
         swipeFontSize: 8
-      key-6-dark: &a28
+      key-6-dark: &a26
         name: key-6-dark
         buttonBackgroundColor: "0x3E3E3E"
         pressedButtonBackgroundColor: "0xDBD9AB"
@@ -1240,7 +1239,7 @@ keyboards:
         shadowSize: 2
         fontSize: 16
         swipeFontSize: 7
-      key-7: &a29
+      key-7: &a27
         name: key-7
         buttonBackgroundColor: "0xFFFFFF"
         pressedButtonBackgroundColor: "0xABAB64"
@@ -1260,7 +1259,7 @@ keyboards:
         shadowSize: 2
         fontSize: 16
         swipeFontSize: 8
-      key-7-dark: &a30
+      key-7-dark: &a28
         name: key-7-dark
         buttonBackgroundColor: "0x3E3E3E"
         pressedButtonBackgroundColor: "0xDBD9AB"
@@ -1280,7 +1279,7 @@ keyboards:
         shadowSize: 2
         fontSize: 16
         swipeFontSize: 7
-      key-8: &a31
+      key-8: &a29
         name: key-8
         buttonBackgroundColor: "0xFFFFFF"
         pressedButtonBackgroundColor: "0xABAB64"
@@ -1300,7 +1299,7 @@ keyboards:
         shadowSize: 2
         fontSize: 16
         swipeFontSize: 8
-      key-8-dark: &a32
+      key-8-dark: &a30
         name: key-8-dark
         buttonBackgroundColor: "0x3E3E3E"
         pressedButtonBackgroundColor: "0xDBD9AB"
@@ -1320,18 +1319,18 @@ keyboards:
         shadowSize: 2
         fontSize: 16
         swipeFontSize: 7
-      key-fj: &a9
+      key-fj:
         name: key-fj
-        buttonBackgroundColor: "0xDABCA9"
-        pressedButtonBackgroundColor: "0xEEEEEE"
-        buttonForegroundColor: "0xFFFFFF"
-        pressedButtonForegroundColor: "0xDABCA9"
-        swipeForegroundColor: "0xFFFFFF"
-        pressedSwipeForegroundColor: "0xDABCA9"
-        buttonBubbleBackgroundColor: "0xDABCA9"
-        actionCalloutBackgroundColor: "0xDABCA9"
-        actionCalloutSelectedBackgroundColor: "0xF2D9CA"
-        actionCalloutSelectedForegroundColor: "0xFFFFFF"
+        buttonBackgroundColor: "0xFFFFFF"
+        pressedButtonBackgroundColor: "0xABAB64"
+        buttonForegroundColor: "0xABAB64"
+        pressedButtonForegroundColor: "0xFFFFFF"
+        swipeForegroundColor: "0xABAB64"
+        pressedSwipeForegroundColor: "0xFFFFFF"
+        buttonBubbleBackgroundColor: "0xFFFFFF"
+        actionCalloutBackgroundColor: "0xFFFFFF"
+        actionCalloutSelectedBackgroundColor: "0xFFFFFF"
+        actionCalloutSelectedForegroundColor: "0xABAB64"
         cornerRadius: 11
         borderSize: 2
         borderColor: "0xFEFEFE"
@@ -1340,21 +1339,21 @@ keyboards:
         shadowSize: 2
         fontSize: 16
         swipeFontSize: 8
-      key-fj-dark: &a10
+      key-fj-dark:
         name: key-fj-dark
-        buttonBackgroundColor: "0x9F7156"
-        pressedButtonBackgroundColor: "0xEEEEEE"
-        buttonForegroundColor: "0xFFFFFF"
-        pressedButtonForegroundColor: "0x9F7156"
-        swipeForegroundColor: "0xFFFFFF"
-        pressedSwipeForegroundColor: "0x9F7156"
+        buttonBackgroundColor: "0x3E3E3E"
+        pressedButtonBackgroundColor: "0xDBD9AB"
+        buttonForegroundColor: "0xDBD9AB"
+        pressedButtonForegroundColor: "0x3E3E3E"
+        swipeForegroundColor: "0xDBD9AB"
+        pressedSwipeForegroundColor: "0x3E3E3E"
         buttonBubbleBackgroundColor: "0x3E3E3E"
         actionCalloutBackgroundColor: "0x3E3E3E"
-        actionCalloutSelectedBackgroundColor: "0x9F7156"
-        actionCalloutSelectedForegroundColor: "0xFFFFFF"
+        actionCalloutSelectedBackgroundColor: "0x3E3E3E"
+        actionCalloutSelectedForegroundColor: "0xDBD9AB"
         cornerRadius: 11
         borderSize: 2
-        borderColor: "0xFFFFFF"
+        borderColor: "0xFEFEFE"
         lowerEdgeColor: "0x82FEFEFE"
         shadowColor: "0xFFFFFF"
         shadowSize: 2
@@ -1479,7 +1478,7 @@ keyboards:
         shadowSize: 2
         fontSize: 16
         swipeFontSize: 12
-      character: &a33
+      character: &a31
         name: character
         buttonBackgroundColor: "0xABAB64"
         pressedButtonBackgroundColor: "0xEEEEEE"
@@ -1499,7 +1498,7 @@ keyboards:
         shadowSize: 2
         fontSize: 15
         swipeFontSize: 12
-      character-dark: &a34
+      character-dark: &a32
         name: character-dark
         buttonBackgroundColor: "0xB1AD68"
         pressedButtonBackgroundColor: "0xEEEEEE"
@@ -1519,7 +1518,7 @@ keyboards:
         shadowSize: 2
         fontSize: 15
         swipeFontSize: 12
-      comma: &a35
+      comma: &a33
         name: comma
         buttonBackgroundColor: "0xABAB64"
         pressedButtonBackgroundColor: "0xEEEEEE"
@@ -1539,7 +1538,7 @@ keyboards:
         shadowSize: 2
         fontSize: 17
         swipeFontSize: 12
-      comma-dark: &a36
+      comma-dark: &a34
         name: comma-dark
         buttonBackgroundColor: "0xB1AD68"
         pressedButtonBackgroundColor: "0xEEEEEE"
@@ -1559,7 +1558,7 @@ keyboards:
         shadowSize: 2
         fontSize: 17
         swipeFontSize: 12
-      space: &a13
+      space: &a11
         name: space
         buttonBackgroundColor: "0xB8DAA9"
         pressedButtonBackgroundColor: "0xEEEEEE"
@@ -1579,7 +1578,7 @@ keyboards:
         shadowSize: 2
         fontSize: 18
         swipeFontSize: 12
-      space-dark: &a14
+      space-dark: &a12
         name: space-dark
         buttonBackgroundColor: "0x99BE89"
         pressedButtonBackgroundColor: "0xEEEEEE"
@@ -1599,7 +1598,7 @@ keyboards:
         shadowSize: 2
         fontSize: 18
         swipeFontSize: 12
-      cn_en: &a11
+      cn_en: &a9
         name: cn_en
         buttonBackgroundColor: "0xDAB1A9"
         pressedButtonBackgroundColor: "0xEEEEEE"
@@ -1619,7 +1618,7 @@ keyboards:
         shadowSize: 2
         fontSize: 13
         swipeFontSize: 12
-      cn_en-dark: &a12
+      cn_en-dark: &a10
         name: cn_en-dark
         buttonBackgroundColor: "0xBD968F"
         pressedButtonBackgroundColor: "0xEEEEEE"
@@ -1639,7 +1638,7 @@ keyboards:
         shadowSize: 2
         fontSize: 13
         swipeFontSize: 12
-      enter: &a15
+      enter: &a13
         name: enter
         buttonBackgroundColor: "0x8FE6C3"
         pressedButtonBackgroundColor: "0xFFFFFF"
@@ -1659,7 +1658,7 @@ keyboards:
         shadowSize: 2
         fontSize: 18
         swipeFontSize: 12
-      enter-dark: &a16
+      enter-dark: &a14
         name: enter-dark
         buttonBackgroundColor: "0x82C9AD"
         pressedButtonBackgroundColor: "0xFFFFFF"
@@ -1856,8 +1855,8 @@ keyboards:
             width: available
             label:
               text: ""
-            lightModeStyleName: key-fj
-            darkModeStyleName: key-fj-dark
+            lightModeStyleName: number
+            darkModeStyleName: number-dark
           - action:
               character:
                 char: "6"
@@ -2015,14 +2014,12 @@ keyboards:
       number-dark: *a6
       backspace: *a7
       backspace-dark: *a8
-      key-fj: *a9
-      key-fj-dark: *a10
-      cn_en: *a11
-      cn_en-dark: *a12
-      space: *a13
-      space-dark: *a14
-      enter: *a15
-      enter-dark: *a16
+      cn_en: *a9
+      cn_en-dark: *a10
+      space: *a11
+      space-dark: *a12
+      enter: *a13
+      enter-dark: *a14
   - name: Candy-中文数字符号
     isPrimary: false
     rows:
@@ -2339,7 +2336,7 @@ keyboards:
               keyboardType: classifySymbolic
             width:
               portrait:
-                percentage: 0.13
+                percentage: 0.1
               landscape: available
             label: 更多
             swipe:
@@ -2449,7 +2446,7 @@ keyboards:
           - action: backspace
             width:
               portrait:
-                percentage: 0.14
+                percentage: 0.18
               landscape: available
             label: 󰁮
             swipe:
@@ -2584,38 +2581,38 @@ keyboards:
     keyStyle:
       function: *a1
       function-dark: *a2
-      key-1: *a17
-      key-1-dark: *a18
-      key-2: *a19
-      key-2-dark: *a20
-      key-3: *a21
-      key-3-dark: *a22
-      key-4: *a23
-      key-4-dark: *a24
-      key-5: *a25
-      key-5-dark: *a26
-      key-6: *a27
-      key-6-dark: *a28
-      key-7: *a29
-      key-7-dark: *a30
-      key-8: *a31
-      key-8-dark: *a32
+      key-1: *a15
+      key-1-dark: *a16
+      key-2: *a17
+      key-2-dark: *a18
+      key-3: *a19
+      key-3-dark: *a20
+      key-4: *a21
+      key-4-dark: *a22
+      key-5: *a23
+      key-5-dark: *a24
+      key-6: *a25
+      key-6-dark: *a26
+      key-7: *a27
+      key-7-dark: *a28
+      key-8: *a29
+      key-8-dark: *a30
       shift: *a3
       shift-dark: *a4
       backspace: *a7
       backspace-dark: *a8
       number: *a5
       number-dark: *a6
-      character: *a33
-      character-dark: *a34
-      comma: *a35
-      comma-dark: *a36
-      space: *a13
-      space-dark: *a14
-      cn_en: *a11
-      cn_en-dark: *a12
-      enter: *a15
-      enter-dark: *a16
+      character: *a31
+      character-dark: *a32
+      comma: *a33
+      comma-dark: *a34
+      space: *a11
+      space-dark: *a12
+      cn_en: *a9
+      cn_en-dark: *a10
+      enter: *a13
+      enter-dark: *a14
   - name: Candy-英文
     isPrimary: false
     rows:
@@ -3010,8 +3007,8 @@ keyboards:
                 display: true
                 processByRIME: true
                 direction: down
-            lightModeStyleName: key-fj
-            darkModeStyleName: key-fj-dark
+            lightModeStyleName: key-4
+            darkModeStyleName: key-4-dark
           - action:
               character:
                 char: g
@@ -3073,8 +3070,8 @@ keyboards:
                 display: true
                 processByRIME: false
                 direction: up
-            lightModeStyleName: key-fj
-            darkModeStyleName: key-fj-dark
+            lightModeStyleName: key-6
+            darkModeStyleName: key-6-dark
           - action:
               character:
                 char: k
@@ -3133,7 +3130,7 @@ keyboards:
           - action: shift
             width:
               portrait:
-                percentage: 0.13
+                percentage: 0.1
               landscape: available
             label:
               text: ""
@@ -3326,7 +3323,7 @@ keyboards:
             swipe:
               - action:
                   character:
-                    char: ^
+                    char: _
                 label:
                   text: ""
                 display: true
@@ -3346,7 +3343,7 @@ keyboards:
           - action: backspace
             width:
               portrait:
-                percentage: 0.14
+                percentage: 0.18
               landscape: available
             label: 󰁮
             swipe:
@@ -3481,40 +3478,38 @@ keyboards:
     keyStyle:
       function: *a1
       function-dark: *a2
-      key-1: *a17
-      key-1-dark: *a18
-      key-2: *a19
-      key-2-dark: *a20
-      key-3: *a21
-      key-3-dark: *a22
-      key-4: *a23
-      key-4-dark: *a24
-      key-5: *a25
-      key-5-dark: *a26
-      key-6: *a27
-      key-6-dark: *a28
-      key-7: *a29
-      key-7-dark: *a30
-      key-8: *a31
-      key-8-dark: *a32
-      key-fj: *a9
-      key-fj-dark: *a10
+      key-1: *a15
+      key-1-dark: *a16
+      key-2: *a17
+      key-2-dark: *a18
+      key-3: *a19
+      key-3-dark: *a20
+      key-4: *a21
+      key-4-dark: *a22
+      key-5: *a23
+      key-5-dark: *a24
+      key-6: *a25
+      key-6-dark: *a26
+      key-7: *a27
+      key-7-dark: *a28
+      key-8: *a29
+      key-8-dark: *a30
       shift: *a3
       shift-dark: *a4
       backspace: *a7
       backspace-dark: *a8
       number: *a5
       number-dark: *a6
-      character: *a33
-      character-dark: *a34
-      comma: *a35
-      comma-dark: *a36
-      space: *a13
-      space-dark: *a14
-      cn_en: *a11
-      cn_en-dark: *a12
-      enter: *a15
-      enter-dark: *a16
+      character: *a31
+      character-dark: *a32
+      comma: *a33
+      comma-dark: *a34
+      space: *a11
+      space-dark: *a12
+      cn_en: *a9
+      cn_en-dark: *a10
+      enter: *a13
+      enter-dark: *a14
   - name: Candy-英文数字
     isPrimary: false
     rows:
@@ -3692,8 +3687,8 @@ keyboards:
             width: available
             label:
               text: ""
-            lightModeStyleName: key-fj
-            darkModeStyleName: key-fj-dark
+            lightModeStyleName: number
+            darkModeStyleName: number-dark
           - action:
               character:
                 char: "6"
@@ -3852,14 +3847,12 @@ keyboards:
       number-dark: *a6
       backspace: *a7
       backspace-dark: *a8
-      key-fj: *a9
-      key-fj-dark: *a10
-      cn_en: *a11
-      cn_en-dark: *a12
-      space: *a13
-      space-dark: *a14
-      enter: *a15
-      enter-dark: *a16
+      cn_en: *a9
+      cn_en-dark: *a10
+      space: *a11
+      space-dark: *a12
+      enter: *a13
+      enter-dark: *a14
   - name: Candy-英文数字符号
     isPrimary: false
     rows:
@@ -4176,7 +4169,7 @@ keyboards:
               keyboardType: classifySymbolic
             width:
               portrait:
-                percentage: 0.13
+                percentage: 0.1
               landscape: available
             label: 更多
             swipe:
@@ -4286,7 +4279,7 @@ keyboards:
           - action: backspace
             width:
               portrait:
-                percentage: 0.14
+                percentage: 0.18
               landscape: available
             label:
               text: ""
@@ -4422,35 +4415,913 @@ keyboards:
     keyStyle:
       function: *a1
       function-dark: *a2
-      key-1: *a17
-      key-1-dark: *a18
-      key-2: *a19
-      key-2-dark: *a20
-      key-3: *a21
-      key-3-dark: *a22
-      key-4: *a23
-      key-4-dark: *a24
-      key-5: *a25
-      key-5-dark: *a26
-      key-6: *a27
-      key-6-dark: *a28
-      key-7: *a29
-      key-7-dark: *a30
-      key-8: *a31
-      key-8-dark: *a32
+      key-1: *a15
+      key-1-dark: *a16
+      key-2: *a17
+      key-2-dark: *a18
+      key-3: *a19
+      key-3-dark: *a20
+      key-4: *a21
+      key-4-dark: *a22
+      key-5: *a23
+      key-5-dark: *a24
+      key-6: *a25
+      key-6-dark: *a26
+      key-7: *a27
+      key-7-dark: *a28
+      key-8: *a29
+      key-8-dark: *a30
       shift: *a3
       shift-dark: *a4
       backspace: *a7
       backspace-dark: *a8
       number: *a5
       number-dark: *a6
-      character: *a33
-      character-dark: *a34
-      comma: *a35
-      comma-dark: *a36
-      space: *a13
-      space-dark: *a14
-      cn_en: *a11
-      cn_en-dark: *a12
-      enter: *a15
-      enter-dark: *a16
+      character: *a31
+      character-dark: *a32
+      comma: *a33
+      comma-dark: *a34
+      space: *a11
+      space-dark: *a12
+      cn_en: *a9
+      cn_en-dark: *a10
+      enter: *a13
+      enter-dark: *a14
+  - name: Candy-中文助记
+    isPrimary: true
+    rows:
+      - keys:
+          - action:
+              shortcutCommand: "#左移"
+            width: available
+            label: 
+            swipe:
+              - action:
+                  shortcutCommand: "#行首"
+                label: " "
+                display: true
+                processByRIME: true
+                direction: down
+            lightModeStyleName: function
+            darkModeStyleName: function-dark
+          - action:
+              character:
+                char: ""
+            width: available
+            label: 糖
+            lightModeStyleName: function
+            darkModeStyleName: function-dark
+          - action:
+              shortcutCommand:
+                openURL:
+                  url: mqqapi://
+            width: available
+            label: 
+            lightModeStyleName: function
+            darkModeStyleName: function-dark
+          - action:
+              shortcutCommand:
+                openURL:
+                  url: weixin://
+            width: available
+            label: 
+            lightModeStyleName: function
+            darkModeStyleName: function-dark
+          - action:
+              shortcutCommand:
+                openURL:
+                  url: https://www.perplexity.ai/search/new?q=#pasteboardContent
+            width: available
+            label: 
+            lightModeStyleName: function
+            darkModeStyleName: function-dark
+          - action:
+              shortcutCommand:
+                openURL:
+                  url: https://www.google.com/search?q=#pasteboardContent
+            width: available
+            label: 
+            lightModeStyleName: function
+            darkModeStyleName: function-dark
+          - action:
+              keyboardType: Candy-中文
+            width: available
+            label: 果
+            lightModeStyleName: function
+            darkModeStyleName: function-dark
+          - action:
+              shortcutCommand: "#右移"
+            width: available
+            label: 
+            swipe:
+              - action:
+                  shortcutCommand: "#行尾"
+                label: " "
+                display: true
+                processByRIME: true
+                direction: down
+            lightModeStyleName: function
+            darkModeStyleName: function-dark
+        rowHeight:
+          portrait: 36
+          landscape: 40
+      - keys:
+          - action:
+              character:
+                char: q
+            width:
+              portrait:
+                percentage: 0.1
+              landscape: available
+            label: 都
+            swipe:
+              - action:
+                  character:
+                    char: "1"
+                label:
+                  text: ""
+                display: true
+                processByRIME: true
+                direction: up
+              - action:
+                  character:
+                    char: "`"
+                label: 反查
+                display: true
+                processByRIME: true
+                direction: down
+            lightModeStyleName: key-1
+            darkModeStyleName: key-1-dark
+          - action:
+              character:
+                char: w
+            width:
+              portrait:
+                percentage: 0.1
+              landscape: available
+            label: 得
+            swipe:
+              - action:
+                  character:
+                    char: "2"
+                label:
+                  text: ""
+                display: true
+                processByRIME: true
+                direction: up
+            lightModeStyleName: key-2
+            darkModeStyleName: key-2-dark
+          - action:
+              character:
+                char: e
+            width:
+              portrait:
+                percentage: 0.1
+              landscape: available
+            label: 也
+            swipe:
+              - action:
+                  character:
+                    char: "3"
+                label:
+                  text: ""
+                display: true
+                processByRIME: true
+                direction: up
+            lightModeStyleName: key-3
+            darkModeStyleName: key-3-dark
+          - action:
+              character:
+                char: r
+            width:
+              portrait:
+                percentage: 0.1
+              landscape: available
+            label: 了
+            swipe:
+              - action:
+                  character:
+                    char: "4"
+                label:
+                  text: ""
+                display: true
+                processByRIME: true
+                direction: up
+            lightModeStyleName: key-4
+            darkModeStyleName: key-4-dark
+          - action:
+              character:
+                char: t
+            width:
+              portrait:
+                percentage: 0.1
+              landscape: available
+            label: 我
+            swipe:
+              - action:
+                  character:
+                    char: "5"
+                label:
+                  text: ""
+                display: true
+                processByRIME: true
+                direction: up
+            lightModeStyleName: key-4
+            darkModeStyleName: key-4-dark
+          - action:
+              character:
+                char: y
+            width:
+              portrait:
+                percentage: 0.1
+              landscape: available
+            label: 到
+            swipe:
+              - action:
+                  character:
+                    char: "6"
+                label:
+                  text: ""
+                display: true
+                processByRIME: true
+                direction: up
+            lightModeStyleName: key-5
+            darkModeStyleName: key-5-dark
+          - action:
+              character:
+                char: u
+            width:
+              portrait:
+                percentage: 0.1
+              landscape: available
+            label: 的
+            swipe:
+              - action:
+                  character:
+                    char: "7"
+                label:
+                  text: ""
+                display: true
+                processByRIME: true
+                direction: up
+            lightModeStyleName: key-6
+            darkModeStyleName: key-6-dark
+          - action:
+              character:
+                char: i
+            width:
+              portrait:
+                percentage: 0.1
+              landscape: available
+            label: 为
+            swipe:
+              - action:
+                  character:
+                    char: "8"
+                label:
+                  text: ""
+                display: true
+                processByRIME: true
+                direction: up
+            lightModeStyleName: key-7
+            darkModeStyleName: key-7-dark
+          - action:
+              character:
+                char: o
+            width:
+              portrait:
+                percentage: 0.1
+              landscape: available
+            label: 是
+            swipe:
+              - action:
+                  character:
+                    char: "9"
+                label:
+                  text: ""
+                display: true
+                processByRIME: true
+                direction: up
+              - action:
+                  character:
+                    char: "&"
+                label: 
+                display: true
+                processByRIME: true
+                direction: down
+            lightModeStyleName: key-8
+            darkModeStyleName: key-8-dark
+          - action:
+              character:
+                char: p
+            width: available
+            label: 行
+            swipe:
+              - action:
+                  character:
+                    char: "0"
+                label:
+                  text: ""
+                display: true
+                processByRIME: true
+                direction: up
+              - action:
+                  character:
+                    char: "*"
+                label: " 简繁"
+                display: true
+                processByRIME: true
+                direction: down
+            lightModeStyleName: key-8
+            darkModeStyleName: key-8-dark
+        rowHeight:
+          portrait: 54
+          landscape: 58
+      - keys:
+          - action:
+              characterMargin:
+                char: ""
+            width:
+              portrait:
+                percentage: 0.05
+              landscape: available
+            label:
+              text: ""
+          - action:
+              character:
+                char: a
+            width:
+              portrait:
+                percentage: 0.1
+              landscape: available
+            label: 来
+            swipe:
+              - action:
+                  character:
+                    char: "-"
+                label:
+                  text: ""
+                display: true
+                processByRIME: true
+                direction: up
+              - action:
+                  shortcutCommand: "#selectText"
+                label: 
+                display: true
+                processByRIME: true
+                direction: down
+            lightModeStyleName: key-1
+            darkModeStyleName: key-1-dark
+          - action:
+              character:
+                char: s
+            width:
+              portrait:
+                percentage: 0.1
+              landscape: available
+            label: 说
+            swipe:
+              - action:
+                  character:
+                    char: /
+                label:
+                  text: ""
+                display: true
+                processByRIME: true
+                direction: up
+            lightModeStyleName: key-2
+            darkModeStyleName: key-2-dark
+          - action:
+              character:
+                char: d
+            width:
+              portrait:
+                percentage: 0.1
+              landscape: available
+            label: 中
+            swipe:
+              - action:
+                  character:
+                    char: ：
+                label:
+                  text: ""
+                display: true
+                processByRIME: true
+                direction: up
+            lightModeStyleName: key-3
+            darkModeStyleName: key-3-dark
+          - action:
+              character:
+                char: f
+            width:
+              portrait:
+                percentage: 0.1
+              landscape: available
+            label: 一
+            swipe:
+              - action:
+                  character:
+                    char: ；
+                label:
+                  text: ""
+                display: true
+                processByRIME: true
+                direction: up
+              - action:
+                  shortcutCommand: "#toggleScriptView"
+                label: 󱜧
+                display: true
+                processByRIME: true
+                direction: down
+            lightModeStyleName: key-4
+            darkModeStyleName: key-4-dark
+          - action:
+              character:
+                char: g
+            width:
+              portrait:
+                percentage: 0.1
+              landscape: available
+            label: 就
+            swipe:
+              - action:
+                  character:
+                    char: （
+                label:
+                  text: ""
+                display: true
+                processByRIME: true
+                direction: up
+            lightModeStyleName: key-4
+            darkModeStyleName: key-4-dark
+          - action:
+              character:
+                char: h
+            width:
+              portrait:
+                percentage: 0.1
+              landscape: available
+            label: 道
+            swipe:
+              - action:
+                  character:
+                    char: ）
+                label:
+                  text: ""
+                display: true
+                processByRIME: true
+                direction: up
+            lightModeStyleName: key-5
+            darkModeStyleName: key-5-dark
+          - action:
+              character:
+                char: j
+            width:
+              portrait:
+                percentage: 0.1
+              landscape: available
+            label: 人
+            swipe:
+              - action:
+                  character:
+                    char: "~"
+                label:
+                  text: ""
+                display: true
+                processByRIME: true
+                direction: up
+            lightModeStyleName: key-6
+            darkModeStyleName: key-6-dark
+          - action:
+              character:
+                char: k
+            width:
+              portrait:
+                percentage: 0.1
+              landscape: available
+            label: 能
+            swipe:
+              - action:
+                  character:
+                    char: “
+                label:
+                  text: ""
+                display: true
+                processByRIME: true
+                direction: up
+              - action:
+                  character:
+                    char: ;
+                label: 快符
+                display: true
+                processByRIME: true
+                direction: down
+            lightModeStyleName: key-7
+            darkModeStyleName: key-7-dark
+          - action:
+              character:
+                char: l
+            width:
+              portrait:
+                percentage: 0.1
+              landscape: available
+            label: 而
+            swipe:
+              - action:
+                  character:
+                    char: ”
+                label:
+                  text: ""
+                display: true
+                processByRIME: true
+                direction: up
+              - action:
+                  character:
+                    char: "'"
+                label: 英文
+                display: true
+                processByRIME: true
+                direction: down
+            lightModeStyleName: key-8
+            darkModeStyleName: key-8-dark
+          - action:
+              characterMargin:
+                char: ""
+            width:
+              portrait:
+                percentage: 0.05
+              landscape: available
+            label:
+              text: ""
+        rowHeight:
+          portrait: 54
+          landscape: 58
+      - keys:
+          - action: shift
+            width:
+              portrait:
+                percentage: 0.1
+              landscape: available
+            label:
+              text: ""
+            swipe:
+              - action: tab
+                label:
+                  text: ""
+                display: true
+                processByRIME: true
+                direction: up
+            lightModeStyleName: shift
+            darkModeStyleName: shift-dark
+          - action:
+              characterMargin:
+                char: ""
+            width:
+              portrait:
+                percentage: 0.01
+              landscape: available
+            label:
+              text: ""
+          - action:
+              character:
+                char: z
+            width:
+              portrait:
+                percentage: 0.1
+              landscape: available
+            label: 可
+            swipe:
+              - action:
+                  character:
+                    char: "@"
+                label:
+                  text: ""
+                display: true
+                processByRIME: true
+                direction: up
+              - action:
+                  shortcutCommand: "#撤销"
+                label: 
+                display: true
+                processByRIME: true
+                direction: down
+            lightModeStyleName: key-1
+            darkModeStyleName: key-1-dark
+          - action:
+              character:
+                char: x
+            width:
+              portrait:
+                percentage: 0.1
+              landscape: available
+            label: 和
+            swipe:
+              - action:
+                  character:
+                    char: .
+                label:
+                  text: ""
+                display: true
+                processByRIME: false
+                direction: up
+              - action:
+                  shortcutCommand: "#剪切"
+                label: 
+                display: true
+                processByRIME: true
+                direction: down
+            lightModeStyleName: key-2
+            darkModeStyleName: key-2-dark
+          - action:
+              character:
+                char: c
+            width:
+              portrait:
+                percentage: 0.1
+              landscape: available
+            label: 不
+            swipe:
+              - action:
+                  character:
+                    char: "#"
+                label:
+                  text: ""
+                display: true
+                processByRIME: true
+                direction: up
+              - action:
+                  shortcutCommand: "#复制"
+                label: 
+                display: true
+                processByRIME: true
+                direction: down
+            lightModeStyleName: key-3
+            darkModeStyleName: key-3-dark
+          - action:
+              character:
+                char: v
+            width:
+              portrait:
+                percentage: 0.1
+              landscape: available
+            label: 要
+            swipe:
+              - action:
+                  character:
+                    char: 、
+                label:
+                  text: ""
+                display: true
+                processByRIME: true
+                direction: up
+              - action:
+                  shortcutCommand: "#粘贴"
+                label: 
+                display: true
+                processByRIME: true
+                direction: down
+            lightModeStyleName: key-4
+            darkModeStyleName: key-4-dark
+          - action:
+              character:
+                char: b
+            width:
+              portrait:
+                percentage: 0.1
+              landscape: available
+            label: 如
+            swipe:
+              - action:
+                  character:
+                    char: ？
+                label:
+                  text: ""
+                display: true
+                processByRIME: true
+                direction: up
+            lightModeStyleName: key-4
+            darkModeStyleName: key-4-dark
+          - action:
+              character:
+                char: n
+            width:
+              portrait:
+                percentage: 0.1
+              landscape: available
+            label: 在
+            swipe:
+              - action:
+                  character:
+                    char: ！
+                label:
+                  text: ""
+                display: true
+                processByRIME: true
+                direction: up
+              - action:
+                  character:
+                    char: '"'
+                label: 拆字
+                display: true
+                processByRIME: true
+                direction: down
+            lightModeStyleName: key-5
+            darkModeStyleName: key-5-dark
+          - action:
+              character:
+                char: m
+            width:
+              portrait:
+                percentage: 0.1
+              landscape: available
+            label: 大
+            swipe:
+              - action:
+                  character:
+                    char: _
+                label:
+                  text: ""
+                display: true
+                processByRIME: false
+                direction: up
+              - action:
+                  character:
+                    char: /
+                label: 命令
+                display: true
+                processByRIME: true
+                direction: down
+            lightModeStyleName: key-6
+            darkModeStyleName: key-6-dark
+          - action:
+              characterMargin:
+                char: ""
+            width:
+              portrait:
+                percentage: 0.01
+              landscape: available
+            label:
+              text: ""
+          - action: backspace
+            width:
+              portrait:
+                percentage: 0.18
+              landscape: available
+            label: 󰁮
+            swipe:
+              - action:
+                  shortcutCommand: "#deleteText"
+                label:
+                  text: ""
+                display: false
+                processByRIME: true
+                direction: up
+              - action:
+                  shortcutCommand: "#重输"
+                label:
+                  text: ""
+                display: true
+                processByRIME: true
+                direction: left
+            lightModeStyleName: backspace
+            darkModeStyleName: backspace-dark
+        rowHeight:
+          portrait: 54
+          landscape: 58
+      - keys:
+          - action:
+              keyboardType: Candy-中文数字
+            width:
+              portrait:
+                percentage: 0.11
+              landscape: available
+            label: "123"
+            lightModeStyleName: number
+            darkModeStyleName: number-dark
+          - action:
+              keyboardType: Candy-中文数字符号
+            width:
+              portrait:
+                percentage: 0.11
+              landscape: available
+            label: 符
+            lightModeStyleName: character
+            darkModeStyleName: character-dark
+          - action:
+              character:
+                char: ，
+            width:
+              portrait:
+                percentage: 0.11
+              landscape: available
+            label: ，
+            swipe:
+              - action:
+                  character:
+                    char: 。
+                label: 。
+                display: true
+                processByRIME: true
+                direction: up
+            lightModeStyleName: comma
+            darkModeStyleName: comma-dark
+          - action: space
+            width:
+              portrait:
+                percentage: 0.34
+              landscape: available
+            label:
+              text: ""
+            swipe:
+              - action:
+                  shortcutCommand: "#次选上屏"
+                label:
+                  text: ""
+                display: true
+                processByRIME: true
+                direction: up
+              - action:
+                  shortcutCommand: "#关闭键盘"
+                label:
+                  text: ""
+                display: true
+                processByRIME: true
+                direction: down
+            lightModeStyleName: space
+            darkModeStyleName: space-dark
+          - action:
+              keyboardType: Candy-英文
+            width:
+              portrait:
+                percentage: 0.11
+              landscape: available
+            label: 中/英
+            swipe:
+              - action:
+                  shortcutCommand: "#三选上屏"
+                label:
+                  text: ""
+                display: true
+                processByRIME: true
+                direction: up
+            lightModeStyleName: cn_en
+            darkModeStyleName: cn_en-dark
+          - action: enter
+            width:
+              portrait:
+                percentage: 0.22
+              landscape: available
+            label: 
+            swipe:
+              - action:
+                  shortcutCommand: "#换行"
+                label:
+                  text: ""
+                display: true
+                processByRIME: true
+                direction: up
+            lightModeStyleName: enter
+            darkModeStyleName: enter-dark
+        rowHeight:
+          portrait: 54
+          landscape: 60
+    buttonInsets:
+      left: 2
+      bottom: 4
+      top: 6
+      right: 3
+    keyStyle:
+      function: *a1
+      function-dark: *a2
+      key-1: *a15
+      key-1-dark: *a16
+      key-2: *a17
+      key-2-dark: *a18
+      key-3: *a19
+      key-3-dark: *a20
+      key-4: *a21
+      key-4-dark: *a22
+      key-5: *a23
+      key-5-dark: *a24
+      key-6: *a25
+      key-6-dark: *a26
+      key-7: *a27
+      key-7-dark: *a28
+      key-8: *a29
+      key-8-dark: *a30
+      shift: *a3
+      shift-dark: *a4
+      backspace: *a7
+      backspace-dark: *a8
+      number: *a5
+      number-dark: *a6
+      character: *a31
+      character-dark: *a32
+      comma: *a33
+      comma-dark: *a34
+      space: *a11
+      space-dark: *a12
+      cn_en: *a9
+      cn_en-dark: *a10
+      enter: *a13
+      enter-dark: *a14
