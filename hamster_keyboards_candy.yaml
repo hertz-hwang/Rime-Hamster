@@ -82,6 +82,12 @@ keyboards:
                 char: ""
             width: available
             label: 糖
+            callout:
+              - action:
+                  shortcutCommand:
+                    openURL:
+                      url: hamster://dev.fuxiao.app.hamster/uploadInputSchema
+                label: Wi-Fi上传
             lightModeStyleName: function
             darkModeStyleName: function-dark
           - action:
