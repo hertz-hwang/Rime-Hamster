@@ -421,7 +421,7 @@ keyboards:
             swipe:
               - action:
                   character:
-                    char: ：
+                    char: ":"
                 label:
                   text: ""
                 display: true
@@ -440,7 +440,7 @@ keyboards:
             swipe:
               - action:
                   character:
-                    char: ；
+                    char: ;
                 label:
                   text: ""
                 display: true
@@ -465,7 +465,7 @@ keyboards:
             swipe:
               - action:
                   character:
-                    char: （
+                    char: (
                 label:
                   text: ""
                 display: true
@@ -484,7 +484,7 @@ keyboards:
             swipe:
               - action:
                   character:
-                    char: ）
+                    char: )
                 label:
                   text: ""
                 display: true
@@ -691,9 +691,8 @@ keyboards:
             swipe:
               - action:
                   character:
-                    char: 、
-                label:
-                  text: ""
+                    char: \
+                label: 、
                 display: true
                 processByRIME: true
                 direction: up
@@ -720,7 +719,7 @@ keyboards:
             swipe:
               - action:
                   character:
-                    char: ？
+                    char: "?"
                 label:
                   text: ""
                 display: true
@@ -739,7 +738,7 @@ keyboards:
             swipe:
               - action:
                   character:
-                    char: ！
+                    char: "!"
                 label:
                   text: ""
                 display: true
