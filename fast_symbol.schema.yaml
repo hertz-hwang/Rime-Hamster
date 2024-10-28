@@ -1,0 +1,17 @@
+# Rime schema
+# encoding: utf-8
+
+schema:
+  schema_id: fast_symbol
+  name: fast_symbol
+  description: 用于词典部署（不用勾选）
+
+engine:
+  translators:
+    - table_translator
+
+translator:
+  dictionary: fast_symbol
+  enable_user_dict: false
+  enable_sentence: false
+  enable_encoder: false

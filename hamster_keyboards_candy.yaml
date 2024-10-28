@@ -149,9 +149,7 @@ keyboards:
               character:
                 char: q
             width:
-              portrait:
-                percentage: 0.1
-              landscape: available
+              percentage: 0.1
             label: Q
             swipe:
               - action:
@@ -175,9 +173,7 @@ keyboards:
               character:
                 char: w
             width:
-              portrait:
-                percentage: 0.1
-              landscape: available
+              percentage: 0.1
             label: W
             swipe:
               - action:
@@ -194,9 +190,7 @@ keyboards:
               character:
                 char: e
             width:
-              portrait:
-                percentage: 0.1
-              landscape: available
+              percentage: 0.1
             label: E
             swipe:
               - action:
@@ -213,9 +207,7 @@ keyboards:
               character:
                 char: r
             width:
-              portrait:
-                percentage: 0.1
-              landscape: available
+              percentage: 0.1
             label: R
             swipe:
               - action:
@@ -232,9 +224,7 @@ keyboards:
               character:
                 char: t
             width:
-              portrait:
-                percentage: 0.1
-              landscape: available
+              percentage: 0.1
             label: T
             swipe:
               - action:
@@ -251,9 +241,7 @@ keyboards:
               character:
                 char: y
             width:
-              portrait:
-                percentage: 0.1
-              landscape: available
+              percentage: 0.1
             label: Y
             swipe:
               - action:
@@ -270,9 +258,7 @@ keyboards:
               character:
                 char: u
             width:
-              portrait:
-                percentage: 0.1
-              landscape: available
+              percentage: 0.1
             label: U
             swipe:
               - action:
@@ -283,15 +269,21 @@ keyboards:
                 display: true
                 processByRIME: true
                 direction: up
+              - action:
+                  character:
+                    char: "["
+                label:
+                  text: ""
+                display: true
+                processByRIME: true
+                direction: down
             lightModeStyleName: key-6
             darkModeStyleName: key-6-dark
           - action:
               character:
                 char: i
             width:
-              portrait:
-                percentage: 0.1
-              landscape: available
+              percentage: 0.1
             label: I
             swipe:
               - action:
@@ -302,15 +294,21 @@ keyboards:
                 display: true
                 processByRIME: true
                 direction: up
+              - action:
+                  character:
+                    char: "]"
+                label:
+                  text: ""
+                display: true
+                processByRIME: true
+                direction: down
             lightModeStyleName: key-7
             darkModeStyleName: key-7-dark
           - action:
               character:
                 char: o
             width:
-              portrait:
-                percentage: 0.1
-              landscape: available
+              percentage: 0.1
             label: O
             swipe:
               - action:
@@ -333,7 +331,10 @@ keyboards:
           - action:
               character:
                 char: p
-            width: available
+            width:
+              portrait: available
+              landscape:
+                percentage: 0.1
             label: P
             swipe:
               - action:
@@ -361,18 +362,14 @@ keyboards:
               characterMargin:
                 char: ""
             width:
-              portrait:
-                percentage: 0.05
-              landscape: available
+              percentage: 0.05
             label:
               text: ""
           - action:
               character:
                 char: a
             width:
-              portrait:
-                percentage: 0.1
-              landscape: available
+              percentage: 0.1
             label: A
             swipe:
               - action:
@@ -395,9 +392,7 @@ keyboards:
               character:
                 char: s
             width:
-              portrait:
-                percentage: 0.1
-              landscape: available
+              percentage: 0.1
             label: S
             swipe:
               - action:
@@ -414,9 +409,7 @@ keyboards:
               character:
                 char: d
             width:
-              portrait:
-                percentage: 0.1
-              landscape: available
+              percentage: 0.1
             label: D
             swipe:
               - action:
@@ -433,9 +426,7 @@ keyboards:
               character:
                 char: f
             width:
-              portrait:
-                percentage: 0.1
-              landscape: available
+              percentage: 0.1
             label: F
             swipe:
               - action:
@@ -458,9 +449,7 @@ keyboards:
               character:
                 char: g
             width:
-              portrait:
-                percentage: 0.1
-              landscape: available
+              percentage: 0.1
             label: G
             swipe:
               - action:
@@ -477,9 +466,7 @@ keyboards:
               character:
                 char: h
             width:
-              portrait:
-                percentage: 0.1
-              landscape: available
+              percentage: 0.1
             label: H
             swipe:
               - action:
@@ -496,9 +483,7 @@ keyboards:
               character:
                 char: j
             width:
-              portrait:
-                percentage: 0.1
-              landscape: available
+              percentage: 0.1
             label: J
             swipe:
               - action:
@@ -515,9 +500,7 @@ keyboards:
               character:
                 char: k
             width:
-              portrait:
-                percentage: 0.1
-              landscape: available
+              percentage: 0.1
             label: K
             swipe:
               - action:
@@ -541,9 +524,7 @@ keyboards:
               character:
                 char: l
             width:
-              portrait:
-                percentage: 0.1
-              landscape: available
+              percentage: 0.1
             label: L
             swipe:
               - action:
@@ -567,9 +548,7 @@ keyboards:
               characterMargin:
                 char: ""
             width:
-              portrait:
-                percentage: 0.05
-              landscape: available
+              percentage: 0.05
             label:
               text: ""
         rowHeight:
@@ -578,9 +557,7 @@ keyboards:
       - keys:
           - action: shift
             width:
-              portrait:
-                percentage: 0.1
-              landscape: available
+              percentage: 0.1
             label:
               text: ""
             swipe:
@@ -596,18 +573,14 @@ keyboards:
               characterMargin:
                 char: ""
             width:
-              portrait:
-                percentage: 0.01
-              landscape: available
+              percentage: 0.01
             label:
               text: ""
           - action:
               character:
                 char: z
             width:
-              portrait:
-                percentage: 0.1
-              landscape: available
+              percentage: 0.1
             label: Z
             swipe:
               - action:
@@ -630,9 +603,7 @@ keyboards:
               character:
                 char: x
             width:
-              portrait:
-                percentage: 0.1
-              landscape: available
+              percentage: 0.1
             label: X
             swipe:
               - action:
@@ -655,9 +626,7 @@ keyboards:
               character:
                 char: c
             width:
-              portrait:
-                percentage: 0.1
-              landscape: available
+              percentage: 0.1
             label: C
             swipe:
               - action:
@@ -684,9 +653,7 @@ keyboards:
               character:
                 char: v
             width:
-              portrait:
-                percentage: 0.1
-              landscape: available
+              percentage: 0.1
             label: V
             swipe:
               - action:
@@ -712,9 +679,7 @@ keyboards:
               character:
                 char: b
             width:
-              portrait:
-                percentage: 0.1
-              landscape: available
+              percentage: 0.1
             label: B
             swipe:
               - action:
@@ -725,15 +690,20 @@ keyboards:
                 display: true
                 processByRIME: true
                 direction: up
+              - action:
+                  character:
+                    char: \
+                label: 拼音
+                display: true
+                processByRIME: true
+                direction: down
             lightModeStyleName: key-4
             darkModeStyleName: key-4-dark
           - action:
               character:
                 char: n
             width:
-              portrait:
-                percentage: 0.1
-              landscape: available
+              percentage: 0.1
             label: N
             swipe:
               - action:
@@ -757,9 +727,7 @@ keyboards:
               character:
                 char: m
             width:
-              portrait:
-                percentage: 0.1
-              landscape: available
+              percentage: 0.1
             label: M
             swipe:
               - action:
@@ -783,16 +751,12 @@ keyboards:
               characterMargin:
                 char: ""
             width:
-              portrait:
-                percentage: 0.01
-              landscape: available
+              percentage: 0.01
             label:
               text: ""
           - action: backspace
             width:
-              portrait:
-                percentage: 0.18
-              landscape: available
+              percentage: 0.18
             label: 󰁮
             swipe:
               - action:
@@ -818,18 +782,14 @@ keyboards:
           - action:
               keyboardType: Candy-中文数字
             width:
-              portrait:
-                percentage: 0.11
-              landscape: available
+              percentage: 0.11
             label: "123"
             lightModeStyleName: number
             darkModeStyleName: number-dark
           - action:
               keyboardType: Candy-中文数字符号
             width:
-              portrait:
-                percentage: 0.11
-              landscape: available
+              percentage: 0.11
             label: 符
             callout:
               - action:
@@ -858,9 +818,7 @@ keyboards:
               character:
                 char: ，
             width:
-              portrait:
-                percentage: 0.11
-              landscape: available
+              percentage: 0.11
             label: ，
             swipe:
               - action:
@@ -898,8 +856,7 @@ keyboards:
               portrait:
                 percentage: 0.34
               landscape: available
-            label:
-              text: ""
+            label: 󱇄󱥢 赫兹󰝹虎码 󱥢󱇂
             swipe:
               - action:
                   shortcutCommand: "#次选上屏"
@@ -920,9 +877,7 @@ keyboards:
           - action:
               keyboardType: Candy-英文
             width:
-              portrait:
-                percentage: 0.11
-              landscape: available
+              percentage: 0.11
             label: 中/英
             swipe:
               - action:
@@ -941,9 +896,7 @@ keyboards:
             darkModeStyleName: cn_en-dark
           - action: enter
             width:
-              portrait:
-                percentage: 0.22
-              landscape: available
+              percentage: 0.22
             label: 
             swipe:
               - action:
@@ -1581,8 +1534,8 @@ keyboards:
         lowerEdgeColor: "0xFEFEFE"
         shadowColor: "0x000000"
         shadowSize: 2
-        fontSize: 18
-        swipeFontSize: 12
+        fontSize: 13
+        swipeFontSize: 10
       space-dark: &a12
         name: space-dark
         buttonBackgroundColor: "0x99BE89"
@@ -1601,8 +1554,8 @@ keyboards:
         lowerEdgeColor: "0xFEFEFE"
         shadowColor: "0xFFFFFF"
         shadowSize: 2
-        fontSize: 18
-        swipeFontSize: 12
+        fontSize: 13
+        swipeFontSize: 10
       cn_en: &a9
         name: cn_en
         buttonBackgroundColor: "0xDAB1A9"
@@ -2110,9 +2063,7 @@ keyboards:
                 char: ！
             processByRIME: false
             width:
-              portrait:
-                percentage: 0.1
-              landscape: available
+              percentage: 0.1
             label: "!"
             lightModeStyleName: key-1
             darkModeStyleName: key-1-dark
@@ -2121,9 +2072,7 @@ keyboards:
                 char: "@"
             processByRIME: false
             width:
-              portrait:
-                percentage: 0.1
-              landscape: available
+              percentage: 0.1
             label: "@"
             lightModeStyleName: key-2
             darkModeStyleName: key-2-dark
@@ -2132,9 +2081,7 @@ keyboards:
                 char: "#"
             processByRIME: false
             width:
-              portrait:
-                percentage: 0.1
-              landscape: available
+              percentage: 0.1
             label: "#"
             lightModeStyleName: key-3
             darkModeStyleName: key-3-dark
@@ -2143,9 +2090,7 @@ keyboards:
                 char: ￥
             processByRIME: false
             width:
-              portrait:
-                percentage: 0.1
-              landscape: available
+              percentage: 0.1
             label: ￥
             lightModeStyleName: key-4
             darkModeStyleName: key-4-dark
@@ -2154,9 +2099,7 @@ keyboards:
                 char: "%"
             processByRIME: false
             width:
-              portrait:
-                percentage: 0.1
-              landscape: available
+              percentage: 0.1
             label: "%"
             lightModeStyleName: key-4
             darkModeStyleName: key-4-dark
@@ -2165,9 +2108,7 @@ keyboards:
                 char: ……
             processByRIME: false
             width:
-              portrait:
-                percentage: 0.1
-              landscape: available
+              percentage: 0.1
             label: ……
             lightModeStyleName: key-5
             darkModeStyleName: key-5-dark
@@ -2176,9 +2117,7 @@ keyboards:
                 char: "&"
             processByRIME: false
             width:
-              portrait:
-                percentage: 0.1
-              landscape: available
+              percentage: 0.1
             label: "&"
             lightModeStyleName: key-6
             darkModeStyleName: key-6-dark
@@ -2187,9 +2126,7 @@ keyboards:
                 char: "*"
             processByRIME: false
             width:
-              portrait:
-                percentage: 0.1
-              landscape: available
+              percentage: 0.1
             label: "*"
             lightModeStyleName: key-7
             darkModeStyleName: key-7-dark
@@ -2198,9 +2135,7 @@ keyboards:
                 char: （
             processByRIME: false
             width:
-              portrait:
-                percentage: 0.1
-              landscape: available
+              percentage: 0.1
             label: （
             lightModeStyleName: key-8
             darkModeStyleName: key-8-dark
@@ -2208,7 +2143,10 @@ keyboards:
               character:
                 char: ）
             processByRIME: false
-            width: available
+            width:
+              portrait: available
+              landscape:
+                percentage: 0.1
             label: ）
             lightModeStyleName: key-8
             darkModeStyleName: key-8-dark
@@ -2220,9 +2158,7 @@ keyboards:
               characterMargin:
                 char: ""
             width:
-              portrait:
-                percentage: 0.05
-              landscape: available
+              percentage: 0.05
             label:
               text: ""
           - action:
@@ -2230,9 +2166,7 @@ keyboards:
                 char: ｜
             processByRIME: false
             width:
-              portrait:
-                percentage: 0.1
-              landscape: available
+              percentage: 0.1
             label: ｜
             lightModeStyleName: key-1
             darkModeStyleName: key-1-dark
@@ -2241,9 +2175,7 @@ keyboards:
                 char: —
             processByRIME: false
             width:
-              portrait:
-                percentage: 0.1
-              landscape: available
+              percentage: 0.1
             label: —
             lightModeStyleName: key-2
             darkModeStyleName: key-2-dark
@@ -2252,9 +2184,7 @@ keyboards:
                 char: 、
             processByRIME: false
             width:
-              portrait:
-                percentage: 0.1
-              landscape: available
+              percentage: 0.1
             label: 、
             lightModeStyleName: key-3
             darkModeStyleName: key-3-dark
@@ -2263,9 +2193,7 @@ keyboards:
                 char: →
             processByRIME: false
             width:
-              portrait:
-                percentage: 0.1
-              landscape: available
+              percentage: 0.1
             label: →
             lightModeStyleName: key-4
             darkModeStyleName: key-4-dark
@@ -2274,9 +2202,7 @@ keyboards:
                 char: 《
             processByRIME: false
             width:
-              portrait:
-                percentage: 0.1
-              landscape: available
+              percentage: 0.1
             label: 《
             lightModeStyleName: key-4
             darkModeStyleName: key-4-dark
@@ -2285,9 +2211,7 @@ keyboards:
                 char: 》
             processByRIME: false
             width:
-              portrait:
-                percentage: 0.1
-              landscape: available
+              percentage: 0.1
             label: 》
             lightModeStyleName: key-5
             darkModeStyleName: key-5-dark
@@ -2296,9 +2220,7 @@ keyboards:
                 char: 「
             processByRIME: false
             width:
-              portrait:
-                percentage: 0.1
-              landscape: available
+              percentage: 0.1
             label: 「
             lightModeStyleName: key-6
             darkModeStyleName: key-6-dark
@@ -2307,9 +2229,7 @@ keyboards:
                 char: 」
             processByRIME: false
             width:
-              portrait:
-                percentage: 0.1
-              landscape: available
+              percentage: 0.1
             label: 」
             lightModeStyleName: key-7
             darkModeStyleName: key-7-dark
@@ -2318,9 +2238,7 @@ keyboards:
                 char: ？
             processByRIME: false
             width:
-              portrait:
-                percentage: 0.1
-              landscape: available
+              percentage: 0.1
             label: ？
             lightModeStyleName: key-8
             darkModeStyleName: key-8-dark
@@ -2328,9 +2246,7 @@ keyboards:
               characterMargin:
                 char: ""
             width:
-              portrait:
-                percentage: 0.05
-              landscape: available
+              percentage: 0.05
             label:
               text: ""
         rowHeight:
@@ -2340,9 +2256,7 @@ keyboards:
           - action:
               keyboardType: classifySymbolic
             width:
-              portrait:
-                percentage: 0.1
-              landscape: available
+              percentage: 0.1
             label: 更多
             swipe:
               - action: tab
@@ -2357,9 +2271,7 @@ keyboards:
               characterMargin:
                 char: ""
             width:
-              portrait:
-                percentage: 0.01
-              landscape: available
+              percentage: 0.01
             label:
               text: ""
           - action:
@@ -2367,9 +2279,7 @@ keyboards:
                 char: ·
             processByRIME: false
             width:
-              portrait:
-                percentage: 0.1
-              landscape: available
+              percentage: 0.1
             label: ·
             lightModeStyleName: key-1
             darkModeStyleName: key-1-dark
@@ -2378,9 +2288,7 @@ keyboards:
                 char: 【
             processByRIME: false
             width:
-              portrait:
-                percentage: 0.1
-              landscape: available
+              percentage: 0.1
             label: 【
             lightModeStyleName: key-2
             darkModeStyleName: key-2-dark
@@ -2389,9 +2297,7 @@ keyboards:
                 char: 】
             processByRIME: false
             width:
-              portrait:
-                percentage: 0.1
-              landscape: available
+              percentage: 0.1
             label: 】
             lightModeStyleName: key-3
             darkModeStyleName: key-3-dark
@@ -2400,9 +2306,7 @@ keyboards:
                 char: 『
             processByRIME: false
             width:
-              portrait:
-                percentage: 0.1
-              landscape: available
+              percentage: 0.1
             label: 『
             lightModeStyleName: key-4
             darkModeStyleName: key-4-dark
@@ -2411,9 +2315,7 @@ keyboards:
                 char: 』
             processByRIME: false
             width:
-              portrait:
-                percentage: 0.1
-              landscape: available
+              percentage: 0.1
             label: 』
             lightModeStyleName: key-4
             darkModeStyleName: key-4-dark
@@ -2422,9 +2324,7 @@ keyboards:
                 char: “
             processByRIME: false
             width:
-              portrait:
-                percentage: 0.1
-              landscape: available
+              percentage: 0.1
             label: “
             lightModeStyleName: key-5
             darkModeStyleName: key-5-dark
@@ -2433,9 +2333,7 @@ keyboards:
                 char: ”
             processByRIME: false
             width:
-              portrait:
-                percentage: 0.1
-              landscape: available
+              percentage: 0.1
             label: ”
             lightModeStyleName: key-6
             darkModeStyleName: key-6-dark
@@ -2443,16 +2341,12 @@ keyboards:
               characterMargin:
                 char: ""
             width:
-              portrait:
-                percentage: 0.01
-              landscape: available
+              percentage: 0.01
             label:
               text: ""
           - action: backspace
             width:
-              portrait:
-                percentage: 0.18
-              landscape: available
+              percentage: 0.18
             label: 󰁮
             swipe:
               - action:
@@ -2478,18 +2372,14 @@ keyboards:
           - action:
               keyboardType: Candy-中文数字
             width:
-              portrait:
-                percentage: 0.11
-              landscape: available
+              percentage: 0.11
             label: "123"
             lightModeStyleName: number
             darkModeStyleName: number-dark
           - action:
               keyboardType: Candy-中文
             width:
-              portrait:
-                percentage: 0.11
-              landscape: available
+              percentage: 0.11
             label: 返
             lightModeStyleName: character
             darkModeStyleName: character-dark
@@ -2497,9 +2387,7 @@ keyboards:
               character:
                 char: ","
             width:
-              portrait:
-                percentage: 0.11
-              landscape: available
+              percentage: 0.11
             label:
               text: ""
             swipe:
@@ -2534,12 +2422,8 @@ keyboards:
             lightModeStyleName: comma
             darkModeStyleName: comma-dark
           - action: space
-            width:
-              portrait:
-                percentage: 0.34
-              landscape: available
-            label:
-              text: ""
+            width: available
+            label: 󱇄󱥢 赫兹󰝹符号 󱥢󱇂
             swipe:
               - action:
                   shortcutCommand: "#关闭键盘"
@@ -2553,17 +2437,13 @@ keyboards:
           - action:
               keyboardType: Candy-英文
             width:
-              portrait:
-                percentage: 0.11
-              landscape: available
+              percentage: 0.11
             label: 中/英
             lightModeStyleName: cn_en
             darkModeStyleName: cn_en-dark
           - action: enter
             width:
-              portrait:
-                percentage: 0.22
-              landscape: available
+              percentage: 0.22
             label: 
             swipe:
               - action:
@@ -2703,9 +2583,7 @@ keyboards:
                 char: q
             processByRIME: false
             width:
-              portrait:
-                percentage: 0.1
-              landscape: available
+              percentage: 0.1
             label:
               text: ""
             swipe:
@@ -2724,9 +2602,7 @@ keyboards:
                 char: w
             processByRIME: false
             width:
-              portrait:
-                percentage: 0.1
-              landscape: available
+              percentage: 0.1
             label:
               text: ""
             swipe:
@@ -2745,9 +2621,7 @@ keyboards:
                 char: e
             processByRIME: false
             width:
-              portrait:
-                percentage: 0.1
-              landscape: available
+              percentage: 0.1
             label:
               text: ""
             swipe:
@@ -2766,9 +2640,7 @@ keyboards:
                 char: r
             processByRIME: false
             width:
-              portrait:
-                percentage: 0.1
-              landscape: available
+              percentage: 0.1
             label:
               text: ""
             swipe:
@@ -2787,9 +2659,7 @@ keyboards:
                 char: t
             processByRIME: false
             width:
-              portrait:
-                percentage: 0.1
-              landscape: available
+              percentage: 0.1
             label:
               text: ""
             swipe:
@@ -2808,9 +2678,7 @@ keyboards:
                 char: y
             processByRIME: false
             width:
-              portrait:
-                percentage: 0.1
-              landscape: available
+              percentage: 0.1
             label:
               text: ""
             swipe:
@@ -2829,9 +2697,7 @@ keyboards:
                 char: u
             processByRIME: false
             width:
-              portrait:
-                percentage: 0.1
-              landscape: available
+              percentage: 0.1
             label:
               text: ""
             swipe:
@@ -2850,9 +2716,7 @@ keyboards:
                 char: i
             processByRIME: false
             width:
-              portrait:
-                percentage: 0.1
-              landscape: available
+              percentage: 0.1
             label:
               text: ""
             swipe:
@@ -2871,9 +2735,7 @@ keyboards:
                 char: o
             processByRIME: false
             width:
-              portrait:
-                percentage: 0.1
-              landscape: available
+              percentage: 0.1
             label:
               text: ""
             swipe:
@@ -2891,7 +2753,10 @@ keyboards:
               character:
                 char: p
             processByRIME: false
-            width: available
+            width:
+              portrait: available
+              landscape:
+                percentage: 0.1
             label:
               text: ""
             swipe:
@@ -2913,9 +2778,7 @@ keyboards:
               characterMargin:
                 char: ""
             width:
-              portrait:
-                percentage: 0.05
-              landscape: available
+              percentage: 0.05
             label:
               text: ""
           - action:
@@ -2923,9 +2786,7 @@ keyboards:
                 char: a
             processByRIME: false
             width:
-              portrait:
-                percentage: 0.1
-              landscape: available
+              percentage: 0.1
             label:
               text: ""
             swipe:
@@ -2950,9 +2811,7 @@ keyboards:
                 char: s
             processByRIME: false
             width:
-              portrait:
-                percentage: 0.1
-              landscape: available
+              percentage: 0.1
             label:
               text: ""
             swipe:
@@ -2971,9 +2830,7 @@ keyboards:
                 char: d
             processByRIME: false
             width:
-              portrait:
-                percentage: 0.1
-              landscape: available
+              percentage: 0.1
             label:
               text: ""
             swipe:
@@ -2992,9 +2849,7 @@ keyboards:
                 char: f
             processByRIME: false
             width:
-              portrait:
-                percentage: 0.1
-              landscape: available
+              percentage: 0.1
             label:
               text: ""
             swipe:
@@ -3019,9 +2874,7 @@ keyboards:
                 char: g
             processByRIME: false
             width:
-              portrait:
-                percentage: 0.1
-              landscape: available
+              percentage: 0.1
             label:
               text: ""
             swipe:
@@ -3040,9 +2893,7 @@ keyboards:
                 char: h
             processByRIME: false
             width:
-              portrait:
-                percentage: 0.1
-              landscape: available
+              percentage: 0.1
             label:
               text: ""
             swipe:
@@ -3061,9 +2912,7 @@ keyboards:
                 char: j
             processByRIME: false
             width:
-              portrait:
-                percentage: 0.1
-              landscape: available
+              percentage: 0.1
             label:
               text: ""
             swipe:
@@ -3082,9 +2931,7 @@ keyboards:
                 char: k
             processByRIME: false
             width:
-              portrait:
-                percentage: 0.1
-              landscape: available
+              percentage: 0.1
             label:
               text: ""
             swipe:
@@ -3103,9 +2950,7 @@ keyboards:
                 char: l
             processByRIME: false
             width:
-              portrait:
-                percentage: 0.1
-              landscape: available
+              percentage: 0.1
             label:
               text: ""
             swipe:
@@ -3123,9 +2968,7 @@ keyboards:
               characterMargin:
                 char: ""
             width:
-              portrait:
-                percentage: 0.05
-              landscape: available
+              percentage: 0.05
             label:
               text: ""
         rowHeight:
@@ -3134,9 +2977,7 @@ keyboards:
       - keys:
           - action: shift
             width:
-              portrait:
-                percentage: 0.1
-              landscape: available
+              percentage: 0.1
             label:
               text: ""
             swipe:
@@ -3152,9 +2993,7 @@ keyboards:
               characterMargin:
                 char: ""
             width:
-              portrait:
-                percentage: 0.01
-              landscape: available
+              percentage: 0.01
             label:
               text: ""
           - action:
@@ -3162,9 +3001,7 @@ keyboards:
                 char: z
             processByRIME: false
             width:
-              portrait:
-                percentage: 0.1
-              landscape: available
+              percentage: 0.1
             label:
               text: ""
             swipe:
@@ -3189,9 +3026,7 @@ keyboards:
                 char: x
             processByRIME: false
             width:
-              portrait:
-                percentage: 0.1
-              landscape: available
+              percentage: 0.1
             label:
               text: ""
             swipe:
@@ -3216,9 +3051,7 @@ keyboards:
                 char: c
             processByRIME: false
             width:
-              portrait:
-                percentage: 0.1
-              landscape: available
+              percentage: 0.1
             label:
               text: ""
             swipe:
@@ -3247,9 +3080,7 @@ keyboards:
                 char: v
             processByRIME: false
             width:
-              portrait:
-                percentage: 0.1
-              landscape: available
+              percentage: 0.1
             label:
               text: ""
             swipe:
@@ -3278,9 +3109,7 @@ keyboards:
                 char: b
             processByRIME: false
             width:
-              portrait:
-                percentage: 0.1
-              landscape: available
+              percentage: 0.1
             label:
               text: ""
             swipe:
@@ -3299,9 +3128,7 @@ keyboards:
                 char: n
             processByRIME: false
             width:
-              portrait:
-                percentage: 0.1
-              landscape: available
+              percentage: 0.1
             label:
               text: ""
             swipe:
@@ -3320,9 +3147,7 @@ keyboards:
                 char: m
             processByRIME: false
             width:
-              portrait:
-                percentage: 0.1
-              landscape: available
+              percentage: 0.1
             label:
               text: ""
             swipe:
@@ -3340,16 +3165,12 @@ keyboards:
               characterMargin:
                 char: ""
             width:
-              portrait:
-                percentage: 0.01
-              landscape: available
+              percentage: 0.01
             label:
               text: ""
           - action: backspace
             width:
-              portrait:
-                percentage: 0.18
-              landscape: available
+              percentage: 0.18
             label: 󰁮
             swipe:
               - action:
@@ -3375,18 +3196,14 @@ keyboards:
           - action:
               keyboardType: Candy-英文数字
             width:
-              portrait:
-                percentage: 0.11
-              landscape: available
+              percentage: 0.11
             label: "123"
             lightModeStyleName: number
             darkModeStyleName: number-dark
           - action:
               keyboardType: Candy-英文数字符号
             width:
-              portrait:
-                percentage: 0.11
-              landscape: available
+              percentage: 0.11
             label: 符
             lightModeStyleName: character
             darkModeStyleName: character-dark
@@ -3395,9 +3212,7 @@ keyboards:
                 char: .
             processByRIME: false
             width:
-              portrait:
-                percentage: 0.11
-              landscape: available
+              percentage: 0.11
             label: .
             swipe:
               - action:
@@ -3435,8 +3250,7 @@ keyboards:
               portrait:
                 percentage: 0.34
               landscape: available
-            label:
-              text: ""
+            label: 󱇄󱥢 赫兹󰝹英文 󱥢󱇂
             swipe:
               - action:
                   shortcutCommand: "#关闭键盘"
@@ -3450,17 +3264,13 @@ keyboards:
           - action:
               keyboardType: Candy-中文
             width:
-              portrait:
-                percentage: 0.11
-              landscape: available
+              percentage: 0.11
             label: 英/中
             lightModeStyleName: cn_en
             darkModeStyleName: cn_en-dark
           - action: enter
             width:
-              portrait:
-                percentage: 0.22
-              landscape: available
+              percentage: 0.22
             label: 
             swipe:
               - action:
@@ -3943,9 +3753,7 @@ keyboards:
                 char: "!"
             processByRIME: false
             width:
-              portrait:
-                percentage: 0.1
-              landscape: available
+              percentage: 0.1
             label: "!"
             lightModeStyleName: key-1
             darkModeStyleName: key-1-dark
@@ -3954,9 +3762,7 @@ keyboards:
                 char: "@"
             processByRIME: false
             width:
-              portrait:
-                percentage: 0.1
-              landscape: available
+              percentage: 0.1
             label: "@"
             lightModeStyleName: key-2
             darkModeStyleName: key-2-dark
@@ -3965,9 +3771,7 @@ keyboards:
                 char: "#"
             processByRIME: false
             width:
-              portrait:
-                percentage: 0.1
-              landscape: available
+              percentage: 0.1
             label: "#"
             lightModeStyleName: key-3
             darkModeStyleName: key-3-dark
@@ -3976,9 +3780,7 @@ keyboards:
                 char: $
             processByRIME: false
             width:
-              portrait:
-                percentage: 0.1
-              landscape: available
+              percentage: 0.1
             label: $
             lightModeStyleName: key-4
             darkModeStyleName: key-4-dark
@@ -3987,9 +3789,7 @@ keyboards:
                 char: "%"
             processByRIME: false
             width:
-              portrait:
-                percentage: 0.1
-              landscape: available
+              percentage: 0.1
             label: "%"
             lightModeStyleName: key-4
             darkModeStyleName: key-4-dark
@@ -3998,9 +3798,7 @@ keyboards:
                 char: ^
             processByRIME: false
             width:
-              portrait:
-                percentage: 0.1
-              landscape: available
+              percentage: 0.1
             label: ^
             lightModeStyleName: key-5
             darkModeStyleName: key-5-dark
@@ -4009,9 +3807,7 @@ keyboards:
                 char: "&"
             processByRIME: false
             width:
-              portrait:
-                percentage: 0.1
-              landscape: available
+              percentage: 0.1
             label: "&"
             lightModeStyleName: key-6
             darkModeStyleName: key-6-dark
@@ -4020,9 +3816,7 @@ keyboards:
                 char: "*"
             processByRIME: false
             width:
-              portrait:
-                percentage: 0.1
-              landscape: available
+              percentage: 0.1
             label: "*"
             lightModeStyleName: key-7
             darkModeStyleName: key-7-dark
@@ -4031,9 +3825,7 @@ keyboards:
                 char: (
             processByRIME: false
             width:
-              portrait:
-                percentage: 0.1
-              landscape: available
+              percentage: 0.1
             label: (
             lightModeStyleName: key-8
             darkModeStyleName: key-8-dark
@@ -4041,7 +3833,10 @@ keyboards:
               character:
                 char: )
             processByRIME: false
-            width: available
+            width:
+              portrait: available
+              landscape:
+                percentage: 0.1
             label: )
             lightModeStyleName: key-8
             darkModeStyleName: key-8-dark
@@ -4053,9 +3848,7 @@ keyboards:
               characterMargin:
                 char: ""
             width:
-              portrait:
-                percentage: 0.05
-              landscape: available
+              percentage: 0.05
             label:
               text: ""
           - action:
@@ -4063,9 +3856,7 @@ keyboards:
                 char: "|"
             processByRIME: false
             width:
-              portrait:
-                percentage: 0.1
-              landscape: available
+              percentage: 0.1
             label: "|"
             lightModeStyleName: key-1
             darkModeStyleName: key-1-dark
@@ -4074,9 +3865,7 @@ keyboards:
                 char: "-"
             processByRIME: false
             width:
-              portrait:
-                percentage: 0.1
-              landscape: available
+              percentage: 0.1
             label: "-"
             lightModeStyleName: key-2
             darkModeStyleName: key-2-dark
@@ -4085,9 +3874,7 @@ keyboards:
                 char: +
             processByRIME: false
             width:
-              portrait:
-                percentage: 0.1
-              landscape: available
+              percentage: 0.1
             label: +
             lightModeStyleName: key-3
             darkModeStyleName: key-3-dark
@@ -4096,9 +3883,7 @@ keyboards:
                 char: =
             processByRIME: false
             width:
-              portrait:
-                percentage: 0.1
-              landscape: available
+              percentage: 0.1
             label: =
             lightModeStyleName: key-4
             darkModeStyleName: key-4-dark
@@ -4107,9 +3892,7 @@ keyboards:
                 char: "{"
             processByRIME: false
             width:
-              portrait:
-                percentage: 0.1
-              landscape: available
+              percentage: 0.1
             label: "{"
             lightModeStyleName: key-4
             darkModeStyleName: key-4-dark
@@ -4118,9 +3901,7 @@ keyboards:
                 char: "}"
             processByRIME: false
             width:
-              portrait:
-                percentage: 0.1
-              landscape: available
+              percentage: 0.1
             label: "}"
             lightModeStyleName: key-5
             darkModeStyleName: key-5-dark
@@ -4129,9 +3910,7 @@ keyboards:
                 char: "["
             processByRIME: false
             width:
-              portrait:
-                percentage: 0.1
-              landscape: available
+              percentage: 0.1
             label: "["
             lightModeStyleName: key-6
             darkModeStyleName: key-6-dark
@@ -4140,9 +3919,7 @@ keyboards:
                 char: "]"
             processByRIME: false
             width:
-              portrait:
-                percentage: 0.1
-              landscape: available
+              percentage: 0.1
             label: "]"
             lightModeStyleName: key-7
             darkModeStyleName: key-7-dark
@@ -4151,9 +3928,7 @@ keyboards:
                 char: \
             processByRIME: false
             width:
-              portrait:
-                percentage: 0.1
-              landscape: available
+              percentage: 0.1
             label: \
             lightModeStyleName: key-8
             darkModeStyleName: key-8-dark
@@ -4161,9 +3936,7 @@ keyboards:
               characterMargin:
                 char: ""
             width:
-              portrait:
-                percentage: 0.05
-              landscape: available
+              percentage: 0.05
             label:
               text: ""
         rowHeight:
@@ -4173,9 +3946,7 @@ keyboards:
           - action:
               keyboardType: classifySymbolic
             width:
-              portrait:
-                percentage: 0.1
-              landscape: available
+              percentage: 0.1
             label: 更多
             swipe:
               - action: tab
@@ -4190,9 +3961,7 @@ keyboards:
               characterMargin:
                 char: ""
             width:
-              portrait:
-                percentage: 0.01
-              landscape: available
+              percentage: 0.01
             label:
               text: ""
           - action:
@@ -4200,9 +3969,7 @@ keyboards:
                 char: _
             processByRIME: false
             width:
-              portrait:
-                percentage: 0.1
-              landscape: available
+              percentage: 0.1
             label: _
             lightModeStyleName: key-1
             darkModeStyleName: key-1-dark
@@ -4211,9 +3978,7 @@ keyboards:
                 char: <
             processByRIME: false
             width:
-              portrait:
-                percentage: 0.1
-              landscape: available
+              percentage: 0.1
             label: <
             lightModeStyleName: key-2
             darkModeStyleName: key-2-dark
@@ -4222,9 +3987,7 @@ keyboards:
                 char: ">"
             processByRIME: false
             width:
-              portrait:
-                percentage: 0.1
-              landscape: available
+              percentage: 0.1
             label: ">"
             lightModeStyleName: key-3
             darkModeStyleName: key-3-dark
@@ -4233,9 +3996,7 @@ keyboards:
                 char: /
             processByRIME: false
             width:
-              portrait:
-                percentage: 0.1
-              landscape: available
+              percentage: 0.1
             label: /
             lightModeStyleName: key-4
             darkModeStyleName: key-4-dark
@@ -4244,9 +4005,7 @@ keyboards:
                 char: "?"
             processByRIME: false
             width:
-              portrait:
-                percentage: 0.1
-              landscape: available
+              percentage: 0.1
             label: "?"
             lightModeStyleName: key-4
             darkModeStyleName: key-4-dark
@@ -4255,9 +4014,7 @@ keyboards:
                 char: ","
             processByRIME: false
             width:
-              portrait:
-                percentage: 0.1
-              landscape: available
+              percentage: 0.1
             label: ","
             lightModeStyleName: key-5
             darkModeStyleName: key-5-dark
@@ -4266,9 +4023,7 @@ keyboards:
                 char: .
             processByRIME: false
             width:
-              portrait:
-                percentage: 0.1
-              landscape: available
+              percentage: 0.1
             label: .
             lightModeStyleName: key-6
             darkModeStyleName: key-6-dark
@@ -4276,16 +4031,12 @@ keyboards:
               characterMargin:
                 char: ""
             width:
-              portrait:
-                percentage: 0.01
-              landscape: available
+              percentage: 0.01
             label:
               text: ""
           - action: backspace
             width:
-              portrait:
-                percentage: 0.18
-              landscape: available
+              percentage: 0.18
             label:
               text: ""
             swipe:
@@ -4312,18 +4063,14 @@ keyboards:
           - action:
               keyboardType: Candy-英文数字
             width:
-              portrait:
-                percentage: 0.11
-              landscape: available
+              percentage: 0.11
             label: "123"
             lightModeStyleName: number
             darkModeStyleName: number-dark
           - action:
               keyboardType: Candy-英文
             width:
-              portrait:
-                percentage: 0.11
-              landscape: available
+              percentage: 0.11
             label: 返
             lightModeStyleName: character
             darkModeStyleName: character-dark
@@ -4331,9 +4078,7 @@ keyboards:
               character:
                 char: ","
             width:
-              portrait:
-                percentage: 0.11
-              landscape: available
+              percentage: 0.11
             label: ","
             swipe:
               - action:
@@ -4371,8 +4116,7 @@ keyboards:
               portrait:
                 percentage: 0.34
               landscape: available
-            label:
-              text: ""
+            label: 󱇄󱥢 赫兹󰝹符号 󱥢󱇂
             swipe:
               - action:
                   shortcutCommand: "#关闭键盘"
@@ -4386,17 +4130,13 @@ keyboards:
           - action:
               keyboardType: Candy-中文
             width:
-              portrait:
-                percentage: 0.11
-              landscape: available
+              percentage: 0.11
             label: 英/中
             lightModeStyleName: cn_en
             darkModeStyleName: cn_en-dark
           - action: enter
             width:
-              portrait:
-                percentage: 0.22
-              landscape: available
+              percentage: 0.22
             label:
               text: ""
             swipe:
@@ -4535,9 +4275,7 @@ keyboards:
               character:
                 char: q
             width:
-              portrait:
-                percentage: 0.1
-              landscape: available
+              percentage: 0.1
             label: 都
             swipe:
               - action:
@@ -4561,9 +4299,7 @@ keyboards:
               character:
                 char: w
             width:
-              portrait:
-                percentage: 0.1
-              landscape: available
+              percentage: 0.1
             label: 得
             swipe:
               - action:
@@ -4580,9 +4316,7 @@ keyboards:
               character:
                 char: e
             width:
-              portrait:
-                percentage: 0.1
-              landscape: available
+              percentage: 0.1
             label: 也
             swipe:
               - action:
@@ -4599,9 +4333,7 @@ keyboards:
               character:
                 char: r
             width:
-              portrait:
-                percentage: 0.1
-              landscape: available
+              percentage: 0.1
             label: 了
             swipe:
               - action:
@@ -4618,9 +4350,7 @@ keyboards:
               character:
                 char: t
             width:
-              portrait:
-                percentage: 0.1
-              landscape: available
+              percentage: 0.1
             label: 我
             swipe:
               - action:
@@ -4637,9 +4367,7 @@ keyboards:
               character:
                 char: y
             width:
-              portrait:
-                percentage: 0.1
-              landscape: available
+              percentage: 0.1
             label: 到
             swipe:
               - action:
@@ -4656,9 +4384,7 @@ keyboards:
               character:
                 char: u
             width:
-              portrait:
-                percentage: 0.1
-              landscape: available
+              percentage: 0.1
             label: 的
             swipe:
               - action:
@@ -4669,15 +4395,21 @@ keyboards:
                 display: true
                 processByRIME: true
                 direction: up
+              - action:
+                  character:
+                    char: "["
+                label:
+                  text: ""
+                display: true
+                processByRIME: true
+                direction: down
             lightModeStyleName: key-6
             darkModeStyleName: key-6-dark
           - action:
               character:
                 char: i
             width:
-              portrait:
-                percentage: 0.1
-              landscape: available
+              percentage: 0.1
             label: 为
             swipe:
               - action:
@@ -4688,15 +4420,21 @@ keyboards:
                 display: true
                 processByRIME: true
                 direction: up
+              - action:
+                  character:
+                    char: "]"
+                label:
+                  text: ""
+                display: true
+                processByRIME: true
+                direction: down
             lightModeStyleName: key-7
             darkModeStyleName: key-7-dark
           - action:
               character:
                 char: o
             width:
-              portrait:
-                percentage: 0.1
-              landscape: available
+              percentage: 0.1
             label: 是
             swipe:
               - action:
@@ -4719,7 +4457,10 @@ keyboards:
           - action:
               character:
                 char: p
-            width: available
+            width:
+              portrait: available
+              landscape:
+                percentage: 0.1
             label: 行
             swipe:
               - action:
@@ -4747,18 +4488,14 @@ keyboards:
               characterMargin:
                 char: ""
             width:
-              portrait:
-                percentage: 0.05
-              landscape: available
+              percentage: 0.05
             label:
               text: ""
           - action:
               character:
                 char: a
             width:
-              portrait:
-                percentage: 0.1
-              landscape: available
+              percentage: 0.1
             label: 来
             swipe:
               - action:
@@ -4781,9 +4518,7 @@ keyboards:
               character:
                 char: s
             width:
-              portrait:
-                percentage: 0.1
-              landscape: available
+              percentage: 0.1
             label: 说
             swipe:
               - action:
@@ -4800,9 +4535,7 @@ keyboards:
               character:
                 char: d
             width:
-              portrait:
-                percentage: 0.1
-              landscape: available
+              percentage: 0.1
             label: 中
             swipe:
               - action:
@@ -4819,9 +4552,7 @@ keyboards:
               character:
                 char: f
             width:
-              portrait:
-                percentage: 0.1
-              landscape: available
+              percentage: 0.1
             label: 一
             swipe:
               - action:
@@ -4844,9 +4575,7 @@ keyboards:
               character:
                 char: g
             width:
-              portrait:
-                percentage: 0.1
-              landscape: available
+              percentage: 0.1
             label: 就
             swipe:
               - action:
@@ -4863,9 +4592,7 @@ keyboards:
               character:
                 char: h
             width:
-              portrait:
-                percentage: 0.1
-              landscape: available
+              percentage: 0.1
             label: 道
             swipe:
               - action:
@@ -4882,9 +4609,7 @@ keyboards:
               character:
                 char: j
             width:
-              portrait:
-                percentage: 0.1
-              landscape: available
+              percentage: 0.1
             label: 人
             swipe:
               - action:
@@ -4901,9 +4626,7 @@ keyboards:
               character:
                 char: k
             width:
-              portrait:
-                percentage: 0.1
-              landscape: available
+              percentage: 0.1
             label: 能
             swipe:
               - action:
@@ -4927,9 +4650,7 @@ keyboards:
               character:
                 char: l
             width:
-              portrait:
-                percentage: 0.1
-              landscape: available
+              percentage: 0.1
             label: 而
             swipe:
               - action:
@@ -4953,9 +4674,7 @@ keyboards:
               characterMargin:
                 char: ""
             width:
-              portrait:
-                percentage: 0.05
-              landscape: available
+              percentage: 0.05
             label:
               text: ""
         rowHeight:
@@ -4964,9 +4683,7 @@ keyboards:
       - keys:
           - action: shift
             width:
-              portrait:
-                percentage: 0.1
-              landscape: available
+              percentage: 0.1
             label:
               text: ""
             swipe:
@@ -4982,18 +4699,14 @@ keyboards:
               characterMargin:
                 char: ""
             width:
-              portrait:
-                percentage: 0.01
-              landscape: available
+              percentage: 0.01
             label:
               text: ""
           - action:
               character:
                 char: z
             width:
-              portrait:
-                percentage: 0.1
-              landscape: available
+              percentage: 0.1
             label: 可
             swipe:
               - action:
@@ -5016,9 +4729,7 @@ keyboards:
               character:
                 char: x
             width:
-              portrait:
-                percentage: 0.1
-              landscape: available
+              percentage: 0.1
             label: 和
             swipe:
               - action:
@@ -5041,9 +4752,7 @@ keyboards:
               character:
                 char: c
             width:
-              portrait:
-                percentage: 0.1
-              landscape: available
+              percentage: 0.1
             label: 不
             swipe:
               - action:
@@ -5066,9 +4775,7 @@ keyboards:
               character:
                 char: v
             width:
-              portrait:
-                percentage: 0.1
-              landscape: available
+              percentage: 0.1
             label: 要
             swipe:
               - action:
@@ -5091,9 +4798,7 @@ keyboards:
               character:
                 char: b
             width:
-              portrait:
-                percentage: 0.1
-              landscape: available
+              percentage: 0.1
             label: 如
             swipe:
               - action:
@@ -5104,15 +4809,20 @@ keyboards:
                 display: true
                 processByRIME: true
                 direction: up
+              - action:
+                  character:
+                    char: \
+                label: 拼音
+                display: true
+                processByRIME: true
+                direction: down
             lightModeStyleName: key-4
             darkModeStyleName: key-4-dark
           - action:
               character:
                 char: n
             width:
-              portrait:
-                percentage: 0.1
-              landscape: available
+              percentage: 0.1
             label: 在
             swipe:
               - action:
@@ -5136,9 +4846,7 @@ keyboards:
               character:
                 char: m
             width:
-              portrait:
-                percentage: 0.1
-              landscape: available
+              percentage: 0.1
             label: 大
             swipe:
               - action:
@@ -5162,16 +4870,12 @@ keyboards:
               characterMargin:
                 char: ""
             width:
-              portrait:
-                percentage: 0.01
-              landscape: available
+              percentage: 0.01
             label:
               text: ""
           - action: backspace
             width:
-              portrait:
-                percentage: 0.18
-              landscape: available
+              percentage: 0.18
             label: 󰁮
             swipe:
               - action:
@@ -5197,18 +4901,14 @@ keyboards:
           - action:
               keyboardType: Candy-中文数字
             width:
-              portrait:
-                percentage: 0.11
-              landscape: available
+              percentage: 0.11
             label: "123"
             lightModeStyleName: number
             darkModeStyleName: number-dark
           - action:
               keyboardType: Candy-中文数字符号
             width:
-              portrait:
-                percentage: 0.11
-              landscape: available
+              percentage: 0.11
             label: 符
             lightModeStyleName: character
             darkModeStyleName: character-dark
@@ -5216,9 +4916,7 @@ keyboards:
               character:
                 char: ，
             width:
-              portrait:
-                percentage: 0.11
-              landscape: available
+              percentage: 0.11
             label: ，
             swipe:
               - action:
@@ -5235,8 +4933,7 @@ keyboards:
               portrait:
                 percentage: 0.34
               landscape: available
-            label:
-              text: ""
+            label: 󱇄󱥢 赫兹󰝹虎码 󱥢󱇂
             swipe:
               - action:
                   shortcutCommand: "#次选上屏"
@@ -5257,9 +4954,7 @@ keyboards:
           - action:
               keyboardType: Candy-英文
             width:
-              portrait:
-                percentage: 0.11
-              landscape: available
+              percentage: 0.11
             label: 中/英
             swipe:
               - action:
@@ -5273,9 +4968,7 @@ keyboards:
             darkModeStyleName: cn_en-dark
           - action: enter
             width:
-              portrait:
-                percentage: 0.22
-              landscape: available
+              percentage: 0.22
             label: 
             swipe:
               - action:

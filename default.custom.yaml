@@ -8,4 +8,5 @@ patch:
   schema_list:
     - {schema: tiger}
     - {schema: tigress}
-    - {schema: PY_c}
+    #- {schema: PY_c}
+    - {schema: tigerost}

@@ -22,11 +22,11 @@ patch:
 
 ### Dark - I Love Candy
 
-![dark](/assets/pic_candy-dark.jpg)
+![dark](/assets/pic_candy-dark.png)
 
 ### Light - I Love Candy
 
-![light](/assets/pic_candy-light.jpg)
+![light](/assets/pic_candy-light.png)
 
 ### Layouts
 
