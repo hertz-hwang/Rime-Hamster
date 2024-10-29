@@ -160,13 +160,11 @@ keyboards:
                 display: true
                 processByRIME: true
                 direction: up
+            callout:
               - action:
                   character:
-                    char: "`"
-                label: 反查
-                display: true
-                processByRIME: true
-                direction: down
+                    char: Q
+                label: Q
             lightModeStyleName: key-1
             darkModeStyleName: key-1-dark
           - action:
@@ -184,6 +182,11 @@ keyboards:
                 display: true
                 processByRIME: true
                 direction: up
+            callout:
+              - action:
+                  character:
+                    char: W
+                label: W
             lightModeStyleName: key-2
             darkModeStyleName: key-2-dark
           - action:
@@ -201,6 +204,11 @@ keyboards:
                 display: true
                 processByRIME: true
                 direction: up
+            callout:
+              - action:
+                  character:
+                    char: E
+                label: E
             lightModeStyleName: key-3
             darkModeStyleName: key-3-dark
           - action:
@@ -218,6 +226,11 @@ keyboards:
                 display: true
                 processByRIME: true
                 direction: up
+            callout:
+              - action:
+                  character:
+                    char: R
+                label: R
             lightModeStyleName: key-4
             darkModeStyleName: key-4-dark
           - action:
@@ -235,6 +248,11 @@ keyboards:
                 display: true
                 processByRIME: true
                 direction: up
+            callout:
+              - action:
+                  character:
+                    char: T
+                label: T
             lightModeStyleName: key-4
             darkModeStyleName: key-4-dark
           - action:
@@ -252,6 +270,11 @@ keyboards:
                 display: true
                 processByRIME: true
                 direction: up
+            callout:
+              - action:
+                  character:
+                    char: Y
+                label: Y
             lightModeStyleName: key-5
             darkModeStyleName: key-5-dark
           - action:
@@ -277,6 +300,11 @@ keyboards:
                 display: true
                 processByRIME: true
                 direction: down
+            callout:
+              - action:
+                  character:
+                    char: U
+                label: U
             lightModeStyleName: key-6
             darkModeStyleName: key-6-dark
           - action:
@@ -302,6 +330,11 @@ keyboards:
                 display: true
                 processByRIME: true
                 direction: down
+            callout:
+              - action:
+                  character:
+                    char: I
+                label: I
             lightModeStyleName: key-7
             darkModeStyleName: key-7-dark
           - action:
@@ -326,6 +359,11 @@ keyboards:
                 display: true
                 processByRIME: true
                 direction: down
+            callout:
+              - action:
+                  character:
+                    char: O
+                label: O
             lightModeStyleName: key-8
             darkModeStyleName: key-8-dark
           - action:
@@ -352,6 +390,11 @@ keyboards:
                 display: true
                 processByRIME: true
                 direction: down
+            callout:
+              - action:
+                  character:
+                    char: P
+                label: P
             lightModeStyleName: key-8
             darkModeStyleName: key-8-dark
         rowHeight:
@@ -386,6 +429,11 @@ keyboards:
                 display: true
                 processByRIME: true
                 direction: down
+            callout:
+              - action:
+                  character:
+                    char: A
+                label: A
             lightModeStyleName: key-1
             darkModeStyleName: key-1-dark
           - action:
@@ -403,6 +451,11 @@ keyboards:
                 display: true
                 processByRIME: true
                 direction: up
+            callout:
+              - action:
+                  character:
+                    char: S
+                label: S
             lightModeStyleName: key-2
             darkModeStyleName: key-2-dark
           - action:
@@ -420,6 +473,11 @@ keyboards:
                 display: true
                 processByRIME: true
                 direction: up
+            callout:
+              - action:
+                  character:
+                    char: D
+                label: D
             lightModeStyleName: key-3
             darkModeStyleName: key-3-dark
           - action:
@@ -443,6 +501,11 @@ keyboards:
                 display: true
                 processByRIME: true
                 direction: down
+            callout:
+              - action:
+                  character:
+                    char: F
+                label: F
             lightModeStyleName: key-fj
             darkModeStyleName: key-fj-dark
           - action:
@@ -460,6 +523,11 @@ keyboards:
                 display: true
                 processByRIME: true
                 direction: up
+            callout:
+              - action:
+                  character:
+                    char: G
+                label: G
             lightModeStyleName: key-4
             darkModeStyleName: key-4-dark
           - action:
@@ -477,6 +545,11 @@ keyboards:
                 display: true
                 processByRIME: true
                 direction: up
+            callout:
+              - action:
+                  character:
+                    char: H
+                label: H
             lightModeStyleName: key-5
             darkModeStyleName: key-5-dark
           - action:
@@ -494,6 +567,11 @@ keyboards:
                 display: true
                 processByRIME: true
                 direction: up
+            callout:
+              - action:
+                  character:
+                    char: J
+                label: J
             lightModeStyleName: key-fj
             darkModeStyleName: key-fj-dark
           - action:
@@ -518,6 +596,11 @@ keyboards:
                 display: true
                 processByRIME: true
                 direction: down
+            callout:
+              - action:
+                  character:
+                    char: K
+                label: K
             lightModeStyleName: key-7
             darkModeStyleName: key-7-dark
           - action:
@@ -542,6 +625,11 @@ keyboards:
                 display: true
                 processByRIME: true
                 direction: down
+            callout:
+              - action:
+                  character:
+                    char: L
+                label: L
             lightModeStyleName: key-8
             darkModeStyleName: key-8-dark
           - action:
@@ -592,11 +680,17 @@ keyboards:
                 processByRIME: true
                 direction: up
               - action:
-                  shortcutCommand: "#撤销"
-                label: 
+                  character:
+                    char: "`"
+                label: 反查
                 display: true
                 processByRIME: true
                 direction: down
+            callout:
+              - action:
+                  character:
+                    char: Z
+                label: Z
             lightModeStyleName: key-1
             darkModeStyleName: key-1-dark
           - action:
@@ -620,6 +714,11 @@ keyboards:
                 display: true
                 processByRIME: true
                 direction: down
+            callout:
+              - action:
+                  character:
+                    char: X
+                label: X
             lightModeStyleName: key-2
             darkModeStyleName: key-2-dark
           - action:
@@ -645,6 +744,10 @@ keyboards:
                 direction: down
             callout:
               - action:
+                  character:
+                    char: C
+                label: C
+              - action:
                   shortcutCommand: "#showPhraseView"
                 label: 常用语
             lightModeStyleName: key-3
@@ -658,8 +761,8 @@ keyboards:
             swipe:
               - action:
                   character:
-                    char: \
-                label: 、
+                    char: "?"
+                label: ？
                 display: true
                 processByRIME: true
                 direction: up
@@ -671,8 +774,12 @@ keyboards:
                 direction: down
             callout:
               - action:
+                  character:
+                    char: V
+                label: V
+              - action:
                   shortcutCommand: "#showPasteboardView"
-                label: 剪贴板
+                label: 剪切板
             lightModeStyleName: key-4
             darkModeStyleName: key-4-dark
           - action:
@@ -684,9 +791,8 @@ keyboards:
             swipe:
               - action:
                   character:
-                    char: "?"
-                label:
-                  text: ""
+                    char: \
+                label: 、
                 display: true
                 processByRIME: true
                 direction: up
@@ -697,6 +803,11 @@ keyboards:
                 display: true
                 processByRIME: true
                 direction: down
+            callout:
+              - action:
+                  character:
+                    char: B
+                label: B
             lightModeStyleName: key-4
             darkModeStyleName: key-4-dark
           - action:
@@ -721,6 +832,11 @@ keyboards:
                 display: true
                 processByRIME: true
                 direction: down
+            callout:
+              - action:
+                  character:
+                    char: N
+                label: N
             lightModeStyleName: key-5
             darkModeStyleName: key-5-dark
           - action:
@@ -745,6 +861,11 @@ keyboards:
                 display: true
                 processByRIME: true
                 direction: down
+            callout:
+              - action:
+                  character:
+                    char: M
+                label: M
             lightModeStyleName: key-6
             darkModeStyleName: key-6-dark
           - action:
@@ -784,6 +905,47 @@ keyboards:
             width:
               percentage: 0.11
             label: "123"
+            callout:
+              - action:
+                  character:
+                    char: "0"
+                label: "0"
+              - action:
+                  character:
+                    char: "1"
+                label: "1"
+              - action:
+                  character:
+                    char: "2"
+                label: "2"
+              - action:
+                  character:
+                    char: "3"
+                label: "3"
+              - action:
+                  character:
+                    char: "4"
+                label: "4"
+              - action:
+                  character:
+                    char: "5"
+                label: "5"
+              - action:
+                  character:
+                    char: "6"
+                label: "6"
+              - action:
+                  character:
+                    char: "7"
+                label: "7"
+              - action:
+                  character:
+                    char: "8"
+                label: "8"
+              - action:
+                  character:
+                    char: "9"
+                label: "9"
             lightModeStyleName: number
             darkModeStyleName: number-dark
           - action:
@@ -812,6 +974,10 @@ keyboards:
                   character:
                     char: "%"
                 label: U编码
+              - action:
+                  character:
+                    char: \
+                label: 拼音
             lightModeStyleName: character
             darkModeStyleName: character-dark
           - action:
@@ -1280,18 +1446,18 @@ keyboards:
       key-fj:
         name: key-fj
         buttonBackgroundColor: "0xFFFFFF"
-        pressedButtonBackgroundColor: "0xABAB64"
-        buttonForegroundColor: "0xABAB64"
+        pressedButtonBackgroundColor: "0xCB906C"
+        buttonForegroundColor: "0xCB906C"
         pressedButtonForegroundColor: "0xFFFFFF"
-        swipeForegroundColor: "0xABAB64"
+        swipeForegroundColor: "0xCB906C"
         pressedSwipeForegroundColor: "0xFFFFFF"
         buttonBubbleBackgroundColor: "0xFFFFFF"
         actionCalloutBackgroundColor: "0xFFFFFF"
         actionCalloutSelectedBackgroundColor: "0xFFFFFF"
-        actionCalloutSelectedForegroundColor: "0xABAB64"
+        actionCalloutSelectedForegroundColor: "0xCB906C"
         cornerRadius: 11
         borderSize: 2
-        borderColor: "0xFEFEFE"
+        borderColor: "0xFFFFFF"
         lowerEdgeColor: "0xFEFEFE"
         shadowColor: "0x000000"
         shadowSize: 2
@@ -1299,15 +1465,15 @@ keyboards:
         swipeFontSize: 8
       key-fj-dark:
         name: key-fj-dark
-        buttonBackgroundColor: "0x3E3E3E"
+        buttonBackgroundColor: "0x525252"
         pressedButtonBackgroundColor: "0xDBD9AB"
         buttonForegroundColor: "0xDBD9AB"
-        pressedButtonForegroundColor: "0x3E3E3E"
+        pressedButtonForegroundColor: "0x525252"
         swipeForegroundColor: "0xDBD9AB"
-        pressedSwipeForegroundColor: "0x3E3E3E"
-        buttonBubbleBackgroundColor: "0x3E3E3E"
-        actionCalloutBackgroundColor: "0x3E3E3E"
-        actionCalloutSelectedBackgroundColor: "0x3E3E3E"
+        pressedSwipeForegroundColor: "0x525252"
+        buttonBubbleBackgroundColor: "0x525252"
+        actionCalloutBackgroundColor: "0x525252"
+        actionCalloutSelectedBackgroundColor: "0x525252"
         actionCalloutSelectedForegroundColor: "0xDBD9AB"
         cornerRadius: 11
         borderSize: 2

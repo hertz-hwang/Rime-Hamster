@@ -8,6 +8,7 @@ patch:
     - name: chaifen
       reset: 1
       states: [ 拆隐, 拆显 ]
+  reverse_lookup/tips: "〔鹤→虎〕"
   translator/dictionary: tiger.extended #引入增补自定词典，这个不要改动
   #translator/enable_completion: true # 编码提示，默认关闭，删掉行首的#号，即可开启
   #speller/auto_select_pattern: ^;\w+|^\w{4}$  # 四码上屏功能，删掉行首的#号，即可开启

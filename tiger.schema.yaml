@@ -136,7 +136,7 @@ translator:
 reverse_lookup:
   dictionary: PY_c
   prefix: "`"
-  tips: "〔小鹤双拼〕"
+  tips: "〔拼音〕"
   preedit_format:
     - "xform/([nl])v/$1ü/"
     - "xform/([nl])ue/$1üe/"
