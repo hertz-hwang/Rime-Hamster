@@ -3252,7 +3252,7 @@ keyboards:
             swipe:
               - action:
                   character:
-                    char: \
+                    char: "?"
                 label:
                   text: ""
                 display: true
@@ -3281,7 +3281,7 @@ keyboards:
             swipe:
               - action:
                   character:
-                    char: "?"
+                    char: \
                 label:
                   text: ""
                 display: true
@@ -4159,20 +4159,20 @@ keyboards:
             darkModeStyleName: key-3-dark
           - action:
               character:
-                char: /
-            processByRIME: false
-            width:
-              percentage: 0.1
-            label: /
-            lightModeStyleName: key-4
-            darkModeStyleName: key-4-dark
-          - action:
-              character:
                 char: "?"
             processByRIME: false
             width:
               percentage: 0.1
             label: "?"
+            lightModeStyleName: key-4
+            darkModeStyleName: key-4-dark
+          - action:
+              character:
+                char: \
+            processByRIME: false
+            width:
+              percentage: 0.1
+            label: \
             lightModeStyleName: key-4
             darkModeStyleName: key-4-dark
           - action:

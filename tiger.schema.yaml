@@ -83,9 +83,6 @@ engine:
     - reverse_lookup_translator #拼音反查
     - table_translator
     - table_translator@easy_english #临时英文
-    - history_translator@historyDM # 重复上屏 电脑
-    - history_translator@historyDM2 # 重复上屏 电脑2
-    - history_translator@historyDM3 # 重复上屏 电脑3
     - history_translator@historySJ # 重复上屏 手机
     # - history_translator@historySJ2 # 重复上屏 手机2
     - lua_translator@number_translator # 数字转大写
@@ -203,27 +200,6 @@ historySJ:
   input: z
   size: 1
   initial_quality: 0
-
-# historySJ2:
-#   input: o
-#   size: 1
-#   initial_quality: 0
-
-historyDM:
-  input: "["
-  size: 1
-  initial_quality: 999
-
-
-historyDM2:
-  input: "'"
-  size: 1
-  initial_quality: -999
-
-historyDM3:
-  input: "]"
-  size: 1
-  initial_quality: 999
 
 # ↓简繁(+部分异体)滤镜
 simplification:  #⇩四选一
