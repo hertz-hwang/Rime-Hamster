@@ -22,8 +22,8 @@ patch:
       text_color: 0x808070
       font_face: PingFang SC
       font_point: 18
-    
-    style:
+
+  style:
     #capture_type: none
     #color_font: true
     comment_font_face: "Consolas, Apple Color Emoji, TumanPUA, LXGW WenKai GB Screen, SimSun, SimSun-ExtB, SimSun-ExtG, TH-Tshyn-P0, TH-Tshyn-P1, TH-Tshyn-P2, TH-Tshyn-P16"
