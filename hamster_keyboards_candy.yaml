@@ -32,7 +32,7 @@ colorSchemas:
   - schemaName: I Love Candy - Dark
     name: I Love Candy - Dark
     author: Bennett S. Owen
-    back_color: "0x303030"
+    back_color: "0x01303030"
     button_back_color: "0x303030"
     button_pressed_back_color: "0xD0D0D0"
     button_bubble_back_color: "0xD0D0D0"
@@ -292,14 +292,6 @@ keyboards:
                 display: true
                 processByRIME: true
                 direction: up
-              - action:
-                  character:
-                    char: "["
-                label:
-                  text: ""
-                display: true
-                processByRIME: true
-                direction: down
             callout:
               - action:
                   character:
@@ -323,10 +315,10 @@ keyboards:
                 processByRIME: true
                 direction: up
               - action:
-                  character:
-                    char: "]"
-                label:
-                  text: ""
+                  shortcutCommand:
+                    sendKeys:
+                      keys: Control+i
+                label: 
                 display: true
                 processByRIME: true
                 direction: down
@@ -353,9 +345,10 @@ keyboards:
                 processByRIME: true
                 direction: up
               - action:
-                  character:
-                    char: "&"
-                label: 
+                  shortcutCommand:
+                    sendKeys:
+                      keys: Control+o
+                label: 简繁
                 display: true
                 processByRIME: true
                 direction: down
@@ -384,9 +377,10 @@ keyboards:
                 processByRIME: true
                 direction: up
               - action:
-                  character:
-                    char: "*"
-                label: " 简繁"
+                  shortcutCommand:
+                    sendKeys:
+                      keys: Control+p
+                label: " 拼音"
                 display: true
                 processByRIME: true
                 direction: down
@@ -523,6 +517,14 @@ keyboards:
                 display: true
                 processByRIME: true
                 direction: up
+              - action:
+                  character:
+                    char: "["
+                label:
+                  text: ""
+                display: true
+                processByRIME: true
+                direction: down
             callout:
               - action:
                   character:
@@ -545,6 +547,14 @@ keyboards:
                 display: true
                 processByRIME: true
                 direction: up
+              - action:
+                  character:
+                    char: "]"
+                label:
+                  text: ""
+                display: true
+                processByRIME: true
+                direction: down
             callout:
               - action:
                   character:
@@ -567,6 +577,14 @@ keyboards:
                 display: true
                 processByRIME: true
                 direction: up
+              - action:
+                  shortcutCommand:
+                    sendKeys:
+                      keys: Control+j
+                label: 拆分
+                display: true
+                processByRIME: true
+                direction: down
             callout:
               - action:
                   character:
@@ -796,13 +814,6 @@ keyboards:
                 display: true
                 processByRIME: true
                 direction: up
-              - action:
-                  character:
-                    char: \
-                label: 拼音
-                display: true
-                processByRIME: true
-                direction: down
             callout:
               - action:
                   character:
@@ -825,13 +836,6 @@ keyboards:
                 display: true
                 processByRIME: true
                 direction: up
-              - action:
-                  character:
-                    char: '"'
-                label: 拆字
-                display: true
-                processByRIME: true
-                direction: down
             callout:
               - action:
                   character:
@@ -1465,15 +1469,15 @@ keyboards:
         swipeFontSize: 8
       key-fj-dark:
         name: key-fj-dark
-        buttonBackgroundColor: "0x525252"
+        buttonBackgroundColor: "0x3E3E3E"
         pressedButtonBackgroundColor: "0xDBD9AB"
         buttonForegroundColor: "0xDBD9AB"
-        pressedButtonForegroundColor: "0x525252"
+        pressedButtonForegroundColor: "0x3E3E3E"
         swipeForegroundColor: "0xDBD9AB"
-        pressedSwipeForegroundColor: "0x525252"
-        buttonBubbleBackgroundColor: "0x525252"
-        actionCalloutBackgroundColor: "0x525252"
-        actionCalloutSelectedBackgroundColor: "0x525252"
+        pressedSwipeForegroundColor: "0x3E3E3E"
+        buttonBubbleBackgroundColor: "0x3E3E3E"
+        actionCalloutBackgroundColor: "0x3E3E3E"
+        actionCalloutSelectedBackgroundColor: "0x3E3E3E"
         actionCalloutSelectedForegroundColor: "0xDBD9AB"
         cornerRadius: 11
         borderSize: 2
