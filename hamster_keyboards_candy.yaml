@@ -160,6 +160,14 @@ keyboards:
                 display: true
                 processByRIME: true
                 direction: up
+              - action:
+                  shortcutCommand:
+                    sendKeys:
+                      keys: Control+grave
+                label: 方案
+                display: true
+                processByRIME: true
+                direction: down
             callout:
               - action:
                   character:
