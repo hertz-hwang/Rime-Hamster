@@ -31,6 +31,7 @@ switches_engine_tiger_code:
     segmentors:
       - ascii_segmentor
       - matcher
+      - affix_segmentor@easy_en                   # 英文
       - abc_segmentor                             # 标记输入码的类型
       - punct_segmentor                           # 割界，与前后方的其他编码区分开
       - fallback_segmentor
@@ -38,6 +39,7 @@ switches_engine_tiger_code:
       - punct_translator                          # 转换标点符号
       - reverse_lookup_translator                 # 拼音反查
       - table_translator                          # 码表转换
+      - table_translator@easy_en                  # 英文
       - table_translator@fast_symbol              # 码表转换-快符
       - history_translator@input_history
     filters:
@@ -47,6 +49,7 @@ switches_engine_tiger_code:
       - simplifier@emoji                          # Emoji滤镜
       - lua_filter@*hertz.inline_candidate_filter # 首选内嵌
       - uniquifier                                # 过滤重复的候选字，可能来自简繁转换
+      #- lua_filter@*hertz.easy_en*enhance_filter
 
 switches_engine_pinyin:
   switches:
@@ -119,6 +122,30 @@ fast_symbol_translator:
     enable_encoder: false
     enable_sentence: false
 
+easy_en_translator:
+  easy_en:
+    dictionary: easy_en
+    tag: easy_en
+    split_sentence: true
+    use_wordninja_rs_lua_module: false
+    wordninja_rs_lua_module_path: "/usr/lib/lua/5.4/wordninja.so"
+    use_wordninja_rs: true
+    wordninja_rs_path: "/usr/local/bin/wordninja"
+    use_wordninja_py: false
+    __patch:
+      engine/filter/@next: lua_filter@*hertz.easy_en*enhance_filter
+    prefix: "'"
+    tips: "〔英文〕"
+    enable_sentence: true
+    enable_encoder: false
+    encode_commit_history: false
+    enable_completion: true
+    enable_user_dict: false
+    preedit_format:
+      - xlit|_| |
+    comment_format:
+      - xlit|~||
+
 reverse_lookup_translator_xh:
   reverse_lookup:
     dictionary: pinyin
@@ -132,7 +159,6 @@ reverse_lookup_translator_xh:
       - xform|^||
       - xform|0||
       - xform|[[]||
-
 
 s2t_filter:
   s2t:
