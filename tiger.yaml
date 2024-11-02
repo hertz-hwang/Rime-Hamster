@@ -132,8 +132,6 @@ easy_en_translator:
     use_wordninja_rs: true
     wordninja_rs_path: "/usr/local/bin/wordninja"
     use_wordninja_py: false
-    __patch:
-      engine/filter/@next: lua_filter@*hertz.easy_en*enhance_filter
     prefix: "'"
     tips: "〔英文〕"
     enable_sentence: true
