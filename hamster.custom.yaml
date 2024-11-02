@@ -1,8 +1,10 @@
 patch:
   "keyboards":
-    __include: hamster_keyboards_candy:/keyboards
+    #__include: hamster_keyboards_candy:/keyboards
+    __include: hamster_keyboards_iOS:/keyboards
   "keyboard/colorSchemas":
-    __include: hamster_keyboards_candy:/colorSchemas
+    #__include: hamster_keyboards_candy:/colorSchemas
+    __include: hamster_keyboards_iOS:/colorSchemas
   "keyboard/chineseEnglishSwitchButtonIsOnLeftOfSpaceButton": false
   "keyboard/disableSwipeLabel": false  # 划动文本显示关闭
   "keyboard/displayButtonBubbles": true  # 显示按键气泡
@@ -53,9 +55,9 @@ patch:
   "keyboard/swipeLabelUpAndDownIrregularLayout": false  # 不规则显示划动文本
   "keyboard/swipeLabelUpAndDownLayout": true  # 划动文本上下显示
   "keyboard/upSwipeOnLeft": true  # 上划显示位置-左上侧
-  "keyboard/useColorSchemaForDark": "I Love Candy - Dark"  # 暗色主题
-  "keyboard/useColorSchemaForLight": "I Love Candy - Light"  # 亮色主题
-  "keyboard/useKeyboardType": "Candy-中文"  # 键盘布局
+  "keyboard/useColorSchemaForDark": "iOS - Dark"  # 暗色主题
+  "keyboard/useColorSchemaForLight": "iOS - Light"  # 亮色主题
+  "keyboard/useKeyboardType": "iOS-中文"  # 键盘布局
   "rime/overrideDictFiles": true
   "rime/switchSimplifiedOrTraditionalOption": simplification
   "toolbar/candidateCommentFontSize": 11

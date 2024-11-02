@@ -1,5 +1,5 @@
 ---
-name: tiger_s
+name: tiger_core
 version: "2024.11.01"
 sort: by_weight
 use_preset_vocabulary: false
