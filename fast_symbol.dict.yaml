@@ -1,13 +1,10 @@
-# Rime dictionary: tiger.extended
+# Rime dictionary: fast_symbol
 # encoding: utf-8
 
 ---
 name: fast_symbol
 version: "2.0"
 sort: original
-#import_tables:
-#  - tigress_simp_ci
-#  - tiger
   
 columns:
   - text

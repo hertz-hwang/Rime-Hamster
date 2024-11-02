@@ -1,0 +1,69 @@
+# Rime schema
+# encoding: utf-8
+
+schema:
+  schema_id: pinyin
+  name: 拼音（勿用）
+  version: "2024-10-31"
+  description: 用于词典部署（不用勾选）
+
+__include: tiger:/switches_engine_pinyin       # Rime模块
+__include: tiger:/s2t_filter                   # 简繁滤镜
+__include: tiger:/chaifen_filter               # 拆分滤镜
+__include: tiger:/emoji_filter                 # Emoji 滤镜
+__include: tiger:/key_bindings                 # 按键定义
+
+speller:
+  alphabet: ";'zyxwvutsrqponmlkjihgfedcba]"    # 输入范围 码元
+  delimiter: " '" 
+  algebra:
+    - erase/^xx$/
+    - derive/^([jqxy])u$/$1v/
+    - derive/^([aoe])([ioun])$/$1$1$2/
+    - xform/^([aoe])(ng)?$/$1$1$2/
+    - xform/iu$/Q/
+    - xform/(.)ei$/$1W/
+    - xform/uan$/R/
+    - xform/[uv]e$/T/
+    - xform/un$/Y/
+    - xform/^sh/U/
+    - xform/^ch/I/
+    - xform/^zh/V/
+    - xform/uo$/O/
+    - xform/ie$/P/
+    - xform/i?ong$/S/
+    - xform/ing$|uai$/K/
+    - xform/(.)ai$/$1D/
+    - xform/(.)en$/$1F/
+    - xform/(.)eng$/$1G/
+    - xform/[iu]ang$/L/
+    - xform/(.)ang$/$1H/
+    - xform/ian$/M/
+    - xform/(.)an$/$1J/
+    - xform/(.)ou$/$1Z/
+    - xform/[iu]a$/X/
+    - xform/iao$/N/
+    - xform/(.)ao$/$1C/
+    - xform/ui$/V/
+    - xform/in$/B/
+    - xlit/QWRTYUIOPSDFGHJKLZXCVBNM/qwrtyuiopsdfghjklzxcvbnm/
+
+translator:
+  dictionary: pinyin           # 字典文件
+  prism: pinyin
+  initial_quality: 1           # 该翻译器出字优先级别
+  enable_user_dict: false      # 开启用户词典〔用户词典记录动态字词频、用户词〕
+  enable_encoder: false        # 开启自动造词
+  enable_sentence: false       # 是否开启自动造句
+  enable_completion: false     # 编码提示 true 开启  false 关闭
+  encode_commit_history: false # 是否对已上屏的词自动造词
+
+recognizer:
+  import_preset: default
+  patterns:
+    punct: "^/([0-9]0?|[A-Za-z]+)$"
+    expression: "^=.*$"
+    #reverse_lookup: "`[a-z]*'?$"
+
+punctuator: # 设定符号表，这里直接导入外部的symbols文件夹
+  import_preset: symbols

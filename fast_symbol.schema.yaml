@@ -3,7 +3,8 @@
 
 schema:
   schema_id: fast_symbol
-  name: fast_symbol
+  name: 快符（勿用）
+  version: "2024-10-31"
   description: 用于词典部署（不用勾选）
 
 engine:

@@ -1,0 +1,183 @@
+switches_engine_tiger_code:
+  switches:
+    - name: ascii_mode
+      reset: 0
+      states: [ 虎, 英 ]
+    - name: traditionalization
+      states: [ 简, 繁 ]
+    - name: pinyin
+      states: [ 拼, pīn ]
+    - name: emoji
+      states: [ 🈚, 🈶 ]
+    - name: chaifen
+      reset: 1
+      states: [ 不拆, 拆字 ]
+    - name: full_shape
+      reset: 0
+      states: [ 半角, 全角 ]
+    - name: ascii_punct
+      reset: 0
+      states: [ 。，, ．， ]
+  engine:
+    processors:
+      - ascii_composer                            # 处理英文模式及中英文切换
+      - recognizer                                # 与 matcher 搭配，处理符合特定规则的输入码，如网址、反查等
+      - key_binder                                # 在特定条件下将按键绑定到其他按键，如重定义逗号、句号为候选翻页键
+      - speller                                   # 把字母追加到编码串
+      - punctuator                                # 处理符号按键
+      - selector                                  # 选字和换页功能
+      - navigator                                 # 移动插入点
+      - express_editor                            # 空格确认当前输入，其他字符直接上屏
+    segmentors:
+      - ascii_segmentor
+      - matcher
+      - abc_segmentor                             # 标记输入码的类型
+      - punct_segmentor                           # 割界，与前后方的其他编码区分开
+      - fallback_segmentor
+    translators:
+      - punct_translator                          # 转换标点符号
+      - reverse_lookup_translator                 # 拼音反查
+      - table_translator                          # 码表转换
+      - table_translator@fast_symbol              # 码表转换-快符
+      - history_translator@input_history
+    filters:
+      - simplifier@s2t                            # 简繁滤镜
+      - simplifier@chaifen                        # 拆分滤镜
+      - simplifier@pinyin                         # 拼音滤镜
+      - simplifier@emoji                          # Emoji滤镜
+      - lua_filter@*hertz.inline_candidate_filter # 首选内嵌
+      - uniquifier                                # 过滤重复的候选字，可能来自简繁转换
+
+switches_engine_pinyin:
+  switches:
+    - name: ascii_mode
+      reset: 0
+      states: [ 拼, 英 ]
+    - name: traditionalization
+      states: [ 简, 繁 ]
+    - name: pinyin
+      states: [ 拼, pīn ]
+    - name: emoji
+      states: [ 🈚, 🈶 ]
+    - name: chaifen
+      reset: 1
+      states: [ 不拆, 拆字 ]
+    - name: full_shape
+      reset: 0
+      states: [ 半角, 全角 ]
+    - name: ascii_punct
+      reset: 0
+      states: [ 。，, ．， ]
+  engine:
+    processors:
+      - ascii_composer                            # 处理英文模式及中英文切换
+      - recognizer                                # 与 matcher 搭配，处理符合特定规则的输入码，如网址、反查等
+      - key_binder                                # 在特定条件下将按键绑定到其他按键，如重定义逗号、句号为候选翻页键
+      - speller                                   # 把字母追加到编码串
+      - punctuator                                # 处理符号按键
+      - selector                                  # 选字和换页功能
+      - navigator                                 # 移动插入点
+      - express_editor                            # 空格确认当前输入，其他字符直接上屏
+    segmentors:
+      - ascii_segmentor
+      - matcher
+      - abc_segmentor                             # 标记输入码的类型
+      - punct_segmentor                           # 割界，与前后方的其他编码区分开
+      - fallback_segmentor
+    translators:
+      - punct_translator                          # 转换标点符号
+      - script_translator                         # 脚本表转换
+    filters:
+      - simplifier@s2t                            # 简繁滤镜
+      - simplifier@chaifen                        # 拆分滤镜
+      - simplifier@emoji                          # Emoji滤镜
+      - uniquifier                                # 过滤重复的候选字，可能来自简繁转换
+
+key_bindings:
+  key_binder:
+    bindings:
+      - { when: paging, accept: bracketleft, send: Page_Up }    # [ 后翻
+      - { when: has_menu, accept: bracketright, send: Page_Down } # ] 前翻
+      - { when: has_menu, accept: minus, send: Page_Up }
+      - { when: has_menu, accept: equal, send: Page_Down }
+
+      - { when: has_menu, accept: semicolon, send: 2 }  # 分号次选
+      - { when: has_menu, accept: apostrophe, send: 3 } # 引号三选
+      - { when: composing, accept: Tab, send: Escape }  # tab清屏
+
+      - { when: composing, accept: "Control+o", toggle: traditionalization } # 简繁滤镜
+      - { when: composing, accept: "Control+i", toggle: emoji }              # Emoji开关
+      - { when: composing, accept: "Control+p", toggle: pinyin }             # 拼音开关
+      - { when: composing, accept: "Control+j", toggle: chaifen }            # 拆分滤镜开关
+
+fast_symbol_translator:
+  fast_symbol:
+    dictionary: fast_symbol
+    enable_user_dict: false
+    enable_charset_filter: false
+    enable_completion: false
+    enable_encoder: false
+    enable_sentence: false
+
+reverse_lookup_translator_xh:
+  reverse_lookup:
+    dictionary: pinyin
+    prefix: "`"
+    tips: "〔鹤→虎〕"
+    preedit_format:
+      - "xform/([nl])v/$1ü/"
+      - "xform/([nl])ue/$1üe/"
+      - "xform/([jqxy])v/$1u/"
+    comment_format:
+      - xform|^||
+      - xform|0||
+      - xform|[[]||
+
+
+s2t_filter:
+  s2t:
+    opencc_config: filter_s2t/st_tu.json
+    option_name: traditionalization
+    tips: all
+
+chaifen_filter:
+  chaifen:
+    opencc_config: filter_chaifen/tiger_code_chaifen.json
+    option_name: chaifen
+    show_in_comment: true 
+    comment_format:     
+      - xform|&nbsp;||
+      - xform|〔|⚡️‹|
+      - xform|·|›→🐯«|
+      - xform|〕|»|
+    tags:     
+      - abc
+      - tiger_code
+      - reverse_lookup
+    tips: all
+
+history_filter:
+  input_history:
+    input: 'z'
+    size: 1
+    initial_quality: 0
+
+pinyin_filter:
+  pinyin:
+    opencc_config: filter_pinyin/pinyin.json
+    option_name: pinyin
+    show_in_comment: true
+    comment_format:
+      - xform|&nbsp;| |
+    tags:
+      - abc
+      - tiger_code
+      - reverse_lookup
+    tips: all
+
+emoji_filter:
+  emoji:
+    opencc_config: filter_emoji/emoji.json
+    option_name: emoji
+    tips: all
+

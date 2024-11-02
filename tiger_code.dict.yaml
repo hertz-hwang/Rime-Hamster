@@ -1,0 +1,10 @@
+# Rime dictionary: tiger_code
+# encoding: utf-8
+
+---
+name: tiger_code
+version: "2024-10-31"
+sort: by_weight
+import_tables:
+  - dict/tiger_core
+...

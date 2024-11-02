@@ -1,3 +1,7 @@
+## I Love Candy
+
+![dark](/assets/candy.jpg)
+
 ## 使用方法
 
 下载最新[hamster_keyboards_candy.yaml](https://github.com/hertz-hwang/Rime-Hamster/releases/latest/download/hamster_keyboards_candy.yaml)后，下面方法二选一：
@@ -19,14 +23,6 @@ patch:
 ## Themes & Layouts
 
 主题&布局设计工具：[hamster-tools](https://hertz-hwang.github.io/hamster-tools/) （Forked from [饼干](https://github.com/lost-melody/Lost-Melody.github.io)）
-
-### Dark - I Love Candy
-
-![dark](/assets/pic_candy-dark.png)
-
-### Light - I Love Candy
-
-![light](/assets/pic_candy-light.png)
 
 ### Layouts
 
