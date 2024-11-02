@@ -17,7 +17,7 @@ patch:
   "keyboard/enableChineseWordSegmentationByShift": false  # Shift中文分词
   "keyboard/enableColorSchema": true
   "keyboard/enableCommaButton": true
-  #"keyboard/enableEmbeddedInputMode": true  # 启用内嵌模式，建议调整工具栏高度40
+  "keyboard/enableEmbeddedInputMode": true  # 启用内嵌模式，建议调整工具栏高度40
   "keyboard/enableInputPeriodBySpaceDoubleTap": false  # 双击空格输入句号
   #"keyboard/enableLoadingTextForSpaceButton": true  # 启用空格加载文字
   "keyboard/enableNineGridOfNumericKeyboard": false
@@ -65,7 +65,7 @@ patch:
   "toolbar/displayCommentOfCandidate": true
   "toolbar/displayIndexOfCandidate": false
   "toolbar/heightOfCodingArea": 15
-  #"toolbar/heightOfToolbar": 40
+  "toolbar/heightOfToolbar": 40
 
   # 候选栏设置
   "toolbar/displayAppIconButton": false  # 显示应用图标-R
