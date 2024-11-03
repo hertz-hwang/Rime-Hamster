@@ -18,6 +18,7 @@ patch:
   switcher/fold_options: true
   switcher/abbreviate_options: true
   switcher/option_list_separator: '／'
+  menu/alternative_select_labels: [ ⑴, ⑵, ⑶, ⑷, ⑸, ⑹, ⑺, ⑻, ⑼, ⑽ ]
   menu/page_size: 3
 
   recognizer/patterns:

@@ -46,12 +46,7 @@ speller:
 
 translator:
   dictionary: tiger_code
-  enable_charset_filter: false
-  enable_encoder: false
-  enable_sentence: false
-  encode_commit_history: false
-  enable_user_dict: false
-  enable_completion: false
+  __include: tiger:/dict_All_false
 
 recognizer:
   import_preset: default
@@ -61,4 +56,5 @@ recognizer:
     reverse_lookup: "^`[a-z]*'?$"
 
 punctuator:
-  import_preset: symbols
+  #import_preset:
+  __include: tiger:/punctuator
