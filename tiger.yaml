@@ -41,9 +41,10 @@ switches_engine_tiger_code:
       - table_translator                            # 码表转换
       - table_translator@easy_en                    # 英文
       - table_translator@fast_symbol                # 码表转换-快符
-      - history_translator@input_history
+      - history_translator@input_history            # 输入历史
       - lua_translator@*hertz.calculator_translator # 计算器
       - lua_translator@*hertz.time_translator       # 时间
+      - lua_translator@*hertz.lunar_translator      # 农历
       - lua_translator@*hertz.number_translator     # 数字
     filters:
       - simplifier@s2t                              # 简繁滤镜
