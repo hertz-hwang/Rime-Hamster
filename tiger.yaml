@@ -43,6 +43,7 @@ switches_engine_tiger_code:
       - table_translator@fast_symbol                # 码表转换-快符
       - history_translator@input_history
       - lua_translator@*hertz.calculator_translator # 计算器
+      - lua_translator@*hertz.time_translator       # 时间
     filters:
       - simplifier@s2t                              # 简繁滤镜
       - simplifier@chaifen                          # 拆分滤镜
