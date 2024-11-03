@@ -3,7 +3,7 @@
 patch:
   schema_list:
     - schema: tiger_code
-    - schema: easy_en
+    - schema: easy_en    # 方案集成（勿用）
   switcher/hotkeys:  # 将默认的 F4热键 更改为ctrl+~
     - Control+grave
     - Control+F8
