@@ -23,9 +23,9 @@ colorSchemas:
     hilited_candidate_text_color: "0xFFFFFF"
     hilited_candidate_label_color: "0xFFFFFF"
     hilited_comment_text_color: "0xFFFFFF"
-    candidate_text_color: "0xCECECE"
-    comment_text_color: "0xCECECE"
-    label_color: "0xCECECE"
+    candidate_text_color: "0xFFFFFF"
+    comment_text_color: "0xFFFFFF"
+    label_color: "0xFFFFFF"
     hilited_callout_back_color: "0xF57935"
     hilited_callout_foreground_color: "0xFFFFFF"
     action_callout_back_color: "0xF57935"
@@ -58,6 +58,11 @@ keyboards:
                     openURL:
                       url: hamster://dev.fuxiao.app.hamster/uploadInputSchema
                 label: Wi-Fi上传
+              - action:
+                  shortcutCommand:
+                    openURL:
+                      url: shortcuts://run-shortcut?name=拼接图片
+                label: 拼接图片
             lightModeStyleName: hotkeys
             darkModeStyleName: hotkeys
           - action:
@@ -66,6 +71,12 @@ keyboards:
                   url: mqqapi://
             width: available
             label: 
+            callout:
+              - action:
+                  shortcutCommand:
+                    openURL:
+                      url: mqqapi://scanqrcode
+                label: 扫一扫
             lightModeStyleName: hotkeys
             darkModeStyleName: hotkeys
           - action:
@@ -74,6 +85,12 @@ keyboards:
                   url: weixin://
             width: available
             label: 
+            callout:
+              - action:
+                  shortcutCommand:
+                    openURL:
+                      url: weixin://scanqrcode
+                label: 扫一扫
             lightModeStyleName: hotkeys
             darkModeStyleName: hotkeys
           - action:
@@ -97,6 +114,29 @@ keyboards:
                 char: ""
             width: available
             label: 󱄅
+            swipe:
+              - action:
+                  shortcutCommand: "#关闭键盘"
+                label: " "
+                display: true
+                processByRIME: true
+                direction: down
+            callout:
+              - action:
+                  shortcutCommand:
+                    openURL:
+                      url: bilibili://search?keyword=#pasteboardContent
+                label: B站
+              - action:
+                  shortcutCommand:
+                    openURL:
+                      url: zhihu://search?q=#pasteboardContent
+                label: 知乎
+              - action:
+                  shortcutCommand:
+                    openURL:
+                      url: xhsdiscover://search/result?keyword=#pasteboardContent
+                label: 小红书
             lightModeStyleName: hotkeys
             darkModeStyleName: hotkeys
           - action:
@@ -125,17 +165,17 @@ keyboards:
             swipe:
               - action:
                   character:
-                    char: "1"
+                    char: "!"
                 label:
                   text: ""
                 display: true
                 processByRIME: true
                 direction: up
               - action:
-                  shortcutCommand:
-                    sendKeys:
-                      keys: Control+grave
-                label: 方案
+                  character:
+                    char: "1"
+                label:
+                  text: ""
                 display: true
                 processByRIME: true
                 direction: down
@@ -155,12 +195,20 @@ keyboards:
             swipe:
               - action:
                   character:
-                    char: "2"
+                    char: "@"
                 label:
                   text: ""
                 display: true
                 processByRIME: true
                 direction: up
+              - action:
+                  character:
+                    char: "2"
+                label:
+                  text: ""
+                display: true
+                processByRIME: true
+                direction: down
             callout:
               - action:
                   character:
@@ -177,12 +225,20 @@ keyboards:
             swipe:
               - action:
                   character:
-                    char: "3"
+                    char: "#"
                 label:
                   text: ""
                 display: true
                 processByRIME: true
                 direction: up
+              - action:
+                  character:
+                    char: "3"
+                label:
+                  text: ""
+                display: true
+                processByRIME: true
+                direction: down
             callout:
               - action:
                   character:
@@ -199,12 +255,20 @@ keyboards:
             swipe:
               - action:
                   character:
-                    char: "4"
+                    char: $
                 label:
                   text: ""
                 display: true
                 processByRIME: true
                 direction: up
+              - action:
+                  character:
+                    char: "4"
+                label:
+                  text: ""
+                display: true
+                processByRIME: true
+                direction: down
             callout:
               - action:
                   character:
@@ -221,12 +285,20 @@ keyboards:
             swipe:
               - action:
                   character:
-                    char: "5"
+                    char: "%"
                 label:
                   text: ""
                 display: true
                 processByRIME: true
                 direction: up
+              - action:
+                  character:
+                    char: "5"
+                label:
+                  text: ""
+                display: true
+                processByRIME: true
+                direction: down
             callout:
               - action:
                   character:
@@ -243,12 +315,20 @@ keyboards:
             swipe:
               - action:
                   character:
-                    char: "6"
+                    char: ^
                 label:
                   text: ""
                 display: true
                 processByRIME: true
                 direction: up
+              - action:
+                  character:
+                    char: "6"
+                label:
+                  text: ""
+                display: true
+                processByRIME: true
+                direction: down
             callout:
               - action:
                   character:
@@ -265,12 +345,20 @@ keyboards:
             swipe:
               - action:
                   character:
-                    char: "7"
+                    char: "&"
                 label:
                   text: ""
                 display: true
                 processByRIME: true
                 direction: up
+              - action:
+                  character:
+                    char: "7"
+                label:
+                  text: ""
+                display: true
+                processByRIME: true
+                direction: down
             callout:
               - action:
                   character:
@@ -286,18 +374,18 @@ keyboards:
             label: I
             swipe:
               - action:
-                  character:
-                    char: "8"
-                label:
-                  text: ""
-                display: true
-                processByRIME: true
-                direction: up
-              - action:
                   shortcutCommand:
                     sendKeys:
                       keys: Control+i
                 label: 
+                display: true
+                processByRIME: true
+                direction: up
+              - action:
+                  character:
+                    char: "8"
+                label:
+                  text: ""
                 display: true
                 processByRIME: true
                 direction: down
@@ -316,18 +404,18 @@ keyboards:
             label: O
             swipe:
               - action:
-                  character:
-                    char: "9"
-                label:
-                  text: ""
-                display: true
-                processByRIME: true
-                direction: up
-              - action:
                   shortcutCommand:
                     sendKeys:
                       keys: Control+o
                 label: 简繁
+                display: true
+                processByRIME: true
+                direction: up
+              - action:
+                  character:
+                    char: "9"
+                label:
+                  text: ""
                 display: true
                 processByRIME: true
                 direction: down
@@ -348,18 +436,18 @@ keyboards:
             label: P
             swipe:
               - action:
-                  character:
-                    char: "0"
-                label:
-                  text: ""
-                display: true
-                processByRIME: true
-                direction: up
-              - action:
                   shortcutCommand:
                     sendKeys:
                       keys: Control+p
                 label: " 拼音"
+                display: true
+                processByRIME: true
+                direction: up
+              - action:
+                  character:
+                    char: "0"
+                label:
+                  text: ""
                 display: true
                 processByRIME: true
                 direction: down
@@ -418,12 +506,20 @@ keyboards:
             swipe:
               - action:
                   character:
-                    char: /
+                    char: +
                 label:
                   text: ""
                 display: true
                 processByRIME: true
                 direction: up
+              - action:
+                  character:
+                    char: "{"
+                label:
+                  text: ""
+                display: true
+                processByRIME: true
+                direction: down
             callout:
               - action:
                   character:
@@ -446,6 +542,14 @@ keyboards:
                 display: true
                 processByRIME: true
                 direction: up
+              - action:
+                  character:
+                    char: "}"
+                label:
+                  text: ""
+                display: true
+                processByRIME: true
+                direction: down
             callout:
               - action:
                   character:
@@ -652,13 +756,25 @@ keyboards:
                 display: true
                 processByRIME: true
                 direction: up
+              - action:
+                  shortcutCommand:
+                    sendKeys:
+                      keys: Control+grave
+                label:
+                  text: ""
+                display: true
+                processByRIME: true
+                direction: right
             lightModeStyleName: shift_delete
             darkModeStyleName: shift_delete
           - action:
               characterMargin:
                 char: ""
             width:
-              percentage: 0.01
+              portrait:
+                percentage: 0.02
+              landscape:
+                percentage: 0.01
             label:
               text: ""
           - action:
@@ -670,7 +786,7 @@ keyboards:
             swipe:
               - action:
                   character:
-                    char: "@"
+                    char: "*"
                 label:
                   text: ""
                 display: true
@@ -699,11 +815,11 @@ keyboards:
             swipe:
               - action:
                   character:
-                    char: .
+                    char: =
                 label:
                   text: ""
                 display: true
-                processByRIME: false
+                processByRIME: true
                 direction: up
               - action:
                   shortcutCommand: "#剪切"
@@ -793,6 +909,14 @@ keyboards:
                 display: true
                 processByRIME: true
                 direction: up
+              - action:
+                  character:
+                    char: <
+                label:
+                  text: ""
+                display: true
+                processByRIME: true
+                direction: down
             callout:
               - action:
                   character:
@@ -815,6 +939,14 @@ keyboards:
                 display: true
                 processByRIME: true
                 direction: up
+              - action:
+                  character:
+                    char: ">"
+                label:
+                  text: ""
+                display: true
+                processByRIME: true
+                direction: down
             callout:
               - action:
                   character:
@@ -855,7 +987,10 @@ keyboards:
               characterMargin:
                 char: ""
             width:
-              percentage: 0.01
+              portrait:
+                percentage: 0.02
+              landscape:
+                percentage: 0.01
             label:
               text: ""
           - action: backspace
@@ -938,31 +1073,27 @@ keyboards:
               keyboardType: iOS-中文数字符号
             width:
               percentage: 0.11
-            label: 符
+            label: 󱐋
             callout:
               - action:
-                  character:
-                    char: '"'
+                  shortcutCommand:
+                    sendKeys:
+                      keys: Control+j
                 label: 拆字
               - action:
-                  character:
-                    char: "&"
+                  shortcutCommand:
+                    sendKeys:
+                      keys: Control+i
                 label: Emoji
               - action:
-                  character:
-                    char: "*"
+                  shortcutCommand:
+                    sendKeys:
+                      keys: Control+o
                 label: 简繁
               - action:
-                  character:
-                    char: ^
-                label: U分区
-              - action:
-                  character:
-                    char: "%"
-                label: U编码
-              - action:
-                  character:
-                    char: \
+                  shortcutCommand:
+                    sendKeys:
+                      keys: Control+p
                 label: 拼音
             lightModeStyleName: shift_delete
             darkModeStyleName: shift_delete
@@ -1008,7 +1139,7 @@ keyboards:
               portrait:
                 percentage: 0.34
               landscape: available
-            label: 󱇄󱥢 赫兹󰝹虎单 󱥢󱇂
+            label: 󱇄󱥢 赫兹󰝹虎码 󱥢󱇂
             swipe:
               - action:
                   shortcutCommand: "#次选上屏"
@@ -1058,16 +1189,16 @@ keyboards:
                 display: true
                 processByRIME: true
                 direction: up
-            lightModeStyleName: return
-            darkModeStyleName: return
+            lightModeStyleName: shift_delete
+            darkModeStyleName: shift_delete
         rowHeight:
           portrait: 54
           landscape: 60
     buttonInsets:
       left: 4
-      bottom: 5
+      bottom: 6
       top: 6
-      right: 5
+      right: 4
     keyStyle:
       hotkeys: &a1
         name: hotkeys
@@ -1077,8 +1208,8 @@ keyboards:
         pressedButtonForegroundColor: "0xFFFFFF"
         swipeForegroundColor: "0xFFFFFF"
         pressedSwipeForegroundColor: "0xFFFFFF"
-        buttonBubbleBackgroundColor: "0xF57935"
-        actionCalloutBackgroundColor: "0xF57935"
+        buttonBubbleBackgroundColor: "0x6A6A6A"
+        actionCalloutBackgroundColor: "0x6A6A6A"
         actionCalloutSelectedBackgroundColor: "0xF57935"
         actionCalloutSelectedForegroundColor: "0xFFFFFF"
         cornerRadius: 4
@@ -1091,11 +1222,15 @@ keyboards:
         pressedButtonForegroundColor: "0xFFFFFF"
         swipeForegroundColor: "0xFFFFFF"
         pressedSwipeForegroundColor: "0xFFFFFF"
-        buttonBubbleBackgroundColor: "0xF57935"
-        actionCalloutBackgroundColor: "0xF57935"
+        buttonBubbleBackgroundColor: "0x6A6A6A"
+        actionCalloutBackgroundColor: "0x6A6A6A"
         actionCalloutSelectedBackgroundColor: "0xF57935"
         actionCalloutSelectedForegroundColor: "0xFFFFFF"
         cornerRadius: 5
+        borderSize: 0
+        lowerEdgeColor: "0x000000"
+        shadowColor: "0x000000"
+        shadowSize: 1
         fontSize: 16
         swipeFontSize: 7
       fjkeys: &a4
@@ -1106,13 +1241,13 @@ keyboards:
         pressedButtonForegroundColor: "0xFFFFFF"
         swipeForegroundColor: "0xFFFFFF"
         pressedSwipeForegroundColor: "0xFFFFFF"
-        buttonBubbleBackgroundColor: "0xF57935"
-        actionCalloutBackgroundColor: "0xF57935"
+        buttonBubbleBackgroundColor: "0x6A6A6A"
+        actionCalloutBackgroundColor: "0x6A6A6A"
         actionCalloutSelectedBackgroundColor: "0xF57935"
         actionCalloutSelectedForegroundColor: "0xFFFFFF"
         cornerRadius: 5
-        lowerEdgeColor: "0xF57935"
-        shadowColor: "0xF57935"
+        lowerEdgeColor: "0x000000"
+        shadowColor: "0x000000"
         shadowSize: 1
         fontSize: 16
         swipeFontSize: 7
@@ -1124,17 +1259,17 @@ keyboards:
         pressedButtonForegroundColor: "0xFFFFFF"
         swipeForegroundColor: "0xFFFFFF"
         pressedSwipeForegroundColor: "0xFFFFFF"
-        buttonBubbleBackgroundColor: "0xF57935"
-        actionCalloutBackgroundColor: "0xF57935"
+        buttonBubbleBackgroundColor: "0x6A6A6A"
+        actionCalloutBackgroundColor: "0x6A6A6A"
         actionCalloutSelectedBackgroundColor: "0xF57935"
         actionCalloutSelectedForegroundColor: "0xFFFFFF"
         cornerRadius: 5
-        lowerEdgeColor: "0xF57935"
-        shadowColor: "0xF57935"
+        lowerEdgeColor: "0x000000"
+        shadowColor: "0x000000"
         shadowSize: 1
         fontSize: 16
         swipeFontSize: 7
-      space: &a6
+      space: &a5
         name: space
         buttonBackgroundColor: "0x6A6A6A"
         pressedButtonBackgroundColor: "0xAF6A6A6A"
@@ -1142,17 +1277,17 @@ keyboards:
         pressedButtonForegroundColor: "0xFFFFFF"
         swipeForegroundColor: "0xFFFFFF"
         pressedSwipeForegroundColor: "0xFFFFFF"
-        buttonBubbleBackgroundColor: "0xF57935"
-        actionCalloutBackgroundColor: "0xF57935"
+        buttonBubbleBackgroundColor: "0x6A6A6A"
+        actionCalloutBackgroundColor: "0x6A6A6A"
         actionCalloutSelectedBackgroundColor: "0xF57935"
         actionCalloutSelectedForegroundColor: "0xFFFFFF"
         cornerRadius: 5
-        lowerEdgeColor: "0xF57935"
-        shadowColor: "0xF57935"
+        lowerEdgeColor: "0x000000"
+        shadowColor: "0x000000"
         shadowSize: 1
-        fontSize: 13
+        fontSize: 12
         swipeFontSize: 7
-      cn_en: &a7
+      cn_en: &a6
         name: cn_en
         buttonBackgroundColor: "0x464646"
         pressedButtonBackgroundColor: "0xAF464646"
@@ -1160,33 +1295,15 @@ keyboards:
         pressedButtonForegroundColor: "0xFFFFFF"
         swipeForegroundColor: "0xFFFFFF"
         pressedSwipeForegroundColor: "0xFFFFFF"
-        buttonBubbleBackgroundColor: "0xF57935"
-        actionCalloutBackgroundColor: "0xF57935"
+        buttonBubbleBackgroundColor: "0x6A6A6A"
+        actionCalloutBackgroundColor: "0x6A6A6A"
         actionCalloutSelectedBackgroundColor: "0xF57935"
         actionCalloutSelectedForegroundColor: "0xFFFFFF"
         cornerRadius: 5
-        lowerEdgeColor: "0xF57935"
-        shadowColor: "0xF57935"
+        lowerEdgeColor: "0x000000"
+        shadowColor: "0x000000"
         shadowSize: 1
         fontSize: 12
-        swipeFontSize: 7
-      return: &a5
-        name: return
-        buttonBackgroundColor: "0xF57935"
-        pressedButtonBackgroundColor: "0xAFF57935"
-        buttonForegroundColor: "0xFFFFFF"
-        pressedButtonForegroundColor: "0xFFFFFF"
-        swipeForegroundColor: "0xFFFFFF"
-        pressedSwipeForegroundColor: "0xFFFFFF"
-        buttonBubbleBackgroundColor: "0xF57935"
-        actionCalloutBackgroundColor: "0xF57935"
-        actionCalloutSelectedBackgroundColor: "0xF57935"
-        actionCalloutSelectedForegroundColor: "0xFFFFFF"
-        cornerRadius: 5
-        lowerEdgeColor: "0xF57935"
-        shadowColor: "0xF57935"
-        shadowSize: 1
-        fontSize: 16
         swipeFontSize: 7
   - name: iOS-中文数字
     isPrimary: false
@@ -1210,6 +1327,17 @@ keyboards:
                 char: ""
             width: available
             label: 
+            callout:
+              - action:
+                  shortcutCommand:
+                    openURL:
+                      url: hamster://dev.fuxiao.app.hamster/uploadInputSchema
+                label: Wi-Fi上传
+              - action:
+                  shortcutCommand:
+                    openURL:
+                      url: shortcuts://run-shortcut?name=拼接图片
+                label: 拼接图片
             lightModeStyleName: hotkeys
             darkModeStyleName: hotkeys
           - action:
@@ -1218,6 +1346,12 @@ keyboards:
                   url: mqqapi://
             width: available
             label: 
+            callout:
+              - action:
+                  shortcutCommand:
+                    openURL:
+                      url: mqqapi://scanqrcode
+                label: 扫一扫
             lightModeStyleName: hotkeys
             darkModeStyleName: hotkeys
           - action:
@@ -1226,6 +1360,12 @@ keyboards:
                   url: weixin://
             width: available
             label: 
+            callout:
+              - action:
+                  shortcutCommand:
+                    openURL:
+                      url: weixin://scanqrcode
+                label: 扫一扫
             lightModeStyleName: hotkeys
             darkModeStyleName: hotkeys
           - action:
@@ -1249,6 +1389,29 @@ keyboards:
                 char: ""
             width: available
             label: 󱄅
+            swipe:
+              - action:
+                  shortcutCommand: "#关闭键盘"
+                label: " "
+                display: true
+                processByRIME: true
+                direction: down
+            callout:
+              - action:
+                  shortcutCommand:
+                    openURL:
+                      url: bilibili://search?keyword=#pasteboardContent
+                label: B站
+              - action:
+                  shortcutCommand:
+                    openURL:
+                      url: zhihu://search?q=#pasteboardContent
+                label: 知乎
+              - action:
+                  shortcutCommand:
+                    openURL:
+                      url: xhsdiscover://search/result?keyword=#pasteboardContent
+                label: 小红书
             lightModeStyleName: hotkeys
             darkModeStyleName: hotkeys
           - action:
@@ -1452,8 +1615,8 @@ keyboards:
               keyboardType: iOS-中文
             width: available
             label: 󱞱
-            lightModeStyleName: return
-            darkModeStyleName: return
+            lightModeStyleName: shift_delete
+            darkModeStyleName: shift_delete
           - action:
               character:
                 char: "%"
@@ -1505,14 +1668,14 @@ keyboards:
                 display: true
                 processByRIME: true
                 direction: up
-            lightModeStyleName: return
-            darkModeStyleName: return
+            lightModeStyleName: shift_delete
+            darkModeStyleName: shift_delete
         rowHeight:
           portrait: 54
           landscape: 60
     buttonInsets:
       left: 4
-      bottom: 5
+      bottom: 6
       top: 6
       right: 4
     keyStyle:
@@ -1520,8 +1683,7 @@ keyboards:
       shift_delete: *a2
       mainkeys: *a3
       fjkeys: *a4
-      return: *a5
-      space: *a6
+      space: *a5
   - name: iOS-中文数字符号
     isPrimary: false
     rows:
@@ -1544,6 +1706,17 @@ keyboards:
                 char: ""
             width: available
             label: 
+            callout:
+              - action:
+                  shortcutCommand:
+                    openURL:
+                      url: hamster://dev.fuxiao.app.hamster/uploadInputSchema
+                label: Wi-Fi上传
+              - action:
+                  shortcutCommand:
+                    openURL:
+                      url: shortcuts://run-shortcut?name=拼接图片
+                label: 拼接图片
             lightModeStyleName: hotkeys
             darkModeStyleName: hotkeys
           - action:
@@ -1552,6 +1725,12 @@ keyboards:
                   url: mqqapi://
             width: available
             label: 
+            callout:
+              - action:
+                  shortcutCommand:
+                    openURL:
+                      url: mqqapi://scanqrcode
+                label: 扫一扫
             lightModeStyleName: hotkeys
             darkModeStyleName: hotkeys
           - action:
@@ -1560,6 +1739,12 @@ keyboards:
                   url: weixin://
             width: available
             label: 
+            callout:
+              - action:
+                  shortcutCommand:
+                    openURL:
+                      url: weixin://scanqrcode
+                label: 扫一扫
             lightModeStyleName: hotkeys
             darkModeStyleName: hotkeys
           - action:
@@ -1583,6 +1768,29 @@ keyboards:
                 char: ""
             width: available
             label: 󱄅
+            swipe:
+              - action:
+                  shortcutCommand: "#关闭键盘"
+                label: " "
+                display: true
+                processByRIME: true
+                direction: down
+            callout:
+              - action:
+                  shortcutCommand:
+                    openURL:
+                      url: bilibili://search?keyword=#pasteboardContent
+                label: B站
+              - action:
+                  shortcutCommand:
+                    openURL:
+                      url: zhihu://search?q=#pasteboardContent
+                label: 知乎
+              - action:
+                  shortcutCommand:
+                    openURL:
+                      url: xhsdiscover://search/result?keyword=#pasteboardContent
+                label: 小红书
             lightModeStyleName: hotkeys
             darkModeStyleName: hotkeys
           - action:
@@ -1815,7 +2023,10 @@ keyboards:
               characterMargin:
                 char: ""
             width:
-              percentage: 0.01
+              portrait:
+                percentage: 0.02
+              landscape:
+                percentage: 0.01
             label:
               text: ""
           - action:
@@ -1885,7 +2096,10 @@ keyboards:
               characterMargin:
                 char: ""
             width:
-              percentage: 0.01
+              portrait:
+                percentage: 0.02
+              landscape:
+                percentage: 0.01
             label:
               text: ""
           - action: backspace
@@ -1928,8 +2142,8 @@ keyboards:
             width:
               percentage: 0.11
             label: 返
-            lightModeStyleName: return
-            darkModeStyleName: return
+            lightModeStyleName: shift_delete
+            darkModeStyleName: shift_delete
           - action:
               character:
                 char: ","
@@ -2000,8 +2214,8 @@ keyboards:
                 display: true
                 processByRIME: true
                 direction: up
-            lightModeStyleName: return
-            darkModeStyleName: return
+            lightModeStyleName: shift_delete
+            darkModeStyleName: shift_delete
         rowHeight:
           portrait: 54
           landscape: 60
@@ -2009,14 +2223,13 @@ keyboards:
       left: 4
       bottom: 5
       top: 6
-      right: 5
+      right: 4
     keyStyle:
       hotkeys: *a1
       mainkeys: *a3
       shift_delete: *a2
-      return: *a5
-      space: *a6
-      cn_en: *a7
+      space: *a5
+      cn_en: *a6
   - name: iOS-英文
     isPrimary: false
     rows:
@@ -2039,6 +2252,17 @@ keyboards:
                 char: ""
             width: available
             label: 
+            callout:
+              - action:
+                  shortcutCommand:
+                    openURL:
+                      url: hamster://dev.fuxiao.app.hamster/uploadInputSchema
+                label: Wi-Fi上传
+              - action:
+                  shortcutCommand:
+                    openURL:
+                      url: shortcuts://run-shortcut?name=拼接图片
+                label: 拼接图片
             lightModeStyleName: hotkeys
             darkModeStyleName: hotkeys
           - action:
@@ -2047,6 +2271,12 @@ keyboards:
                   url: mqqapi://
             width: available
             label: 
+            callout:
+              - action:
+                  shortcutCommand:
+                    openURL:
+                      url: mqqapi://scanqrcode
+                label: 扫一扫
             lightModeStyleName: hotkeys
             darkModeStyleName: hotkeys
           - action:
@@ -2055,6 +2285,12 @@ keyboards:
                   url: weixin://
             width: available
             label: 
+            callout:
+              - action:
+                  shortcutCommand:
+                    openURL:
+                      url: weixin://scanqrcode
+                label: 扫一扫
             lightModeStyleName: hotkeys
             darkModeStyleName: hotkeys
           - action:
@@ -2078,6 +2314,29 @@ keyboards:
                 char: ""
             width: available
             label: 󱄅
+            swipe:
+              - action:
+                  shortcutCommand: "#关闭键盘"
+                label: " "
+                display: true
+                processByRIME: true
+                direction: down
+            callout:
+              - action:
+                  shortcutCommand:
+                    openURL:
+                      url: bilibili://search?keyword=#pasteboardContent
+                label: B站
+              - action:
+                  shortcutCommand:
+                    openURL:
+                      url: zhihu://search?q=#pasteboardContent
+                label: 知乎
+              - action:
+                  shortcutCommand:
+                    openURL:
+                      url: xhsdiscover://search/result?keyword=#pasteboardContent
+                label: 小红书
             lightModeStyleName: hotkeys
             darkModeStyleName: hotkeys
           - action:
@@ -2108,12 +2367,20 @@ keyboards:
             swipe:
               - action:
                   character:
-                    char: "1"
+                    char: "!"
                 label:
                   text: ""
                 display: true
                 processByRIME: false
                 direction: up
+              - action:
+                  character:
+                    char: "1"
+                label:
+                  text: ""
+                display: true
+                processByRIME: false
+                direction: down
             lightModeStyleName: mainkeys
             darkModeStyleName: mainkeys
           - action:
@@ -2127,12 +2394,20 @@ keyboards:
             swipe:
               - action:
                   character:
-                    char: "2"
+                    char: "@"
                 label:
                   text: ""
                 display: true
                 processByRIME: false
                 direction: up
+              - action:
+                  character:
+                    char: "2"
+                label:
+                  text: ""
+                display: true
+                processByRIME: false
+                direction: down
             lightModeStyleName: mainkeys
             darkModeStyleName: mainkeys
           - action:
@@ -2146,12 +2421,20 @@ keyboards:
             swipe:
               - action:
                   character:
-                    char: "3"
+                    char: "#"
                 label:
                   text: ""
                 display: true
                 processByRIME: false
                 direction: up
+              - action:
+                  character:
+                    char: "3"
+                label:
+                  text: ""
+                display: true
+                processByRIME: false
+                direction: down
             lightModeStyleName: mainkeys
             darkModeStyleName: mainkeys
           - action:
@@ -2165,12 +2448,20 @@ keyboards:
             swipe:
               - action:
                   character:
-                    char: "4"
+                    char: $
                 label:
                   text: ""
                 display: true
                 processByRIME: false
                 direction: up
+              - action:
+                  character:
+                    char: "4"
+                label:
+                  text: ""
+                display: true
+                processByRIME: false
+                direction: down
             lightModeStyleName: mainkeys
             darkModeStyleName: mainkeys
           - action:
@@ -2184,12 +2475,20 @@ keyboards:
             swipe:
               - action:
                   character:
-                    char: "5"
+                    char: "%"
                 label:
                   text: ""
                 display: true
                 processByRIME: false
                 direction: up
+              - action:
+                  character:
+                    char: "5"
+                label:
+                  text: ""
+                display: true
+                processByRIME: false
+                direction: down
             lightModeStyleName: mainkeys
             darkModeStyleName: mainkeys
           - action:
@@ -2203,12 +2502,20 @@ keyboards:
             swipe:
               - action:
                   character:
-                    char: "6"
+                    char: ^
                 label:
                   text: ""
                 display: true
                 processByRIME: false
                 direction: up
+              - action:
+                  character:
+                    char: "6"
+                label:
+                  text: ""
+                display: true
+                processByRIME: false
+                direction: down
             lightModeStyleName: mainkeys
             darkModeStyleName: mainkeys
           - action:
@@ -2222,12 +2529,20 @@ keyboards:
             swipe:
               - action:
                   character:
-                    char: "7"
+                    char: "&"
                 label:
                   text: ""
                 display: true
                 processByRIME: false
                 direction: up
+              - action:
+                  character:
+                    char: "7"
+                label:
+                  text: ""
+                display: true
+                processByRIME: false
+                direction: down
             lightModeStyleName: mainkeys
             darkModeStyleName: mainkeys
           - action:
@@ -2241,12 +2556,20 @@ keyboards:
             swipe:
               - action:
                   character:
-                    char: "8"
+                    char: "*"
                 label:
                   text: ""
                 display: true
                 processByRIME: false
                 direction: up
+              - action:
+                  character:
+                    char: "8"
+                label:
+                  text: ""
+                display: true
+                processByRIME: false
+                direction: down
             lightModeStyleName: mainkeys
             darkModeStyleName: mainkeys
           - action:
@@ -2260,12 +2583,20 @@ keyboards:
             swipe:
               - action:
                   character:
-                    char: "9"
+                    char: (
                 label:
                   text: ""
                 display: true
                 processByRIME: false
                 direction: up
+              - action:
+                  character:
+                    char: "9"
+                label:
+                  text: ""
+                display: true
+                processByRIME: false
+                direction: down
             lightModeStyleName: mainkeys
             darkModeStyleName: mainkeys
           - action:
@@ -2281,12 +2612,20 @@ keyboards:
             swipe:
               - action:
                   character:
-                    char: "0"
+                    char: )
                 label:
                   text: ""
                 display: true
                 processByRIME: false
                 direction: up
+              - action:
+                  character:
+                    char: "0"
+                label:
+                  text: ""
+                display: true
+                processByRIME: false
+                direction: down
             lightModeStyleName: mainkeys
             darkModeStyleName: mainkeys
         rowHeight:
@@ -2336,7 +2675,7 @@ keyboards:
             swipe:
               - action:
                   character:
-                    char: /
+                    char: +
                 label:
                   text: ""
                 display: true
@@ -2405,6 +2744,14 @@ keyboards:
                 display: true
                 processByRIME: false
                 direction: up
+              - action:
+                  character:
+                    char: "["
+                label:
+                  text: ""
+                display: true
+                processByRIME: true
+                direction: down
             lightModeStyleName: mainkeys
             darkModeStyleName: mainkeys
           - action:
@@ -2424,6 +2771,14 @@ keyboards:
                 display: true
                 processByRIME: false
                 direction: up
+              - action:
+                  character:
+                    char: "]"
+                label:
+                  text: ""
+                display: true
+                processByRIME: true
+                direction: down
             lightModeStyleName: mainkeys
             darkModeStyleName: mainkeys
           - action:
@@ -2506,13 +2861,25 @@ keyboards:
                 display: true
                 processByRIME: true
                 direction: up
+              - action:
+                  shortcutCommand:
+                    sendKeys:
+                      keys: Control+grave
+                label:
+                  text: ""
+                display: true
+                processByRIME: true
+                direction: right
             lightModeStyleName: shift_delete
             darkModeStyleName: shift_delete
           - action:
               characterMargin:
                 char: ""
             width:
-              percentage: 0.01
+              portrait:
+                percentage: 0.02
+              landscape:
+                percentage: 0.01
             label:
               text: ""
           - action:
@@ -2526,7 +2893,7 @@ keyboards:
             swipe:
               - action:
                   character:
-                    char: "@"
+                    char: "*"
                 label:
                   text: ""
                 display: true
@@ -2551,7 +2918,7 @@ keyboards:
             swipe:
               - action:
                   character:
-                    char: .
+                    char: =
                 label:
                   text: ""
                 display: true
@@ -2640,6 +3007,14 @@ keyboards:
                 display: true
                 processByRIME: false
                 direction: up
+              - action:
+                  character:
+                    char: <
+                label:
+                  text: ""
+                display: true
+                processByRIME: false
+                direction: down
             lightModeStyleName: mainkeys
             darkModeStyleName: mainkeys
           - action:
@@ -2659,6 +3034,14 @@ keyboards:
                 display: true
                 processByRIME: false
                 direction: up
+              - action:
+                  character:
+                    char: ">"
+                label:
+                  text: ""
+                display: true
+                processByRIME: false
+                direction: down
             lightModeStyleName: mainkeys
             darkModeStyleName: mainkeys
           - action:
@@ -2684,7 +3067,10 @@ keyboards:
               characterMargin:
                 char: ""
             width:
-              percentage: 0.01
+              portrait:
+                percentage: 0.02
+              landscape:
+                percentage: 0.01
             label:
               text: ""
           - action: backspace
@@ -2726,7 +3112,7 @@ keyboards:
               keyboardType: iOS-英文数字符号
             width:
               percentage: 0.11
-            label: 符
+            label: 󱐋
             lightModeStyleName: shift_delete
             darkModeStyleName: shift_delete
           - action:
@@ -2802,24 +3188,23 @@ keyboards:
                 display: true
                 processByRIME: true
                 direction: up
-            lightModeStyleName: return
-            darkModeStyleName: return
+            lightModeStyleName: shift_delete
+            darkModeStyleName: shift_delete
         rowHeight:
           portrait: 54
           landscape: 60
     buttonInsets:
       left: 4
-      bottom: 5
+      bottom: 6
       top: 6
-      right: 6
+      right: 4
     keyStyle:
       hotkeys: *a1
       mainkeys: *a3
       fjkeys: *a4
       shift_delete: *a2
-      space: *a6
-      cn_en: *a7
-      return: *a5
+      space: *a5
+      cn_en: *a6
   - name: iOS-英文数字
     isPrimary: false
     rows:
@@ -2842,6 +3227,17 @@ keyboards:
                 char: ""
             width: available
             label: 
+            callout:
+              - action:
+                  shortcutCommand:
+                    openURL:
+                      url: hamster://dev.fuxiao.app.hamster/uploadInputSchema
+                label: Wi-Fi上传
+              - action:
+                  shortcutCommand:
+                    openURL:
+                      url: shortcuts://run-shortcut?name=拼接图片
+                label: 拼接图片
             lightModeStyleName: hotkeys
             darkModeStyleName: hotkeys
           - action:
@@ -2850,6 +3246,12 @@ keyboards:
                   url: mqqapi://
             width: available
             label: 
+            callout:
+              - action:
+                  shortcutCommand:
+                    openURL:
+                      url: mqqapi://scanqrcode
+                label: 扫一扫
             lightModeStyleName: hotkeys
             darkModeStyleName: hotkeys
           - action:
@@ -2858,6 +3260,12 @@ keyboards:
                   url: weixin://
             width: available
             label: 
+            callout:
+              - action:
+                  shortcutCommand:
+                    openURL:
+                      url: weixin://scanqrcode
+                label: 扫一扫
             lightModeStyleName: hotkeys
             darkModeStyleName: hotkeys
           - action:
@@ -2881,6 +3289,29 @@ keyboards:
                 char: ""
             width: available
             label: 󱄅
+            swipe:
+              - action:
+                  shortcutCommand: "#关闭键盘"
+                label: " "
+                display: true
+                processByRIME: true
+                direction: down
+            callout:
+              - action:
+                  shortcutCommand:
+                    openURL:
+                      url: bilibili://search?keyword=#pasteboardContent
+                label: B站
+              - action:
+                  shortcutCommand:
+                    openURL:
+                      url: zhihu://search?q=#pasteboardContent
+                label: 知乎
+              - action:
+                  shortcutCommand:
+                    openURL:
+                      url: xhsdiscover://search/result?keyword=#pasteboardContent
+                label: 小红书
             lightModeStyleName: hotkeys
             darkModeStyleName: hotkeys
           - action:
@@ -3084,8 +3515,8 @@ keyboards:
               keyboardType: iOS-英文
             width: available
             label: 󱞱
-            lightModeStyleName: return
-            darkModeStyleName: return
+            lightModeStyleName: shift_delete
+            darkModeStyleName: shift_delete
           - action:
               character:
                 char: "%"
@@ -3138,14 +3569,14 @@ keyboards:
                 display: true
                 processByRIME: true
                 direction: up
-            lightModeStyleName: return
-            darkModeStyleName: return
+            lightModeStyleName: shift_delete
+            darkModeStyleName: shift_delete
         rowHeight:
           portrait: 54
           landscape: 60
     buttonInsets:
       left: 4
-      bottom: 5
+      bottom: 6
       top: 6
       right: 4
     keyStyle:
@@ -3153,8 +3584,7 @@ keyboards:
       shift_delete: *a2
       mainkeys: *a3
       fjkeys: *a4
-      return: *a5
-      space: *a6
+      space: *a5
   - name: iOS-英文数字符号
     isPrimary: false
     rows:
@@ -3177,6 +3607,17 @@ keyboards:
                 char: ""
             width: available
             label: 
+            callout:
+              - action:
+                  shortcutCommand:
+                    openURL:
+                      url: hamster://dev.fuxiao.app.hamster/uploadInputSchema
+                label: Wi-Fi上传
+              - action:
+                  shortcutCommand:
+                    openURL:
+                      url: shortcuts://run-shortcut?name=拼接图片
+                label: 拼接图片
             lightModeStyleName: hotkeys
             darkModeStyleName: hotkeys
           - action:
@@ -3185,6 +3626,12 @@ keyboards:
                   url: mqqapi://
             width: available
             label: 
+            callout:
+              - action:
+                  shortcutCommand:
+                    openURL:
+                      url: mqqapi://scanqrcode
+                label: 扫一扫
             lightModeStyleName: hotkeys
             darkModeStyleName: hotkeys
           - action:
@@ -3193,6 +3640,12 @@ keyboards:
                   url: weixin://
             width: available
             label: 
+            callout:
+              - action:
+                  shortcutCommand:
+                    openURL:
+                      url: weixin://scanqrcode
+                label: 扫一扫
             lightModeStyleName: hotkeys
             darkModeStyleName: hotkeys
           - action:
@@ -3216,6 +3669,29 @@ keyboards:
                 char: ""
             width: available
             label: 󱄅
+            swipe:
+              - action:
+                  shortcutCommand: "#关闭键盘"
+                label: " "
+                display: true
+                processByRIME: true
+                direction: down
+            callout:
+              - action:
+                  shortcutCommand:
+                    openURL:
+                      url: bilibili://search?keyword=#pasteboardContent
+                label: B站
+              - action:
+                  shortcutCommand:
+                    openURL:
+                      url: zhihu://search?q=#pasteboardContent
+                label: 知乎
+              - action:
+                  shortcutCommand:
+                    openURL:
+                      url: xhsdiscover://search/result?keyword=#pasteboardContent
+                label: 小红书
             lightModeStyleName: hotkeys
             darkModeStyleName: hotkeys
           - action:
@@ -3448,7 +3924,10 @@ keyboards:
               characterMargin:
                 char: ""
             width:
-              percentage: 0.01
+              portrait:
+                percentage: 0.02
+              landscape:
+                percentage: 0.01
             label:
               text: ""
           - action:
@@ -3518,7 +3997,10 @@ keyboards:
               characterMargin:
                 char: ""
             width:
-              percentage: 0.01
+              portrait:
+                percentage: 0.02
+              landscape:
+                percentage: 0.01
             label:
               text: ""
           - action: backspace
@@ -3562,8 +4044,8 @@ keyboards:
             width:
               percentage: 0.11
             label: 返
-            lightModeStyleName: return
-            darkModeStyleName: return
+            lightModeStyleName: shift_delete
+            darkModeStyleName: shift_delete
           - action:
               character:
                 char: ","
@@ -3637,20 +4119,19 @@ keyboards:
                 display: true
                 processByRIME: true
                 direction: up
-            lightModeStyleName: return
-            darkModeStyleName: return
+            lightModeStyleName: shift_delete
+            darkModeStyleName: shift_delete
         rowHeight:
           portrait: 54
           landscape: 60
     buttonInsets:
       left: 4
-      bottom: 5
+      bottom: 6
       top: 6
-      right: 5
+      right: 4
     keyStyle:
       hotkeys: *a1
       mainkeys: *a3
       shift_delete: *a2
-      return: *a5
-      space: *a6
-      cn_en: *a7
+      space: *a5
+      cn_en: *a6
