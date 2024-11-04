@@ -843,11 +843,11 @@ keyboards:
             swipe:
               - action:
                   character:
-                    char: "#"
+                    char: /
                 label:
                   text: ""
                 display: true
-                processByRIME: true
+                processByRIME: false
                 direction: up
               - action:
                   shortcutCommand: "#复制"
@@ -1095,6 +1095,11 @@ keyboards:
                     sendKeys:
                       keys: Control+p
                 label: 拼音
+              - action:
+                  shortcutCommand:
+                    sendKeys:
+                      keys: Control+e
+                label: 翻译
             lightModeStyleName: shift_delete
             darkModeStyleName: shift_delete
           - action:
@@ -2943,7 +2948,7 @@ keyboards:
             swipe:
               - action:
                   character:
-                    char: "#"
+                    char: /
                 label:
                   text: ""
                 display: true

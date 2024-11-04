@@ -96,6 +96,7 @@ key_bindings:
       - { when: composing, accept: "Control+i", toggle: emoji }              # Emoji开关
       - { when: composing, accept: "Control+p", toggle: pinyin }             # 拼音开关
       - { when: composing, accept: "Control+j", toggle: chaifen }            # 拆分滤镜开关
+      - { when: has_menu, accept: "Control+e", toggle: chinese_english }     # 翻译
 
 dict_All_false:
   enable_user_dict: false
@@ -130,7 +131,7 @@ easy_en_translator:
     preedit_format:
       - xlit|_| |
     comment_format:
-      - xlit|~||
+      - xlit|_| |
 
 reverse_lookup_translator_xh:
   reverse_lookup:
@@ -196,6 +197,14 @@ emoji_filter:
     opencc_config: filter_emoji/emoji.json
     option_name: emoji
     tips: all
+
+cn_en_filter:
+  chinese_english:
+    opencc_config: filter_cn_en/chinese_english.json
+    option_name: chinese_english
+    tips: char
+    comment_format:
+      - "xform/-/ /"
 
 switches_list:
   - name: ascii_mode

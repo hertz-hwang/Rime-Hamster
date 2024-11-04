@@ -32,10 +32,10 @@ speller:
   alphabet: ";'zyxwvutsrqponmlkjihgfedcba]V"
   auto_select_pattern: ^;\w+
   algebra:
-    - derive|^(.+)[[](\w)(\w)$|$1|     # 2码
-    - derive|^(.+)[[](\w)(\w)$|$1$2|   # 3码
-    - derive|^(.+)[[](\w)(\w)$|$1$2$3| # 4码
-    - erase|^(.+)[[](.+)$|             # 刪除原始編碼以加速檢索
+    - derive|^(\w+)\[(\w)(\w)$|$1$2$3|  # 4码
+    - derive|^(\w+)\[(\w)(\w)$|$1$2|    # 3码
+    - derive|^(\w+)\[(\w)(\w)$|$1|      # 2码
+    - erase|^(\w+)\[(\w+)$|             # 刪除原始編碼以加速檢索
 # 说明
 # xform --改寫〔不保留原形〕
 # derive --衍生〔保留原形〕
