@@ -14,7 +14,7 @@ schema:
   schema_id: tiger_code
   version: "2024-10-31"
 
-__include: tiger:/switches_engine_tiger_code   # Rime模块
+__include: tiger:/switches_engine_table        # Rime模块
 __include: tiger:/fast_symbol_translator       # 快符
 __include: tiger:/easy_en_translator           # 英文
 __include: tiger:/reverse_lookup_translator_xh # 小鹤反查

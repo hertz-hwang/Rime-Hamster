@@ -1,23 +1,8 @@
-switches_engine_tiger_code:
+# tiger-code config
+
+switches_engine_table:
   switches:
-    - name: ascii_mode
-      reset: 0
-      states: [ 虎, 英 ]
-    - name: traditionalization
-      states: [ 简, 繁 ]
-    - name: pinyin
-      states: [ 拼, pīn ]
-    - name: emoji
-      states: [ 🈚, 🈶 ]
-    - name: chaifen
-      reset: 1
-      states: [ 不拆, 拆字 ]
-    - name: full_shape
-      reset: 0
-      states: [ 半角, 全角 ]
-    - name: ascii_punct
-      reset: 0
-      states: [ 。，, ．， ]
+    __include: switches_list
   engine:
     processors:
       - ascii_composer                              # 处理英文模式及中英文切换
@@ -55,50 +40,45 @@ switches_engine_tiger_code:
       - uniquifier                                  # 过滤重复的候选字，可能来自简繁转换
       #- lua_filter@*hertz.easy_en*enhance_filter
 
-switches_engine_pinyin:
+switches_engine_script:
   switches:
-    - name: ascii_mode
-      reset: 0
-      states: [ 拼, 英 ]
-    - name: traditionalization
-      states: [ 简, 繁 ]
-    - name: pinyin
-      states: [ 拼, pīn ]
-    - name: emoji
-      states: [ 🈚, 🈶 ]
-    - name: chaifen
-      reset: 1
-      states: [ 不拆, 拆字 ]
-    - name: full_shape
-      reset: 0
-      states: [ 半角, 全角 ]
-    - name: ascii_punct
-      reset: 0
-      states: [ 。，, ．， ]
+    __include: switches_list
   engine:
     processors:
-      - ascii_composer                            # 处理英文模式及中英文切换
-      - recognizer                                # 与 matcher 搭配，处理符合特定规则的输入码，如网址、反查等
-      - key_binder                                # 在特定条件下将按键绑定到其他按键，如重定义逗号、句号为候选翻页键
-      - speller                                   # 把字母追加到编码串
-      - punctuator                                # 处理符号按键
-      - selector                                  # 选字和换页功能
-      - navigator                                 # 移动插入点
-      - express_editor                            # 空格确认当前输入，其他字符直接上屏
+      - ascii_composer                              # 处理英文模式及中英文切换
+      - recognizer                                  # 与 matcher 搭配，处理符合特定规则的输入码，如网址、反查等
+      - key_binder                                  # 在特定条件下将按键绑定到其他按键，如重定义逗号、句号为候选翻页键
+      - speller                                     # 把字母追加到编码串
+      - punctuator                                  # 处理符号按键
+      - selector                                    # 选字和换页功能
+      - navigator                                   # 移动插入点
+      - express_editor                              # 空格确认当前输入，其他字符直接上屏
     segmentors:
       - ascii_segmentor
       - matcher
-      - abc_segmentor                             # 标记输入码的类型
-      - punct_segmentor                           # 割界，与前后方的其他编码区分开
+      - affix_segmentor@easy_en                     # 英文
+      - abc_segmentor                               # 标记输入码的类型
+      - punct_segmentor                             # 割界，与前后方的其他编码区分开
       - fallback_segmentor
     translators:
-      - punct_translator                          # 转换标点符号
-      - script_translator                         # 脚本表转换
+      - punct_translator                            # 转换标点符号
+      - reverse_lookup_translator                   # 拼音反查
+      - script_translator                           # 码表转换
+      - table_translator@easy_en                    # 英文
+      - table_translator@fast_symbol                # 码表转换-快符
+      - history_translator@input_history            # 输入历史
+      - lua_translator@*hertz.calculator_translator # 计算器
+      - lua_translator@*hertz.time_translator       # 时间
+      - lua_translator@*hertz.lunar_translator      # 农历
+      - lua_translator@*hertz.number_translator     # 数字
     filters:
-      - simplifier@s2t                            # 简繁滤镜
-      - simplifier@chaifen                        # 拆分滤镜
-      - simplifier@emoji                          # Emoji滤镜
-      - uniquifier                                # 过滤重复的候选字，可能来自简繁转换
+      - simplifier@s2t                              # 简繁滤镜
+      - simplifier@chaifen                          # 拆分滤镜
+      - simplifier@pinyin                           # 拼音滤镜
+      - simplifier@emoji                            # Emoji滤镜
+      - lua_filter@*hertz.inline_candidate_filter   # 首选内嵌
+      - uniquifier                                  # 过滤重复的候选字，可能来自简繁转换
+      #- lua_filter@*hertz.easy_en*enhance_filter
 
 key_bindings:
   key_binder:
@@ -216,6 +196,26 @@ emoji_filter:
     opencc_config: filter_emoji/emoji.json
     option_name: emoji
     tips: all
+
+switches_list:
+  - name: ascii_mode
+    reset: 0
+    states: [ 虎, 英 ]
+  - name: traditionalization
+    states: [ 简, 繁 ]
+  - name: pinyin
+    states: [ 拼, pīn ]
+  - name: emoji
+    states: [ 🈚, 🈶 ]
+  - name: chaifen
+    reset: 1
+    states: [ 不拆, 拆字 ]
+  - name: full_shape
+    reset: 0
+    states: [ 半角, 全角 ]
+  - name: ascii_punct
+    reset: 0
+    states: [ 。，, ．， ]
 
 punctuator:
   full_shape:

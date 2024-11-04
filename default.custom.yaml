@@ -19,7 +19,7 @@ patch:
   switcher/abbreviate_options: true
   switcher/option_list_separator: '／'
   menu/alternative_select_labels: [ ⑴, ⑵, ⑶, ⑷, ⑸, ⑹, ⑺, ⑻, ⑼, ⑽ ]
-  menu/page_size: 3
+  menu/page_size: 5
 
   recognizer/patterns:
     email: "^[A-Za-z][-_.0-9A-Za-z]*@.*$"
