@@ -2,6 +2,7 @@
 
 patch:
   schema_list:
+    - schema: tiger_oni
     - schema: tiger_code
     - schema: easy_en    # 方案集成（勿用）
   switcher/hotkeys:  # 将默认的 F4热键 更改为ctrl+~
@@ -19,7 +20,7 @@ patch:
   switcher/abbreviate_options: true
   switcher/option_list_separator: '／'
   menu/alternative_select_labels: [ ⑴, ⑵, ⑶, ⑷, ⑸, ⑹, ⑺, ⑻, ⑼, ⑽ ]
-  menu/page_size: 5
+  menu/page_size: 9
 
   recognizer/patterns:
     email: "^[A-Za-z][-_.0-9A-Za-z]*@.*$"
