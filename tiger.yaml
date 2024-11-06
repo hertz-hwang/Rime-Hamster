@@ -76,7 +76,7 @@ switches_engine_script:
       - simplifier@chaifen                          # 拆分滤镜
       - simplifier@pinyin                           # 拼音滤镜
       - simplifier@emoji                            # Emoji滤镜
-      - lua_filter@*hertz.inline_candidate_filter   # 首选内嵌
+      #- lua_filter@*hertz.inline_candidate_filter   # 首选内嵌
       - uniquifier                                  # 过滤重复的候选字，可能来自简繁转换
       #- lua_filter@*hertz.easy_en*enhance_filter
 
@@ -160,9 +160,9 @@ chaifen_filter:
     show_in_comment: true 
     comment_format:
       - xform|〔|🐯【|
-      - xform|·|】[|
+      - xform|&nbsp;·&nbsp;|】[|
       - xform|〕|]|
-      - xform|&nbsp;||
+      - xform|&nbsp;| |
       #- xform|·| · |
       #- xform|〔|⚡️‹|
       #- xform|·|›→🐯«|

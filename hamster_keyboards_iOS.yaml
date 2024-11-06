@@ -655,8 +655,7 @@ keyboards:
               - action:
                   character:
                     char: "~"
-                label:
-                  text: ""
+                label: ~ 通配
                 display: true
                 processByRIME: true
                 direction: up
