@@ -29,12 +29,21 @@ speller:
   auto_clear: max_length
   auto_select: true
   max_code_length: 4
-  alphabet: ";'zyxwvutsrqponmlkjihgfedcba]V"
+  alphabet: "~;'zyxwvutsrqponmlkjihgfedcba]V"
   auto_select_pattern: ^;\w+
   algebra:
     - derive|^(\w+)\[(\w)(\w)$|$1$2$3|  # 4码
     - derive|^(\w+)\[(\w)(\w)$|$1$2|    # 3码
     - derive|^(\w+)\[(\w)(\w)$|$1|      # 2码
+    - derive|^(\w+)(\w+)\[(\w)(\w)$|~\2\3\4|
+    - derive|^(\w+)(\w+)\[(\w)(\w)$|\1~\3\4|
+    - derive|^(\w+)(\w+)\[(\w)(\w)$|\1\2~\4|
+    - derive|^(\w+)(\w+)\[(\w)(\w)$|\1\2\3~|
+    #- derive|^(\w+)(\w+)\[(\w)(\w)$|\1\2\3\4`|
+    #- derive|^(\w+)(\w+)\[(\w)(\w)$|\1\2`|
+    #- derive|^(\w+)(\w+)\[(\w)(\w)$|\1\2``|
+    #- derive|^(\w+)(\w+)\[(\w)(\w)$|\1\2\3`|
+    #- derive|^(\w+)(\w+)\[(\w)(\w)$|\1\2`\4|
     - erase|^(\w+)\[(\w+)$|             # 刪除原始編碼以加速檢索
 # 说明
 # xform --改寫〔不保留原形〕
