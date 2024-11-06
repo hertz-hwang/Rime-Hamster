@@ -14,6 +14,10 @@ schema:
   schema_id: tiger_code
   version: "2024-10-31"
 
+__patch:
+  - tiger_code.custom:/patch?
+  - engine/filters/@next: simplifier@chinese_english
+
 __include: tiger:/switches_engine_table        # Rime模块
 __include: tiger:/fast_symbol_translator       # 快符
 __include: tiger:/easy_en_translator           # 英文
@@ -23,6 +27,7 @@ __include: tiger:/chaifen_filter               # 拆分滤镜
 __include: tiger:/history_filter               # z 键历史
 __include: tiger:/pinyin_filter                # 拼音滤镜
 __include: tiger:/emoji_filter                 # Emoji 滤镜
+__include: tiger:/cn_en_filter                 # 中英滤镜
 __include: tiger:/key_bindings                 # 按键定义
 
 speller:
