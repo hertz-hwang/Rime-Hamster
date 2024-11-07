@@ -1,6 +1,6 @@
-## I Love Candy
+## 仿 iOS 配色
 
-![Candy](/assets/candy.jpg)
+![iOS](/assets/iOS.jpg)
 
 ## 使用方法
 
@@ -47,6 +47,7 @@ patch:
 | I         | 下划 | 编码中开关Emoji |
 | O         | 下划 | 编码中简繁切换  |
 | P         | 下划 | 编码中显示拼音  |
+| J         | 上划 | 通配符         |
 | J         | 下划 | 编码中显示拆分  |
 | K         | 下划 | 快符引导       |
 | M         | 下划 | 命令引导        |
