@@ -2,6 +2,10 @@
 
 ![iOS](/assets/iOS.jpg)
 
+## 糖果主题
+
+![candy](/assets/candy.jpg)
+
 ## 使用方法
 
 下载最新[hamster_keyboards_candy.yaml](https://github.com/hertz-hwang/Rime-Hamster/releases/latest/download/hamster_keyboards_candy.yaml)后，下面方法二选一：

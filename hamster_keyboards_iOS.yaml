@@ -29,6 +29,36 @@ colorSchemas:
     hilited_callout_back_color: "0xF57935"
     hilited_callout_foreground_color: "0xFFFFFF"
     action_callout_back_color: "0xF57935"
+  - schemaName: iOS - Light
+    name: iOS - Light
+    author: Bennett S. Owen
+    back_color: "0x01D9D3D0"
+    button_back_color: "0xFFFFFF"
+    button_pressed_back_color: "0xFFFFFF"
+    button_bubble_back_color: "0xF57935"
+    button_foreground_color: "0x000000"
+    button_pressed_foreground_color: "0x000000"
+    button_swipe_foreground_color: "0x000000"
+    button_swipe_pressed_foreground_color: "0x000000"
+    font_size: 13
+    swipe_font_size: 8
+    corner_radius: 11
+    border_color: "0x01FFFFFF"
+    border_size: 0
+    text_color: "0x000000"
+    lower_edge_color: "0x01FFFFFF"
+    shadow_color: "0x01FFFFFF"
+    shadow_size: 0
+    hilited_candidate_back_color: "0xF57935"
+    hilited_candidate_text_color: "0x000000"
+    hilited_candidate_label_color: "0x000000"
+    hilited_comment_text_color: "0x000000"
+    candidate_text_color: "0x000000"
+    comment_text_color: "0x000000"
+    label_color: "0x000000"
+    hilited_callout_back_color: "0xF57935"
+    hilited_callout_foreground_color: "0x000000"
+    action_callout_back_color: "0xF57935"
 keyboards:
   - name: iOS-中文
     isPrimary: true
@@ -45,7 +75,7 @@ keyboards:
                 display: true
                 processByRIME: true
                 direction: down
-            lightModeStyleName: hotkeys
+            lightModeStyleName: hotkeys_light
             darkModeStyleName: hotkeys
           - action:
               character:
@@ -63,7 +93,7 @@ keyboards:
                     openURL:
                       url: shortcuts://run-shortcut?name=拼接图片
                 label: 拼接图片
-            lightModeStyleName: hotkeys
+            lightModeStyleName: hotkeys_light
             darkModeStyleName: hotkeys
           - action:
               shortcutCommand:
@@ -77,7 +107,7 @@ keyboards:
                     openURL:
                       url: mqqapi://scanqrcode
                 label: 扫一扫
-            lightModeStyleName: hotkeys
+            lightModeStyleName: hotkeys_light
             darkModeStyleName: hotkeys
           - action:
               shortcutCommand:
@@ -91,7 +121,7 @@ keyboards:
                     openURL:
                       url: weixin://scanqrcode
                 label: 扫一扫
-            lightModeStyleName: hotkeys
+            lightModeStyleName: hotkeys_light
             darkModeStyleName: hotkeys
           - action:
               shortcutCommand:
@@ -99,7 +129,7 @@ keyboards:
                   url: https://www.perplexity.ai/search/new?q=#pasteboardContent
             width: available
             label: 
-            lightModeStyleName: hotkeys
+            lightModeStyleName: hotkeys_light
             darkModeStyleName: hotkeys
           - action:
               shortcutCommand:
@@ -107,7 +137,7 @@ keyboards:
                   url: https://www.google.com/search?q=#pasteboardContent
             width: available
             label: 
-            lightModeStyleName: hotkeys
+            lightModeStyleName: hotkeys_light
             darkModeStyleName: hotkeys
           - action:
               character:
@@ -137,7 +167,7 @@ keyboards:
                     openURL:
                       url: xhsdiscover://search/result?keyword=#pasteboardContent
                 label: 小红书
-            lightModeStyleName: hotkeys
+            lightModeStyleName: hotkeys_light
             darkModeStyleName: hotkeys
           - action:
               shortcutCommand: "#右移"
@@ -150,7 +180,7 @@ keyboards:
                 display: true
                 processByRIME: true
                 direction: down
-            lightModeStyleName: hotkeys
+            lightModeStyleName: hotkeys_light
             darkModeStyleName: hotkeys
         rowHeight:
           portrait: 36
@@ -184,7 +214,7 @@ keyboards:
                   character:
                     char: Q
                 label: Q
-            lightModeStyleName: mainkeys
+            lightModeStyleName: mainkeys_light
             darkModeStyleName: mainkeys
           - action:
               character:
@@ -214,7 +244,7 @@ keyboards:
                   character:
                     char: W
                 label: W
-            lightModeStyleName: mainkeys
+            lightModeStyleName: mainkeys_light
             darkModeStyleName: mainkeys
           - action:
               character:
@@ -244,7 +274,7 @@ keyboards:
                   character:
                     char: E
                 label: E
-            lightModeStyleName: mainkeys
+            lightModeStyleName: mainkeys_light
             darkModeStyleName: mainkeys
           - action:
               character:
@@ -274,7 +304,7 @@ keyboards:
                   character:
                     char: R
                 label: R
-            lightModeStyleName: mainkeys
+            lightModeStyleName: mainkeys_light
             darkModeStyleName: mainkeys
           - action:
               character:
@@ -304,7 +334,7 @@ keyboards:
                   character:
                     char: T
                 label: T
-            lightModeStyleName: mainkeys
+            lightModeStyleName: mainkeys_light
             darkModeStyleName: mainkeys
           - action:
               character:
@@ -334,7 +364,7 @@ keyboards:
                   character:
                     char: Y
                 label: Y
-            lightModeStyleName: mainkeys
+            lightModeStyleName: mainkeys_light
             darkModeStyleName: mainkeys
           - action:
               character:
@@ -364,7 +394,7 @@ keyboards:
                   character:
                     char: U
                 label: U
-            lightModeStyleName: mainkeys
+            lightModeStyleName: mainkeys_light
             darkModeStyleName: mainkeys
           - action:
               character:
@@ -394,7 +424,7 @@ keyboards:
                   character:
                     char: I
                 label: I
-            lightModeStyleName: mainkeys
+            lightModeStyleName: mainkeys_light
             darkModeStyleName: mainkeys
           - action:
               character:
@@ -424,7 +454,7 @@ keyboards:
                   character:
                     char: O
                 label: O
-            lightModeStyleName: mainkeys
+            lightModeStyleName: mainkeys_light
             darkModeStyleName: mainkeys
           - action:
               character:
@@ -456,7 +486,7 @@ keyboards:
                   character:
                     char: P
                 label: P
-            lightModeStyleName: mainkeys
+            lightModeStyleName: mainkeys_light
             darkModeStyleName: mainkeys
         rowHeight:
           portrait: 54
@@ -495,7 +525,7 @@ keyboards:
                   character:
                     char: A
                 label: A
-            lightModeStyleName: mainkeys
+            lightModeStyleName: mainkeys_light
             darkModeStyleName: mainkeys
           - action:
               character:
@@ -525,7 +555,7 @@ keyboards:
                   character:
                     char: S
                 label: S
-            lightModeStyleName: mainkeys
+            lightModeStyleName: mainkeys_light
             darkModeStyleName: mainkeys
           - action:
               character:
@@ -555,7 +585,7 @@ keyboards:
                   character:
                     char: D
                 label: D
-            lightModeStyleName: mainkeys
+            lightModeStyleName: mainkeys_light
             darkModeStyleName: mainkeys
           - action:
               character:
@@ -583,7 +613,7 @@ keyboards:
                   character:
                     char: F
                 label: F
-            lightModeStyleName: fjkeys
+            lightModeStyleName: fjkeys_light
             darkModeStyleName: fjkeys
           - action:
               character:
@@ -613,7 +643,7 @@ keyboards:
                   character:
                     char: G
                 label: G
-            lightModeStyleName: mainkeys
+            lightModeStyleName: mainkeys_light
             darkModeStyleName: mainkeys
           - action:
               character:
@@ -643,7 +673,7 @@ keyboards:
                   character:
                     char: H
                 label: H
-            lightModeStyleName: mainkeys
+            lightModeStyleName: mainkeys_light
             darkModeStyleName: mainkeys
           - action:
               character:
@@ -672,7 +702,7 @@ keyboards:
                   character:
                     char: J
                 label: J
-            lightModeStyleName: fjkeys
+            lightModeStyleName: fjkeys_light
             darkModeStyleName: fjkeys
           - action:
               character:
@@ -701,7 +731,7 @@ keyboards:
                   character:
                     char: K
                 label: K
-            lightModeStyleName: mainkeys
+            lightModeStyleName: mainkeys_light
             darkModeStyleName: mainkeys
           - action:
               character:
@@ -730,7 +760,7 @@ keyboards:
                   character:
                     char: L
                 label: L
-            lightModeStyleName: mainkeys
+            lightModeStyleName: mainkeys_light
             darkModeStyleName: mainkeys
           - action:
               characterMargin:
@@ -764,7 +794,7 @@ keyboards:
                 display: true
                 processByRIME: true
                 direction: right
-            lightModeStyleName: shift_delete
+            lightModeStyleName: shift_delete_light
             darkModeStyleName: shift_delete
           - action:
               characterMargin:
@@ -803,7 +833,7 @@ keyboards:
                   character:
                     char: Z
                 label: Z
-            lightModeStyleName: mainkeys
+            lightModeStyleName: mainkeys_light
             darkModeStyleName: mainkeys
           - action:
               character:
@@ -831,7 +861,7 @@ keyboards:
                   character:
                     char: X
                 label: X
-            lightModeStyleName: mainkeys
+            lightModeStyleName: mainkeys_light
             darkModeStyleName: mainkeys
           - action:
               character:
@@ -862,7 +892,7 @@ keyboards:
               - action:
                   shortcutCommand: "#showPhraseView"
                 label: 常用语
-            lightModeStyleName: mainkeys
+            lightModeStyleName: mainkeys_light
             darkModeStyleName: mainkeys
           - action:
               character:
@@ -892,7 +922,7 @@ keyboards:
               - action:
                   shortcutCommand: "#showPasteboardView"
                 label: 剪切板
-            lightModeStyleName: mainkeys
+            lightModeStyleName: mainkeys_light
             darkModeStyleName: mainkeys
           - action:
               character:
@@ -921,7 +951,7 @@ keyboards:
                   character:
                     char: B
                 label: B
-            lightModeStyleName: mainkeys
+            lightModeStyleName: mainkeys_light
             darkModeStyleName: mainkeys
           - action:
               character:
@@ -951,7 +981,7 @@ keyboards:
                   character:
                     char: N
                 label: N
-            lightModeStyleName: mainkeys
+            lightModeStyleName: mainkeys_light
             darkModeStyleName: mainkeys
           - action:
               character:
@@ -980,7 +1010,7 @@ keyboards:
                   character:
                     char: M
                 label: M
-            lightModeStyleName: mainkeys
+            lightModeStyleName: mainkeys_light
             darkModeStyleName: mainkeys
           - action:
               characterMargin:
@@ -1014,7 +1044,7 @@ keyboards:
                 display: true
                 processByRIME: true
                 direction: left
-            lightModeStyleName: shift_delete
+            lightModeStyleName: shift_delete_light
             darkModeStyleName: shift_delete
         rowHeight:
           portrait: 54
@@ -1066,7 +1096,7 @@ keyboards:
                   character:
                     char: "9"
                 label: "9"
-            lightModeStyleName: shift_delete
+            lightModeStyleName: shift_delete_light
             darkModeStyleName: shift_delete
           - action:
               keyboardType: iOS-中文数字符号
@@ -1099,7 +1129,7 @@ keyboards:
                     sendKeys:
                       keys: Control+e
                 label: 翻译
-            lightModeStyleName: shift_delete
+            lightModeStyleName: shift_delete_light
             darkModeStyleName: shift_delete
           - action:
               character:
@@ -1136,7 +1166,7 @@ keyboards:
                   symbol:
                     char: .ai
                 label: .ai
-            lightModeStyleName: shift_delete
+            lightModeStyleName: shift_delete_light
             darkModeStyleName: shift_delete
           - action: space
             width:
@@ -1159,7 +1189,7 @@ keyboards:
                 display: true
                 processByRIME: true
                 direction: down
-            lightModeStyleName: space
+            lightModeStyleName: space_light
             darkModeStyleName: space
           - action:
               keyboardType: iOS-英文
@@ -1179,7 +1209,7 @@ keyboards:
                   character:
                     char: "'"
                 label: 临时英文
-            lightModeStyleName: cn_en
+            lightModeStyleName: cn_en_light
             darkModeStyleName: cn_en
           - action: enter
             width:
@@ -1193,7 +1223,7 @@ keyboards:
                 display: true
                 processByRIME: true
                 direction: up
-            lightModeStyleName: shift_delete
+            lightModeStyleName: shift_delete_light
             darkModeStyleName: shift_delete
         rowHeight:
           portrait: 54
@@ -1204,7 +1234,21 @@ keyboards:
       top: 6
       right: 4
     keyStyle:
-      hotkeys: &a1
+      hotkeys_light: &a1
+        name: hotkeys_light
+        buttonBackgroundColor: "0x01FFFFFF"
+        pressedButtonBackgroundColor: "0x55FFFFFF"
+        buttonForegroundColor: "0x636363"
+        pressedButtonForegroundColor: "0x636363"
+        swipeForegroundColor: "0x636363"
+        pressedSwipeForegroundColor: "0x636363"
+        buttonBubbleBackgroundColor: "0xD9D3D0"
+        actionCalloutBackgroundColor: "0xD9D3D0"
+        actionCalloutSelectedBackgroundColor: "0xF57935"
+        actionCalloutSelectedForegroundColor: "0x636363"
+        cornerRadius: 4
+        fontSize: 15
+      hotkeys: &a2
         name: hotkeys
         buttonBackgroundColor: "0x016A6A6A"
         pressedButtonBackgroundColor: "0x556A6A6A"
@@ -1218,7 +1262,26 @@ keyboards:
         actionCalloutSelectedForegroundColor: "0xFFFFFF"
         cornerRadius: 4
         fontSize: 15
-      mainkeys: &a3
+      mainkeys_light: &a5
+        name: mainkeys_light
+        buttonBackgroundColor: "0xFFFFFF"
+        pressedButtonBackgroundColor: "0xAFFFFFFF"
+        buttonForegroundColor: "0x000000"
+        pressedButtonForegroundColor: "0x000000"
+        swipeForegroundColor: "0x636363"
+        pressedSwipeForegroundColor: "0x000000"
+        buttonBubbleBackgroundColor: "0xD9D3D0"
+        actionCalloutBackgroundColor: "0xD9D3D0"
+        actionCalloutSelectedBackgroundColor: "0xF57935"
+        actionCalloutSelectedForegroundColor: "0x000000"
+        cornerRadius: 5
+        borderSize: 0
+        lowerEdgeColor: "0xFFFFFF"
+        shadowColor: "0xFFFFFF"
+        shadowSize: 1
+        fontSize: 16
+        swipeFontSize: 7
+      mainkeys: &a6
         name: mainkeys
         buttonBackgroundColor: "0x6A6A6A"
         pressedButtonBackgroundColor: "0xAF6A6A6A"
@@ -1237,7 +1300,25 @@ keyboards:
         shadowSize: 1
         fontSize: 16
         swipeFontSize: 7
-      fjkeys: &a4
+      fjkeys_light: &a7
+        name: fjkeys_light
+        buttonBackgroundColor: "0xFFFFFF"
+        pressedButtonBackgroundColor: "0xAFFFFFFF"
+        buttonForegroundColor: "0x000000"
+        pressedButtonForegroundColor: "0x000000"
+        swipeForegroundColor: "0x636363"
+        pressedSwipeForegroundColor: "0x000000"
+        buttonBubbleBackgroundColor: "0xD9D3D0"
+        actionCalloutBackgroundColor: "0xD9D3D0"
+        actionCalloutSelectedBackgroundColor: "0xF57935"
+        actionCalloutSelectedForegroundColor: "0x000000"
+        cornerRadius: 5
+        lowerEdgeColor: "0xFFFFFF"
+        shadowColor: "0xFFFFFF"
+        shadowSize: 1
+        fontSize: 16
+        swipeFontSize: 7
+      fjkeys: &a8
         name: fjkeys
         buttonBackgroundColor: "0x6A6A6A"
         pressedButtonBackgroundColor: "0xAF6A6A6A"
@@ -1255,7 +1336,25 @@ keyboards:
         shadowSize: 1
         fontSize: 16
         swipeFontSize: 7
-      shift_delete: &a2
+      shift_delete_light: &a3
+        name: shift_delete_light
+        buttonBackgroundColor: "0xFFFFFF"
+        pressedButtonBackgroundColor: "0xAFFFFFFF"
+        buttonForegroundColor: "0x636363"
+        pressedButtonForegroundColor: "0x000000"
+        swipeForegroundColor: "0x636363"
+        pressedSwipeForegroundColor: "0x000000"
+        buttonBubbleBackgroundColor: "0xD9D3D0"
+        actionCalloutBackgroundColor: "0xD9D3D0"
+        actionCalloutSelectedBackgroundColor: "0xF57935"
+        actionCalloutSelectedForegroundColor: "0x000000"
+        cornerRadius: 5
+        lowerEdgeColor: "0xFFFFFF"
+        shadowColor: "0xFFFFFF"
+        shadowSize: 1
+        fontSize: 16
+        swipeFontSize: 7
+      shift_delete: &a4
         name: shift_delete
         buttonBackgroundColor: "0x464646"
         pressedButtonBackgroundColor: "0xAF464646"
@@ -1273,7 +1372,25 @@ keyboards:
         shadowSize: 1
         fontSize: 16
         swipeFontSize: 7
-      space: &a5
+      space_light: &a9
+        name: space_light
+        buttonBackgroundColor: "0xFFFFFF"
+        pressedButtonBackgroundColor: "0xAFFFFFFF"
+        buttonForegroundColor: "0x636363"
+        pressedButtonForegroundColor: "0x000000"
+        swipeForegroundColor: "0x636363"
+        pressedSwipeForegroundColor: "0x000000"
+        buttonBubbleBackgroundColor: "0xD9D3D0"
+        actionCalloutBackgroundColor: "0xD9D3D0"
+        actionCalloutSelectedBackgroundColor: "0xF57935"
+        actionCalloutSelectedForegroundColor: "0x000000"
+        cornerRadius: 5
+        lowerEdgeColor: "0xFFFFFF"
+        shadowColor: "0xFFFFFF"
+        shadowSize: 1
+        fontSize: 12
+        swipeFontSize: 7
+      space: &a10
         name: space
         buttonBackgroundColor: "0x6A6A6A"
         pressedButtonBackgroundColor: "0xAF6A6A6A"
@@ -1291,7 +1408,25 @@ keyboards:
         shadowSize: 1
         fontSize: 12
         swipeFontSize: 7
-      cn_en: &a6
+      cn_en_light: &a11
+        name: cn_en_light
+        buttonBackgroundColor: "0xFFFFFF"
+        pressedButtonBackgroundColor: "0xAFFFFFFF"
+        buttonForegroundColor: "0x636363"
+        pressedButtonForegroundColor: "0x000000"
+        swipeForegroundColor: "0x636363"
+        pressedSwipeForegroundColor: "0x000000"
+        buttonBubbleBackgroundColor: "0xD9D3D0"
+        actionCalloutBackgroundColor: "0xD9D3D0"
+        actionCalloutSelectedBackgroundColor: "0xF57935"
+        actionCalloutSelectedForegroundColor: "0x000000"
+        cornerRadius: 5
+        lowerEdgeColor: "0xFFFFFF"
+        shadowColor: "0xFFFFFF"
+        shadowSize: 1
+        fontSize: 12
+        swipeFontSize: 7
+      cn_en: &a12
         name: cn_en
         buttonBackgroundColor: "0x464646"
         pressedButtonBackgroundColor: "0xAF464646"
@@ -1324,7 +1459,7 @@ keyboards:
                 display: true
                 processByRIME: true
                 direction: down
-            lightModeStyleName: hotkeys
+            lightModeStyleName: hotkeys_light
             darkModeStyleName: hotkeys
           - action:
               character:
@@ -1342,7 +1477,7 @@ keyboards:
                     openURL:
                       url: shortcuts://run-shortcut?name=拼接图片
                 label: 拼接图片
-            lightModeStyleName: hotkeys
+            lightModeStyleName: hotkeys_light
             darkModeStyleName: hotkeys
           - action:
               shortcutCommand:
@@ -1356,7 +1491,7 @@ keyboards:
                     openURL:
                       url: mqqapi://scanqrcode
                 label: 扫一扫
-            lightModeStyleName: hotkeys
+            lightModeStyleName: hotkeys_light
             darkModeStyleName: hotkeys
           - action:
               shortcutCommand:
@@ -1370,7 +1505,7 @@ keyboards:
                     openURL:
                       url: weixin://scanqrcode
                 label: 扫一扫
-            lightModeStyleName: hotkeys
+            lightModeStyleName: hotkeys_light
             darkModeStyleName: hotkeys
           - action:
               shortcutCommand:
@@ -1378,7 +1513,7 @@ keyboards:
                   url: https://www.perplexity.ai/search/new?q=#pasteboardContent
             width: available
             label: 
-            lightModeStyleName: hotkeys
+            lightModeStyleName: hotkeys_light
             darkModeStyleName: hotkeys
           - action:
               shortcutCommand:
@@ -1386,7 +1521,7 @@ keyboards:
                   url: https://www.google.com/search?q=#pasteboardContent
             width: available
             label: 
-            lightModeStyleName: hotkeys
+            lightModeStyleName: hotkeys_light
             darkModeStyleName: hotkeys
           - action:
               character:
@@ -1416,7 +1551,7 @@ keyboards:
                     openURL:
                       url: xhsdiscover://search/result?keyword=#pasteboardContent
                 label: 小红书
-            lightModeStyleName: hotkeys
+            lightModeStyleName: hotkeys_light
             darkModeStyleName: hotkeys
           - action:
               shortcutCommand: "#右移"
@@ -1429,7 +1564,7 @@ keyboards:
                 display: true
                 processByRIME: true
                 direction: down
-            lightModeStyleName: hotkeys
+            lightModeStyleName: hotkeys_light
             darkModeStyleName: hotkeys
         rowHeight:
           portrait: 36
@@ -1441,7 +1576,7 @@ keyboards:
             width: available
             label:
               text: ""
-            lightModeStyleName: shift_delete
+            lightModeStyleName: shift_delete_light
             darkModeStyleName: shift_delete
           - action:
               character:
@@ -1450,7 +1585,7 @@ keyboards:
               percentage: 0.16
             label:
               text: ""
-            lightModeStyleName: shift_delete
+            lightModeStyleName: shift_delete_light
             darkModeStyleName: shift_delete
           - action:
               character:
@@ -1458,7 +1593,7 @@ keyboards:
             width: available
             label:
               text: ""
-            lightModeStyleName: mainkeys
+            lightModeStyleName: mainkeys_light
             darkModeStyleName: mainkeys
           - action:
               character:
@@ -1466,7 +1601,7 @@ keyboards:
             width: available
             label:
               text: ""
-            lightModeStyleName: mainkeys
+            lightModeStyleName: mainkeys_light
             darkModeStyleName: mainkeys
           - action:
               character:
@@ -1474,7 +1609,7 @@ keyboards:
             width: available
             label:
               text: ""
-            lightModeStyleName: mainkeys
+            lightModeStyleName: mainkeys_light
             darkModeStyleName: mainkeys
           - action: backspace
             width:
@@ -1495,7 +1630,7 @@ keyboards:
                 display: true
                 processByRIME: true
                 direction: left
-            lightModeStyleName: shift_delete
+            lightModeStyleName: shift_delete_light
             darkModeStyleName: shift_delete
         rowHeight:
           portrait: 54
@@ -1507,7 +1642,7 @@ keyboards:
             width: available
             label:
               text: ""
-            lightModeStyleName: shift_delete
+            lightModeStyleName: shift_delete_light
             darkModeStyleName: shift_delete
           - action:
               character:
@@ -1516,7 +1651,7 @@ keyboards:
               percentage: 0.16
             label:
               text: ""
-            lightModeStyleName: shift_delete
+            lightModeStyleName: shift_delete_light
             darkModeStyleName: shift_delete
           - action:
               character:
@@ -1524,7 +1659,7 @@ keyboards:
             width: available
             label:
               text: ""
-            lightModeStyleName: mainkeys
+            lightModeStyleName: mainkeys_light
             darkModeStyleName: mainkeys
           - action:
               character:
@@ -1532,7 +1667,7 @@ keyboards:
             width: available
             label:
               text: ""
-            lightModeStyleName: fjkeys
+            lightModeStyleName: fjkeys_light
             darkModeStyleName: fjkeys
           - action:
               character:
@@ -1540,7 +1675,7 @@ keyboards:
             width: available
             label:
               text: ""
-            lightModeStyleName: mainkeys
+            lightModeStyleName: mainkeys_light
             darkModeStyleName: mainkeys
           - action:
               symbol:
@@ -1549,7 +1684,7 @@ keyboards:
               percentage: 0.16
             label:
               text: ""
-            lightModeStyleName: shift_delete
+            lightModeStyleName: shift_delete_light
             darkModeStyleName: shift_delete
         rowHeight:
           portrait: 54
@@ -1561,7 +1696,7 @@ keyboards:
             width: available
             label:
               text: ""
-            lightModeStyleName: shift_delete
+            lightModeStyleName: shift_delete_light
             darkModeStyleName: shift_delete
           - action:
               character:
@@ -1570,7 +1705,7 @@ keyboards:
               percentage: 0.16
             label:
               text: ""
-            lightModeStyleName: shift_delete
+            lightModeStyleName: shift_delete_light
             darkModeStyleName: shift_delete
           - action:
               character:
@@ -1578,7 +1713,7 @@ keyboards:
             width: available
             label:
               text: ""
-            lightModeStyleName: mainkeys
+            lightModeStyleName: mainkeys_light
             darkModeStyleName: mainkeys
           - action:
               character:
@@ -1586,7 +1721,7 @@ keyboards:
             width: available
             label:
               text: ""
-            lightModeStyleName: mainkeys
+            lightModeStyleName: mainkeys_light
             darkModeStyleName: mainkeys
           - action:
               character:
@@ -1594,7 +1729,7 @@ keyboards:
             width: available
             label:
               text: ""
-            lightModeStyleName: mainkeys
+            lightModeStyleName: mainkeys_light
             darkModeStyleName: mainkeys
           - action:
               character:
@@ -1609,7 +1744,7 @@ keyboards:
                 display: true
                 processByRIME: true
                 direction: up
-            lightModeStyleName: shift_delete
+            lightModeStyleName: shift_delete_light
             darkModeStyleName: shift_delete
         rowHeight:
           portrait: 54
@@ -1619,7 +1754,7 @@ keyboards:
               keyboardType: iOS-中文
             width: available
             label: 󱞱
-            lightModeStyleName: shift_delete
+            lightModeStyleName: shift_delete_light
             darkModeStyleName: shift_delete
           - action:
               character:
@@ -1628,7 +1763,7 @@ keyboards:
               percentage: 0.16
             label:
               text: ""
-            lightModeStyleName: shift_delete
+            lightModeStyleName: shift_delete_light
             darkModeStyleName: shift_delete
           - action:
               character:
@@ -1636,7 +1771,7 @@ keyboards:
             width: available
             label:
               text: ""
-            lightModeStyleName: mainkeys
+            lightModeStyleName: mainkeys_light
             darkModeStyleName: mainkeys
           - action:
               character:
@@ -1644,7 +1779,7 @@ keyboards:
             width: available
             label:
               text: ""
-            lightModeStyleName: mainkeys
+            lightModeStyleName: mainkeys_light
             darkModeStyleName: mainkeys
           - action: space
             width: available
@@ -1658,7 +1793,7 @@ keyboards:
                 display: true
                 processByRIME: true
                 direction: down
-            lightModeStyleName: space
+            lightModeStyleName: space_light
             darkModeStyleName: space
           - action: enter
             width:
@@ -1672,7 +1807,7 @@ keyboards:
                 display: true
                 processByRIME: true
                 direction: up
-            lightModeStyleName: shift_delete
+            lightModeStyleName: shift_delete_light
             darkModeStyleName: shift_delete
         rowHeight:
           portrait: 54
@@ -1683,11 +1818,16 @@ keyboards:
       top: 6
       right: 4
     keyStyle:
-      hotkeys: *a1
-      shift_delete: *a2
-      mainkeys: *a3
-      fjkeys: *a4
-      space: *a5
+      hotkeys_light: *a1
+      hotkeys: *a2
+      shift_delete_light: *a3
+      shift_delete: *a4
+      mainkeys_light: *a5
+      mainkeys: *a6
+      fjkeys_light: *a7
+      fjkeys: *a8
+      space_light: *a9
+      space: *a10
   - name: iOS-中文数字符号
     isPrimary: false
     rows:
@@ -1703,7 +1843,7 @@ keyboards:
                 display: true
                 processByRIME: true
                 direction: down
-            lightModeStyleName: hotkeys
+            lightModeStyleName: hotkeys_light
             darkModeStyleName: hotkeys
           - action:
               character:
@@ -1721,7 +1861,7 @@ keyboards:
                     openURL:
                       url: shortcuts://run-shortcut?name=拼接图片
                 label: 拼接图片
-            lightModeStyleName: hotkeys
+            lightModeStyleName: hotkeys_light
             darkModeStyleName: hotkeys
           - action:
               shortcutCommand:
@@ -1735,7 +1875,7 @@ keyboards:
                     openURL:
                       url: mqqapi://scanqrcode
                 label: 扫一扫
-            lightModeStyleName: hotkeys
+            lightModeStyleName: hotkeys_light
             darkModeStyleName: hotkeys
           - action:
               shortcutCommand:
@@ -1749,7 +1889,7 @@ keyboards:
                     openURL:
                       url: weixin://scanqrcode
                 label: 扫一扫
-            lightModeStyleName: hotkeys
+            lightModeStyleName: hotkeys_light
             darkModeStyleName: hotkeys
           - action:
               shortcutCommand:
@@ -1757,7 +1897,7 @@ keyboards:
                   url: https://www.perplexity.ai/search/new?q=#pasteboardContent
             width: available
             label: 
-            lightModeStyleName: hotkeys
+            lightModeStyleName: hotkeys_light
             darkModeStyleName: hotkeys
           - action:
               shortcutCommand:
@@ -1765,7 +1905,7 @@ keyboards:
                   url: https://www.google.com/search?q=#pasteboardContent
             width: available
             label: 
-            lightModeStyleName: hotkeys
+            lightModeStyleName: hotkeys_light
             darkModeStyleName: hotkeys
           - action:
               character:
@@ -1795,7 +1935,7 @@ keyboards:
                     openURL:
                       url: xhsdiscover://search/result?keyword=#pasteboardContent
                 label: 小红书
-            lightModeStyleName: hotkeys
+            lightModeStyleName: hotkeys_light
             darkModeStyleName: hotkeys
           - action:
               shortcutCommand: "#右移"
@@ -1808,7 +1948,7 @@ keyboards:
                 display: true
                 processByRIME: true
                 direction: down
-            lightModeStyleName: hotkeys
+            lightModeStyleName: hotkeys_light
             darkModeStyleName: hotkeys
         rowHeight:
           portrait: 36
@@ -1821,7 +1961,7 @@ keyboards:
             width:
               percentage: 0.1
             label: "!"
-            lightModeStyleName: mainkeys
+            lightModeStyleName: mainkeys_light
             darkModeStyleName: mainkeys
           - action:
               character:
@@ -1830,7 +1970,7 @@ keyboards:
             width:
               percentage: 0.1
             label: "@"
-            lightModeStyleName: mainkeys
+            lightModeStyleName: mainkeys_light
             darkModeStyleName: mainkeys
           - action:
               character:
@@ -1839,7 +1979,7 @@ keyboards:
             width:
               percentage: 0.1
             label: "#"
-            lightModeStyleName: mainkeys
+            lightModeStyleName: mainkeys_light
             darkModeStyleName: mainkeys
           - action:
               character:
@@ -1848,7 +1988,7 @@ keyboards:
             width:
               percentage: 0.1
             label: ￥
-            lightModeStyleName: mainkeys
+            lightModeStyleName: mainkeys_light
             darkModeStyleName: mainkeys
           - action:
               character:
@@ -1857,7 +1997,7 @@ keyboards:
             width:
               percentage: 0.1
             label: "%"
-            lightModeStyleName: mainkeys
+            lightModeStyleName: mainkeys_light
             darkModeStyleName: mainkeys
           - action:
               character:
@@ -1866,7 +2006,7 @@ keyboards:
             width:
               percentage: 0.1
             label: ……
-            lightModeStyleName: mainkeys
+            lightModeStyleName: mainkeys_light
             darkModeStyleName: mainkeys
           - action:
               character:
@@ -1875,7 +2015,7 @@ keyboards:
             width:
               percentage: 0.1
             label: "&"
-            lightModeStyleName: mainkeys
+            lightModeStyleName: mainkeys_light
             darkModeStyleName: mainkeys
           - action:
               character:
@@ -1884,7 +2024,7 @@ keyboards:
             width:
               percentage: 0.1
             label: "*"
-            lightModeStyleName: mainkeys
+            lightModeStyleName: mainkeys_light
             darkModeStyleName: mainkeys
           - action:
               character:
@@ -1893,7 +2033,7 @@ keyboards:
             width:
               percentage: 0.1
             label: （
-            lightModeStyleName: mainkeys
+            lightModeStyleName: mainkeys_light
             darkModeStyleName: mainkeys
           - action:
               character:
@@ -1904,7 +2044,7 @@ keyboards:
               landscape:
                 percentage: 0.1
             label: ）
-            lightModeStyleName: mainkeys
+            lightModeStyleName: mainkeys_light
             darkModeStyleName: mainkeys
         rowHeight:
           portrait: 54
@@ -1924,7 +2064,7 @@ keyboards:
             width:
               percentage: 0.1
             label: ｜
-            lightModeStyleName: mainkeys
+            lightModeStyleName: mainkeys_light
             darkModeStyleName: mainkeys
           - action:
               character:
@@ -1933,7 +2073,7 @@ keyboards:
             width:
               percentage: 0.1
             label: —
-            lightModeStyleName: mainkeys
+            lightModeStyleName: mainkeys_light
             darkModeStyleName: mainkeys
           - action:
               character:
@@ -1942,7 +2082,7 @@ keyboards:
             width:
               percentage: 0.1
             label: 、
-            lightModeStyleName: mainkeys
+            lightModeStyleName: mainkeys_light
             darkModeStyleName: mainkeys
           - action:
               character:
@@ -1951,7 +2091,7 @@ keyboards:
             width:
               percentage: 0.1
             label: →
-            lightModeStyleName: mainkeys
+            lightModeStyleName: mainkeys_light
             darkModeStyleName: mainkeys
           - action:
               character:
@@ -1960,7 +2100,7 @@ keyboards:
             width:
               percentage: 0.1
             label: 《
-            lightModeStyleName: mainkeys
+            lightModeStyleName: mainkeys_light
             darkModeStyleName: mainkeys
           - action:
               character:
@@ -1969,7 +2109,7 @@ keyboards:
             width:
               percentage: 0.1
             label: 》
-            lightModeStyleName: mainkeys
+            lightModeStyleName: mainkeys_light
             darkModeStyleName: mainkeys
           - action:
               character:
@@ -1978,7 +2118,7 @@ keyboards:
             width:
               percentage: 0.1
             label: 「
-            lightModeStyleName: mainkeys
+            lightModeStyleName: mainkeys_light
             darkModeStyleName: mainkeys
           - action:
               character:
@@ -1987,7 +2127,7 @@ keyboards:
             width:
               percentage: 0.1
             label: 」
-            lightModeStyleName: mainkeys
+            lightModeStyleName: mainkeys_light
             darkModeStyleName: mainkeys
           - action:
               character:
@@ -1996,7 +2136,7 @@ keyboards:
             width:
               percentage: 0.1
             label: ？
-            lightModeStyleName: mainkeys
+            lightModeStyleName: mainkeys_light
             darkModeStyleName: mainkeys
           - action:
               characterMargin:
@@ -2021,7 +2161,7 @@ keyboards:
                 display: true
                 processByRIME: true
                 direction: up
-            lightModeStyleName: shift_delete
+            lightModeStyleName: shift_delete_light
             darkModeStyleName: shift_delete
           - action:
               characterMargin:
@@ -2040,7 +2180,7 @@ keyboards:
             width:
               percentage: 0.1
             label: ·
-            lightModeStyleName: mainkeys
+            lightModeStyleName: mainkeys_light
             darkModeStyleName: mainkeys
           - action:
               character:
@@ -2049,7 +2189,7 @@ keyboards:
             width:
               percentage: 0.1
             label: 【
-            lightModeStyleName: mainkeys
+            lightModeStyleName: mainkeys_light
             darkModeStyleName: mainkeys
           - action:
               character:
@@ -2058,7 +2198,7 @@ keyboards:
             width:
               percentage: 0.1
             label: 】
-            lightModeStyleName: mainkeys
+            lightModeStyleName: mainkeys_light
             darkModeStyleName: mainkeys
           - action:
               character:
@@ -2067,7 +2207,7 @@ keyboards:
             width:
               percentage: 0.1
             label: 『
-            lightModeStyleName: mainkeys
+            lightModeStyleName: mainkeys_light
             darkModeStyleName: mainkeys
           - action:
               character:
@@ -2076,7 +2216,7 @@ keyboards:
             width:
               percentage: 0.1
             label: 』
-            lightModeStyleName: mainkeys
+            lightModeStyleName: mainkeys_light
             darkModeStyleName: mainkeys
           - action:
               character:
@@ -2085,7 +2225,7 @@ keyboards:
             width:
               percentage: 0.1
             label: “
-            lightModeStyleName: mainkeys
+            lightModeStyleName: mainkeys_light
             darkModeStyleName: mainkeys
           - action:
               character:
@@ -2094,7 +2234,7 @@ keyboards:
             width:
               percentage: 0.1
             label: ”
-            lightModeStyleName: mainkeys
+            lightModeStyleName: mainkeys_light
             darkModeStyleName: mainkeys
           - action:
               characterMargin:
@@ -2128,7 +2268,7 @@ keyboards:
                 display: true
                 processByRIME: true
                 direction: left
-            lightModeStyleName: shift_delete
+            lightModeStyleName: shift_delete_light
             darkModeStyleName: shift_delete
         rowHeight:
           portrait: 54
@@ -2139,14 +2279,14 @@ keyboards:
             width:
               percentage: 0.11
             label: "123"
-            lightModeStyleName: shift_delete
+            lightModeStyleName: shift_delete_light
             darkModeStyleName: shift_delete
           - action:
               keyboardType: iOS-中文
             width:
               percentage: 0.11
             label: 返
-            lightModeStyleName: shift_delete
+            lightModeStyleName: shift_delete_light
             darkModeStyleName: shift_delete
           - action:
               character:
@@ -2184,7 +2324,7 @@ keyboards:
                   symbol:
                     char: .ai
                 label: .ai
-            lightModeStyleName: shift_delete
+            lightModeStyleName: shift_delete_light
             darkModeStyleName: shift_delete
           - action: space
             width: available
@@ -2197,14 +2337,14 @@ keyboards:
                 display: true
                 processByRIME: true
                 direction: down
-            lightModeStyleName: space
+            lightModeStyleName: space_light
             darkModeStyleName: space
           - action:
               keyboardType: iOS-英文
             width:
               percentage: 0.11
             label: 中/英
-            lightModeStyleName: cn_en
+            lightModeStyleName: cn_en_light
             darkModeStyleName: cn_en
           - action: enter
             width:
@@ -2218,7 +2358,7 @@ keyboards:
                 display: true
                 processByRIME: true
                 direction: up
-            lightModeStyleName: shift_delete
+            lightModeStyleName: shift_delete_light
             darkModeStyleName: shift_delete
         rowHeight:
           portrait: 54
@@ -2229,11 +2369,16 @@ keyboards:
       top: 6
       right: 4
     keyStyle:
-      hotkeys: *a1
-      mainkeys: *a3
-      shift_delete: *a2
-      space: *a5
-      cn_en: *a6
+      hotkeys_light: *a1
+      hotkeys: *a2
+      mainkeys_light: *a5
+      mainkeys: *a6
+      shift_delete_light: *a3
+      shift_delete: *a4
+      space_light: *a9
+      space: *a10
+      cn_en_light: *a11
+      cn_en: *a12
   - name: iOS-英文
     isPrimary: false
     rows:
@@ -2249,7 +2394,7 @@ keyboards:
                 display: true
                 processByRIME: true
                 direction: down
-            lightModeStyleName: hotkeys
+            lightModeStyleName: hotkeys_light
             darkModeStyleName: hotkeys
           - action:
               character:
@@ -2267,7 +2412,7 @@ keyboards:
                     openURL:
                       url: shortcuts://run-shortcut?name=拼接图片
                 label: 拼接图片
-            lightModeStyleName: hotkeys
+            lightModeStyleName: hotkeys_light
             darkModeStyleName: hotkeys
           - action:
               shortcutCommand:
@@ -2281,7 +2426,7 @@ keyboards:
                     openURL:
                       url: mqqapi://scanqrcode
                 label: 扫一扫
-            lightModeStyleName: hotkeys
+            lightModeStyleName: hotkeys_light
             darkModeStyleName: hotkeys
           - action:
               shortcutCommand:
@@ -2295,7 +2440,7 @@ keyboards:
                     openURL:
                       url: weixin://scanqrcode
                 label: 扫一扫
-            lightModeStyleName: hotkeys
+            lightModeStyleName: hotkeys_light
             darkModeStyleName: hotkeys
           - action:
               shortcutCommand:
@@ -2303,7 +2448,7 @@ keyboards:
                   url: https://www.perplexity.ai/search/new?q=#pasteboardContent
             width: available
             label: 
-            lightModeStyleName: hotkeys
+            lightModeStyleName: hotkeys_light
             darkModeStyleName: hotkeys
           - action:
               shortcutCommand:
@@ -2311,7 +2456,7 @@ keyboards:
                   url: https://www.google.com/search?q=#pasteboardContent
             width: available
             label: 
-            lightModeStyleName: hotkeys
+            lightModeStyleName: hotkeys_light
             darkModeStyleName: hotkeys
           - action:
               character:
@@ -2341,7 +2486,7 @@ keyboards:
                     openURL:
                       url: xhsdiscover://search/result?keyword=#pasteboardContent
                 label: 小红书
-            lightModeStyleName: hotkeys
+            lightModeStyleName: hotkeys_light
             darkModeStyleName: hotkeys
           - action:
               shortcutCommand: "#右移"
@@ -2354,7 +2499,7 @@ keyboards:
                 display: true
                 processByRIME: true
                 direction: down
-            lightModeStyleName: hotkeys
+            lightModeStyleName: hotkeys_light
             darkModeStyleName: hotkeys
         rowHeight:
           portrait: 36
@@ -2385,7 +2530,7 @@ keyboards:
                 display: true
                 processByRIME: false
                 direction: down
-            lightModeStyleName: mainkeys
+            lightModeStyleName: mainkeys_light
             darkModeStyleName: mainkeys
           - action:
               character:
@@ -2412,7 +2557,7 @@ keyboards:
                 display: true
                 processByRIME: false
                 direction: down
-            lightModeStyleName: mainkeys
+            lightModeStyleName: mainkeys_light
             darkModeStyleName: mainkeys
           - action:
               character:
@@ -2439,7 +2584,7 @@ keyboards:
                 display: true
                 processByRIME: false
                 direction: down
-            lightModeStyleName: mainkeys
+            lightModeStyleName: mainkeys_light
             darkModeStyleName: mainkeys
           - action:
               character:
@@ -2466,7 +2611,7 @@ keyboards:
                 display: true
                 processByRIME: false
                 direction: down
-            lightModeStyleName: mainkeys
+            lightModeStyleName: mainkeys_light
             darkModeStyleName: mainkeys
           - action:
               character:
@@ -2493,7 +2638,7 @@ keyboards:
                 display: true
                 processByRIME: false
                 direction: down
-            lightModeStyleName: mainkeys
+            lightModeStyleName: mainkeys_light
             darkModeStyleName: mainkeys
           - action:
               character:
@@ -2520,7 +2665,7 @@ keyboards:
                 display: true
                 processByRIME: false
                 direction: down
-            lightModeStyleName: mainkeys
+            lightModeStyleName: mainkeys_light
             darkModeStyleName: mainkeys
           - action:
               character:
@@ -2547,7 +2692,7 @@ keyboards:
                 display: true
                 processByRIME: false
                 direction: down
-            lightModeStyleName: mainkeys
+            lightModeStyleName: mainkeys_light
             darkModeStyleName: mainkeys
           - action:
               character:
@@ -2574,7 +2719,7 @@ keyboards:
                 display: true
                 processByRIME: false
                 direction: down
-            lightModeStyleName: mainkeys
+            lightModeStyleName: mainkeys_light
             darkModeStyleName: mainkeys
           - action:
               character:
@@ -2601,7 +2746,7 @@ keyboards:
                 display: true
                 processByRIME: false
                 direction: down
-            lightModeStyleName: mainkeys
+            lightModeStyleName: mainkeys_light
             darkModeStyleName: mainkeys
           - action:
               character:
@@ -2630,7 +2775,7 @@ keyboards:
                 display: true
                 processByRIME: false
                 direction: down
-            lightModeStyleName: mainkeys
+            lightModeStyleName: mainkeys_light
             darkModeStyleName: mainkeys
         rowHeight:
           portrait: 54
@@ -2666,7 +2811,7 @@ keyboards:
                 display: true
                 processByRIME: true
                 direction: down
-            lightModeStyleName: mainkeys
+            lightModeStyleName: mainkeys_light
             darkModeStyleName: mainkeys
           - action:
               character:
@@ -2685,7 +2830,7 @@ keyboards:
                 display: true
                 processByRIME: false
                 direction: up
-            lightModeStyleName: mainkeys
+            lightModeStyleName: mainkeys_light
             darkModeStyleName: mainkeys
           - action:
               character:
@@ -2704,7 +2849,7 @@ keyboards:
                 display: true
                 processByRIME: false
                 direction: up
-            lightModeStyleName: mainkeys
+            lightModeStyleName: mainkeys_light
             darkModeStyleName: mainkeys
           - action:
               character:
@@ -2729,7 +2874,7 @@ keyboards:
                 display: true
                 processByRIME: true
                 direction: down
-            lightModeStyleName: fjkeys
+            lightModeStyleName: fjkeys_light
             darkModeStyleName: fjkeys
           - action:
               character:
@@ -2756,7 +2901,7 @@ keyboards:
                 display: true
                 processByRIME: true
                 direction: down
-            lightModeStyleName: mainkeys
+            lightModeStyleName: mainkeys_light
             darkModeStyleName: mainkeys
           - action:
               character:
@@ -2783,7 +2928,7 @@ keyboards:
                 display: true
                 processByRIME: true
                 direction: down
-            lightModeStyleName: mainkeys
+            lightModeStyleName: mainkeys_light
             darkModeStyleName: mainkeys
           - action:
               character:
@@ -2802,7 +2947,7 @@ keyboards:
                 display: true
                 processByRIME: false
                 direction: up
-            lightModeStyleName: fjkeys
+            lightModeStyleName: fjkeys_light
             darkModeStyleName: fjkeys
           - action:
               character:
@@ -2821,7 +2966,7 @@ keyboards:
                 display: true
                 processByRIME: false
                 direction: up
-            lightModeStyleName: mainkeys
+            lightModeStyleName: mainkeys_light
             darkModeStyleName: mainkeys
           - action:
               character:
@@ -2840,7 +2985,7 @@ keyboards:
                 display: true
                 processByRIME: false
                 direction: up
-            lightModeStyleName: mainkeys
+            lightModeStyleName: mainkeys_light
             darkModeStyleName: mainkeys
           - action:
               characterMargin:
@@ -2874,7 +3019,7 @@ keyboards:
                 display: true
                 processByRIME: true
                 direction: right
-            lightModeStyleName: shift_delete
+            lightModeStyleName: shift_delete_light
             darkModeStyleName: shift_delete
           - action:
               characterMargin:
@@ -2909,7 +3054,7 @@ keyboards:
                 display: true
                 processByRIME: true
                 direction: down
-            lightModeStyleName: mainkeys
+            lightModeStyleName: mainkeys_light
             darkModeStyleName: mainkeys
           - action:
               character:
@@ -2934,7 +3079,7 @@ keyboards:
                 display: true
                 processByRIME: true
                 direction: down
-            lightModeStyleName: mainkeys
+            lightModeStyleName: mainkeys_light
             darkModeStyleName: mainkeys
           - action:
               character:
@@ -2963,7 +3108,7 @@ keyboards:
               - action:
                   shortcutCommand: "#showPhraseView"
                 label: 常用语
-            lightModeStyleName: mainkeys
+            lightModeStyleName: mainkeys_light
             darkModeStyleName: mainkeys
           - action:
               character:
@@ -2992,7 +3137,7 @@ keyboards:
               - action:
                   shortcutCommand: "#showPasteboardView"
                 label: 剪贴板
-            lightModeStyleName: mainkeys
+            lightModeStyleName: mainkeys_light
             darkModeStyleName: mainkeys
           - action:
               character:
@@ -3019,7 +3164,7 @@ keyboards:
                 display: true
                 processByRIME: false
                 direction: down
-            lightModeStyleName: mainkeys
+            lightModeStyleName: mainkeys_light
             darkModeStyleName: mainkeys
           - action:
               character:
@@ -3046,7 +3191,7 @@ keyboards:
                 display: true
                 processByRIME: false
                 direction: down
-            lightModeStyleName: mainkeys
+            lightModeStyleName: mainkeys_light
             darkModeStyleName: mainkeys
           - action:
               character:
@@ -3065,7 +3210,7 @@ keyboards:
                 display: true
                 processByRIME: false
                 direction: up
-            lightModeStyleName: mainkeys
+            lightModeStyleName: mainkeys_light
             darkModeStyleName: mainkeys
           - action:
               characterMargin:
@@ -3099,7 +3244,7 @@ keyboards:
                 display: true
                 processByRIME: true
                 direction: left
-            lightModeStyleName: shift_delete
+            lightModeStyleName: shift_delete_light
             darkModeStyleName: shift_delete
         rowHeight:
           portrait: 54
@@ -3110,14 +3255,14 @@ keyboards:
             width:
               percentage: 0.11
             label: "123"
-            lightModeStyleName: shift_delete
+            lightModeStyleName: shift_delete_light
             darkModeStyleName: shift_delete
           - action:
               keyboardType: iOS-英文数字符号
             width:
               percentage: 0.11
             label: 󱐋
-            lightModeStyleName: shift_delete
+            lightModeStyleName: shift_delete_light
             darkModeStyleName: shift_delete
           - action:
               character:
@@ -3155,7 +3300,7 @@ keyboards:
                   symbol:
                     char: .ai
                 label: .ai
-            lightModeStyleName: shift_delete
+            lightModeStyleName: shift_delete_light
             darkModeStyleName: shift_delete
           - action: space
             width:
@@ -3171,14 +3316,14 @@ keyboards:
                 display: true
                 processByRIME: true
                 direction: down
-            lightModeStyleName: space
+            lightModeStyleName: space_light
             darkModeStyleName: space
           - action:
               keyboardType: iOS-中文
             width:
               percentage: 0.11
             label: 英/中
-            lightModeStyleName: cn_en
+            lightModeStyleName: cn_en_light
             darkModeStyleName: cn_en
           - action: enter
             width:
@@ -3192,7 +3337,7 @@ keyboards:
                 display: true
                 processByRIME: true
                 direction: up
-            lightModeStyleName: shift_delete
+            lightModeStyleName: shift_delete_light
             darkModeStyleName: shift_delete
         rowHeight:
           portrait: 54
@@ -3203,12 +3348,18 @@ keyboards:
       top: 6
       right: 4
     keyStyle:
-      hotkeys: *a1
-      mainkeys: *a3
-      fjkeys: *a4
-      shift_delete: *a2
-      space: *a5
-      cn_en: *a6
+      hotkeys_light: *a1
+      hotkeys: *a2
+      mainkeys_light: *a5
+      mainkeys: *a6
+      fjkeys_light: *a7
+      fjkeys: *a8
+      shift_delete_light: *a3
+      shift_delete: *a4
+      space_light: *a9
+      space: *a10
+      cn_en_light: *a11
+      cn_en: *a12
   - name: iOS-英文数字
     isPrimary: false
     rows:
@@ -3224,7 +3375,7 @@ keyboards:
                 display: true
                 processByRIME: true
                 direction: down
-            lightModeStyleName: hotkeys
+            lightModeStyleName: hotkeys_light
             darkModeStyleName: hotkeys
           - action:
               character:
@@ -3242,7 +3393,7 @@ keyboards:
                     openURL:
                       url: shortcuts://run-shortcut?name=拼接图片
                 label: 拼接图片
-            lightModeStyleName: hotkeys
+            lightModeStyleName: hotkeys_light
             darkModeStyleName: hotkeys
           - action:
               shortcutCommand:
@@ -3256,7 +3407,7 @@ keyboards:
                     openURL:
                       url: mqqapi://scanqrcode
                 label: 扫一扫
-            lightModeStyleName: hotkeys
+            lightModeStyleName: hotkeys_light
             darkModeStyleName: hotkeys
           - action:
               shortcutCommand:
@@ -3270,7 +3421,7 @@ keyboards:
                     openURL:
                       url: weixin://scanqrcode
                 label: 扫一扫
-            lightModeStyleName: hotkeys
+            lightModeStyleName: hotkeys_light
             darkModeStyleName: hotkeys
           - action:
               shortcutCommand:
@@ -3278,7 +3429,7 @@ keyboards:
                   url: https://www.perplexity.ai/search/new?q=#pasteboardContent
             width: available
             label: 
-            lightModeStyleName: hotkeys
+            lightModeStyleName: hotkeys_light
             darkModeStyleName: hotkeys
           - action:
               shortcutCommand:
@@ -3286,7 +3437,7 @@ keyboards:
                   url: https://www.google.com/search?q=#pasteboardContent
             width: available
             label: 
-            lightModeStyleName: hotkeys
+            lightModeStyleName: hotkeys_light
             darkModeStyleName: hotkeys
           - action:
               character:
@@ -3316,7 +3467,7 @@ keyboards:
                     openURL:
                       url: xhsdiscover://search/result?keyword=#pasteboardContent
                 label: 小红书
-            lightModeStyleName: hotkeys
+            lightModeStyleName: hotkeys_light
             darkModeStyleName: hotkeys
           - action:
               shortcutCommand: "#右移"
@@ -3329,7 +3480,7 @@ keyboards:
                 display: true
                 processByRIME: true
                 direction: down
-            lightModeStyleName: hotkeys
+            lightModeStyleName: hotkeys_light
             darkModeStyleName: hotkeys
         rowHeight:
           portrait: 36
@@ -3341,7 +3492,7 @@ keyboards:
             width: available
             label:
               text: ""
-            lightModeStyleName: shift_delete
+            lightModeStyleName: shift_delete_light
             darkModeStyleName: shift_delete
           - action:
               character:
@@ -3350,7 +3501,7 @@ keyboards:
               percentage: 0.16
             label:
               text: ""
-            lightModeStyleName: shift_delete
+            lightModeStyleName: shift_delete_light
             darkModeStyleName: shift_delete
           - action:
               character:
@@ -3358,7 +3509,7 @@ keyboards:
             width: available
             label:
               text: ""
-            lightModeStyleName: mainkeys
+            lightModeStyleName: mainkeys_light
             darkModeStyleName: mainkeys
           - action:
               character:
@@ -3366,7 +3517,7 @@ keyboards:
             width: available
             label:
               text: ""
-            lightModeStyleName: mainkeys
+            lightModeStyleName: mainkeys_light
             darkModeStyleName: mainkeys
           - action:
               character:
@@ -3374,7 +3525,7 @@ keyboards:
             width: available
             label:
               text: ""
-            lightModeStyleName: mainkeys
+            lightModeStyleName: mainkeys_light
             darkModeStyleName: mainkeys
           - action: backspace
             width:
@@ -3395,7 +3546,7 @@ keyboards:
                 display: true
                 processByRIME: true
                 direction: left
-            lightModeStyleName: shift_delete
+            lightModeStyleName: shift_delete_light
             darkModeStyleName: shift_delete
         rowHeight:
           portrait: 54
@@ -3407,7 +3558,7 @@ keyboards:
             width: available
             label:
               text: ""
-            lightModeStyleName: shift_delete
+            lightModeStyleName: shift_delete_light
             darkModeStyleName: shift_delete
           - action:
               character:
@@ -3416,7 +3567,7 @@ keyboards:
               percentage: 0.16
             label:
               text: ""
-            lightModeStyleName: shift_delete
+            lightModeStyleName: shift_delete_light
             darkModeStyleName: shift_delete
           - action:
               character:
@@ -3424,7 +3575,7 @@ keyboards:
             width: available
             label:
               text: ""
-            lightModeStyleName: mainkeys
+            lightModeStyleName: mainkeys_light
             darkModeStyleName: mainkeys
           - action:
               character:
@@ -3432,7 +3583,7 @@ keyboards:
             width: available
             label:
               text: ""
-            lightModeStyleName: fjkeys
+            lightModeStyleName: fjkeys_light
             darkModeStyleName: fjkeys
           - action:
               character:
@@ -3440,7 +3591,7 @@ keyboards:
             width: available
             label:
               text: ""
-            lightModeStyleName: mainkeys
+            lightModeStyleName: mainkeys_light
             darkModeStyleName: mainkeys
           - action:
               character:
@@ -3449,7 +3600,7 @@ keyboards:
               percentage: 0.16
             label:
               text: ""
-            lightModeStyleName: shift_delete
+            lightModeStyleName: shift_delete_light
             darkModeStyleName: shift_delete
         rowHeight:
           portrait: 54
@@ -3461,7 +3612,7 @@ keyboards:
             width: available
             label:
               text: ""
-            lightModeStyleName: shift_delete
+            lightModeStyleName: shift_delete_light
             darkModeStyleName: shift_delete
           - action:
               character:
@@ -3470,7 +3621,7 @@ keyboards:
               percentage: 0.16
             label:
               text: ""
-            lightModeStyleName: shift_delete
+            lightModeStyleName: shift_delete_light
             darkModeStyleName: shift_delete
           - action:
               character:
@@ -3478,7 +3629,7 @@ keyboards:
             width: available
             label:
               text: ""
-            lightModeStyleName: mainkeys
+            lightModeStyleName: mainkeys_light
             darkModeStyleName: mainkeys
           - action:
               character:
@@ -3486,7 +3637,7 @@ keyboards:
             width: available
             label:
               text: ""
-            lightModeStyleName: mainkeys
+            lightModeStyleName: mainkeys_light
             darkModeStyleName: mainkeys
           - action:
               character:
@@ -3494,7 +3645,7 @@ keyboards:
             width: available
             label:
               text: ""
-            lightModeStyleName: mainkeys
+            lightModeStyleName: mainkeys_light
             darkModeStyleName: mainkeys
           - action:
               character:
@@ -3509,7 +3660,7 @@ keyboards:
                 display: true
                 processByRIME: true
                 direction: up
-            lightModeStyleName: shift_delete
+            lightModeStyleName: shift_delete_light
             darkModeStyleName: shift_delete
         rowHeight:
           portrait: 54
@@ -3519,7 +3670,7 @@ keyboards:
               keyboardType: iOS-英文
             width: available
             label: 󱞱
-            lightModeStyleName: shift_delete
+            lightModeStyleName: shift_delete_light
             darkModeStyleName: shift_delete
           - action:
               character:
@@ -3528,7 +3679,7 @@ keyboards:
               percentage: 0.16
             label:
               text: ""
-            lightModeStyleName: shift_delete
+            lightModeStyleName: shift_delete_light
             darkModeStyleName: shift_delete
           - action:
               character:
@@ -3536,7 +3687,7 @@ keyboards:
             width: available
             label:
               text: ""
-            lightModeStyleName: mainkeys
+            lightModeStyleName: mainkeys_light
             darkModeStyleName: mainkeys
           - action:
               character:
@@ -3544,7 +3695,7 @@ keyboards:
             width: available
             label:
               text: ""
-            lightModeStyleName: mainkeys
+            lightModeStyleName: mainkeys_light
             darkModeStyleName: mainkeys
           - action: space
             width: available
@@ -3558,7 +3709,7 @@ keyboards:
                 display: true
                 processByRIME: true
                 direction: down
-            lightModeStyleName: space
+            lightModeStyleName: space_light
             darkModeStyleName: space
           - action: enter
             width:
@@ -3573,7 +3724,7 @@ keyboards:
                 display: true
                 processByRIME: true
                 direction: up
-            lightModeStyleName: shift_delete
+            lightModeStyleName: shift_delete_light
             darkModeStyleName: shift_delete
         rowHeight:
           portrait: 54
@@ -3584,11 +3735,16 @@ keyboards:
       top: 6
       right: 4
     keyStyle:
-      hotkeys: *a1
-      shift_delete: *a2
-      mainkeys: *a3
-      fjkeys: *a4
-      space: *a5
+      hotkeys_light: *a1
+      hotkeys: *a2
+      shift_delete_light: *a3
+      shift_delete: *a4
+      mainkeys_light: *a5
+      mainkeys: *a6
+      fjkeys_light: *a7
+      fjkeys: *a8
+      space_light: *a9
+      space: *a10
   - name: iOS-英文数字符号
     isPrimary: false
     rows:
@@ -3604,7 +3760,7 @@ keyboards:
                 display: true
                 processByRIME: true
                 direction: down
-            lightModeStyleName: hotkeys
+            lightModeStyleName: hotkeys_light
             darkModeStyleName: hotkeys
           - action:
               character:
@@ -3622,7 +3778,7 @@ keyboards:
                     openURL:
                       url: shortcuts://run-shortcut?name=拼接图片
                 label: 拼接图片
-            lightModeStyleName: hotkeys
+            lightModeStyleName: hotkeys_light
             darkModeStyleName: hotkeys
           - action:
               shortcutCommand:
@@ -3636,7 +3792,7 @@ keyboards:
                     openURL:
                       url: mqqapi://scanqrcode
                 label: 扫一扫
-            lightModeStyleName: hotkeys
+            lightModeStyleName: hotkeys_light
             darkModeStyleName: hotkeys
           - action:
               shortcutCommand:
@@ -3650,7 +3806,7 @@ keyboards:
                     openURL:
                       url: weixin://scanqrcode
                 label: 扫一扫
-            lightModeStyleName: hotkeys
+            lightModeStyleName: hotkeys_light
             darkModeStyleName: hotkeys
           - action:
               shortcutCommand:
@@ -3658,7 +3814,7 @@ keyboards:
                   url: https://www.perplexity.ai/search/new?q=#pasteboardContent
             width: available
             label: 
-            lightModeStyleName: hotkeys
+            lightModeStyleName: hotkeys_light
             darkModeStyleName: hotkeys
           - action:
               shortcutCommand:
@@ -3666,7 +3822,7 @@ keyboards:
                   url: https://www.google.com/search?q=#pasteboardContent
             width: available
             label: 
-            lightModeStyleName: hotkeys
+            lightModeStyleName: hotkeys_light
             darkModeStyleName: hotkeys
           - action:
               character:
@@ -3696,7 +3852,7 @@ keyboards:
                     openURL:
                       url: xhsdiscover://search/result?keyword=#pasteboardContent
                 label: 小红书
-            lightModeStyleName: hotkeys
+            lightModeStyleName: hotkeys_light
             darkModeStyleName: hotkeys
           - action:
               shortcutCommand: "#右移"
@@ -3709,7 +3865,7 @@ keyboards:
                 display: true
                 processByRIME: true
                 direction: down
-            lightModeStyleName: hotkeys
+            lightModeStyleName: hotkeys_light
             darkModeStyleName: hotkeys
         rowHeight:
           portrait: 36
@@ -3722,7 +3878,7 @@ keyboards:
             width:
               percentage: 0.1
             label: "!"
-            lightModeStyleName: mainkeys
+            lightModeStyleName: mainkeys_light
             darkModeStyleName: mainkeys
           - action:
               character:
@@ -3731,7 +3887,7 @@ keyboards:
             width:
               percentage: 0.1
             label: "@"
-            lightModeStyleName: mainkeys
+            lightModeStyleName: mainkeys_light
             darkModeStyleName: mainkeys
           - action:
               character:
@@ -3740,7 +3896,7 @@ keyboards:
             width:
               percentage: 0.1
             label: "#"
-            lightModeStyleName: mainkeys
+            lightModeStyleName: mainkeys_light
             darkModeStyleName: mainkeys
           - action:
               character:
@@ -3749,7 +3905,7 @@ keyboards:
             width:
               percentage: 0.1
             label: $
-            lightModeStyleName: mainkeys
+            lightModeStyleName: mainkeys_light
             darkModeStyleName: mainkeys
           - action:
               character:
@@ -3758,7 +3914,7 @@ keyboards:
             width:
               percentage: 0.1
             label: "%"
-            lightModeStyleName: mainkeys
+            lightModeStyleName: mainkeys_light
             darkModeStyleName: mainkeys
           - action:
               character:
@@ -3767,7 +3923,7 @@ keyboards:
             width:
               percentage: 0.1
             label: ^
-            lightModeStyleName: mainkeys
+            lightModeStyleName: mainkeys_light
             darkModeStyleName: mainkeys
           - action:
               character:
@@ -3776,7 +3932,7 @@ keyboards:
             width:
               percentage: 0.1
             label: "&"
-            lightModeStyleName: mainkeys
+            lightModeStyleName: mainkeys_light
             darkModeStyleName: mainkeys
           - action:
               character:
@@ -3785,7 +3941,7 @@ keyboards:
             width:
               percentage: 0.1
             label: "*"
-            lightModeStyleName: mainkeys
+            lightModeStyleName: mainkeys_light
             darkModeStyleName: mainkeys
           - action:
               character:
@@ -3794,7 +3950,7 @@ keyboards:
             width:
               percentage: 0.1
             label: (
-            lightModeStyleName: mainkeys
+            lightModeStyleName: mainkeys_light
             darkModeStyleName: mainkeys
           - action:
               character:
@@ -3805,7 +3961,7 @@ keyboards:
               landscape:
                 percentage: 0.1
             label: )
-            lightModeStyleName: mainkeys
+            lightModeStyleName: mainkeys_light
             darkModeStyleName: mainkeys
         rowHeight:
           portrait: 54
@@ -3825,7 +3981,7 @@ keyboards:
             width:
               percentage: 0.1
             label: "|"
-            lightModeStyleName: mainkeys
+            lightModeStyleName: mainkeys_light
             darkModeStyleName: mainkeys
           - action:
               character:
@@ -3834,7 +3990,7 @@ keyboards:
             width:
               percentage: 0.1
             label: "-"
-            lightModeStyleName: mainkeys
+            lightModeStyleName: mainkeys_light
             darkModeStyleName: mainkeys
           - action:
               character:
@@ -3843,7 +3999,7 @@ keyboards:
             width:
               percentage: 0.1
             label: +
-            lightModeStyleName: mainkeys
+            lightModeStyleName: mainkeys_light
             darkModeStyleName: mainkeys
           - action:
               character:
@@ -3852,7 +4008,7 @@ keyboards:
             width:
               percentage: 0.1
             label: =
-            lightModeStyleName: mainkeys
+            lightModeStyleName: mainkeys_light
             darkModeStyleName: mainkeys
           - action:
               character:
@@ -3861,7 +4017,7 @@ keyboards:
             width:
               percentage: 0.1
             label: "{"
-            lightModeStyleName: mainkeys
+            lightModeStyleName: mainkeys_light
             darkModeStyleName: mainkeys
           - action:
               character:
@@ -3870,7 +4026,7 @@ keyboards:
             width:
               percentage: 0.1
             label: "}"
-            lightModeStyleName: mainkeys
+            lightModeStyleName: mainkeys_light
             darkModeStyleName: mainkeys
           - action:
               character:
@@ -3879,7 +4035,7 @@ keyboards:
             width:
               percentage: 0.1
             label: "["
-            lightModeStyleName: mainkeys
+            lightModeStyleName: mainkeys_light
             darkModeStyleName: mainkeys
           - action:
               character:
@@ -3888,7 +4044,7 @@ keyboards:
             width:
               percentage: 0.1
             label: "]"
-            lightModeStyleName: mainkeys
+            lightModeStyleName: mainkeys_light
             darkModeStyleName: mainkeys
           - action:
               character:
@@ -3897,7 +4053,7 @@ keyboards:
             width:
               percentage: 0.1
             label: \
-            lightModeStyleName: mainkeys
+            lightModeStyleName: mainkeys_light
             darkModeStyleName: mainkeys
           - action:
               characterMargin:
@@ -3922,7 +4078,7 @@ keyboards:
                 display: true
                 processByRIME: true
                 direction: up
-            lightModeStyleName: shift_delete
+            lightModeStyleName: shift_delete_light
             darkModeStyleName: shift_delete
           - action:
               characterMargin:
@@ -3941,7 +4097,7 @@ keyboards:
             width:
               percentage: 0.1
             label: _
-            lightModeStyleName: mainkeys
+            lightModeStyleName: mainkeys_light
             darkModeStyleName: mainkeys
           - action:
               character:
@@ -3950,7 +4106,7 @@ keyboards:
             width:
               percentage: 0.1
             label: <
-            lightModeStyleName: mainkeys
+            lightModeStyleName: mainkeys_light
             darkModeStyleName: mainkeys
           - action:
               character:
@@ -3959,7 +4115,7 @@ keyboards:
             width:
               percentage: 0.1
             label: ">"
-            lightModeStyleName: mainkeys
+            lightModeStyleName: mainkeys_light
             darkModeStyleName: mainkeys
           - action:
               character:
@@ -3968,7 +4124,7 @@ keyboards:
             width:
               percentage: 0.1
             label: "?"
-            lightModeStyleName: mainkeys
+            lightModeStyleName: mainkeys_light
             darkModeStyleName: mainkeys
           - action:
               character:
@@ -3977,7 +4133,7 @@ keyboards:
             width:
               percentage: 0.1
             label: \
-            lightModeStyleName: mainkeys
+            lightModeStyleName: mainkeys_light
             darkModeStyleName: mainkeys
           - action:
               character:
@@ -3986,7 +4142,7 @@ keyboards:
             width:
               percentage: 0.1
             label: ","
-            lightModeStyleName: mainkeys
+            lightModeStyleName: mainkeys_light
             darkModeStyleName: mainkeys
           - action:
               character:
@@ -3995,7 +4151,7 @@ keyboards:
             width:
               percentage: 0.1
             label: .
-            lightModeStyleName: mainkeys
+            lightModeStyleName: mainkeys_light
             darkModeStyleName: mainkeys
           - action:
               characterMargin:
@@ -4030,7 +4186,7 @@ keyboards:
                 display: true
                 processByRIME: true
                 direction: left
-            lightModeStyleName: shift_delete
+            lightModeStyleName: shift_delete_light
             darkModeStyleName: shift_delete
         rowHeight:
           portrait: 54
@@ -4041,14 +4197,14 @@ keyboards:
             width:
               percentage: 0.11
             label: "123"
-            lightModeStyleName: shift_delete
+            lightModeStyleName: shift_delete_light
             darkModeStyleName: shift_delete
           - action:
               keyboardType: iOS-英文
             width:
               percentage: 0.11
             label: 返
-            lightModeStyleName: shift_delete
+            lightModeStyleName: shift_delete_light
             darkModeStyleName: shift_delete
           - action:
               character:
@@ -4085,7 +4241,7 @@ keyboards:
                   symbol:
                     char: .ai
                 label: .ai
-            lightModeStyleName: shift_delete
+            lightModeStyleName: shift_delete_light
             darkModeStyleName: shift_delete
           - action: space
             width:
@@ -4101,14 +4257,14 @@ keyboards:
                 display: true
                 processByRIME: true
                 direction: down
-            lightModeStyleName: space
+            lightModeStyleName: space_light
             darkModeStyleName: space
           - action:
               keyboardType: iOS-中文
             width:
               percentage: 0.11
             label: 英/中
-            lightModeStyleName: cn_en
+            lightModeStyleName: cn_en_light
             darkModeStyleName: cn_en
           - action: enter
             width:
@@ -4123,7 +4279,7 @@ keyboards:
                 display: true
                 processByRIME: true
                 direction: up
-            lightModeStyleName: shift_delete
+            lightModeStyleName: shift_delete_light
             darkModeStyleName: shift_delete
         rowHeight:
           portrait: 54
@@ -4134,8 +4290,13 @@ keyboards:
       top: 6
       right: 4
     keyStyle:
-      hotkeys: *a1
-      mainkeys: *a3
-      shift_delete: *a2
-      space: *a5
-      cn_en: *a6
+      hotkeys_light: *a1
+      hotkeys: *a2
+      mainkeys_light: *a5
+      mainkeys: *a6
+      shift_delete_light: *a3
+      shift_delete: *a4
+      space_light: *a9
+      space: *a10
+      cn_en_light: *a11
+      cn_en: *a12
