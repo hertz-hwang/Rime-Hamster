@@ -79,6 +79,7 @@ switches_engine_table:
       - matcher
       - affix_segmentor@easy_en                     # 英文
       - affix_segmentor@tiger_oni                   # 九重鬼虎
+      - affix_segmentor@tiger_phrase                # 赫兹虎码整句
       - abc_segmentor                               # 标记输入码的类型
       - punct_segmentor                             # 割界，与前后方的其他编码区分开
       - fallback_segmentor
@@ -89,6 +90,7 @@ switches_engine_table:
       - table_translator@easy_en                    # 英文
       - table_translator@tiger_oni                  # 九重鬼虎
       - table_translator@fast_symbol                # 码表转换-快符
+      - script_translator@tiger_phrase              # 赫兹虎码整句
       - history_translator@input_history            # 输入历史
       - lua_translator@*hertz.calculator_translator # 计算器
       - lua_translator@*hertz.time_translator       # 时间
@@ -203,6 +205,14 @@ tiger_oni_translator:
     tag: tiger_oni
     prefix: "G"
     tips: "〔九重鬼虎〕"
+    __include: dict_All_false
+
+tiger_phrase_translator:
+  tiger_phrase:
+    dictionary: tiger_phrase
+    tag: tiger_phrase
+    prefix: "J"
+    tips: "〔赫兹虎码整句〕"
     __include: dict_All_false
 
 reverse_lookup_translator_xh:

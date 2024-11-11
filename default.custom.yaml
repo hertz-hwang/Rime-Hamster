@@ -2,8 +2,7 @@
 
 patch:
   schema_list:
-    - schema: tiger_code     # 主方案-虎单
-    - schema: tiger_phrase   # 虎码整句
+    - schema: tiger_code     # 主方案：虎单，已集成：九重鬼虎、赫兹虎码整句
     - schema: easy_en        # 方案集成
   switcher/hotkeys:  # 将默认的 F4热键 更改为ctrl+~
     - Control+grave

@@ -9,8 +9,8 @@ schema:
     - fast_symbol
     - easy_en
   description: |
-    虎码整句
-  name: "虎码整句"
+    赫兹虎码整句
+  name: "赫兹虎码整句(已集成，勿用)"
   schema_id: tiger_phrase
   version: "2024-11-11"
 
