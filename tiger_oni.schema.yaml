@@ -10,7 +10,7 @@ schema:
     - easy_en
   description: |
     官虎词库+鬼虎词库
-  name: "九重鬼虎"
+  name: "九重鬼虎(已集成，勿用)"
   schema_id: tiger_oni
   version: "2024-11-04"
 

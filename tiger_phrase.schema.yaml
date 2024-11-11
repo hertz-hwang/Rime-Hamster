@@ -1,0 +1,66 @@
+# Rime schema
+# encoding: utf-8
+
+schema:
+  author:
+    - Hertz Hwang <hertz@26hz.com.cn>
+  dependencies:
+    - pinyin
+    - fast_symbol
+    - easy_en
+  description: |
+    虎码整句
+  name: "虎码整句"
+  schema_id: tiger_phrase
+  version: "2024-11-11"
+
+__patch:
+  - tiger_code.custom:/patch?
+  - engine/filters/@next: simplifier@chinese_english
+
+__include: tiger:/switches_engine_script       # Rime模块
+__include: tiger:/fast_symbol_translator       # 快符
+__include: tiger:/easy_en_translator           # 英文
+__include: tiger:/reverse_lookup_translator_xh # 小鹤反查
+__include: tiger:/s2t_filter                   # 简繁滤镜
+__include: tiger:/chaifen_filter               # 拆分滤镜
+__include: tiger:/history_filter               # z 键历史
+__include: tiger:/pinyin_filter                # 拼音滤镜
+__include: tiger:/emoji_filter                 # Emoji 滤镜
+__include: tiger:/cn_en_filter                 # 中英滤镜
+__include: tiger:/key_bindings                 # 按键定义
+
+speller:
+  auto_clear: max_length
+  auto_select: true
+  max_code_length: 5
+  alphabet: ";'zyxwvutsrqponmlkjihgfedcba]/V"
+  auto_select_pattern: ^;\w+
+  algebra:
+    __patch:
+      - tiger:/algebra/phrase      # 核心拼算
+      - tiger:/algebra/erase       # 擦除编码
+  
+# 说明
+# xform --改寫〔不保留原形〕
+# derive --衍生〔保留原形〕
+# abbrev --簡拼〔出字優先級較上兩組更低〕
+# fuzz --畧拼〔此種簡拼僅組詞，不出單字〕
+# xlit --變換〔適合大量一對一變換〕
+# erase --刪除
+
+translator:
+  dictionary: tiger_phrase
+  __include: tiger:/dict_All_false
+
+recognizer:
+  import_preset: default
+  patterns:
+    punct: '^/([0-9]0?|[A-Za-z]+)$'
+    easy_en: "^'[A-Z|a-z]*`?$"
+    reverse_lookup: "^`[a-z]*'?$"
+    expression: '^=.*$'
+
+punctuator:
+  #import_preset:
+  __include: tiger:/punctuator
