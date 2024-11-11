@@ -38,9 +38,9 @@ speller:
   auto_select_pattern: ^;\w+
   algebra:
     __patch:
-      - tiger:/algebra/core
-      - tiger:/algebra/wildcard?
-      - tiger:/algebra/erase
+      - tiger:/algebra/core        # 核心拼算
+      #- tiger:/algebra/wildcard?   # 通配拼算
+      - tiger:/algebra/erase       # 擦除编码
 # 说明
 # xform --改寫〔不保留原形〕
 # derive --衍生〔保留原形〕
