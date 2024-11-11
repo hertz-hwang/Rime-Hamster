@@ -55,6 +55,7 @@ switches_engine_table:
       - ascii_segmentor
       - matcher
       - affix_segmentor@easy_en                     # 英文
+      - affix_segmentor@tiger_oni                   # 九重鬼虎
       - abc_segmentor                               # 标记输入码的类型
       - punct_segmentor                             # 割界，与前后方的其他编码区分开
       - fallback_segmentor
@@ -63,6 +64,7 @@ switches_engine_table:
       - reverse_lookup_translator                   # 拼音反查
       - table_translator                            # 码表转换
       - table_translator@easy_en                    # 英文
+      - table_translator@tiger_oni                  # 九重鬼虎
       - table_translator@fast_symbol                # 码表转换-快符
       - history_translator@input_history            # 输入历史
       - lua_translator@*hertz.calculator_translator # 计算器
@@ -95,6 +97,7 @@ switches_engine_script:
       - ascii_segmentor
       - matcher
       - affix_segmentor@easy_en                     # 英文
+      - affix_segmentor@tiger_oni
       - abc_segmentor                               # 标记输入码的类型
       - punct_segmentor                             # 割界，与前后方的其他编码区分开
       - fallback_segmentor
@@ -170,6 +173,14 @@ easy_en_translator:
       - xlit|_| |
     comment_format:
       - xlit|_| |
+
+tiger_oni_translator:
+  tiger_oni:
+    dictionary: tiger_oni
+    tag: tiger_oni
+    prefix: "G"
+    tips: "〔九重鬼虎〕"
+    __include: dict_All_false
 
 reverse_lookup_translator_xh:
   reverse_lookup:
