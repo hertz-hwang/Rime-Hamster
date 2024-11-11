@@ -6,7 +6,65 @@
 
 ![candy](/assets/candy.jpg)
 
-## 使用方法
+## 功能介绍
+
+### 打词——[G]九重鬼虎
+
+按下大写字母 `G` 键，进入 “九重鬼虎” 打词模式
+
+![鬼虎](/assets/agzh.png)
+
+### 打句——[J]整句模式
+
+按下大写字母 `J` 键，进入 “整句模式” 
+
+![整句](/assets/xhgj.png)
+
+### 通配符 `~`
+
+![通配符](/assets/ktyv.png)
+
+### 计算器 `=`
+
+![计算器](/assets/snrq.png)
+
+### 临时英文模式 `'`
+
+![英文](/assets/lmvw.png)
+
+### 中英互译 `Ctrl+e`
+
+![tpsr](/assets/tpsr.png)
+
+### 首选内嵌
+
+![首选内嵌](/assets/mjvz.gif)
+
+### 公历、农历、当前时间、金额
+
+![数字](/assets/pbwh.png)
+
+### 字根拆分、编码提示 `Ctrl+j`
+
+![拆分](/assets/chaifen.png)
+
+### Emoji `Ctrl+i`
+
+![Emoji](/assets/emoji.png)
+
+### 小鹤反查 "`"
+
+![xreo](/assets/xreo.png)
+
+### 简繁转换 `Ctrl+o`
+
+![raek](/assets/raek.png)
+
+### 拼音滤镜 `Ctrl+p`
+
+![拼音](/assets/pinyin.png)
+
+## 仓输入法
 
 下载最新[hamster_keyboards_candy.yaml](https://github.com/hertz-hwang/Rime-Hamster/releases/latest/download/hamster_keyboards_candy.yaml)后，下面方法二选一：
 
