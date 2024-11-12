@@ -2,6 +2,7 @@
 patch:
   preset_color_schemes:
     hertz-Q:
+      name: "赫兹定制·Q改"
       author: Bennett S. Owen
       back_color: 0xe3f6fd
       border_color: 0xc5c8cc
@@ -16,7 +17,6 @@ patch:
       hilited_text_color: 0xd5e8ee
       key_symbol_color: 0x339977
       label_color: 0x919183
-      name: "赫兹定制·Q改"
       preview_back_color: 0x6b55d073
       preview_text_color: 0xd5e8ee
       text_color: 0x808070
@@ -26,6 +26,8 @@ patch:
   style:
     #capture_type: none
     #color_font: true
+    candidate_list_layout: stacked # stacked    | linear
+    text_orientation: horizontal   # horizontal | vertical
     comment_font_face: "Consolas, Apple Color Emoji, TumanPUA, LXGW WenKai GB Screen, SimSun, SimSun-ExtB, SimSun-ExtG, TH-Tshyn-P0, TH-Tshyn-P1, TH-Tshyn-P2, TH-Tshyn-P16"
     comment_font_point: 16 #滤镜字号
     #display_tray_icon: false

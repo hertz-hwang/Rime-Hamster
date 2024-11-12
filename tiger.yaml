@@ -245,6 +245,8 @@ chaifen_filter:
     tags:     
       - abc
       - tiger_code
+      - tiger_oni
+      - tiger_phrase
       - reverse_lookup
     tips: all
 
@@ -264,6 +266,8 @@ pinyin_filter:
     tags:
       - abc
       - tiger_code
+      - tiger_oni
+      - tiger_phrase
       - reverse_lookup
     tips: all
 
