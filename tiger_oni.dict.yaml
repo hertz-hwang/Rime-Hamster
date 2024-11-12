@@ -6,7 +6,7 @@ name: tiger_oni
 version: "2024-10-31"
 sort: by_weight
 import_tables:
-  - dicts/tigress      # 官方虎词11w+单字
-  - dicts/onitiger_ci  # 鬼虎123w+词汇
+  - dicts/cn_dicts/tigress      # 官方虎词11w+单字
+  - dicts/cn_dicts/onitiger_ci  # 鬼虎123w+词汇
   - dicts/kaomoji      # Vv进入Kaomoji颜表情
 ...

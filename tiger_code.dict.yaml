@@ -6,6 +6,6 @@ name: tiger_code
 version: "2024-10-31"
 sort: by_weight
 import_tables:
-  - dicts/tiger_core   # 虎码11w+单字
-  - dicts/kaomoji      # Vv进入Kaomoji颜表情
+  - dicts/cn_dicts/tiger_core   # 虎码11w+单字
+  - dicts/cn_dicts/kaomoji      # Vv进入Kaomoji颜表情
 ...

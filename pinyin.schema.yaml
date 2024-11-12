@@ -52,11 +52,7 @@ translator:
   dictionary: pinyin           # 字典文件
   prism: pinyin
   initial_quality: 1           # 该翻译器出字优先级别
-  enable_user_dict: false      # 开启用户词典〔用户词典记录动态字词频、用户词〕
-  enable_encoder: false        # 开启自动造词
-  enable_sentence: false       # 是否开启自动造句
-  enable_completion: false     # 编码提示 true 开启  false 关闭
-  encode_commit_history: false # 是否对已上屏的词自动造词
+  __include: tiger:/dict_All_false
 
 recognizer:
   import_preset: default

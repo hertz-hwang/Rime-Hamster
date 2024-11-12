@@ -1,0 +1,12 @@
+# nihong-hybrid.dict.yaml
+# encoding: utf-8
+
+---
+name: japanese
+version: '2024-11-12'
+
+import_tables:
+  - dicts/jp_dicts/japanese.mozc
+  - dicts/jp_dicts/japanese.jmdict
+  - dicts/jp_dicts/japanese.kana
+...
