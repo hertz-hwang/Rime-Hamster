@@ -8,6 +8,7 @@ schema:
     - pinyin
     - fast_symbol
     - easy_en
+    - japanese
     - tiger_oni
     - tiger_phrase
   description: |
@@ -23,6 +24,7 @@ __patch:
 __include: tiger:/switches_engine_table        # Rime模块
 __include: tiger:/fast_symbol_translator       # 快符
 __include: tiger:/easy_en_translator           # 英文
+__include: tiger:/japanese_translator          # 日文
 __include: tiger:/tiger_oni_translator         # 九重鬼虎
 __include: tiger:/tiger_phrase_translator      # 赫兹虎码整句
 __include: tiger:/reverse_lookup_translator_xh # 小鹤反查
@@ -62,8 +64,9 @@ recognizer:
   patterns:
     punct: '^/([0-9]0?|[A-Za-z]+)$'
     easy_en: "^'[A-Z|a-z]*`?$"
+    japanese: "^J[_|A-Z|a-z|-]*`?$"
     tiger_oni: "^G[a-z]*`?$"
-    tiger_phrase: "^J[a-z]*`?$"
+    tiger_phrase: "^H[a-z]*`?$"
     reverse_lookup: "^`[a-z]*'?$"
     expression: '^=.*$'
 

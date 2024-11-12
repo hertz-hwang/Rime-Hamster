@@ -3,53 +3,53 @@
 algebra:
   core:
     __append:
-      - derive|^(\w+)0\[00$|$1|                   # 匹配1码
-      - derive|^(\w+)(\w)\[00$|$1$2|              # 匹配2码
-      - derive|^(\w+)(\w)\[(\w)0$|$1$2$3|         # 匹配3码
-      - derive|^(\w+)(\w+)\[(\w)(\w)$|$1$2$3$4|   # 匹配4码
+      - derive|^(\w)0\[00$|$1|                    # 匹配1码
+      - derive|^(\w)(\w)\[00$|$1$2|               # 匹配2码
+      - derive|^(\w)(\w)\[(\w)0$|$1$2$3|          # 匹配3码
+      - derive|^(\w)(\w)\[(\w)(\w)$|$1$2$3$4|     # 匹配4码
   phrase:
     __append:
-      - derive|^(\w+)(\w+)\[(.+)$|$1$2|
-      - derive|^(\w+)(\w+)\[(\w+)(\w+);(\w+)(\w+)\[(.+)$|$5$6|
-      - derive|^(\w+)(\w+)\[(\w+)(.+)$|$1$2$3|
-      - derive|^(\w+)(\w+)\[(\w+)(\w+);(\w+)(\w+)\[(\w+)(.+)$|$5$6$7|
-      - derive|^(\w+)(\w+)\[(\w+)(\w+)$|$1$2$3$4o|
-      - derive|^(\w+)(\w+)\[(\w+)(\w+);(.+)$|$1$2$3$4o|
-      - derive|^(\w+)(\w+)\[(\w+)(\w+);(\w+)(\w+)\[(\w+)(\w+)$|$5$6$7$8o|
-      - derive|^(\w+)0\[00.+$|$1o|
-      - derive|^(\w+)(\w+)\[00.+$|$1$2o|
-      - derive|^(\w+)(\w+)\[(\w+)0.+$|$1$2$3o|
-      - derive|^.+;(\w+)0\[00$|$1o|
-      - derive|^.+;(\w+)(\w+)\[00$|$1$2o|
-      - derive|^.+;(\w+)(\w+)\[(\w+)0$|$1$2$3o|
+      - derive|^(\w)(\w)\[(.+)$|$1$2|
+      - derive|^(\w)(\w)\[(\w)(\w);(\w)(\w)\[(.+)$|$5$6|
+      - derive|^(\w)(\w)\[(\w)(.+)$|$1$2$3|
+      - derive|^(\w)(\w)\[(\w)(\w);(\w)(\w)\[(\w)(.+)$|$5$6$7|
+      - derive|^(\w)(\w)\[(\w)(\w)$|$1$2$3$4o|
+      - derive|^(\w)(\w)\[(\w)(\w);(.+)$|$1$2$3$4o|
+      - derive|^(\w)(\w)\[(\w)(\w);(\w)(\w)\[(\w)(\w)$|$5$6$7$8o|
+      - derive|^(\w)0\[00.+$|$1o|
+      - derive|^(\w)(\w)\[00.+$|$1$2o|
+      - derive|^(\w)(\w)\[(\w+)0.+$|$1$2$3o|
+      - derive|^.+;(\w)0\[00$|$1o|
+      - derive|^.+;(\w)(\w)\[00$|$1$2o|
+      - derive|^.+;(\w)(\w)\[(\w)0$|$1$2$3o|
       
   wildcard:
     __append:
-      - derive|^(\w+)(\w+)\[(\w)(\w)$|~$2$3$4|    # 1码通配
-      - derive|^(\w+)(\w+)\[(\w)(\w)$|~$2$3|      # 1码通配
-      - derive|^(\w+)(\w+)\[(\w)(\w)$|~$2|        # 1码通配
-      - derive|^(\w+)(\w+)\[(\w)(\w)$|$1~$3$4|    # 1码通配
-      - derive|^(\w+)(\w+)\[(\w)(\w)$|$1~$3|      # 1码通配
-      - derive|^(\w+)(\w+)\[(\w)(\w)$|$1~|        # 1码通配
-      - derive|^(\w+)(\w+)\[(\w)(\w)$|$1$2~$4|    # 1码通配
-      - derive|^(\w+)(\w+)\[(\w)(\w)$|$1$2~|      # 1码通配
-      - derive|^(\w+)(\w+)\[(\w)(\w)$|$1$2$3~|    # 1码通配
-      - derive|^(\w+)(\w+)\[(\w)(\w)$|~~$3$4|     # 2码通配
-      - derive|^(\w+)(\w+)\[(\w)(\w)$|~~$3|       # 2码通配
-      - derive|^(\w+)(\w+)\[(\w)(\w)$|~~|         # 2码通配
-      - derive|^(\w+)(\w+)\[(\w)(\w)$|~$2~$4|     # 2码通配
-      - derive|^(\w+)(\w+)\[(\w)(\w)$|~$2~|       # 2码通配
-      - derive|^(\w+)(\w+)\[(\w)(\w)$|~$2$3~|     # 2码通配
-      - derive|^(\w+)(\w+)\[(\w)(\w)$|$1~~$4|     # 2码通配
-      - derive|^(\w+)(\w+)\[(\w)(\w)$|$1~~|       # 2码通配
-      - derive|^(\w+)(\w+)\[(\w)(\w)$|$1~$3~|     # 2码通配
-      - derive|^(\w+)(\w+)\[(\w)(\w)$|$1$2~~|     # 2码通配
-      - derive|^(\w+)(\w+)\[(\w)(\w)$|~~~$4|      # 3码通配
-      - derive|^(\w+)(\w+)\[(\w)(\w)$|~~~|        # 3码通配
-      - derive|^(\w+)(\w+)\[(\w)(\w)$|~~$3~|      # 3码通配
-      - derive|^(\w+)(\w+)\[(\w)(\w)$|~$2~~|      # 3码通配
-      - derive|^(\w+)(\w+)\[(\w)(\w)$|$1~~~|      # 3码通配
-      - derive|^(\w+)(\w+)\[(\w)(\w)$|~~~~|       # 4码通配
+      - derive|^(\w)(\w)\[(\w)(\w)$|~$2$3$4|      # 1码通配
+      - derive|^(\w)(\w)\[(\w)(\w)$|~$2$3|        # 1码通配
+      - derive|^(\w)(\w)\[(\w)(\w)$|~$2|          # 1码通配
+      - derive|^(\w)(\w)\[(\w)(\w)$|$1~$3$4|      # 1码通配
+      - derive|^(\w)(\w)\[(\w)(\w)$|$1~$3|        # 1码通配
+      - derive|^(\w)(\w)\[(\w)(\w)$|$1~|          # 1码通配
+      - derive|^(\w)(\w)\[(\w)(\w)$|$1$2~$4|      # 1码通配
+      - derive|^(\w)(\w)\[(\w)(\w)$|$1$2~|        # 1码通配
+      - derive|^(\w)(\w)\[(\w)(\w)$|$1$2$3~|      # 1码通配
+      - derive|^(\w)(\w)\[(\w)(\w)$|~~$3$4|       # 2码通配
+      - derive|^(\w)(\w)\[(\w)(\w)$|~~$3|         # 2码通配
+      - derive|^(\w)(\w)\[(\w)(\w)$|~~|           # 2码通配
+      - derive|^(\w)(\w)\[(\w)(\w)$|~$2~$4|       # 2码通配
+      - derive|^(\w)(\w)\[(\w)(\w)$|~$2~|         # 2码通配
+      - derive|^(\w)(\w)\[(\w)(\w)$|~$2$3~|       # 2码通配
+      - derive|^(\w)(\w)\[(\w)(\w)$|$1~~$4|       # 2码通配
+      - derive|^(\w)(\w)\[(\w)(\w)$|$1~~|         # 2码通配
+      - derive|^(\w)(\w)\[(\w)(\w)$|$1~$3~|       # 2码通配
+      - derive|^(\w)(\w)\[(\w)(\w)$|$1$2~~|       # 2码通配
+      - derive|^(\w)(\w)\[(\w)(\w)$|~~~$4|        # 3码通配
+      - derive|^(\w)(\w)\[(\w)(\w)$|~~~|          # 3码通配
+      - derive|^(\w)(\w)\[(\w)(\w)$|~~$3~|        # 3码通配
+      - derive|^(\w)(\w)\[(\w)(\w)$|~$2~~|        # 3码通配
+      - derive|^(\w)(\w)\[(\w)(\w)$|$1~~~|        # 3码通配
+      - derive|^(\w)(\w)\[(\w)(\w)$|~~~~|         # 4码通配
   erase:
     __append:
       - erase|^(\w+)\[(\w+)$|                     # 刪除原始編碼以加速檢索
@@ -71,6 +71,7 @@ switches_engine_table:
       - ascii_segmentor
       - matcher
       - affix_segmentor@easy_en                     # 英文
+      - affix_segmentor@japanese                    # 日文
       - affix_segmentor@tiger_oni                   # 九重鬼虎
       - affix_segmentor@tiger_phrase                # 赫兹虎码整句
       - abc_segmentor                               # 标记输入码的类型
@@ -81,6 +82,7 @@ switches_engine_table:
       - reverse_lookup_translator                   # 拼音反查
       - table_translator                            # 码表转换
       - table_translator@easy_en                    # 英文
+      - script_translator@japanese                   # 日文
       - table_translator@tiger_oni                  # 九重鬼虎
       - table_translator@fast_symbol                # 码表转换-快符
       - script_translator@tiger_phrase              # 赫兹虎码整句
@@ -192,6 +194,14 @@ easy_en_translator:
     comment_format:
       - xlit|_| |
 
+japanese_translator:
+  japanese:
+    dictionary: japanese
+    tag: japanese
+    prefix: "J"
+    tips: "〔日本語ローマ字〕"
+    __include: dict_All_false
+
 tiger_oni_translator:
   tiger_oni:
     dictionary: tiger_oni
@@ -204,7 +214,7 @@ tiger_phrase_translator:
   tiger_phrase:
     dictionary: tiger_phrase
     tag: tiger_phrase
-    prefix: "J"
+    prefix: "H"
     tips: "〔赫兹虎码整句〕"
     __include: dict_All_false
 
