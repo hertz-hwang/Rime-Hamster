@@ -41,17 +41,12 @@ patch:
     - {url: "Segoe UI Emoji.ttf"}
     - {url: "NotoColorEmoji-Regular.ttf"}
     - {url: "SymbolsNerdFontMono-Regular.ttf"}
-    - {url: "SarasaUiSC-Bold.ttf"}
-    - {url: "SarasaUiTC-Bold.ttf"}
-    - {url: "SarasaUiJ-Bold.ttf"}
-    - {url: "SarasaUiK-Bold.ttf"}
-    - {url: "SarasaUiCL-Bold.ttf"}
-    - {url: "SarasaUiHC-Bold.ttf"}
-    - {url: "LXGWWenKaiGBScreen.ttf"}
-    - {url: "TH-Tshyn-P0.ttf"}
-    - {url: "TH-Tshyn-P1.ttf"}
-    - {url: "TH-Tshyn-P2.ttf"}
-    - {url: "TH-Tshyn-P16.ttf"}
+    - {url: "98WB-0.otf"}
+    - {url: "98WB-1.otf"}
+    - {url: "98WB-2.otf"}
+    - {url: "98WB-3.otf"}
+    - {url: "98WB-U.otf"}
+    - {url: "98WB-V.otf"}
   "keyboard/swipeLabelUpAndDownIrregularLayout": false  # 不规则显示划动文本
   "keyboard/swipeLabelUpAndDownLayout": true  # 划动文本上下显示
   "keyboard/upSwipeOnLeft": true  # 上划显示位置-左上侧
