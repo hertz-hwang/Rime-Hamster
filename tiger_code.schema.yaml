@@ -5,6 +5,7 @@ schema:
   author:
     - Hertz Hwang <hertz@26hz.com.cn>
   dependencies:
+    - charset
     - pinyin
     - fast_symbol
     - easy_en

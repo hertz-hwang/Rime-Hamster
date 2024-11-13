@@ -1129,6 +1129,11 @@ keyboards:
                     sendKeys:
                       keys: Control+e
                 label: 翻译
+              - action:
+                  shortcutCommand:
+                    sendKeys:
+                      keys: Control+b
+                label: 字集
             lightModeStyleName: shift_delete_light
             darkModeStyleName: shift_delete
           - action:

@@ -15,6 +15,7 @@ patch:
     - emoji
     - chaifen
     - pinyin
+    - extended_char
   switcher/fold_options: true
   switcher/abbreviate_options: true
   switcher/option_list_separator: '／'

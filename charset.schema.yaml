@@ -1,0 +1,10 @@
+# Rime schema
+# encoding: utf-8
+
+schema:
+  schema_id: charset
+  name: "字集过滤·伪方案·勿用"
+
+translator:
+  dictionary: charset
+  enable_user_dict: false

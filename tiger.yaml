@@ -93,6 +93,7 @@ switches_engine_table:
       - lua_translator@*hertz.lunar_translator      # 农历
       - lua_translator@*hertz.number_translator     # 数字
     filters:
+      - lua_filter@*hertz.charset_filter            # 字集过滤
       - simplifier@s2t                              # 简繁滤镜
       - simplifier@chaifen                          # 拆分滤镜
       - simplifier@pinyin                           # 拼音滤镜
@@ -154,6 +155,7 @@ key_bindings:
       - { when: has_menu, accept: apostrophe, send: 3 } # 引号三选
       - { when: composing, accept: Tab, send: Escape }  # tab清屏
 
+      - { when: composing, accept: "Control+b", toggle: extended_char }      # 字集滤镜
       - { when: composing, accept: "Control+o", toggle: traditionalization } # 简繁滤镜
       - { when: composing, accept: "Control+i", toggle: emoji }              # Emoji开关
       - { when: composing, accept: "Control+p", toggle: pinyin }             # 拼音开关
@@ -309,6 +311,8 @@ switches_list:
   - name: chaifen
     reset: 1
     states: [ 不拆, 拆字 ]
+  - name: extended_char
+    states: [ 全字集, 常用字 ]
   - name: full_shape
     reset: 0
     states: [ 半角, 全角 ]
