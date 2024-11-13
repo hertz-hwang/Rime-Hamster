@@ -8,13 +8,13 @@
 
 ## 功能介绍
 
-### 九重鬼虎 `G〔九重鬼虎〕`
+### 临时打词 `G〔九重鬼虎〕`
 
 按下大写字母 `G` 键，进入 “九重鬼虎” 打词模式
 
 ![鬼虎](/assets/agzh.png)
 
-### 临式整句模式 `H〔赫兹虎码整句〕`
+### 临式打句 `H〔赫兹虎码整句〕`
 
 按下大写字母 `H` 键，进入 “整句模式” 
 
@@ -69,24 +69,6 @@
 ### 拼音滤镜 `Ctrl+p`
 
 ![拼音](/assets/pinyin.png)
-
-## 仓输入法
-
-下载最新[hamster_keyboards_candy.yaml](https://github.com/hertz-hwang/Rime-Hamster/releases/latest/download/hamster_keyboards_candy.yaml)后，下面方法二选一：
-
-- a. 通过仓输入法“键盘布局”-“+”来导入；
-
-- b. 写入自定义配置 hamster.custom.yaml 来引入。（[参考](https://github.com/hertz-hwang/Rime-Hamster/blob/3acea50b60caa20fa5e98c0e5ec624d81f31df63/hamster.custom.yaml#L2-L5)）
-
-```yaml
-patch:
-  # ...
-  "keyboards":
-    __include: hamster_keyboards_candy:/keyboards
-  "keyboard/colorSchemas":
-    __include: hamster_keyboards_candy:/colorSchemas
-  # ...
-```
 
 ## Themes & Layouts
 
