@@ -94,6 +94,7 @@ switches_engine_table:
       - lua_translator@*hertz.number_translator     # 数字
     filters:
       - lua_filter@*hertz.charset_filter            # 字集过滤
+      - lua_filter@*hertz.mark_phrase_filter        # 标记词组
       - simplifier@s2t                              # 简繁滤镜
       - simplifier@chaifen                          # 拆分滤镜
       - simplifier@pinyin                           # 拼音滤镜
@@ -135,6 +136,7 @@ switches_engine_script:
       - lua_translator@*hertz.lunar_translator      # 农历
       - lua_translator@*hertz.number_translator     # 数字
     filters:
+      - lua_filter@*hertz.mark_phrase_filter        # 标记词组
       - simplifier@s2t                              # 简繁滤镜
       - simplifier@chaifen                          # 拆分滤镜
       - simplifier@pinyin                           # 拼音滤镜
