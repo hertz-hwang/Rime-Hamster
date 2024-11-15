@@ -1,0 +1,56 @@
+# Rime default settings
+# encoding: utf-8
+
+config_version: '0.40'
+
+schema_list:
+  - schema: tiger_code     # 主方案：虎单，已集成：九重鬼虎、赫兹虎码整句
+  - schema: easy_en        # 方案集成
+
+switcher:
+  caption: "〔方案選單〕"
+  hotkeys:
+    - "Control+grave"
+    - "Control+F8"
+  save_options:
+    - full_shape
+    - ascii_punct
+    - traditionalization
+    - emoji
+    - chaifen
+    - pinyin
+    - extended_char
+  fold_options: true
+  abbreviate_options: true
+  option_list_separator: '／'
+
+menu:
+  alternative_select_labels: [ ⑴, ⑵, ⑶, ⑷, ⑸, ⑹, ⑺, ⑻, ⑼, ⑽ ]
+  page_size: 9
+
+punctuator:
+  __include: tiger:/punctuator
+
+key_binder:
+  import_preset: default
+  bindings:
+    __patch:
+      - tiger:/keys/page_up_down
+      - tiger:/keys/selector
+      - tiger:/keys/options_toggle
+
+recognizer:
+  patterns:
+    email: "^[A-Za-z][-_.0-9A-Za-z]*@.*$"
+    uppercase: "[A-Z][-_+.'0-9A-Za-z]*$"
+    url: "^(www[.]|https?:|ftp[.:]|mailto:|file:).*$|^[a-z]+[.].+$"
+
+ascii_composer:
+  good_old_caps_lock: true
+  switch_key:
+    Caps_Lock: clear
+    Control_L: noop
+    Control_R: noop
+    Eisu_toggle: clear
+    Shift_L: commit_code
+    Shift_R: commit_text

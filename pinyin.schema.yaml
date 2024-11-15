@@ -11,7 +11,6 @@ __include: tiger:/switches_engine_script       # Rime模块
 __include: tiger:/s2t_filter                   # 简繁滤镜
 __include: tiger:/chaifen_filter               # 拆分滤镜
 __include: tiger:/emoji_filter                 # Emoji 滤镜
-__include: tiger:/key_bindings                 # 按键定义
 
 speller:
   alphabet: ";'zyxwvutsrqponmlkjihgfedcba]"    # 输入范围 码元
@@ -53,6 +52,17 @@ translator:
   prism: pinyin
   initial_quality: 1           # 该翻译器出字优先级别
   __include: tiger:/dict_All_false
+
+key_binder:
+  import_preset: default
+  custom_bindings:
+    __append:
+      # 在這裏添加只在本方案中生效的按鍵綁定
+  bindings:
+    __patch:
+      - tiger:/keys/page_up_down
+      - tiger:/keys/selector
+      - tiger:/keys/options_toggle
 
 recognizer:
   import_preset: default

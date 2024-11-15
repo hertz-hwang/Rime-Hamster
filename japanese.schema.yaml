@@ -8,8 +8,6 @@ schema:
   author:
     - Hertz Hwang <hertz@26hz.com.cn>
 
-__include: tiger:/key_bindings                 # 按键定义
-
 switches:
   - name: ascii_mode
     reset: 0
@@ -47,6 +45,17 @@ speller:
 translator:
   dictionary: japanese
   __include: tiger:/dict_All_false
+
+key_binder:
+  import_preset: default
+  custom_bindings:
+    __append:
+      # 在這裏添加只在本方案中生效的按鍵綁定
+  bindings:
+    __patch:
+      - tiger:/keys/page_up_down
+      - tiger:/keys/selector
+      - tiger:/keys/options_toggle
 
 recognizer:
   import_preset: default

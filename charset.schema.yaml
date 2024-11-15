@@ -8,3 +8,14 @@ schema:
 translator:
   dictionary: charset
   enable_user_dict: false
+
+key_binder:
+  import_preset: default
+  custom_bindings:
+    __append:
+      # 在這裏添加只在本方案中生效的按鍵綁定
+  bindings:
+    __patch:
+      - tiger:/keys/page_up_down
+      - tiger:/keys/selector
+      - tiger:/keys/options_toggle

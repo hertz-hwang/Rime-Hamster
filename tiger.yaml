@@ -101,7 +101,7 @@ switches_engine_table:
       - simplifier@emoji                            # Emoji滤镜
       #- lua_filter@*hertz.inline_candidate_filter   # 首选内嵌
       - uniquifier                                  # 过滤重复的候选字，可能来自简繁转换
-      #- lua_filter@*hertz.easy_en*enhance_filter
+      #- lua_filter@*hertz.easy_en*enhance_filter    # 英文增强
 
 switches_engine_script:
   switches:
@@ -143,20 +143,22 @@ switches_engine_script:
       - simplifier@emoji                            # Emoji滤镜
       #- lua_filter@*hertz.inline_candidate_filter   # 首选内嵌
       - uniquifier                                  # 过滤重复的候选字，可能来自简繁转换
-      #- lua_filter@*hertz.easy_en*enhance_filter
+      #- lua_filter@*hertz.easy_en*enhance_filter    # 英文增强
 
-key_bindings:
-  key_binder:
-    bindings:
-      - { when: paging, accept: bracketleft, send: Page_Up }    # [ 后翻
+keys:
+  page_up_down:
+    __append:
+      - { when: paging, accept: bracketleft, send: Page_Up }      # [ 后翻
       - { when: has_menu, accept: bracketright, send: Page_Down } # ] 前翻
       - { when: has_menu, accept: minus, send: Page_Up }
       - { when: has_menu, accept: equal, send: Page_Down }
-
+  selector:
+    __append:
       - { when: has_menu, accept: semicolon, send: 2 }  # 分号次选
       - { when: has_menu, accept: apostrophe, send: 3 } # 引号三选
       - { when: composing, accept: Tab, send: Escape }  # tab清屏
-
+  options_toggle:
+    __append:
       - { when: composing, accept: "Control+b", toggle: extended_char }      # 字集滤镜
       - { when: composing, accept: "Control+o", toggle: traditionalization } # 简繁滤镜
       - { when: composing, accept: "Control+i", toggle: emoji }              # Emoji开关
@@ -311,7 +313,6 @@ switches_list:
   - name: emoji
     states: [ 🈚, 🈶 ]
   - name: chaifen
-    reset: 1
     states: [ 不拆, 拆字 ]
   - name: extended_char
     states: [ 全字集, 常用字 ]
