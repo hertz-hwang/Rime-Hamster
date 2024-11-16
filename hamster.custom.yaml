@@ -41,6 +41,7 @@ patch:
     - {url: "Segoe UI Emoji.ttf"}
     - {url: "NotoColorEmoji-Regular.ttf"}
     - {url: "SymbolsNerdFontMono-Regular.ttf"}
+    - {url: "LXGWWenKaiGBScreen.ttf"}
     - {url: "98WB-0.otf"}
     - {url: "98WB-1.otf"}
     - {url: "98WB-2.otf"}

@@ -7,7 +7,5 @@ version: "2024-11-11"
 sort: by_weight
 import_tables:
   - dicts/tiger_core        # 官方虎词11w+单字
-  - dicts/tiger_phrase_base # 词汇1
-  - dicts/tiger_phrase_ext  # 词汇2
   - dicts/kaomoji           # Vv进入Kaomoji颜表情
 ...

@@ -28,13 +28,13 @@ style:
   color_scheme_dark: wechat_dark
 
   # #候选字体
-  font_face: "Segoe UI Emoji, 98WB-0, 98WB-1, 98WB-2, 98WB-3, 98WB-U, 98WB-V"
+  font_face: "Segoe UI Emoji, LXGW WenKai GB Screen, 98WB-0, 98WB-1, 98WB-2, 98WB-3, 98WB-U, 98WB-V"
   font_point: 20 #主字体字号
   # #滤镜内容字体
-  comment_font_face: "Segoe UI Emoji, 98WB-0, 98WB-1, 98WB-2, 98WB-3, 98WB-U, 98WB-V"
+  comment_font_face: "Segoe UI Emoji, LXGW WenKai GB Screen, 98WB-0, 98WB-1, 98WB-2, 98WB-3, 98WB-U, 98WB-V"
   comment_font_point: 12 # 滤镜内容字号
   # #候选前编号标志字体
-  label_font_face: "Segoe UI Emoji, 98WB-0, 98WB-1, 98WB-2, 98WB-3, 98WB-U, 98WB-V"
+  label_font_face: "Segoe UI Emoji, LXGW WenKai GB Screen, 98WB-0, 98WB-1, 98WB-2, 98WB-3, 98WB-U, 98WB-V"
   label_font_point: 18 #候选前编号标志字号
 
   corner_radius: 8
@@ -196,10 +196,10 @@ preset_color_schemes:
     border_height: 0
     border_width: 0
     back_color: 0xFFFFFF  #候选条背景色
-    font_face: "Segoe UI Emoji, 98WB-0, 98WB-1, 98WB-2, 98WB-3, 98WB-U, 98WB-V"  #候选词字体
+    font_face: "Segoe UI Emoji, LXGW WenKai GB Screen, 98WB-0, 98WB-1, 98WB-2, 98WB-3, 98WB-U, 98WB-V"  #候选词字体
     font_point: 16  #候选字词大小
     text_color: 0x424242  #高亮选中词颜色
-    label_font_face: "Segoe UI Emoji, 98WB-0, 98WB-1, 98WB-2, 98WB-3, 98WB-U, 98WB-V"   #候选词编号字体
+    label_font_face: "Segoe UI Emoji, LXGW WenKai GB Screen, 98WB-0, 98WB-1, 98WB-2, 98WB-3, 98WB-U, 98WB-V"   #候选词编号字体
     label_font_point: 12   #候选编号大小
     hilited_candidate_text_color: 0xEE6E00  #候选文字颜色
     hilited_candidate_back_color: 0xFFF0E4  #候选文字背景色
@@ -216,9 +216,9 @@ preset_color_schemes:
     border_width: 8                                    # 窗口边界宽度，大于圆角半径才生效
     back_color: 0xeeffffff  #候选条背景色
     border_color: 0xE0B693                             # 边框色
-    font_face: "Segoe UI Emoji, 98WB-0, 98WB-1, 98WB-2, 98WB-3, 98WB-U, 98WB-V"     #候选词字体
+    font_face: "Segoe UI Emoji, LXGW WenKai GB Screen, 98WB-0, 98WB-1, 98WB-2, 98WB-3, 98WB-U, 98WB-V"     #候选词字体
     font_point: 14  #候选字词大小
-    label_font_face: "Segoe UI Emoji, 98WB-0, 98WB-1, 98WB-2, 98WB-3, 98WB-U, 98WB-V"   #候选词编号字体
+    label_font_face: "Segoe UI Emoji, LXGW WenKai GB Screen, 98WB-0, 98WB-1, 98WB-2, 98WB-3, 98WB-U, 98WB-V"   #候选词编号字体
     label_font_point: 10   #候选编号大小
     label_color: 0xcbcbcb                              # 预选栏编号颜色
     candidate_text_color: 0x555555                     # 预选项文字颜色
@@ -240,7 +240,7 @@ preset_color_schemes:
     hilited_corner_radius: 3                # 高亮圆角
     border_height: 6                        # 窗口边界高度，大于圆角半径才生效
     border_width: 6                         # 窗口边界宽度，大于圆角半径才生效
-    font_face: "Segoe UI Emoji, 98WB-0, 98WB-1, 98WB-2, 98WB-3, 98WB-U, 98WB-V"                 # 候选词字体
+    font_face: "Segoe UI Emoji, LXGW WenKai GB Screen, 98WB-0, 98WB-1, 98WB-2, 98WB-3, 98WB-U, 98WB-V"                 # 候选词字体
     font_point: 16                          # 候选字词大小
     label_font_point: 14                    # 候选编号大小
 
@@ -300,7 +300,7 @@ preset_color_schemes:
     line_spacing: 10                             # 行间距(适用于竖排)
     border_height: 4                             # 窗口上下高度，大于圆角半径才生效
     border_width: 4                              # 窗口左右宽度，大于圆角半径才生效
-    font_face: "Segoe UI Emoji, 98WB-0, 98WB-1, 98WB-2, 98WB-3, 98WB-U, 98WB-V"                      # 候选词字体
+    font_face: "Segoe UI Emoji, LXGW WenKai GB Screen, 98WB-0, 98WB-1, 98WB-2, 98WB-3, 98WB-U, 98WB-V"                      # 候选词字体
     font_point: 16                               # 候选字大小
     label_font_point: 13                         # 候选编号大小
     text_color: 0x424242                    # 拼音行文字颜色
@@ -323,7 +323,7 @@ preset_color_schemes:
     line_spacing: 10                              # 行间距(适用于竖排)
     border_height: 4                             # 窗口上下高度，大于圆角半径才生效
     border_width: 4                              # 窗口左右宽度，大于圆角半径才生效
-    font_face: "Segoe UI Emoji, 98WB-0, 98WB-1, 98WB-2, 98WB-3, 98WB-U, 98WB-V"                      # 候选词字体
+    font_face: "Segoe UI Emoji, LXGW WenKai GB Screen, 98WB-0, 98WB-1, 98WB-2, 98WB-3, 98WB-U, 98WB-V"                      # 候选词字体
     font_point: 16                               # 候选字大小
     label_font_point: 13                         # 候选编号大小
     text_color: 0x424242                    # 拼音行文字颜色
@@ -347,7 +347,7 @@ preset_color_schemes:
     line_spacing: 10                              # 行间距(适用于竖排)
     border_height: 4                             # 窗口上下高度，大于圆角半径才生效
     border_width: 4                              # 窗口左右宽度，大于圆角半径才生效
-    font_face: "Segoe UI Emoji, 98WB-0, 98WB-1, 98WB-2, 98WB-3, 98WB-U, 98WB-V"                      # 候选词字体
+    font_face: "Segoe UI Emoji, LXGW WenKai GB Screen, 98WB-0, 98WB-1, 98WB-2, 98WB-3, 98WB-U, 98WB-V"                      # 候选词字体
     font_point: 16                               # 候选字大小
     label_font_point: 13                         # 候选编号大小
     text_color: 0x424242                    # 拼音行文字颜色
@@ -370,7 +370,7 @@ preset_color_schemes:
     line_spacing: 10                              # 行间距(适用于竖排)
     border_height: 4                             # 窗口上下高度，大于圆角半径才生效
     border_width: 4                              # 窗口左右宽度，大于圆角半径才生效
-    font_face: "Segoe UI Emoji, 98WB-0, 98WB-1, 98WB-2, 98WB-3, 98WB-U, 98WB-V"                      # 候选词字体
+    font_face: "Segoe UI Emoji, LXGW WenKai GB Screen, 98WB-0, 98WB-1, 98WB-2, 98WB-3, 98WB-U, 98WB-V"                      # 候选词字体
     font_point: 16                               # 候选字大小
     label_font_point: 13                         # 候选编号大小
     text_color: 0x424242                    # 拼音行文字颜色
@@ -390,7 +390,7 @@ preset_color_schemes:
     name: Mac浅蓝
     candidate_format: "%c %@ "    # 用 1/6 em 空格 U+2005 来控制编号 %c 和候选词 %@ 前后的空间
     corner_radius: 5                             # 窗口圆角
-    font_face: "Segoe UI Emoji, 98WB-0, 98WB-1, 98WB-2, 98WB-3, 98WB-U, 98WB-V"                      # 候选词字体
+    font_face: "Segoe UI Emoji, LXGW WenKai GB Screen, 98WB-0, 98WB-1, 98WB-2, 98WB-3, 98WB-U, 98WB-V"                      # 候选词字体
     font_point: 16                               # 候选字大小
     label_font_point: 13                         # 候选编号大小
     line_spacing: 10                              # 行间距(适用于竖排)
@@ -633,9 +633,9 @@ preset_color_schemes:
     border_color: 0xffffff                    # 颜色 - 边框
     back_color: 0xF4F4F6                      # 颜色 - 面板背景
     label_color: 0xaaaaaa                     # 颜色 - 候选序号
-    # font_face: "Segoe UI Emoji, 98WB-0, 98WB-1, 98WB-2, 98WB-3, 98WB-U, 98WB-V"                    # 字体 - 候选文字
+    # font_face: "Segoe UI Emoji, LXGW WenKai GB Screen, 98WB-0, 98WB-1, 98WB-2, 98WB-3, 98WB-U, 98WB-V"                    # 字体 - 候选文字
     font_point: 18                            # 字体大小 - 候选
-    # label_font_face: "Segoe UI Emoji, 98WB-0, 98WB-1, 98WB-2, 98WB-3, 98WB-U, 98WB-V"                     # 字体 - 候选数字
+    # label_font_face: "Segoe UI Emoji, LXGW WenKai GB Screen, 98WB-0, 98WB-1, 98WB-2, 98WB-3, 98WB-U, 98WB-V"                     # 字体 - 候选数字
     # label_font_point: 18                      # 字体大小 - 候选序号
     corner_radius: 5                          # 候选框圆角大小
 
@@ -654,7 +654,7 @@ preset_color_schemes:
     hilited_comment_text_color: 0xF19C38      # 颜色 - 首选候选词 - 提示编码
     candidate_text_color: 0x222222            # 颜色 - 其它候选词 - 文字
     comment_text_color: 0x5AC461              # 颜色 - 其它候选词 - 提示编码
-    comment_font_face: "Segoe UI Emoji, 98WB-0, 98WB-1, 98WB-2, 98WB-3, 98WB-U, 98WB-V"            # 字体 - 候选词编码的提示
+    comment_font_face: "Segoe UI Emoji, LXGW WenKai GB Screen, 98WB-0, 98WB-1, 98WB-2, 98WB-3, 98WB-U, 98WB-V"            # 字体 - 候选词编码的提示
     comment_font_point: 16                    # 字体大小 - 候选词编码的提示
 
     inline_preedit: true                      # 输入的编码是否直接写入到输入框中，如果为 false，未上屏的编码就会写在候选框中
@@ -917,9 +917,9 @@ preset_color_schemes:
     corner_radius: 5
     border_height: 0
     border_width: 0
-    font_face: "Segoe UI Emoji, 98WB-0, 98WB-1, 98WB-2, 98WB-3, 98WB-U, 98WB-V"
+    font_face: "Segoe UI Emoji, LXGW WenKai GB Screen, 98WB-0, 98WB-1, 98WB-2, 98WB-3, 98WB-U, 98WB-V"
     font_point: 16.5
-    label_font_face: "Segoe UI Emoji, 98WB-0, 98WB-1, 98WB-2, 98WB-3, 98WB-U, 98WB-V"
+    label_font_face: "Segoe UI Emoji, LXGW WenKai GB Screen, 98WB-0, 98WB-1, 98WB-2, 98WB-3, 98WB-U, 98WB-V"
     label_font_point: 12
     color_space: display_p3
     back_color: 0xFFFFFF
@@ -943,9 +943,9 @@ preset_color_schemes:
     corner_radius: 5
     border_height: 0
     border_width: 0
-    font_face: "Segoe UI Emoji, 98WB-0, 98WB-1, 98WB-2, 98WB-3, 98WB-U, 98WB-V"
+    font_face: "Segoe UI Emoji, LXGW WenKai GB Screen, 98WB-0, 98WB-1, 98WB-2, 98WB-3, 98WB-U, 98WB-V"
     font_point: 16.5
-    label_font_face: "Segoe UI Emoji, 98WB-0, 98WB-1, 98WB-2, 98WB-3, 98WB-U, 98WB-V"
+    label_font_face: "Segoe UI Emoji, LXGW WenKai GB Screen, 98WB-0, 98WB-1, 98WB-2, 98WB-3, 98WB-U, 98WB-V"
     label_font_point: 12
     color_space: display_p3
     back_color: 0x1E1E1E
@@ -974,7 +974,7 @@ preset_color_schemes:
     comment_text_color: 0x999999
     corner_radius: 5
     hilited_corner_radius: 5
-    font_face: "Segoe UI Emoji, 98WB-0, 98WB-1, 98WB-2, 98WB-3, 98WB-U, 98WB-V"
+    font_face: "Segoe UI Emoji, LXGW WenKai GB Screen, 98WB-0, 98WB-1, 98WB-2, 98WB-3, 98WB-U, 98WB-V"
     #font_point: 16
     hilited_candidate_back_color: 0x75B100
     hilited_candidate_text_color: 0xFFFFFF
@@ -995,7 +995,7 @@ preset_color_schemes:
     comment_text_color: 0xAEAEAE
     corner_radius: 5
     hilited_corner_radius: 5
-    font_face: "Segoe UI Emoji, 98WB-0, 98WB-1, 98WB-2, 98WB-3, 98WB-U, 98WB-V"
+    font_face: "Segoe UI Emoji, LXGW WenKai GB Screen, 98WB-0, 98WB-1, 98WB-2, 98WB-3, 98WB-U, 98WB-V"
     #font_point: 16
     hilited_candidate_back_color: 0x75B100
     hilited_candidate_text_color: 0xFFFFFF
