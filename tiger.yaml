@@ -1,5 +1,12 @@
 # tiger-code config
 
+# 说明
+# xform --改寫〔不保留原形〕
+# derive --衍生〔保留原形〕
+# abbrev --簡拼〔出字優先級較上兩組更低〕
+# fuzz --畧拼〔此種簡拼僅組詞，不出單字〕
+# xlit --變換〔適合大量一對一變換〕
+# erase --刪除
 algebra:
   core:
     __append:
@@ -10,14 +17,14 @@ algebra:
 
   phrase:
     __append:
-      - derive|^(\w)0\[00$|$1|
-      - derive|^(\w)(\w)\[00$|$1$2|
-      - derive|^(\w)(\w)\[(\w)0$|$1$2$3|
-      - derive|^(\w)(\w)\[(\w)(\w)$|$1$2$3$4|
       - derive|^(\w)0\[00$|$1j|
       - derive|^(\w)(\w)\[00$|$1$2u|
       - derive|^(\w)(\w)\[(\w)0$|$1$2$3f|
       - derive|^(\w)(\w)\[(\w)(\w)$|$1$2$3$4h|
+      - derive|^(\w)0\[00$|$1|
+      - derive|^(\w)(\w)\[00$|$1$2|
+      - derive|^(\w)(\w)\[(\w)0$|$1$2$3|
+      - derive|^(\w)(\w)\[(\w)(\w)$|$1$2$3$4|
       
   wildcard:
     __append:
