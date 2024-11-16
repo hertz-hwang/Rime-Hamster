@@ -1,4 +1,3 @@
----
 name: tigress
 version: "2024.08.31"
 sort: by_weight
@@ -13,8 +12,11 @@ encoder:
       formula: "AaAbBaBb"
     - length_equal: 3
       formula: "AaBaCaCb"
-    - length_in_range: [4, 99]
+    - length_in_range: [4, 10]
       formula: "AaBaCaZa"
+import_tables:
+  - tigress_ci
+  - tigress_simp_ci
 ...
 
 的	10359470	u	un

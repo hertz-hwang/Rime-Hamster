@@ -76,9 +76,9 @@ switches_engine_table:
     translators:
       - punct_translator                            # 转换标点符号
       - reverse_lookup_translator                   # 拼音反查
+      - script_translator@japanese                  # 日文
       - table_translator                            # 码表转换
       - table_translator@easy_en                    # 英文
-      - script_translator@japanese                   # 日文
       - table_translator@tiger_oni                  # 九重鬼虎
       - table_translator@fast_symbol                # 码表转换-快符
       - script_translator@tiger_phrase              # 赫兹虎码整句
@@ -115,22 +115,26 @@ switches_engine_script:
       - ascii_segmentor
       - matcher
       - affix_segmentor@easy_en                     # 英文
-      - affix_segmentor@tiger_oni
+      - affix_segmentor@japanese                    # 日文
+      - affix_segmentor@tiger_oni                   # 九重鬼虎
+      - affix_segmentor@tiger_phrase                # 赫兹虎码整句
       - abc_segmentor                               # 标记输入码的类型
       - punct_segmentor                             # 割界，与前后方的其他编码区分开
       - fallback_segmentor
     translators:
       - punct_translator                            # 转换标点符号
       - reverse_lookup_translator                   # 拼音反查
-      - script_translator                           # 码表转换
       - table_translator@easy_en                    # 英文
+      - table_translator@tiger_oni                  # 九重鬼虎
       - table_translator@fast_symbol                # 码表转换-快符
+      - script_translator                           # 码表转换
       - history_translator@input_history            # 输入历史
       - lua_translator@*hertz.calculator_translator # 计算器
       - lua_translator@*hertz.time_translator       # 时间
       - lua_translator@*hertz.lunar_translator      # 农历
       - lua_translator@*hertz.number_translator     # 数字
     filters:
+      - lua_filter@*hertz.charset_filter            # 字集过滤
       - lua_filter@*hertz.mark_phrase_filter        # 标记词组
       - simplifier@s2t                              # 简繁滤镜
       - simplifier@chaifen                          # 拆分滤镜
