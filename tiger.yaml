@@ -124,6 +124,7 @@ switches_engine_script:
     translators:
       - punct_translator                            # 转换标点符号
       - reverse_lookup_translator                   # 拼音反查
+      - script_translator@japanese                  # 日文
       - table_translator@easy_en                    # 英文
       - table_translator@tiger_oni                  # 九重鬼虎
       - table_translator@fast_symbol                # 码表转换-快符
