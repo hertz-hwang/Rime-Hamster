@@ -1,0 +1,10 @@
+# encoding: utf-8
+# vim: set noet:
+
+---
+name: japanese.hertz
+version: '20241117'
+sort: by_weight
+...
+
+䖋	zjr

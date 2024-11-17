@@ -9,4 +9,5 @@ import_tables:
   - dicts/japanese.mozc
   - dicts/japanese.jmdict
   - dicts/japanese.kana
+  - dicts/japanese.hertz
 ...
