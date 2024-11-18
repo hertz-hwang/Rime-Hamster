@@ -6,5 +6,6 @@ name: easy_en
 version: "2024-11-12"
 sort: by_weight
 import_tables:
-  - dicts/en
+  - dicts/en_base
+  - dicts/en_custom
 ...

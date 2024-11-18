@@ -103,7 +103,7 @@ switches_engine_table:
       - simplifier@emoji                            # Emoji滤镜
       #- lua_filter@*hertz.inline_candidate_filter   # 首选内嵌
       - uniquifier                                  # 过滤重复的候选字，可能来自简繁转换
-      #- lua_filter@*hertz.easy_en*enhance_filter    # 英文增强
+      - lua_filter@*hertz.easy_en*enhance_filter    # 英文增强
 
 switches_engine_script:
   switches:
@@ -150,7 +150,7 @@ switches_engine_script:
       - simplifier@emoji                            # Emoji滤镜
       #- lua_filter@*hertz.inline_candidate_filter   # 首选内嵌
       - uniquifier                                  # 过滤重复的候选字，可能来自简繁转换
-      #- lua_filter@*hertz.easy_en*enhance_filter    # 英文增强
+      - lua_filter@*hertz.easy_en*enhance_filter    # 英文增强
 
 keys:
   page_up_down:
@@ -191,11 +191,6 @@ easy_en_translator:
     dictionary: easy_en
     tag: easy_en
     split_sentence: true
-    use_wordninja_rs_lua_module: false
-    wordninja_rs_lua_module_path: "/usr/lib/lua/5.4/wordninja.so"
-    use_wordninja_rs: true
-    wordninja_rs_path: "/usr/local/bin/wordninja"
-    use_wordninja_py: false
     prefix: "'"
     tips: "〔英文〕"
     enable_sentence: true

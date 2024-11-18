@@ -43786,3 +43786,4 @@ zymase	zymase n.变酒酵素
 zymogenic	zymogenic a.酵素母质的;酵素原的;发酵菌的
 zymology	zymology n.发酵学;发酵论
 zymosis	zymosis n.发酵;发酵作用;酵性病
+btw	btw abbr.顺便说一句

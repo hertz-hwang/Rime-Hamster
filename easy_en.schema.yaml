@@ -17,11 +17,6 @@ __include: tiger:/cn_en_filter                 # 中英滤镜
 
 easy_en:
   split_sentence: true
-  use_wordninja_rs_lua_module: false
-  wordninja_rs_lua_module_path: "/usr/lib/lua/5.4/wordninja.so"
-  use_wordninja_rs: true
-  wordninja_rs_path: "/usr/local/bin/wordninja"
-  use_wordninja_py: false
 
 switches:
   - name: ascii_mode
