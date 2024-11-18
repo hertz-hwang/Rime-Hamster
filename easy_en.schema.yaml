@@ -4,7 +4,7 @@
 
 schema:
   schema_id: easy_en
-  name: 英文（勿用）
+  name: '英文'
   version: "0.9.1"
   author:
     - Patrick <ipatrickmac@gmail.com>

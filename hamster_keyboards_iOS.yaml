@@ -2,7 +2,7 @@ colorSchemas:
   - schemaName: iOS - Dark
     name: iOS - Dark
     author: Bennett S. Owen
-    back_color: "0x01282828"
+    back_color: "0x55282828"
     button_back_color: "0x6A6A6A"
     button_pressed_back_color: "0x6A6A6A"
     button_bubble_back_color: "0xF57935"

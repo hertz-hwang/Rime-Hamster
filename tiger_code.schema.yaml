@@ -14,7 +14,7 @@ schema:
     - tiger_phrase
   description: |
     虎码单字
-  name: "赫兹优化虎单"
+  name: "主方案-赫兹优化虎单"
   schema_id: tiger_code
   version: "2024-10-31"
 

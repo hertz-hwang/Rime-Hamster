@@ -37,17 +37,16 @@ patch:
   "keyboard/spaceLeftButtonProcessByRIME": true
   "keyboard/spaceRightButtonProcessByRIME": true
   "keyboard/style/fontFace":
-    - {url: "ziti.ttf"}
-    - {url: "Segoe UI Emoji.ttf"}
-    - {url: "NotoColorEmoji-Regular.ttf"}
-    - {url: "SymbolsNerdFontMono-Regular.ttf"}
-    - {url: "LXGWWenKaiGBScreen.ttf"}
-    - {url: "98WB-0.otf"}
-    - {url: "98WB-1.otf"}
-    - {url: "98WB-2.otf"}
-    - {url: "98WB-3.otf"}
-    - {url: "98WB-U.otf"}
-    - {url: "98WB-V.otf"}
+    - {url: "Arial-Bold.ttf"}                   # 英文字体
+    - {url: "Segoe UI Emoji.ttf"}               # 表情符号
+    - {url: "SymbolsNerdFontMono-Regular.ttf"}  # 符号字体
+    - {url: "LXGWWenKaiGBScreen.ttf"}           # 常用中文
+    - {url: "98WB-0.otf"}                       # 中文增补
+    - {url: "98WB-1.otf"}                       # 中文增补
+    - {url: "98WB-2.otf"}                       # 中文增补
+    - {url: "98WB-3.otf"}                       # 中文增补
+    - {url: "98WB-U.otf"}                       # 中文增补
+    - {url: "98WB-V.otf"}                       # 中文增补
   "keyboard/swipeLabelUpAndDownIrregularLayout": false  # 不规则显示划动文本
   "keyboard/swipeLabelUpAndDownLayout": true  # 划动文本上下显示
   "keyboard/upSwipeOnLeft": true  # 上划显示位置-左上侧
