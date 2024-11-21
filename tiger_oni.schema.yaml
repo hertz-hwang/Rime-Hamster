@@ -5,14 +5,17 @@ schema:
   author:
     - Hertz Hwang <hertz@26hz.com.cn>
   dependencies:
+    - charset
     - pinyin
     - fast_symbol
     - easy_en
+    - japanese
+    - tiger_phrase
   description: |
     官虎词库+鬼虎词库
   name: "次方案-九重鬼虎"
   schema_id: tiger_oni
-  version: "2024-11-04"
+  version: "2024-11-21"
 
 __patch:
   - tiger_code.custom:/patch?
@@ -21,6 +24,8 @@ __patch:
 __include: tiger:/switches_engine_table        # Rime模块
 __include: tiger:/fast_symbol_translator       # 快符
 __include: tiger:/easy_en_translator           # 英文
+__include: tiger:/japanese_translator          # 日文
+__include: tiger:/tiger_phrase_translator      # 赫兹虎码整句
 __include: tiger:/reverse_lookup_translator_xh # 小鹤反查
 __include: tiger:/s2t_filter                   # 简繁滤镜
 __include: tiger:/chaifen_filter               # 拆分滤镜
@@ -64,6 +69,8 @@ recognizer:
   patterns:
     punct: '^/([0-9]0?|[A-Za-z]+)$'
     easy_en: "^'[A-Z|a-z]*`?$"
+    japanese: "^J[_|A-Z|a-z|-]*`?$"
+    tiger_phrase: "^H[a-z]*`?$"
     reverse_lookup: "^`[a-z]*'?$"
     expression: '^=.*$'
 
