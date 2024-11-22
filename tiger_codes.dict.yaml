@@ -1,0 +1,13 @@
+# Rime dictionary: tiger_codes
+# encoding: utf-8
+
+---
+name: tiger_codes
+version: "2024-11-22"
+sort: by_weight
+import_tables:
+  - dicts/tigress        # 官方虎词11w+单字
+  - dicts/tigress_ci     # 官方虎词
+  - dicts/tigress_simp_ci
+  - dicts/kaomoji           # Vv进入Kaomoji颜表情
+...

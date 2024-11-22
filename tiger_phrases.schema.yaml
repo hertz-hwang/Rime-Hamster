@@ -12,18 +12,17 @@ schema:
     - japanese
     - tiger_codes
     - tiger_oni
-    - tiger_phrase
   description: |
-    虎码单字
-  name: "主方案-赫兹优化虎单"
-  schema_id: tiger_code
-  version: "2024-10-31"
+    官方虎词整句
+  name: "整活方案2-官方虎词整句"
+  schema_id: tiger_phrases
+  version: "2024-11-22"
 
 __patch:
   - tiger_code.custom:/patch?
   - engine/filters/@next: simplifier@chinese_english
 
-__include: tiger:/switches_engine_table        # Rime模块
+__include: tiger:/switches_engine_script       # Rime模块
 __include: tiger:/fast_symbol_translator       # 快符
 __include: tiger:/easy_en_translator           # 英文
 __include: tiger:/japanese_translator          # 日文
@@ -42,14 +41,14 @@ __include: tiger:/cn_en_filter                 # 中英滤镜
 speller:
   auto_clear: max_length
   auto_select: true
-  max_code_length: 4
-  alphabet: "~;zyxwvutsrqponmlkjihgfedcba]V"
+  max_code_length: 5
+  alphabet: ";'zyxwvutsrqponmlkjihgfedcba]/V"
   auto_select_pattern: ^;\w+
   algebra:
     __patch:
-      - tiger:/algebra/core        # 核心拼算
-      #- tiger:/algebra/wildcard?   # 通配拼算
+      - tiger:/algebra/phrases     # 整句拼算
       - tiger:/algebra/erase       # 擦除编码
+  
 # 说明
 # xform --改寫〔不保留原形〕
 # derive --衍生〔保留原形〕
@@ -59,7 +58,7 @@ speller:
 # erase --刪除
 
 translator:
-  dictionary: tiger_code
+  dictionary: tiger_phrases
   __include: tiger:/dict_All_false
 
 key_binder:

@@ -10,10 +10,11 @@ schema:
     - fast_symbol
     - easy_en
     - japanese
+    - tiger_codes
     - tiger_oni
   description: |
-    赫兹虎码整句
-  name: "整活方案-赫兹虎码整句"
+    赫兹虎单整句
+  name: "整活方案1-赫兹虎单整句"
   schema_id: tiger_phrase
   version: "2024-11-16"
 
@@ -25,7 +26,10 @@ __include: tiger:/switches_engine_script       # Rime模块
 __include: tiger:/fast_symbol_translator       # 快符
 __include: tiger:/easy_en_translator           # 英文
 __include: tiger:/japanese_translator          # 日文
+__include: tiger:/tiger_codes_translator       # 官方虎词
 __include: tiger:/tiger_oni_translator         # 九重鬼虎
+__include: tiger:/tiger_phrase_translator      # 赫兹虎单整句
+__include: tiger:/tiger_phrases_translator     # 官方虎词整句
 __include: tiger:/reverse_lookup_translator_xh # 小鹤反查
 __include: tiger:/s2t_filter                   # 简繁滤镜
 __include: tiger:/chaifen_filter               # 拆分滤镜
@@ -68,15 +72,7 @@ key_binder:
       - tiger:/keys/selector
       - tiger:/keys/options_toggle
 
-recognizer:
-  import_preset: default
-  patterns:
-    punct: '^/([0-9]0?|[A-Za-z]+)$'
-    easy_en: "^'[A-Z|a-z]*`?$"
-    japanese: "^J[_|A-Z|a-z|-]*`?$"
-    tiger_oni: "^G[a-z]*`?$"
-    reverse_lookup: "^`[a-z]*'?$"
-    expression: '^=.*$'
+__include: tiger:/rec
 
 punctuator:
   #import_preset:

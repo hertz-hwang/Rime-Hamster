@@ -14,10 +14,10 @@ schema:
     - tiger_oni
     - tiger_phrase
   description: |
-    虎码单字
-  name: "主方案-赫兹优化虎单"
-  schema_id: tiger_code
-  version: "2024-10-31"
+    官方虎词
+  name: "次方案-官方虎词"
+  schema_id: tiger_codes
+  version: "2024-11-22"
 
 __patch:
   - tiger_code.custom:/patch?
@@ -45,21 +45,9 @@ speller:
   max_code_length: 4
   alphabet: "~;zyxwvutsrqponmlkjihgfedcba]V"
   auto_select_pattern: ^;\w+
-  algebra:
-    __patch:
-      - tiger:/algebra/core        # 核心拼算
-      #- tiger:/algebra/wildcard?   # 通配拼算
-      - tiger:/algebra/erase       # 擦除编码
-# 说明
-# xform --改寫〔不保留原形〕
-# derive --衍生〔保留原形〕
-# abbrev --簡拼〔出字優先級較上兩組更低〕
-# fuzz --畧拼〔此種簡拼僅組詞，不出單字〕
-# xlit --變換〔適合大量一對一變換〕
-# erase --刪除
 
 translator:
-  dictionary: tiger_code
+  dictionary: tiger_codes
   __include: tiger:/dict_All_false
 
 key_binder:
