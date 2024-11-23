@@ -24,6 +24,7 @@ switcher:
     - chaifen
     - pinyin
     - extended_char
+    - mars
   fold_options: true
   abbreviate_options: true
   option_list_separator: '／'

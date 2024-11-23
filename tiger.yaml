@@ -116,6 +116,7 @@ switches_engine_table:
       - simplifier@chaifen                          # 拆分滤镜
       - simplifier@pinyin                           # 拼音滤镜
       - simplifier@emoji                            # Emoji滤镜
+      - simplifier@mars                             # 火星文滤镜
       #- lua_filter@*hertz.inline_candidate_filter   # 首选内嵌
       - uniquifier                                  # 过滤重复的候选字，可能来自简繁转换
       - lua_filter@*hertz.easy_en*enhance_filter    # 英文增强
@@ -166,6 +167,7 @@ switches_engine_script:
       - simplifier@chaifen                          # 拆分滤镜
       - simplifier@pinyin                           # 拼音滤镜
       - simplifier@emoji                            # Emoji滤镜
+      - simplifier@mars                             # 火星文滤镜
       #- lua_filter@*hertz.inline_candidate_filter   # 首选内嵌
       - uniquifier                                  # 过滤重复的候选字，可能来自简繁转换
       - lua_filter@*hertz.easy_en*enhance_filter    # 英文增强
@@ -190,6 +192,7 @@ keys:
       - { when: composing, accept: "Control+p", toggle: pinyin }             # 拼音开关
       - { when: composing, accept: "Control+j", toggle: chaifen }            # 拆分滤镜开关
       - { when: has_menu, accept: "Control+e", toggle: chinese_english }     # 翻译
+      - { when: has_menu, accept: "Control+m", toggle: mars }                # 火星文开关
 
 dict_All_false:
   enable_user_dict: false
@@ -340,6 +343,11 @@ cn_en_filter:
     comment_format:
       - "xform/-/ /"
 
+mars_filter:
+  mars:
+    opencc_config: filter_mars/mars.json
+    option_name: mars
+
 rec:
   recognizer:
     import_preset: default
@@ -368,6 +376,8 @@ switches_list:
     states: [ 不拆, 拆字 ]
   - name: extended_char
     states: [ 全字集, 常用字 ]
+  - name: mars
+    states: [ 地球文, 火星文 ]
   - name: full_shape
     reset: 0
     states: [ 半角, 全角 ]

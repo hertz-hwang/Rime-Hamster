@@ -23,9 +23,9 @@ style:
   translucency: true      # 透明度總開關
 
   # 淺色主题
-  color_scheme: wechat
+  color_scheme: hertz-Q
   # 深色主题
-  color_scheme_dark: wechat_dark
+  color_scheme_dark: hertz-Q
 
   # #候选字体
   font_face: "Segoe UI Emoji, LXGW WenKai GB Screen, 98WB-0, 98WB-1, 98WB-2, 98WB-3, 98WB-U, 98WB-V"
@@ -70,6 +70,12 @@ preset_color_schemes:
     preview_back_color: 0x6b55d073
     preview_text_color: 0xd5e8ee
     text_color: 0x808070
+    border_height: 0
+    border_width: 8
+    candidate_format: '%c %@ '
+    corner_radius: 5
+    hilited_corner_radius: 5
+    inline_preedit: true
 
   aqua:
     name: 碧水／Aqua

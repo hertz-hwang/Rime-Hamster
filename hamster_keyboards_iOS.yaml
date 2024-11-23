@@ -404,10 +404,10 @@ keyboards:
             label: I
             swipe:
               - action:
-                  shortcutCommand:
-                    sendKeys:
-                      keys: Control+i
-                label: 
+                  character:
+                    char: "*"
+                label:
+                  text: ""
                 display: true
                 processByRIME: true
                 direction: up
@@ -434,10 +434,10 @@ keyboards:
             label: O
             swipe:
               - action:
-                  shortcutCommand:
-                    sendKeys:
-                      keys: Control+o
-                label: 简繁
+                  character:
+                    char: (
+                label:
+                  text: ""
                 display: true
                 processByRIME: true
                 direction: up
@@ -466,10 +466,10 @@ keyboards:
             label: P
             swipe:
               - action:
-                  shortcutCommand:
-                    sendKeys:
-                      keys: Control+p
-                label: " 拼音"
+                  character:
+                    char: )
+                label:
+                  text: ""
                 display: true
                 processByRIME: true
                 direction: up
@@ -689,14 +689,6 @@ keyboards:
                 display: true
                 processByRIME: true
                 direction: up
-              - action:
-                  shortcutCommand:
-                    sendKeys:
-                      keys: Control+j
-                label: 拆分
-                display: true
-                processByRIME: true
-                direction: down
             callout:
               - action:
                   character:
@@ -1142,6 +1134,11 @@ keyboards:
                     sendKeys:
                       keys: Control+b
                 label: 字集
+              - action:
+                  shortcutCommand:
+                    sendKeys:
+                      keys: Control+m
+                label: 火星文
             lightModeStyleName: shift_delete_light
             darkModeStyleName: shift_delete
           - action:
@@ -1169,7 +1166,7 @@ keyboards:
               portrait:
                 percentage: 0.34
               landscape: available
-            label: 󱇄󱥢 赫兹󰝹虎码 󱥢󱇂
+            label: 󱇄󱥢 虎󰝹码 󱥢󱇂
             swipe:
               - action:
                   shortcutCommand: "#次选上屏"
@@ -2310,7 +2307,7 @@ keyboards:
             darkModeStyleName: cn_en
           - action: space
             width: available
-            label: 󱇄󱥢 赫兹󰝹符号 󱥢󱇂
+            label: 󱇄󱥢 符󰝹号 󱥢󱇂
             swipe:
               - action:
                   shortcutCommand: "#关闭键盘"
@@ -3297,7 +3294,7 @@ keyboards:
               portrait:
                 percentage: 0.34
               landscape: available
-            label: 󱇄󱥢 赫兹󰝹英文 󱥢󱇂
+            label: 󱇄󱥢 英󰝹文 󱥢󱇂
             swipe:
               - action:
                   shortcutCommand: "#关闭键盘"
@@ -4239,7 +4236,7 @@ keyboards:
               portrait:
                 percentage: 0.34
               landscape: available
-            label: 󱇄󱥢 赫兹󰝹符号 󱥢󱇂
+            label: 󱇄󱥢 符󰝹号 󱥢󱇂
             swipe:
               - action:
                   shortcutCommand: "#关闭键盘"
