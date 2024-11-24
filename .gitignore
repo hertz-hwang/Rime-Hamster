@@ -8,4 +8,5 @@ installation.yaml
 iRime.custom.yaml
 tiger_code.custom.yaml
 user.yaml
+tools/__pycache__
 .DS_Store

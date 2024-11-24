@@ -390,7 +390,7 @@ rec:
 switches_list:
   - name: ascii_mode
     reset: 0
-    states: [ 虎, 英 ]
+    states: [ 中, 英 ]
   - name: traditionalization
     states: [ 简, 繁 ]
   - name: pinyin

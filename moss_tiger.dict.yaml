@@ -7,31 +7,30 @@ version: "2024-11-24"
 sort: by_weight
 import_tables:
   - dicts/moss.base      # 摩斯单字
-  - dicts/moss.phrase    # 摩斯词库
-  - dicts/moss.words     # 摩斯词库
-  - dicts/moss.tencent   # 摩斯词库
-  - dicts/moss.computer  # 摩斯词库
-  - dicts/moss.moe       # 摩斯词库
+  - dicts/moss.basic     # 摩斯基础词库
+  - dicts/moss.phrase    # 摩斯自定义词库
+  - dicts/moss.words     # 摩斯词库-来自moran.words
+  - dicts/moss.tencent   # 摩斯词库-来自moran.tencent
+  - dicts/moss.computer  # 摩斯词库-来自moran.computer
+  - dicts/moss.moe       # 摩斯词库-来自moran.moe
   - dicts/kaomoji        # Vv进入Kaomoji颜表情
 ...
 
-----------一级简码----------
+### 一级简码 ###
 去	e	7182400
 我	k	29569261
-二	k	2073729
+#二	k	2073729
 人	y	18435295
 他	a	17596473
 一	f	35278860
 是	g	31422712
 出	p	2294943
-哦	b	3563330
 平	z	1439957
 啊	o	5366043
 三	n	2747794
 的	d	76938354
 发	c	3946829
 个	u	14789406
-和	o	6252031
 就	r	11305679
 可	i	1069176
 了	l	3481243
@@ -42,3 +41,8 @@ import_tables:
 不	v	2985809
 你	s	1422192
 没	x	7560391
+
+##### 特殊一简 ##### 
+有	q	17847013
+和	t	6252031
+哦	b	3563330
