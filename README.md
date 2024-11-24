@@ -1,3 +1,6 @@
+> 所需字体下载
+> [Fonts.zip](https://github.com/hertz-hwang/Rime-tiger_code/releases/download/Fonts/Fonts.zip)
+
 ## 仿 iOS 配色
 
 ![iOS](/assets/iOS.jpg)
