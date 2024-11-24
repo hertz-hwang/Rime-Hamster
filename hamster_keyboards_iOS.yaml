@@ -5106,6 +5106,42 @@ keyboards:
             width:
               percentage: 0.11
             label: 🐯
+            callout:
+              - action:
+                  shortcutCommand:
+                    sendKeys:
+                      keys: Control+j
+                label: 拆字
+              - action:
+                  shortcutCommand:
+                    sendKeys:
+                      keys: Control+i
+                label: Emoji
+              - action:
+                  shortcutCommand:
+                    sendKeys:
+                      keys: Control+o
+                label: 简繁
+              - action:
+                  shortcutCommand:
+                    sendKeys:
+                      keys: Control+p
+                label: 拼音
+              - action:
+                  shortcutCommand:
+                    sendKeys:
+                      keys: Control+e
+                label: 翻译
+              - action:
+                  shortcutCommand:
+                    sendKeys:
+                      keys: Control+b
+                label: 字集
+              - action:
+                  shortcutCommand:
+                    sendKeys:
+                      keys: Control+m
+                label: 火星文
             lightModeStyleName: shift_delete_light
             darkModeStyleName: shift_delete
           - action:
