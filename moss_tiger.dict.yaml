@@ -6,8 +6,13 @@ name: moss_tiger
 version: "2024-11-24"
 sort: by_weight
 import_tables:
-  - dicts/moss         # 摩斯乱码
-  - dicts/kaomoji      # Vv进入Kaomoji颜表情
+  - dicts/moss.base      # 摩斯单字
+  - dicts/moss.phrase    # 摩斯词库
+  - dicts/moss.words     # 摩斯词库
+  - dicts/moss.tencent   # 摩斯词库
+  - dicts/moss.computer  # 摩斯词库
+  - dicts/moss.moe       # 摩斯词库
+  - dicts/kaomoji        # Vv进入Kaomoji颜表情
 ...
 
 ----------一级简码----------

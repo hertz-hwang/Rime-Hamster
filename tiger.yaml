@@ -788,3 +788,24 @@ punctuator:
     '/hz':
       - 'https://github.com/hertz-hwang/Rime-tiger_code.git'
       - 'https://hertz-hwang.github.io/hamster-tools/'
+
+octagram:
+  disable:
+    __patch:
+      grammar: {}
+  enable_for_sentence:
+    __patch:
+      grammar:
+        language: zh-hant-t-essay-bgw
+        # language: zh-hant-t-s1-tgc
+        collocation_max_length: 4
+        collocation_min_length: 3
+  #enable_for_sentence:
+  #  __patch:
+  #    grammar:
+  #      language: zh-hant-t-essay-bgw
+  #      collocation_max_length: 5
+  #      collocation_min_length: 2
+  #    translator/contextual_suggestions: true # 是否使用语言模型优化输出结果〔需配合 grammar 使用〕
+  #    translator/max_homophones: 7 # 最大同音簇长度〔需配合 grammar 使用〕
+  #    translator/max_homographs: 7 # 最大同形簇长度〔需配合 grammar 使用〕
