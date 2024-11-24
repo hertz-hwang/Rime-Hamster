@@ -64,6 +64,16 @@ algebra:
       - derive|^(\w)(\w)\[(\w)(\w)$|~$2~~|        # 3码通配
       - derive|^(\w)(\w)\[(\w)(\w)$|$1~~~|        # 3码通配
       - derive|^(\w)(\w)\[(\w)(\w)$|~~~~|         # 4码通配
+  moss:
+    __append:
+      - derive|^(.+)](\w)(\d)$|$1|
+      - derive|^(.+)](\w)(\w)$|$1|
+      - derive|^(.+)](\w)(\d)$|$1$2o|
+      - derive|^(.+)](\w)(\w)$|$1$2o|
+      - derive|^(.+)](\w)(\w)$|$1$2$3o|
+      - abbrev|^(.+)](\w)(\d)$|$1$2|
+      - abbrev|^(.+)](\w)(\w)$|$1$2$3|
+
   erase:
     __append:
       - erase|^(\w+)\[(\w+)$|                     # 刪除原始編碼以加速檢索
@@ -90,6 +100,7 @@ switches_engine_table:
       - affix_segmentor@tiger_oni                   # 九重鬼虎
       - affix_segmentor@tiger_phrase                # 赫兹虎单整句
       - affix_segmentor@tiger_phrases               # 官方虎词整句
+      - affix_segmentor@moss_tiger                  # 摩斯乱码
       - abc_segmentor                               # 标记输入码的类型
       - punct_segmentor                             # 割界，与前后方的其他编码区分开
       - fallback_segmentor
@@ -104,6 +115,7 @@ switches_engine_table:
       - table_translator@fast_symbol                # 码表转换-快符
       - script_translator@tiger_phrase              # 赫兹虎单整句
       - script_translator@tiger_phrases             # 官方虎词整句
+      - script_translator@moss_tiger                # 摩斯乱码
       - history_translator@input_history            # 输入历史
       - lua_translator@*hertz.calculator_translator # 计算器
       - lua_translator@*hertz.time_translator       # 时间
@@ -143,6 +155,7 @@ switches_engine_script:
       - affix_segmentor@tiger_oni                   # 九重鬼虎
       - affix_segmentor@tiger_phrase                # 赫兹虎单整句
       - affix_segmentor@tiger_phrases               # 官方虎词整句
+      - affix_segmentor@moss_tiger                  # 摩斯乱码
       - abc_segmentor                               # 标记输入码的类型
       - punct_segmentor                             # 割界，与前后方的其他编码区分开
       - fallback_segmentor
@@ -154,6 +167,9 @@ switches_engine_script:
       - table_translator@tiger_codes                # 官方虎词
       - table_translator@tiger_oni                  # 九重鬼虎
       - table_translator@fast_symbol                # 码表转换-快符
+      - script_translator@tiger_phrase              # 赫兹虎单整句
+      - script_translator@tiger_phrases             # 官方虎词整句
+      - script_translator@moss_tiger                # 摩斯乱码
       - script_translator                           # 码表转换
       - history_translator@input_history            # 输入历史
       - lua_translator@*hertz.calculator_translator # 计算器
@@ -264,6 +280,14 @@ tiger_phrases_translator:
     tips: "〔官方虎词整句〕"
     __include: dict_All_false
 
+moss_tiger_translator:
+  moss_tiger:
+    dictionary: moss_tiger
+    tag: moss_tiger
+    prefix: "M"
+    tips: "〔摩斯乱码〕"
+    __include: dict_All_false
+
 reverse_lookup_translator_xh:
   reverse_lookup:
     dictionary: pinyin
@@ -359,6 +383,7 @@ rec:
       tiger_oni: "^G[a-z]*`?$"
       tiger_phrase: "^H[a-z]*`?$"
       tiger_phrases: "^F[a-z]*`?$"
+      moss_tiger: "^M[a-z]*`?$"
       reverse_lookup: "^`[a-z]*'?$"
       expression: '^=.*$'
 

@@ -31,6 +31,7 @@ __include: tiger:/tiger_codes_translator       # 官方虎词
 __include: tiger:/tiger_oni_translator         # 九重鬼虎
 __include: tiger:/tiger_phrase_translator      # 赫兹虎单整句
 __include: tiger:/tiger_phrases_translator     # 官方虎词整句
+__include: tiger:/moss_tiger_translator        # 摩斯乱码
 __include: tiger:/reverse_lookup_translator_xh # 小鹤反查
 __include: tiger:/s2t_filter                   # 简繁滤镜
 __include: tiger:/chaifen_filter               # 拆分滤镜
