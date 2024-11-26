@@ -1,0 +1,54 @@
+name: convert_scel2rime_dict
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "0 0 * * *"   # 设置定时任务
+
+jobs:
+  convert_scel2rime_dict:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4.1.7
+        with:
+          token: ${{ secrets.PAT_TOKEN }}
+
+      - name: Set up Python
+        uses: actions/setup-python@v5.1.1
+        with:
+          python-version: "3.11"  # 你可以根据需要选择 Python 版本
+          cache: pip
+
+      - name: Install dependencies
+        run: |
+          python3 -m pip install --upgrade pip
+          pip install pypinyin pypinyin_dict
+
+      - name: Download sogou scel file
+        run: |
+          curl -fsL -o sogou_pop.scel 'https://pinyin.sogou.com/d/dict/download_cell.php?id=4&name=网络流行新词【官方推荐】&f=detail'
+
+      - name: Convert sogou scel to rime quanpin_dict
+        run: |
+          python3 ./tools/scel2rime.py sogou_pop.scel
+
+      - name: Gen moss dict
+        run: |
+          python3 ./tools/04-gen_moss_tiger_dict.py ./dicts/moss.sogou.dict.yaml --moss ./dicts/moss.base.dict.yaml --dict ./sogou_pop.dict.yaml
+
+      - name: Remove intermediate file
+        run: |
+          rm -f ./sougou_pop.dict.yaml
+
+      - name: Set env
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+
+      - name: Commit and push changes
+        run: |
+          git add dicts/moss.sogou.dict.yaml
+          git commit -m "convert_scel2rime_dict"
+          git push origin main
