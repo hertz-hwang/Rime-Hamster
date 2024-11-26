@@ -64,9 +64,9 @@ algebra:
     __append:
       - derive|^(.+)](\w)(\d)$|$1|
       - derive|^(.+)](\w)(\w)$|$1|
-      - derive|^(.+)](\w)(\d)$|$1$2/|
-      - derive|^(.+)](\w)(\w)$|$1$2/|
-      - derive|^(.+)](\w)(\w)$|$1$2$3/|
+      - derive|^(.+)](\w)(\d)$|$1$2O|
+      - derive|^(.+)](\w)(\w)$|$1$2O|
+      - derive|^(.+)](\w)(\w)$|$1$2$3O|
       - abbrev|^(.+)](\w)(\d)$|$1$2|
       - abbrev|^(.+)](\w)(\w)$|$1$2$3|
 
@@ -293,6 +293,9 @@ moss_tiger_translator:
     prefix: "M"
     tips: "〔摩斯乱码〕"
     __include: dict_All_false
+    preedit_format:
+      - xform/([a-z][a-z][a-z])O/$1°/
+      - xform/([a-z][a-z][a-z][a-z])O/$1°/
 
 reverse_lookup_translator_xh:
   reverse_lookup:
@@ -330,6 +333,7 @@ chaifen_filter:
       #- xform|〕|»|
     tags:     
       - abc
+      - moss_tiger
       - tiger_code
       - tiger_oni
       - tiger_phrase
@@ -352,6 +356,7 @@ pinyin_filter:
       - xform|&nbsp;| |
     tags:
       - abc
+      - moss_tiger
       - tiger_code
       - tiger_oni
       - tiger_phrase
@@ -389,7 +394,7 @@ rec:
       tiger_oni: "^G[a-z]*`?$"
       tiger_phrase: "^H[a-zA-Z]*`?$"
       tiger_phrases: "^F[a-zA-Z]*`?$"
-      moss_tiger: "^M[a-z]*`?$"
+      moss_tiger: "^M[a-zA-Z]*`?$"
       reverse_lookup: "^`[a-z]*'?$"
       expression: '^=.*$'
 

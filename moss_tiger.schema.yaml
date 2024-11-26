@@ -39,7 +39,7 @@ __include: tiger:/emoji_filter                 # Emoji 滤镜
 __include: tiger:/cn_en_filter                 # 中英滤镜
 __include: tiger:/mars_filter                  # 火星文滤镜
 speller:
-  alphabet: ";'zyxwvutsrqponmlkjihgfedcba]/V"
+  alphabet: ";'zyxwvutsrqponmlkjihgfedcbaO]/V"
   auto_select: true
   auto_select_pattern: ^;\w+
   algebra:
@@ -58,6 +58,9 @@ speller:
 translator:
   dictionary: moss_tiger
   __include: tiger:/dict_All_false
+  preedit_format:
+    - xform/([a-z][a-z][a-z])O/$1°/
+    - xform/([a-z][a-z][a-z][a-z])O/$1°/
 
 key_binder:
   import_preset: default
