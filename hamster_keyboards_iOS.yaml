@@ -97,10 +97,10 @@ keyboards:
             darkModeStyleName: hotkeys
           - action:
               shortcutCommand:
-                openURL:
-                  url: mqqapi://
+                sendKeys:
+                  keys: U
             width: available
-            label: 
+            label: ¹
             callout:
               - action:
                   shortcutCommand:
@@ -111,10 +111,10 @@ keyboards:
             darkModeStyleName: hotkeys
           - action:
               shortcutCommand:
-                openURL:
-                  url: weixin://
+                sendKeys:
+                  keys: I
             width: available
-            label: 
+            label: ²
             callout:
               - action:
                   shortcutCommand:
@@ -125,18 +125,18 @@ keyboards:
             darkModeStyleName: hotkeys
           - action:
               shortcutCommand:
-                openURL:
-                  url: https://www.perplexity.ai/search/new?q=#pasteboardContent
+                sendKeys:
+                  keys: O
             width: available
-            label: 
+            label: ³
             lightModeStyleName: hotkeys_light
             darkModeStyleName: hotkeys
           - action:
               shortcutCommand:
-                openURL:
-                  url: https://www.google.com/search?q=#pasteboardContent
+                sendKeys:
+                  keys: P
             width: available
-            label: 
+            label: ⁴
             lightModeStyleName: hotkeys_light
             darkModeStyleName: hotkeys
           - action:
@@ -4359,18 +4359,18 @@ keyboards:
             darkModeStyleName: hotkeys
           - action:
               shortcutCommand:
-                openURL:
-                  url: https://www.perplexity.ai/search/new?q=#pasteboardContent
+                sendKeys:
+                  keys: O
             width: available
-            label: 
+            label: ³
             lightModeStyleName: hotkeys_light
             darkModeStyleName: hotkeys
           - action:
               shortcutCommand:
-                openURL:
-                  url: https://www.google.com/search?q=#pasteboardContent
+                sendKeys:
+                  keys: P
             width: available
-            label: 
+            label: ⁴
             lightModeStyleName: hotkeys_light
             darkModeStyleName: hotkeys
           - action:

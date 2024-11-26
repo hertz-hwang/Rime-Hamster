@@ -39,7 +39,7 @@ __include: tiger:/emoji_filter                 # Emoji 滤镜
 __include: tiger:/cn_en_filter                 # 中英滤镜
 __include: tiger:/mars_filter                  # 火星文滤镜
 speller:
-  alphabet: ";'zyxwvutsrqponmlkjihgfedcbaO]/V"
+  alphabet: ";'zyxwvutsrqponmlkjihgfedcbaPO]/V"
   auto_select: true
   auto_select_pattern: ^;\w+
   algebra:

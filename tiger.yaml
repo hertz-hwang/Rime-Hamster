@@ -66,7 +66,7 @@ algebra:
       - derive|^(.+)](\w)(\w)$|$1|
       - derive|^(.+)](\w)(\d)$|$1$2O|
       - derive|^(.+)](\w)(\w)$|$1$2O|
-      - derive|^(.+)](\w)(\w)$|$1$2$3O|
+      - derive|^(.+)](\w)(\w)$|$1$2$3P|
       - abbrev|^(.+)](\w)(\d)$|$1$2|
       - abbrev|^(.+)](\w)(\w)$|$1$2$3|
 
@@ -295,7 +295,7 @@ moss_tiger_translator:
     __include: dict_All_false
     preedit_format:
       - xform/([a-z][a-z][a-z])O/$1°/
-      - xform/([a-z][a-z][a-z][a-z])O/$1°/
+      - xform/([a-z][a-z][a-z][a-z])P/$1°/
 
 reverse_lookup_translator_xh:
   reverse_lookup:
