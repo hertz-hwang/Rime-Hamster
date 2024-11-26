@@ -51,13 +51,6 @@ speller:
       - tiger:/algebra/core        # 核心拼算
       #- tiger:/algebra/wildcard?   # 通配拼算
       - tiger:/algebra/erase       # 擦除编码
-# 说明
-# xform --改寫〔不保留原形〕
-# derive --衍生〔保留原形〕
-# abbrev --簡拼〔出字優先級較上兩組更低〕
-# fuzz --畧拼〔此種簡拼僅組詞，不出單字〕
-# xlit --變換〔適合大量一對一變換〕
-# erase --刪除
 
 translator:
   dictionary: tiger_code

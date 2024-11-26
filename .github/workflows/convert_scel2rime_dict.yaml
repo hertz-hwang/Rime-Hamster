@@ -36,7 +36,7 @@ jobs:
 
       - name: Gen moss dict
         run: |
-          python3 ./tools/04-gen_moss_tiger_dict.py ./dicts/moss.sogou.dict.yaml --moss ./dicts/moss.base.dict.yaml --dict ./sogou_pop.dict.yaml
+          python3 ./tools/04-gen_moss_tiger_dict.py ./dicts/moss.sogou_pop.dict.yaml --moss ./dicts/moss.base.dict.yaml --dict ./sogou_pop.dict.yaml
 
       - name: Remove intermediate file
         run: |
@@ -49,6 +49,6 @@ jobs:
 
       - name: Commit and push changes
         run: |
-          git add dicts/moss.sogou.dict.yaml
+          git add dicts/moss.sogou_pop.dict.yaml
           git commit -m "convert_scel2rime_dict"
           git push origin main
