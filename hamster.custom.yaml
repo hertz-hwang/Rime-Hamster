@@ -70,7 +70,7 @@ patch:
   "toolbar/displayIndexOfCandidate": false  # 显示候选项序号
   "toolbar/displayKeyboardDismissButton": false  # 显示键盘收起图标
   "toolbar/enableToolbar": true  # 启用候选工具栏
-  "toolbar/swipePaging": false  # 划动分页模式
+  "toolbar/swipePaging": true  # 划动分页模式
 
   # 声音与震动
   "keyboard/enableHapticFeedback": true

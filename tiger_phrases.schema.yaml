@@ -43,7 +43,7 @@ speller:
   auto_clear: max_length
   auto_select: true
   max_code_length: 5
-  alphabet: ";'zyxwvutsrqponmlkjihgfedcba]/V"
+  alphabet: ";'zyxwvutsrqponmlkjihgfedcbaUPOI]/V"
   auto_select_pattern: ^;\w+
   algebra:
     __patch:
@@ -61,6 +61,11 @@ speller:
 translator:
   dictionary: tiger_phrases
   __include: tiger:/dict_All_false
+  preedit_format:
+    - xform/([a-z])U/$1¹/
+    - xform/([a-z][a-z])I/$1²/
+    - xform/([a-z][a-z][a-z])O/$1³/
+    - xform/([a-z][a-z][a-z][a-z])P/$1⁴/
 
 key_binder:
   import_preset: default

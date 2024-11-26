@@ -44,7 +44,7 @@ speller:
   auto_clear: max_length
   auto_select: true
   max_code_length: 4
-  alphabet: "~;zyxwvutsrqponmlkjihgfedcba]V"
+  alphabet: "~;'zyxwvutsrqponmlkjihgfedcbaUPOI]V"
   auto_select_pattern: ^;\w+
   algebra:
     __patch:

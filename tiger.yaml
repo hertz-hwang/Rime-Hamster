@@ -8,36 +8,32 @@
 # xlit   --變換〔適合大量一對一變換〕
 # erase  --刪除
 algebra:
-  core:
+  core:                                           # 核心单字
     __append:
       - derive|^(\w)(\w)\[(\w)(\w)$|$1$2$3$4|     # 匹配4码
       - derive|^(\w)(\w)\[(\w)(\d)$|$1$2$3|       # 匹配3码
       - derive|^(\w)(\w)\[(\d)(\d)$|$1$2|         # 匹配2码
       - derive|^(\w)(\d)\[(\d)(\d)$|$1|           # 匹配1码
 
-  phrase:
+  phrase:                                         # 单字整句
     __append:
-      - derive|^(\w)(\d)\[(\d)(\d)$|$1q|          # 短语匹配1码
-      - derive|^(\w)(\w)\[(\d)(\d)$|$1$2p|        # 短语匹配2码
-      - derive|^(\w)(\w)\[(\w)(\d)$|$1$2$3z|      # 短语匹配3码
-      - derive|^(\w)(\w)\[(\w)(\w)$|$1$2$3$4c|    # 短语匹配4码
-      - derive|^(\w)(\d)\[(\d)(\d)$|$1|           # 短语匹配1码
-      - derive|^(\w)(\w)\[(\d)(\d)$|$1$2|         # 短语匹配2码
-      - derive|^(\w)(\w)\[(\w)(\d)$|$1$2$3|       # 短语匹配3码
-      - derive|^(\w)(\w)\[(\w)(\w)$|$1$2$3$4|     # 短语匹配4码
+      - derive|^(\w)(\d)\[(\d)(\d)$|$1U|          # 短语匹配1码
+      - derive|^(\w)(\w)\[(\d)(\d)$|$1$2I|        # 短语匹配2码
+      - derive|^(\w)(\w)\[(\w)(\d)$|$1$2$3O|      # 短语匹配3码
+      - derive|^(\w)(\w)\[(\w)(\w)$|$1$2$3$4P|    # 短语匹配4码
 
-  phrases:
+  phrases:                                        # 虎词整句        
     __append:
-      - derive|^(\w)$|$1q|                        # 短语匹配1码
-      - derive|^(\w)(\w)$|$1$2p|                  # 短语匹配2码
-      - derive|^(\w)(\w)(\w)$|$1$2$3z|            # 短语匹配3码
-      - derive|^(\w)(\w)(\w)(\w)$|$1$2$3$4c|      # 短语匹配4码
+      - derive|^(\w)$|$1U|                        # 短语匹配1码
+      - derive|^(\w)(\w)$|$1$2I|                  # 短语匹配2码
+      - derive|^(\w)(\w)(\w)$|$1$2$3O|            # 短语匹配3码
+      - derive|^(\w)(\w)(\w)(\w)$|$1$2$3$4P|      # 短语匹配4码
       - derive|^(\w)$|$1|                         # 短语匹配1码
       - derive|^(\w)(\w)$|$1$2|                   # 短语匹配2码
       - derive|^(\w)(\w)(\w)$|$1$2$3|             # 短语匹配3码
       - derive|^(\w)(\w)(\w)(\w)$|$1$2$3$4|       # 短语匹配4码
 
-  wildcard:
+  wildcard:                                       # 通配符 （影响部署时间，默认关闭）
     __append:
       - derive|^(\w)(\w)\[(\w)(\w)$|~$2$3$4|      # 1码通配
       - derive|^(\w)(\w)\[(\w)(\w)$|~$2$3|        # 1码通配
@@ -64,7 +60,7 @@ algebra:
       - derive|^(\w)(\w)\[(\w)(\w)$|~$2~~|        # 3码通配
       - derive|^(\w)(\w)\[(\w)(\w)$|$1~~~|        # 3码通配
       - derive|^(\w)(\w)\[(\w)(\w)$|~~~~|         # 4码通配
-  moss:
+  moss:                                           # 摩斯乱码
     __append:
       - derive|^(.+)](\w)(\d)$|$1|
       - derive|^(.+)](\w)(\w)$|$1|
@@ -193,13 +189,13 @@ keys:
     __append:
       - { when: paging, accept: bracketleft, send: Page_Up }      # [ 后翻
       - { when: has_menu, accept: bracketright, send: Page_Down } # ] 前翻
-      - { when: has_menu, accept: minus, send: Page_Up }
+      - { when: paging, accept: minus, send: Page_Up }
       - { when: has_menu, accept: equal, send: Page_Down }
   selector:
     __append:
-      - { when: has_menu, accept: semicolon, send: 2 }  # 分号次选
-      - { when: has_menu, accept: apostrophe, send: 3 } # 引号三选
-      - { when: composing, accept: Tab, send: Escape }  # tab清屏
+      - { when: has_menu, accept: semicolon, send: KP_2 }  # 分号次选
+      #- { when: has_menu, accept: apostrophe, send: KP_3 } # 引号三选
+      - { when: composing, accept: Tab, send: Escape }     # tab清屏
   options_toggle:
     __append:
       - { when: composing, accept: "Control+b", toggle: extended_char }      # 字集滤镜
@@ -271,6 +267,11 @@ tiger_phrase_translator:
     prefix: "H"
     tips: "〔赫兹虎单整句〕"
     __include: dict_All_false
+    preedit_format:
+      - xform/([a-z])U/$1¹/
+      - xform/([a-z][a-z])I/$1²/
+      - xform/([a-z][a-z][a-z])O/$1³/
+      - xform/([a-z][a-z][a-z][a-z])P/$1⁴/
 
 tiger_phrases_translator:
   tiger_phrases:
@@ -279,6 +280,11 @@ tiger_phrases_translator:
     prefix: "F"
     tips: "〔官方虎词整句〕"
     __include: dict_All_false
+    preedit_format:
+      - xform/([a-z])U/$1¹/
+      - xform/([a-z][a-z])I/$1²/
+      - xform/([a-z][a-z][a-z])O/$1³/
+      - xform/([a-z][a-z][a-z][a-z])P/$1⁴/
 
 moss_tiger_translator:
   moss_tiger:
@@ -381,8 +387,8 @@ rec:
       japanese: "^J[_|A-Z|a-z|-]*`?$"
       tiger_codes: "^D[a-z]*`?$"
       tiger_oni: "^G[a-z]*`?$"
-      tiger_phrase: "^H[a-z]*`?$"
-      tiger_phrases: "^F[a-z]*`?$"
+      tiger_phrase: "^H[a-zA-Z]*`?$"
+      tiger_phrases: "^F[a-zA-Z]*`?$"
       moss_tiger: "^M[a-z]*`?$"
       reverse_lookup: "^`[a-z]*'?$"
       expression: '^=.*$'
