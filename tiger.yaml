@@ -81,6 +81,7 @@ switches_engine_table:
     processors:
       - ascii_composer                              # 处理英文模式及中英文切换
       - recognizer                                  # 与 matcher 搭配，处理符合特定规则的输入码，如网址、反查等
+      - lua_processor@*hertz.tiger_spelling*processor # 注解处理器
       - key_binder                                  # 在特定条件下将按键绑定到其他按键，如重定义逗号、句号为候选翻页键
       - speller                                     # 把字母追加到编码串
       - punctuator                                  # 处理符号按键
@@ -120,6 +121,7 @@ switches_engine_table:
     filters:
       - lua_filter@*hertz.charset_filter            # 字集过滤
       - lua_filter@*hertz.mark_phrase_filter        # 标记词组
+      - lua_filter@*hertz.tiger_spelling*filter     # 注解滤镜
       - simplifier@s2t                              # 简繁滤镜
       - simplifier@chaifen                          # 拆分滤镜
       - simplifier@pinyin                           # 拼音滤镜
@@ -198,6 +200,7 @@ keys:
       - { when: composing, accept: Tab, send: Escape }     # tab清屏
   options_toggle:
     __append:
+      - { when: has_menu, accept: "/", toggle: tiger_spelling.off }
       - { when: composing, accept: "Control+b", toggle: extended_char }      # 字集滤镜
       - { when: composing, accept: "Control+o", toggle: traditionalization } # 简繁滤镜
       - { when: composing, accept: "Control+i", toggle: emoji }              # Emoji开关
@@ -408,6 +411,13 @@ switches_list:
     states: [ 拼, pīn ]
   - name: emoji
     states: [ 🈚, 🈶 ]
+  - options:
+      - tiger_spelling.off
+      - tiger_spelling.lv1
+      - tiger_spelling.lv2
+      - tiger_spelling.lv3
+    states: [ 〇注解, 一重注解, 二重注解, 三重注解 ]
+    reset: 3
   - name: chaifen
     states: [ 不拆, 拆字 ]
   - name: extended_char
