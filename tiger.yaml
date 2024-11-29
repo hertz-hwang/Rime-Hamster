@@ -367,8 +367,8 @@ switches_list:
       - tiger_spelling.lv1
       - tiger_spelling.lv2
       - tiger_spelling.lv3
-    states: [ 〇注解, 一重注解, 二重注解, 三重注解 ]
-    reset: 0
+      - tiger_spelling.lv4
+    states: [ 〇注解, 一重注解, 二重注解, 三重注解, 四重注解 ]
   - name: extended_char
     states: [ 全字集, 常用字 ]
   - name: mars

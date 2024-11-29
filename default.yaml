@@ -24,6 +24,11 @@ switcher:
     - emoji
     - extended_char
     - mars
+    - tiger_spelling.off
+    - tiger_spelling.lv1
+    - tiger_spelling.lv2
+    - tiger_spelling.lv3
+    - tiger_spelling.lv4
   fold_options: true
   abbreviate_options: true
   option_list_separator: '／'

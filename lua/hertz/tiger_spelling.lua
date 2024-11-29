@@ -163,7 +163,8 @@ local options = {
   'tiger_spelling.off',
   'tiger_spelling.lv1',
   'tiger_spelling.lv2',
-  'tiger_spelling.lv3'
+  'tiger_spelling.lv3',
+  'tiger_spelling.lv4'
 }
 options.default = 3
 
@@ -252,6 +253,8 @@ local function get_tricomment(cand, env)
         and xform(raw_spelling:gsub('%[(.-),.*%]', '[%1]'))
         or env.engine.context:get_option('tiger_spelling.lv2')
         and xform(raw_spelling:gsub('%[(.-,.-),.*%]', '[%1]'))
+        or env.engine.context:get_option('tiger_spelling.lv3')
+        and xform(raw_spelling:gsub('%[(.-,.-,.-),.*%]', '[%1]'))
         or xform(raw_spelling) -- tiger_spelling.lv3 is on
   elseif utf8.len(text) > 1 then
     local spelling = spell_phrase(text, env.spll_rvdb)
