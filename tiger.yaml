@@ -123,8 +123,6 @@ switches_engine_table:
       - lua_filter@*hertz.mark_phrase_filter        # 标记词组
       - lua_filter@*hertz.tiger_spelling*filter     # 注解滤镜
       - simplifier@s2t                              # 简繁滤镜
-      - simplifier@chaifen                          # 拆分滤镜
-      - simplifier@pinyin                           # 拼音滤镜
       - simplifier@emoji                            # Emoji滤镜
       - simplifier@mars                             # 火星文滤镜
       #- lua_filter@*hertz.inline_candidate_filter   # 首选内嵌
@@ -178,8 +176,6 @@ switches_engine_script:
       - lua_filter@*hertz.charset_filter            # 字集过滤
       - lua_filter@*hertz.mark_phrase_filter        # 标记词组
       - simplifier@s2t                              # 简繁滤镜
-      - simplifier@chaifen                          # 拆分滤镜
-      - simplifier@pinyin                           # 拼音滤镜
       - simplifier@emoji                            # Emoji滤镜
       - simplifier@mars                             # 火星文滤镜
       #- lua_filter@*hertz.inline_candidate_filter   # 首选内嵌
@@ -204,8 +200,6 @@ keys:
       - { when: composing, accept: "Control+b", toggle: extended_char }      # 字集滤镜
       - { when: composing, accept: "Control+o", toggle: traditionalization } # 简繁滤镜
       - { when: composing, accept: "Control+i", toggle: emoji }              # Emoji开关
-      - { when: composing, accept: "Control+p", toggle: pinyin }             # 拼音开关
-      - { when: composing, accept: "Control+j", toggle: chaifen }            # 拆分滤镜开关
       - { when: has_menu, accept: "Control+e", toggle: chinese_english }     # 翻译
       - { when: has_menu, accept: "Control+m", toggle: mars }                # 火星文开关
 
@@ -320,52 +314,11 @@ s2t_filter:
     option_name: traditionalization
     tips: all
 
-chaifen_filter:
-  chaifen:
-    opencc_config: filter_chaifen/tiger_code_chaifen.json
-    option_name: chaifen
-    show_in_comment: true 
-    comment_format:
-      - xform|〔|🐯【|
-      - xform|&nbsp;·&nbsp;|】[|
-      - xform|〕|]|
-      - xform|&nbsp;| |
-      #- xform|·| · |
-      #- xform|〔|⚡️‹|
-      #- xform|·|›→🐯«|
-      #- xform|〕|»|
-    tags:     
-      - abc
-      - moss_tiger
-      - tiger_code
-      - tiger_oni
-      - tiger_phrase
-      - tiger_phrases
-      - reverse_lookup
-    tips: all
-
 history_filter:
   input_history:
     input: 'z'
     size: 1
     initial_quality: 0
-
-pinyin_filter:
-  pinyin:
-    opencc_config: filter_pinyin/pinyin.json
-    option_name: pinyin
-    show_in_comment: true
-    comment_format:
-      - xform|&nbsp;| |
-    tags:
-      - abc
-      - moss_tiger
-      - tiger_code
-      - tiger_oni
-      - tiger_phrase
-      - tiger_phrases
-      - reverse_lookup
-    tips: all
 
 emoji_filter:
   emoji:
@@ -407,8 +360,6 @@ switches_list:
     states: [ 中, 英 ]
   - name: traditionalization
     states: [ 简, 繁 ]
-  - name: pinyin
-    states: [ 拼, pīn ]
   - name: emoji
     states: [ 🈚, 🈶 ]
   - options:
@@ -417,9 +368,7 @@ switches_list:
       - tiger_spelling.lv2
       - tiger_spelling.lv3
     states: [ 〇注解, 一重注解, 二重注解, 三重注解 ]
-    reset: 3
-  - name: chaifen
-    states: [ 不拆, 拆字 ]
+    reset: 0
   - name: extended_char
     states: [ 全字集, 常用字 ]
   - name: mars

@@ -9,7 +9,6 @@ schema:
 
 __include: tiger:/switches_engine_script       # Rime模块
 __include: tiger:/s2t_filter                   # 简繁滤镜
-__include: tiger:/chaifen_filter               # 拆分滤镜
 __include: tiger:/emoji_filter                 # Emoji 滤镜
 __include: tiger:/mars_filter                  # 火星文滤镜
 speller:

@@ -34,9 +34,7 @@ __include: tiger:/tiger_phrases_translator     # 官方虎词整句
 __include: tiger:/moss_tiger_translator        # 摩斯乱码
 __include: tiger:/reverse_lookup_translator_xh # 小鹤反查
 __include: tiger:/s2t_filter                   # 简繁滤镜
-__include: tiger:/chaifen_filter               # 拆分滤镜
 __include: tiger:/history_filter               # z 键历史
-__include: tiger:/pinyin_filter                # 拼音滤镜
 __include: tiger:/emoji_filter                 # Emoji 滤镜
 __include: tiger:/cn_en_filter                 # 中英滤镜
 __include: tiger:/mars_filter                  # 火星文滤镜

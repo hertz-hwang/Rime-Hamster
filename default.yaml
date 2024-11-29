@@ -22,8 +22,6 @@ switcher:
     - ascii_punct
     - traditionalization
     - emoji
-    - chaifen
-    - pinyin
     - extended_char
     - mars
   fold_options: true
