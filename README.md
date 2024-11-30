@@ -5,10 +5,6 @@
 
 ![iOS](/assets/iOS.jpg)
 
-## 糖果主题
-
-![candy](/assets/candy.jpg)
-
 ## 功能介绍
 
 ### 临时打词 `G〔九重鬼虎〕` `D〔官方虎词〕`

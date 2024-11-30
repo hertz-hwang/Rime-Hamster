@@ -4339,19 +4339,19 @@ keyboards:
                 char: q
             width:
               percentage: 0.1
-            label: " 空"
+            label: " 都"
             swipe:
               - action:
                   character:
                     char: "!"
-                label: uai
+                label: ia
                 display: true
                 processByRIME: true
                 direction: up
               - action:
                   character:
                     char: "1"
-                label: iang
+                label: uai
                 display: true
                 processByRIME: true
                 direction: down
@@ -4367,14 +4367,14 @@ keyboards:
               - action:
                   character:
                     char: "@"
-                label: uan
+                label: iang
                 display: true
                 processByRIME: true
                 direction: up
               - action:
                   character:
                     char: "2"
-                label: " "
+                label: " uang"
                 display: true
                 processByRIME: true
                 direction: down
@@ -4390,14 +4390,14 @@ keyboards:
               - action:
                   character:
                     char: "#"
-                label: ia
+                label: ue ve
                 display: true
                 processByRIME: true
                 direction: up
               - action:
                   character:
                     char: "3"
-                label: uang
+                label: ui
                 display: true
                 processByRIME: true
                 direction: down
@@ -4413,14 +4413,14 @@ keyboards:
               - action:
                   character:
                     char: $
-                label: ue ve
+                label: uan
                 display: true
                 processByRIME: true
                 direction: up
               - action:
                   character:
                     char: "4"
-                label: ui
+                label: " "
                 display: true
                 processByRIME: true
                 direction: down
@@ -4431,7 +4431,7 @@ keyboards:
                 char: t
             width:
               percentage: 0.1
-            label: 零
+            label: 啊
             swipe:
               - action:
                   character:
@@ -4459,7 +4459,7 @@ keyboards:
               - action:
                   character:
                     char: ^
-                label: in
+                label: iao
                 display: true
                 processByRIME: true
                 direction: up
@@ -4548,12 +4548,12 @@ keyboards:
               portrait: available
               landscape:
                 percentage: 0.1
-            label: CH
+            label: S
             swipe:
               - action:
                   character:
                     char: )
-                label: ie
+                label: in
                 display: true
                 processByRIME: true
                 direction: up
@@ -4604,7 +4604,7 @@ keyboards:
                 char: s
             width:
               percentage: 0.1
-            label: N
+            label: D
             swipe:
               - action:
                   character:
@@ -4627,12 +4627,12 @@ keyboards:
                 char: d
             width:
               percentage: 0.1
-            label: D
+            label: SH
             swipe:
               - action:
                   character:
                     char: ":"
-                label: ao
+                label: e
                 display: true
                 processByRIME: true
                 direction: up
@@ -4655,7 +4655,7 @@ keyboards:
               - action:
                   character:
                     char: ;
-                label: ai
+                label: an
                 display: true
                 processByRIME: true
                 direction: up
@@ -4672,12 +4672,12 @@ keyboards:
                 char: g
             width:
               percentage: 0.1
-            label: SH
+            label: N
             swipe:
               - action:
                   character:
                     char: (
-                label: e
+                label: ai
                 display: true
                 processByRIME: true
                 direction: up
@@ -4696,7 +4696,7 @@ keyboards:
                 char: h
             width:
               percentage: 0.1
-            label: Z
+            label: CH
             swipe:
               - action:
                   character:
@@ -4764,7 +4764,7 @@ keyboards:
               - action:
                   character:
                     char: ”
-                label: an
+                label: ao
                 display: true
                 processByRIME: true
                 direction: up
@@ -4826,7 +4826,7 @@ keyboards:
                 char: z
             width:
               percentage: 0.1
-            label: P
+            label: F
             swipe:
               - action:
                   character:
@@ -4871,7 +4871,7 @@ keyboards:
                 char: c
             width:
               percentage: 0.1
-            label: F
+            label: P
             swipe:
               - action:
                   character:
@@ -4915,7 +4915,7 @@ keyboards:
                 char: b
             width:
               percentage: 0.1
-            label: 空
+            label: 如
             swipe:
               - action:
                   character:
@@ -4938,12 +4938,12 @@ keyboards:
                 char: n
             width:
               percentage: 0.1
-            label: S
+            label: Z
             swipe:
               - action:
                   character:
                     char: "!"
-                label: iao
+                label: ie
                 display: true
                 processByRIME: true
                 direction: up

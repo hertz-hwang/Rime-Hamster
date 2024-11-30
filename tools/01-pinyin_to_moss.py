@@ -1,32 +1,34 @@
 def load_mapping():
     # 声母映射
     initials = {
-        'b': 'v', 'p': 'z', 'm': 'x', 'f': 'c',
-        'd': 'd', 't': 'a', 'n': 's', 'l': 'l',
-        'g': 'u', 'k': 'i', 'h': 'o', 'j': 'r',
-        'q': 'e', 'x': 'w', 'zh': 'j', 'ch': 'p',
-        'sh': 'g', 'r': 'y', 'z': 'h', 'c': 'm',
-        's': 'n', 'y': 'f', 'w': 'k'
+        'b': 'v', 'p': 'c', 'm': 'x', 'f': 'z',
+        'd': 's', 't': 'a', 'n': 'g', 'l': 'l',
+        'g': 'u', 'k': 'i', 'h': 'o',
+        'j': 'r', 'q': 'e', 'x': 'w',
+        'zh': 'j', 'ch': 'h', 'sh': 'd',
+        'r': 'y',
+        'z': 'n', 'c': 'm', 's': 'p',
+        'y': 'f', 'w': 'k'
     }
     
     # 零声母映射
     zero_initials = {
-        'a': 'to', 'o': 'tb', 'e': 'tg',
-        'ang': 'ts', 'eng': 'tc', 'ao': 'td',
-        'ou': 'ti', 'er': 'tk', 'ai': 'tf',
-        'ei': 'tz', 'an': 'tl', 'en': 'tx'
+        'a': 'to', 'o': 'tv', 'e': 'td',
+        'ang': 'ts', 'eng': 'tc', 'ao': 'tl',
+        'ou': 'ti', 'er': 'tk', 'ai': 'tg',
+        'ei': 'tz', 'an': 'tf', 'en': 'tx'
     }
     
     # 韵母映射
     finals = {
-        'a': 'o', 'o': 'v', 'e': 'g', 'i': 'k',
-        'u': 'j', 'v': 'b', 'ai': 'f', 'ei': 'z',
-        'ui': 'r', 'ao': 'd', 'ou': 'i', 'iu': 'm',
-        'ie': 'p', 'ue': 'r', 've': 'r', 'er': 'k',
-        'an': 'l', 'en': 'x', 'in': 'y', 'un': 't',
+        'a': 'o', 'o': 'v', 'e': 'd', 'i': 'k',
+        'u': 'j', 'v': 'b', 'ai': 'g', 'ei': 'z',
+        'ui': 'e', 'ao': 'l', 'ou': 'i', 'iu': 'm',
+        'ie': 'n', 'ue': 'e', 've': 'e', 'er': 'k',
+        'an': 'f', 'en': 'x', 'in': 'p', 'un': 't',
         'ang': 's', 'eng': 'c', 'ing': 'u', 'ong': 'a',
-        'iang': 'q', 'iong': 'i', 'ian': 'h', 'iao': 'n',
-        'uai': 'q', 'uan': 'w', 'uang': 'e', 'ia': 'e',
+        'iang': 'w', 'iong': 'i', 'ian': 'h', 'iao': 'y',
+        'uai': 'q', 'uan': 'r', 'uang': 'w', 'ia': 'q',
         'ua': 'b', 'uo': 'v'
     }
     
