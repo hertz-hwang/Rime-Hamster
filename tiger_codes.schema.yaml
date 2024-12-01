@@ -38,6 +38,8 @@ __include: tiger:/history_filter               # z 键历史
 __include: tiger:/emoji_filter                 # Emoji 滤镜
 __include: tiger:/cn_en_filter                 # 中英滤镜
 __include: tiger:/mars_filter                  # 火星文滤镜
+__include: tiger:/embeded_cands_filter         # 候选嵌入
+
 speller:
   auto_clear: max_length
   auto_select: true

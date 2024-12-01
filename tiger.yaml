@@ -128,6 +128,7 @@ switches_engine_table:
       #- lua_filter@*hertz.inline_candidate_filter   # 首选内嵌
       - uniquifier                                  # 过滤重复的候选字，可能来自简繁转换
       - lua_filter@*hertz.easy_en*enhance_filter    # 英文增强
+      - lua_filter@*hertz.embeded_cands@embeded_cands
 
 switches_engine_script:
   switches:
@@ -339,6 +340,15 @@ mars_filter:
     opencc_config: filter_mars/mars.json
     option_name: mars
 
+embeded_cands_filter:
+  embeded_cands:
+    option_name: embeded_cands                               # 嵌入候選開關
+    index_indicators: [ ¹, ², ³, ⁴, ⁵, ⁶, ⁷, ⁸, ⁹, ⁰ ]       # 嵌入候選的序號顯示格式
+    first_format: "${Stash}[${候選}${Seq}]${Code}${Comment}" # 首選的渲染格式
+    next_format: "${Stash}${候選}${Seq}${Comment}"           # 非首選的渲染格式
+    separator: " "                                           # 候選之間的分隔符
+    stash_placeholder: "~"
+
 rec:
   recognizer:
     import_preset: default
@@ -362,6 +372,13 @@ switches_list:
     states: [ 简, 繁 ]
   - name: emoji
     states: [ 🈚, 🈶 ]
+  - name: embeded_cands
+    states: [ ☐嵌入, ☑嵌入 ]               
+    reset: 0
+  - name: extended_char
+    states: [ 全字集, 常用字 ]
+  - name: mars
+    states: [ 地球文, 火星文 ]
   - options:
       - tiger_spelling.off
       - tiger_spelling.lv1
@@ -369,10 +386,6 @@ switches_list:
       - tiger_spelling.lv3
       - tiger_spelling.lv4
     states: [ 〇注解, 一重注解, 二重注解, 三重注解, 四重注解 ]
-  - name: extended_char
-    states: [ 全字集, 常用字 ]
-  - name: mars
-    states: [ 地球文, 火星文 ]
   - name: full_shape
     reset: 0
     states: [ 半角, 全角 ]
