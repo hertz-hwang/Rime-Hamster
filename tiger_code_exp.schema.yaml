@@ -44,11 +44,11 @@ __include: tiger:/embeded_cands_filter         # 候选嵌入
 
 speller:
   alphabet: "~;'zyxwvutsrqponmlkjihgfedcbaUPOI]V"
-  length_limit: 999
+  #length_limit: 999
   auto_select_phrase: true       # 是否简码自动上屏
-  auto_select_simple_code: true  # 前两码是否自动上屏
-  mannal_43_split: true          # 是否识别43切分为331
-  auto_43_split: true            # 是否自动识别43切分为331
+  #auto_select_simple_code: true  # 前两码是否自动上屏
+  #mannal_43_split: true          # 是否识别43切分为331
+  #auto_43_split: true            # 是否自动识别43切分为331
   auto_code: 4                   # N码自动上屏
   algebra:
     __patch:
