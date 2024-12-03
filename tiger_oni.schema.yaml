@@ -8,10 +8,12 @@ schema:
     - charset
     - pinyin
     - fast_symbol
+    - tiger_spelling_pseudo
     - easy_en
     - japanese
     - tiger_codes
     - tiger_phrase
+    - tiger_phrases
   description: |
     官虎词库+鬼虎词库
   name: "次方案-九重鬼虎"
@@ -67,3 +69,11 @@ __include: tiger:/rec
 punctuator:
   #import_preset:
   __include: tiger:/punctuator
+
+tiger_spelling:
+  lua:
+    switch_key: "Control+c"
+    cycle_key: "Shift+Control+C"
+schema_name:
+  spelling: tiger_spelling_pseudo
+  code: tiger_oni

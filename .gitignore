@@ -4,7 +4,7 @@
 /sync
 /theme
 build_predict
-default.caf
+default.custom.yaml
 installation.yaml
 iRime.custom.yaml
 predict.txt

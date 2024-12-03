@@ -8,10 +8,12 @@ schema:
     - charset
     - pinyin
     - fast_symbol
+    - tiger_spelling_pseudo
     - easy_en
     - japanese
     - tiger_codes
     - tiger_oni
+    - tiger_phrase
   description: |
     官方虎词整句
   name: "整活方案2-官方虎词整句"
@@ -76,3 +78,11 @@ __include: tiger:/rec
 punctuator:
   #import_preset:
   __include: tiger:/punctuator
+
+tiger_spelling:
+  lua:
+    switch_key: "Control+c"
+    cycle_key: "Shift+Control+C"
+schema_name:
+  spelling: tiger_spelling_pseudo
+  code: tiger_phrases

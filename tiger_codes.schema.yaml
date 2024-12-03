@@ -8,11 +8,12 @@ schema:
     - charset
     - pinyin
     - fast_symbol
+    - tiger_spelling_pseudo
     - easy_en
     - japanese
-    - tiger_codes
     - tiger_oni
     - tiger_phrase
+    - tiger_phrases
   description: |
     官方虎词
   name: "次方案-官方虎词"
