@@ -3,9 +3,12 @@
 /Fonts
 /sync
 /theme
+build_predict
 default.caf
 installation.yaml
 iRime.custom.yaml
+predict.txt
+sogou_pop.dict.yaml
 tiger_code.custom.yaml
 user.yaml
 tools/__pycache__
