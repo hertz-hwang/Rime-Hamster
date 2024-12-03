@@ -1116,6 +1116,11 @@ keyboards:
               - action:
                   shortcutCommand:
                     sendKeys:
+                      keys: Control+p
+                label: 联想预测
+              - action:
+                  shortcutCommand:
+                    sendKeys:
                       keys: Control+e
                 label: 翻译
               - action:
@@ -5123,11 +5128,6 @@ keyboards:
               - action:
                   shortcutCommand:
                     sendKeys:
-                      keys: Control+j
-                label: 拆字
-              - action:
-                  shortcutCommand:
-                    sendKeys:
                       keys: Control+i
                 label: Emoji
               - action:
@@ -5139,7 +5139,7 @@ keyboards:
                   shortcutCommand:
                     sendKeys:
                       keys: Control+p
-                label: 拼音
+                label: 联想预测
               - action:
                   shortcutCommand:
                     sendKeys:

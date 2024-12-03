@@ -192,21 +192,22 @@ keys:
     __append:
       - { when: paging, accept: bracketleft, send: Page_Up }      # [ 后翻
       - { when: has_menu, accept: bracketright, send: Page_Down } # ] 前翻
-      - { when: paging, accept: minus, send: Page_Up }
-      - { when: has_menu, accept: equal, send: Page_Down }
+      - { when: paging, accept: minus, send: Page_Up }            # - 后翻
+      - { when: has_menu, accept: equal, send: Page_Down }        # = 前翻
   selector:
     __append:
       - { when: has_menu, accept: semicolon, send: KP_2 }  # 分号次选
-      #- { when: has_menu, accept: apostrophe, send: KP_3 } # 引号三选
+      - { when: has_menu, accept: apostrophe, send: KP_3 } # 引号三选
       - { when: composing, accept: Tab, send: Escape }     # tab清屏
   options_toggle:
     __append:
-      - { when: has_menu, accept: "/", toggle: tiger_spelling.off }
-      - { when: composing, accept: "Control+b", toggle: extended_char }      # 字集滤镜
-      - { when: composing, accept: "Control+o", toggle: traditionalization } # 简繁滤镜
-      - { when: composing, accept: "Control+i", toggle: emoji }              # Emoji开关
-      - { when: has_menu, accept: "Control+e", toggle: chinese_english }     # 翻译
-      - { when: has_menu, accept: "Control+m", toggle: mars }                # 火星文开关
+      - { when: has_menu, accept: "/", toggle: tiger_spelling.off }          # 四重注解
+      - { when: always, accept: "Control+p", toggle: prediction }            # 预测开关
+      - { when: always, accept: "Control+b", toggle: extended_char }         # 字集滤镜
+      - { when: always, accept: "Control+o", toggle: traditionalization }    # 简繁滤镜
+      - { when: always, accept: "Control+i", toggle: emoji }                 # Emoji开关
+      - { when: always, accept: "Control+e", toggle: chinese_english }       # 翻译
+      - { when: always, accept: "Control+m", toggle: mars }                  # 火星文开关
 
 dict_All_false:
   enable_user_dict: false
@@ -371,8 +372,8 @@ rec:
 hertz:
   predictor:
     db: predict.db
-    max_candidates: 5
-    max_iterations: 1
+    max_candidates: 999
+    max_iterations: 999
 
 switches_list:
   - name: ascii_mode
@@ -390,8 +391,7 @@ switches_list:
   - name: mars
     states: [ 地球文, 火星文 ]
   - name: prediction
-    states: [ 關閉預測, 開啓預測 ]
-    reset: 1
+    states: [ 预测关闭, 预测开启 ]
   - options:
       - tiger_spelling.off
       - tiger_spelling.lv1
@@ -796,6 +796,7 @@ octagram:
         # language: zh-hant-t-s1-tgc
         collocation_max_length: 4
         collocation_min_length: 3
+
   #enable_for_sentence:
   #  __patch:
   #    grammar:

@@ -25,6 +25,7 @@ switcher:
     - emoji
     - extended_char
     - mars
+    - prediction
     - tiger_spelling.off
     - tiger_spelling.lv1
     - tiger_spelling.lv2
