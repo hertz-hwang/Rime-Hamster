@@ -146,7 +146,7 @@ def main():
     dict_merge_content = []
     scel_file = sys.argv[1] if len(sys.argv) > 1 else "./sogou_pop.scel"
     target_file = (
-        sys.argv[2] if len(sys.argv) > 2 else "./sogou_pop.dict.yaml"
+        sys.argv[2] if len(sys.argv) > 2 else "./dicts/sogou_pop.dict.yaml"
     )
 
     if os.path.exists(target_file):

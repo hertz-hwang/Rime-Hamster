@@ -34,13 +34,25 @@ jobs:
         run: |
           python3 ./tools/scel2rime.py sogou_pop.scel
 
+      - name: Gen diff_sg.txt
+        run: |
+          awk -F'\t' 'FNR==NR&&NR>=10{a[$1]++;w[$1]=$0};FNR!=NR&&FNR>=10{b[$1]++}END{for(i in a){if(b[i]<1)print w[i]}}' ./dicts/sogou_pop.dict.yaml ./dicts/moss.sogou_pop.dict.yaml >diff_sg.txt
+
+      - name: Convert diff_sg.txt to dict
+        run: |
+          python3 ./tools/convert_diff_to_dict.py
+
       - name: Gen moss dict
         run: |
-          python3 ./tools/04-gen_moss_tiger_dict.py ./dicts/moss.sogou_pop.dict.yaml --moss ./dicts/moss.base.dict.yaml --dict ./sogou_pop.dict.yaml
+          python3 ./tools/04-gen_moss_tiger_dict.py ./moss.sogou_pop.dict.yaml --moss ./dicts/moss.base.dict.yaml --dict ./diff_sg.dict.yaml
+
+      - name: Merge moss.sogou_pop.dict.yaml
+        run: |
+          python3 ./tools/merge_sogou_pop_dicts.py
 
       - name: Remove intermediate file
         run: |
-          rm -f ./sougou_pop.dict.yaml
+          rm -f ./diff_sg* ./moss.sougou_pop.dict.yaml
 
       - name: Set env
         run: |
