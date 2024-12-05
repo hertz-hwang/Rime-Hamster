@@ -52,7 +52,7 @@ jobs:
 
       - name: Remove intermediate file  # 垃圾清理
         run: |
-          rm -f ./diff_sg* ./moss.sougou_pop.dict.yaml
+          rm -f ./diff_sg* ./moss.sogou_pop.dict.yaml
 
       - name: Set env
         run: |
