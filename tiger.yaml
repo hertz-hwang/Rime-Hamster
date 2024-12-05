@@ -184,7 +184,7 @@ switches_engine_script:
     filters:
       - lua_filter@*hertz.charset_filter            # 字集过滤
       - lua_filter@*hertz.mark_phrase_filter        # 标记词组
-      - lua_filter@*hertz.tiger_spelling*filter     # 注解滤镜
+      #- lua_filter@*hertz.tiger_spelling*filter     # 注解滤镜
       - simplifier@s2t                              # 简繁滤镜
       - simplifier@emoji                            # Emoji滤镜
       - simplifier@mars                             # 火星文滤镜

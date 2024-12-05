@@ -23,6 +23,7 @@ schema:
 __patch:
   - tiger_code.custom:/patch?
   - engine/filters/@next: simplifier@chinese_english
+  - engine/filters/@next: lua_filter@*hertz.tiger_spelling*filter
 
 __include: tiger:/switches_engine_script       # Rime模块
 __include: tiger:/fast_symbol_translator       # 快符
@@ -78,6 +79,10 @@ __include: tiger:/rec
 punctuator:
   #import_preset:
   __include: tiger:/punctuator
+
+# 默认启用语言模型
+__include: tiger:/octagram/enable_for_sentence
+# 若要禁用，可直接注释掉上面的 __include
 
 tiger_spelling:
   lua:
