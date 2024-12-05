@@ -71,7 +71,7 @@ punctuator:
   __include: tiger:/punctuator
 
 # 默认启用语言模型
-__include: tiger:/octagram/enable_for_sentence
+#__include: tiger:/octagram/enable_for_sentence
 # 若要禁用，可直接注释掉上面的 __include
 
 tiger_spelling:

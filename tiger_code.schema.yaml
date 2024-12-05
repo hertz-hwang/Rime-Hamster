@@ -16,7 +16,7 @@ schema:
     - tiger_phrase
   description: |
     虎码单字
-  name: "主方案1-赫兹优化虎单"
+  name: "主方案1-官方虎单"
   schema_id: tiger_code
   version: "2024-10-31"
 
@@ -76,7 +76,7 @@ punctuator:
   __include: tiger:/punctuator
 
 # 默认启用语言模型
-__include: tiger:/octagram/enable_for_sentence
+#__include: tiger:/octagram/enable_for_sentence
 # 若要禁用，可直接注释掉上面的 __include
 
 tiger_spelling:
