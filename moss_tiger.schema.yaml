@@ -59,8 +59,11 @@ translator:
   dictionary: moss_tiger
   __include: tiger:/dict_All_false
   preedit_format:
-    - xform/([a-z][a-z][a-z])O/$1°/
-    - xform/([a-z][a-z][a-z][a-z])P/$1°/
+    - xform/([a-z][a-z][a-z])o/$1°/
+    #- xform/([a-z][a-z][a-z])O/$1°/
+    - xform/([a-z][a-z][a-z])\°o/$1o°/
+    - xform/([a-z][a-z][a-z][a-z])o/$1°/
+    #- xform/([a-z][a-z][a-z][a-z])P/$1°/
 
 key_binder:
   import_preset: default

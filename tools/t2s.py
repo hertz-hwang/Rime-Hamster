@@ -7,7 +7,7 @@ def convert_files():
     cc = OpenCC('t2s')
     
     # 确保输出目录存在
-    output_dir = 'data'
+    output_dir = 'data/t2s'
     os.makedirs(output_dir, exist_ok=True)
     
     # 获取所有符合模式的文件
