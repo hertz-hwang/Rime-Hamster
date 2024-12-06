@@ -1,11 +1,3 @@
-#
-# python 04-gen_moss_tiger_dict.py ../dicts/moss.basic.dict.yaml --dict data/moran.basic.dict.yaml
-# python 04-gen_moss_tiger_dict.py ../dicts/moss.phrase.dict.yaml --dict data/phrase.dict.yaml
-# python 04-gen_moss_tiger_dict.py ../dicts/moss.words.dict.yaml --dict data/moran.words.dict.yaml
-# python 04-gen_moss_tiger_dict.py ../dicts/moss.tencent.dict.yaml --dict data/moran.tencent.dict.yaml
-# python 04-gen_moss_tiger_dict.py ../dicts/moss.computer.dict.yaml --dict data/moran.computer.dict.yaml
-# python 04-gen_moss_tiger_dict.py ../dicts/moss.moe.dict.yaml --dict data/moran.moe.dict.yaml
-
 import argparse
 import os
 from datetime import datetime
@@ -29,8 +21,14 @@ def load_char_codes(moss_dict_path):
             parts = line.split('\t')
             if len(parts) >= 3:
                 char, code, weight = parts[0], parts[1], int(parts[2])
-                # 只有当字符不存在,或新的权重更大时才更新
-                if char not in char_codes or weight > char_codes[char][1]:
+                
+                # 检查前两码是否包含"0"
+                first_two_codes = code.split(']')[0] + ']' if ']' in code else code[:2]
+                has_zero = '0' in first_two_codes
+                
+                # 只有当字符不存在，或者现有编码前两码包含"0"而新编码不包含"0"时才更新
+                if (char not in char_codes) or \
+                   ('0' in char_codes[char][0].split(']')[0] + ']' if ']' in char_codes[char][0] else char_codes[char][0][:2] and not has_zero):
                     char_codes[char] = (code, weight)
     
     return char_codes
