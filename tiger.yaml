@@ -97,6 +97,7 @@ switches_engine_table:
       - matcher
       - affix_segmentor@easy_en                     # 英文
       - affix_segmentor@japanese                    # 日文
+      - affix_segmentor@radical_flypy               # 部件拆字
       - affix_segmentor@tiger_codes                 # 官方虎词
       - affix_segmentor@tiger_oni                   # 九重鬼虎
       - affix_segmentor@tiger_phrase                # 赫兹虎单整句
@@ -112,6 +113,7 @@ switches_engine_table:
       - script_translator@japanese                  # 日文
       - table_translator                            # 码表转换
       - table_translator@easy_en                    # 英文
+      - table_translator@radical_flypy              # 部件拆字
       - table_translator@tiger_codes                # 官方虎词
       - table_translator@tiger_oni                  # 九重鬼虎
       - table_translator@fast_symbol                # 码表转换-快符
@@ -155,6 +157,7 @@ switches_engine_script:
       - matcher
       - affix_segmentor@easy_en                     # 英文
       - affix_segmentor@japanese                    # 日文
+      - affix_segmentor@radical_flypy               # 部件拆字
       - affix_segmentor@tiger_codes                 # 官方虎词
       - affix_segmentor@tiger_oni                   # 九重鬼虎
       - affix_segmentor@tiger_phrase                # 赫兹虎单整句
@@ -169,6 +172,7 @@ switches_engine_script:
       - reverse_lookup_translator                   # 拼音反查
       - script_translator@japanese                  # 日文
       - table_translator@easy_en                    # 英文
+      - table_translator@radical_flypy              # 部件拆字
       - table_translator@tiger_codes                # 官方虎词
       - table_translator@tiger_oni                  # 九重鬼虎
       - table_translator@fast_symbol                # 码表转换-快符
@@ -322,6 +326,19 @@ reverse_lookup_translator_xh:
       - xform|0||
       - xform|[[]||
 
+radical_flypy_translator:
+  radical_flypy:
+    dictionary: radical_flypy
+    tag: radical_flypy
+    prefix: "R"
+    tips: "〔部件拆字〕"
+    enable_user_dict: false
+    enable_charset_filter: false
+    enable_encoder: false
+    enable_sentence: false
+    encode_commit_history: false
+    enable_completion: true
+
 s2t_filter:
   s2t:
     opencc_config: filter_s2t/st_tu.json
@@ -369,6 +386,7 @@ rec:
       punct: '^/([0-9]0?|[A-Za-z]+)$'
       easy_en: "^'[A-Z|a-z]*`?$"
       japanese: "^J[_|A-Z|a-z|-]*`?$"
+      radical_flypy: "^R[a-z]*`?$"
       tiger_codes: "^D[a-z]*`?$"
       tiger_oni: "^G[a-z]*`?$"
       tiger_phrase: "^H[a-zA-Z]*`?$"

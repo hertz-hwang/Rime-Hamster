@@ -9,6 +9,7 @@ schema:
     - pinyin
     - fast_symbol
     - tiger_spelling_pseudo
+    - radical_flypy
     - easy_en
     - japanese
     - tiger_codes
@@ -28,6 +29,7 @@ __include: tiger:/switches_engine_table        # Rime模块
 __include: tiger:/fast_symbol_translator       # 快符
 __include: tiger:/easy_en_translator           # 英文
 __include: tiger:/japanese_translator          # 日文
+__include: tiger:/radical_flypy_translator     # 部件拆字
 __include: tiger:/tiger_codes_translator       # 官方虎词
 __include: tiger:/tiger_oni_translator         # 九重鬼虎
 __include: tiger:/tiger_phrase_translator      # 赫兹虎单整句
