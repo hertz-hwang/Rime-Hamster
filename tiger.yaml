@@ -819,9 +819,12 @@ octagram:
     __patch:
       grammar:
         language: zh-hant-t-essay-bgw
-        # language: zh-hant-t-s1-tgc
+        #language: amz-v3n2m1-zh-hans 
         collocation_max_length: 4
         collocation_min_length: 3
+      translator/contextual_suggestions: true
+      translator/max_homophones: 7
+      translator/max_homographs: 7
 
   #enable_for_sentence:
   #  __patch:
