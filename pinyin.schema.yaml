@@ -13,38 +13,42 @@ __include: tiger:/emoji_filter                 # Emoji 滤镜
 __include: tiger:/mars_filter                  # 火星文滤镜
 speller:
   alphabet: ";'zyxwvutsrqponmlkjihgfedcba]"    # 输入范围 码元
-  delimiter: " '" 
+  delimiter: " '"
   algebra:
-    - erase/^xx$/
+    - xlit/āáǎàōóǒòēéěèīíǐìūúǔùǖǘǚǜü/aaaaooooeeeeiiiiuuuuvvvvv/
+    - xform/ń|ň|ǹ/en/ 
+    - xform/\bn\b/en/   #解决𧗈字拼音n通过双拼en打出来
+    - xform/ńg|ňg|ǹg/en/
     - derive/^([jqxy])u$/$1v/
     - derive/^([aoe])([ioun])$/$1$1$2/
     - xform/^([aoe])(ng)?$/$1$1$2/
-    - xform/iu$/Q/
-    - xform/(.)ei$/$1W/
-    - xform/uan$/R/
-    - xform/[uv]e$/T/
-    - xform/un$/Y/
-    - xform/^sh/U/
-    - xform/^ch/I/
-    - xform/^zh/V/
-    - xform/uo$/O/
-    - xform/ie$/P/
-    - xform/i?ong$/S/
-    - xform/ing$|uai$/K/
-    - xform/(.)ai$/$1D/
-    - xform/(.)en$/$1F/
-    - xform/(.)eng$/$1G/
-    - xform/[iu]ang$/L/
-    - xform/(.)ang$/$1H/
-    - xform/ian$/M/
-    - xform/(.)an$/$1J/
-    - xform/(.)ou$/$1Z/
-    - xform/[iu]a$/X/
-    - xform/iao$/N/
-    - xform/(.)ao$/$1C/
-    - xform/ui$/V/
-    - xform/in$/B/
-    - xlit/QWRTYUIOPSDFGHJKLZXCVBNM/qwrtyuiopsdfghjklzxcvbnm/
+    #- xform/iu$/Ⓠ/
+    #- xform/[iu]a$/Ⓦ/
+    #- xform/[uv]an$/Ⓡ/
+    #- xform/[uv]e$/Ⓣ/
+    #- xform/ing$|uai$/Ⓨ/
+    #- xform/^sh/Ⓤ/
+    #- xform/^ch/Ⓘ/
+    #- xform/^zh/Ⓥ/
+    #- xform/uo$/Ⓞ/
+    #- xform/[uv]n$/Ⓟ/
+    #- xform/(.)i?ong$/$1Ⓢ/
+    #- xform/[iu]ang$/Ⓓ/
+    #- xform/(.)en$/$1Ⓕ/
+    #- xform/(.)eng$/$1Ⓖ/
+    #- xform/(.)ang$/$1Ⓗ/
+    #- xform/ian$/Ⓜ/
+    #- xform/(.)an$/$1Ⓙ/
+    #- xform/iao$/Ⓒ/
+    #- xform/(.)ao$/$1Ⓚ/
+    #- xform/(.)ai$/$1Ⓛ/
+    #- xform/(.)ei$/$1Ⓩ/
+    #- xform/ie$/Ⓧ/
+    #- xform/ui$/Ⓥ/
+    #- xform/(.)ou$/$1Ⓑ/
+    #- xform/in$/Ⓝ/
+    - xlit/ⓆⓌⓇⓉⓎⓊⒾⓄⓅⓈⒹⒻⒼⒽⓂⒿⒸⓀⓁⓏⓍⓋⒷⓃ/qwrtyuiopsdfghmjcklzxvbn/
+    - abbrev/^([a-z]).+$/$1/
 
 translator:
   dictionary: pinyin           # 字典文件

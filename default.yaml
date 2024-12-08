@@ -10,7 +10,6 @@ schema_list:
   - schema: tiger_oni      # 次方案：九重鬼虎
   - schema: tiger_phrase   # 整活方案1：赫兹虎单整句
   - schema: tiger_phrases  # 整活方案2：官方虎词整句
-  - schema: moss_tiger     # 双拼方案：摩斯乱码
   - schema: easy_en        # 方案集成
 
 switcher:

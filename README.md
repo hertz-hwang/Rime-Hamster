@@ -74,7 +74,7 @@
 
 ![Emoji](/assets/emoji.png)
 
-### 小鹤反查 "`"
+### 拼音反查 "`"
 
 ![xreo](/assets/xreo.png)
 
