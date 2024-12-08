@@ -49,6 +49,7 @@ speller:
   auto_select: true
   max_code_length: 5
   alphabet: ";'zyxwvutsrqponmlkjihgfedcbaUPOI]/V"
+  delimiter: "_'"
   auto_select_pattern: ^;\w+
   algebra:
     __patch:

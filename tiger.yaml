@@ -189,7 +189,7 @@ keys:
   selector:
     __append:
       - { when: has_menu, accept: semicolon, send: KP_2 }  # 分号次选
-      - { when: has_menu, accept: apostrophe, send: KP_3 } # 引号三选
+      #- { when: has_menu, accept: apostrophe, send: KP_3 } # 引号三选
       - { when: composing, accept: Tab, send: Escape }     # tab清屏
   options_toggle:
     __append:

@@ -49,6 +49,7 @@ speller:
   auto_select: true
   max_code_length: 5
   alphabet: ";'zyxwvutsrqponmlkjihgfedcbaUPOI]/V"
+  delimiter: "_'"
   auto_select_pattern: ^;\w+
   algebra:
     __patch:
@@ -60,10 +61,38 @@ translator:
   dictionary: tiger_phrase
   __include: tiger:/dict_All_false
   preedit_format:
-    - xform/([a-z])U/$1¹/
-    - xform/([a-z][a-z])I/$1²/
-    - xform/([a-z][a-z][a-z])O/$1³/
-    - xform/([a-z][a-z][a-z][a-z])P/$1⁴/
+    - xform/([a-z]{4})_/$1⁴/
+    - xform/([a-z]{3})_/$1³/
+    - xform/([a-z]{2})_/$1²/
+    - xform/([a-z]{1})_/$1¹/
+    - xform/([a-z]{4})'/$1⁴/
+    - xform/([a-z]{3})'/$1³/
+    - xform/([a-z]{2})'/$1²/
+    - xform/([a-z]{1})'/$1¹/
+    - xform/([a-z]{1})U/$1¹/
+    - xform/([a-z]{2})I/$1²/
+    - xform/([a-z]{3})O/$1³/
+    - xform/([a-z]{4})P/$1⁴/
+    - xform/(¹[a-z]{4})'/$1⁴/
+    - xform/(²[a-z]{4})'/$1⁴/
+    - xform/(³[a-z]{4})'/$1⁴/
+    - xform/(⁴[a-z]{4})'/$1⁴/
+    - xform/(¹[a-z]{3})'/$1³/
+    - xform/(²[a-z]{3})'/$1³/
+    - xform/(³[a-z]{3})'/$1³/
+    - xform/(⁴[a-z]{3})'/$1³/
+    - xform/(¹[a-z]{2})'/$1²/
+    - xform/(²[a-z]{2})'/$1²/
+    - xform/(³[a-z]{2})'/$1²/
+    - xform/(⁴[a-z]{2})'/$1²/
+    - xform/(¹[a-z]{1})'/$1¹/
+    - xform/(²[a-z]{1})'/$1¹/
+    - xform/(³[a-z]{1})'/$1¹/
+    - xform/(⁴[a-z]{1})'/$1¹/
+    - xform/_([a-z]{4})/$1/
+    - xform/_([a-z]{3})/$1/
+    - xform/_([a-z]{2})/$1/
+    - xform/_([a-z]{1})/$1/
 
 key_binder:
   import_preset: default
