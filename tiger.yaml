@@ -175,7 +175,7 @@ switches_engine_script:
       - simplifier@s2t                              # 简繁滤镜
       - simplifier@emoji                            # Emoji滤镜
       - simplifier@mars                             # 火星文滤镜
-      #- lua_filter@*hertz.inline_candidate_filter   # 部件内嵌
+      - lua_filter@*hertz.inline_candidate_filter   # 部件内嵌
       - uniquifier                                  # 过滤重复的候选字，可能来自简繁转换
       - lua_filter@*hertz.easy_en*enhance_filter    # 英文增强
 
