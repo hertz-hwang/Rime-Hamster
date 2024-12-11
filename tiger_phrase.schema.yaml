@@ -1,6 +1,11 @@
 # Rime schema
 # encoding: utf-8
 
+# 词库选择
+dicts:
+  __patch:
+    dictionary: tiger_phrase_wanxiang  # 也可以选择 tiger_phrase_moran，则使用魔然词库
+
 schema:
   author:
     - Hertz Hwang <hertz@26hz.com.cn>
@@ -53,46 +58,29 @@ speller:
   auto_select_pattern: ^;\w+
   algebra:
     __patch:
-      - tiger:/algebra/core        # 核心拼算
+      #- tiger:/algebra/core?        # 核心拼算
       - tiger:/algebra/phrase      # 整句拼算
       - tiger:/algebra/erase       # 擦除编码
 
 translator:
-  dictionary: tiger_phrase
-  __include: tiger:/dict_All_false
+  __include: dicts
+  enable_user_dict: false
+  enable_charset_filter: false
+  enable_encoder: false
+  enable_sentence: false
+  encode_commit_history: false
+  enable_completion: false
   preedit_format:
-    - xform/([a-z]{4})_/$1⁴/
-    - xform/([a-z]{3})_/$1³/
-    - xform/([a-z]{2})_/$1²/
-    - xform/([a-z]{1})_/$1¹/
-    - xform/([a-z]{4})'/$1⁴/
-    - xform/([a-z]{3})'/$1³/
-    - xform/([a-z]{2})'/$1²/
-    - xform/([a-z]{1})'/$1¹/
-    - xform/([a-z]{1})U/$1¹/
-    - xform/([a-z]{2})I/$1²/
-    - xform/([a-z]{3})O/$1³/
-    - xform/([a-z]{4})P/$1⁴/
-    - xform/(¹[a-z]{4})'/$1⁴/
-    - xform/(²[a-z]{4})'/$1⁴/
-    - xform/(³[a-z]{4})'/$1⁴/
-    - xform/(⁴[a-z]{4})'/$1⁴/
-    - xform/(¹[a-z]{3})'/$1³/
-    - xform/(²[a-z]{3})'/$1³/
-    - xform/(³[a-z]{3})'/$1³/
-    - xform/(⁴[a-z]{3})'/$1³/
-    - xform/(¹[a-z]{2})'/$1²/
-    - xform/(²[a-z]{2})'/$1²/
-    - xform/(³[a-z]{2})'/$1²/
-    - xform/(⁴[a-z]{2})'/$1²/
-    - xform/(¹[a-z]{1})'/$1¹/
-    - xform/(²[a-z]{1})'/$1¹/
-    - xform/(³[a-z]{1})'/$1¹/
-    - xform/(⁴[a-z]{1})'/$1¹/
-    - xform/_([a-z]{4})/$1/
-    - xform/_([a-z]{3})/$1/
-    - xform/_([a-z]{2})/$1/
-    - xform/_([a-z]{1})/$1/
+    # 手动分词标记
+    - xform/([a-z]{4})[P']/$1⁴/
+    - xform/([a-z]{3})[O']/$1³/
+    - xform/([a-z]{2})[I']/$1²/
+    - xform/([a-z]{1})[U']/$1¹/
+    # 自动分词标记
+    - xform/([a-z]{1,4})[_]/$1␣/
+    # 其余处理
+    - xform/([¹²³⁴][a-z]+)[_']/$1/
+    - xform/([¹²³⁴])_/$1/
 
 key_binder:
   import_preset: default
@@ -112,7 +100,7 @@ punctuator:
   __include: tiger:/punctuator
 
 # 默认启用语言模型
-#__include: tiger:/octagram/enable_for_sentence
+__include: tiger:/octagram/enable_for_chars
 # 若要禁用，可直接注释掉上面的 __include
 
 tiger_spelling:

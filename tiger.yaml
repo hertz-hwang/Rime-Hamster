@@ -10,17 +10,21 @@
 algebra:
   core:                                           # 核心单字
     __append:
-      - derive|^(\w)(\w)\[(\w)(\w)$|$1$2$3$4|     # 匹配4码
-      - derive|^(\w)(\w)\[(\w)(\d)$|$1$2$3|       # 匹配3码
-      - derive|^(\w)(\w)\[(\d)(\d)$|$1$2|         # 匹配2码
-      - derive|^(\w)(\d)\[(\d)(\d)$|$1|           # 匹配1码
+      #- derive|^(\w)(\w)\[(\w)(\w)$|$1$2$3$4|     # 匹配4码
+      #- derive|^(\w)(\w)\[(\w)(\d)$|$1$2$3|       # 匹配3码
+      #- derive|^(\w)(\w)\[(\d)(\d)$|$1$2|         # 匹配2码
+      #- derive|^(\w)(\d)\[(\d)(\d)$|$1|           # 匹配1码
 
   phrase:                                         # 单字整句
     __append:
-      - derive|^(\w)(\d)\[(\d)(\d)$|$1U|          # 短语匹配1码
-      - derive|^(\w)(\w)\[(\d)(\d)$|$1$2I|        # 短语匹配2码
-      - derive|^(\w)(\w)\[(\w)(\d)$|$1$2$3O|      # 短语匹配3码
-      - derive|^(\w)(\w)\[(\w)(\w)$|$1$2$3$4P|    # 短语匹配4码
+      #- derive|^(\w)(\d)\[(\d)(\d)$|$1U|          # 短语匹配1码
+      #- derive|^(\w)(\w)\[(\d)(\d)$|$1$2I|        # 短语匹配2码
+      #- derive|^(\w)(\w)\[(\w)(\d)$|$1$2$3O|      # 短语匹配3码
+      #- derive|^(\w)(\w)\[(\w)(\w)$|$1$2$3$4P|    # 短语匹配4码
+      - derive|^(\w{1})$|$1U|                     # 短语匹配1码
+      - derive|^(\w{2})$|$1I|                     # 短语匹配2码
+      - derive|^(\w{3})$|$1O|                     # 短语匹配3码
+      - derive|^(\w{4})$|$1P|                     # 短语匹配4码
 
   phrases:                                        # 虎词整句        
     __append:
@@ -117,7 +121,7 @@ switches_engine_table:
       - simplifier@s2t                              # 简繁滤镜
       - simplifier@emoji                            # Emoji滤镜
       - simplifier@mars                             # 火星文滤镜
-      - lua_filter@*hertz.inline_candidate_filter   # 部件内嵌
+      #- lua_filter@*hertz.inline_candidate_filter   # 部件内嵌
       - uniquifier                                  # 过滤重复的候选字，可能来自简繁转换
       - lua_filter@*hertz.easy_en*enhance_filter    # 英文增强
       - lua_filter@*hertz.embeded_cands@embeded_cands
@@ -263,10 +267,16 @@ tiger_phrase_translator:
     tips: "〔赫兹虎单整句〕"
     __include: dict_All_false
     preedit_format:
-      - xform/([a-z])U/$1¹/
-      - xform/([a-z][a-z])I/$1²/
-      - xform/([a-z][a-z][a-z])O/$1³/
-      - xform/([a-z][a-z][a-z][a-z])P/$1⁴/
+      # 手动分词标记
+      - xform/([a-z]{4})[P']/$1⁴/
+      - xform/([a-z]{3})[O']/$1³/
+      - xform/([a-z]{2})[I']/$1²/
+      - xform/([a-z]{1})[U']/$1¹/
+      # 自动分词标记
+      - xform/([a-z]{1,4})[_]/$1␣/
+      # 其余处理
+      - xform/([¹²³⁴][a-z]+)[_']/$1/
+      - xform/([¹²³⁴])_/$1/
 
 tiger_phrases_translator:
   tiger_phrases:
@@ -276,10 +286,16 @@ tiger_phrases_translator:
     tips: "〔官方虎词整句〕"
     __include: dict_All_false
     preedit_format:
-      - xform/([a-z])U/$1¹/
-      - xform/([a-z][a-z])I/$1²/
-      - xform/([a-z][a-z][a-z])O/$1³/
-      - xform/([a-z][a-z][a-z][a-z])P/$1⁴/
+      # 手动分词标记
+      - xform/([a-z]{4})[P']/$1⁴/
+      - xform/([a-z]{3})[O']/$1³/
+      - xform/([a-z]{2})[I']/$1²/
+      - xform/([a-z]{1})[U']/$1¹/
+      # 自动分词标记
+      - xform/([a-z]{1,4})[_]/$1␣/
+      # 其余处理
+      - xform/([¹²³⁴][a-z]+)[_']/$1/
+      - xform/([¹²³⁴])_/$1/
 
 reverse_lookup_translator_xh:
   reverse_lookup:
@@ -783,23 +799,26 @@ octagram:
   disable:
     __patch:
       grammar: {}
-  enable_for_sentence:
+  enable_for_chars: #用于字句的参数
     __patch:
       grammar:
-        language: zh-hant-t-essay-bgw
-        #language: amz-v3n2m1-zh-hans 
+        language: amz-v3n2m1-zh-hans
         collocation_max_length: 4
         collocation_min_length: 3
-      translator/contextual_suggestions: true
-      translator/max_homophones: 7
-      translator/max_homographs: 7
+        collocation_penalty: -12
+        non_collocation_penalty: -12
+        weak_collocation_penalty: -24
+        rear_penalty: -18
+      translator/+:
+        contextual_suggestions: false  # 设置为false，避免二简混乱，如："kw" 首选变成 “能得” 等
+        max_homophones: 7
+        max_homographs: 7
 
-  #enable_for_sentence:
-  #  __patch:
-  #    grammar:
-  #      language: zh-hant-t-essay-bgw
-  #      collocation_max_length: 5
-  #      collocation_min_length: 2
-  #    translator/contextual_suggestions: true # 是否使用语言模型优化输出结果〔需配合 grammar 使用〕
-  #    translator/max_homophones: 7 # 最大同音簇长度〔需配合 grammar 使用〕
-  #    translator/max_homographs: 7 # 最大同形簇长度〔需配合 grammar 使用〕
+  enable_for_words: #用于词句的参数，未定
+    __patch:
+      grammar:
+        language: amz-v3n2m1-zh-hans
+      translator/+:
+        contextual_suggestions: true
+        max_homophones: 7
+        max_homographs: 7

@@ -166,7 +166,7 @@ local options = {
   'tiger_spelling.lv3',
   'tiger_spelling.lv4'
 }
-options.default = 3
+options.default = 1
 
 local processor = rime.make_option_cycler(options,
   'tiger_spelling/lua/cycle_key',

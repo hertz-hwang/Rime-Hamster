@@ -1,0 +1,23 @@
+# Rime dictionary: tiger.extended
+# encoding: utf-8
+
+---
+name: tiger_phrase_moran
+version: "2.0"
+sort: by_weight
+import_tables:
+  - dicts/tiger_core        # 官方虎词11w+单字
+  - dicts/moran.base
+  - dicts/moran.words
+  - dicts/moran.tencent
+  - dicts/moran.computer
+  - dicts/moran.moe
+  - dicts/kaomoji           # Vv进入Kaomoji颜表情
+  
+columns:
+  - text
+  - code
+  - weight
+  - stem
+
+...
