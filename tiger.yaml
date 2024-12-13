@@ -799,20 +799,20 @@ octagram:
   disable:
     __patch:
       grammar: {}
-  enable_for_chars: #用于字句的参数
+  enable_for_chars: #参数较极端，仅适用于虎单方案，其它方案不保证有效
     __patch:
       grammar:
         language: amz-v3n2m1-zh-hans
         collocation_max_length: 4
-        collocation_min_length: 3
-        collocation_penalty: -9       # -9
-        non_collocation_penalty: -8   # -8 以下的值，如：-9，-10，-11……
-        weak_collocation_penalty: -24 # 任意值(未发现影响)
-        rear_penalty: -18             # 任意值(未发现影响)
+        collocation_min_length: 2
+        collocation_penalty: -10
+        non_collocation_penalty: -48
+        weak_collocation_penalty: -24 # 任意值(虎码中未发现影响)
+        rear_penalty: -18             # 任意值(虎码中未发现影响)
       translator/+:
         contextual_suggestions: false  # 设置为false，避免二简混乱，如："kw" 首选变成 “能得” 等
-        max_homophones: 7
-        max_homographs: 7
+        max_homophones: 4
+        max_homographs: 0
 
   enable_for_words: #用于词句的参数，未定
     __patch:

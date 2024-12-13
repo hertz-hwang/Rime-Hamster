@@ -4,13 +4,14 @@
 config_version: '0.40'
 
 schema_list:
-  - schema: tiger_code     # 主方案1：虎单
-  - schema: tiger_code_52p # 主方案2：虎单五二顶
-  - schema: tiger_codes    # 次方案：官方虎词
-  - schema: tiger_oni      # 次方案：九重鬼虎
-  - schema: tiger_phrase   # 整活方案1：赫兹虎单整句
-  - schema: tiger_phrases  # 整活方案2：官方虎词整句
-  - schema: easy_en        # 方案集成
+  - schema: tiger_code     # 🐯官方虎单
+  - schema: tiger_code_52p # 🐯虎单·五二顶
+  - schema: tiger_code_53p # 🐯虎单·五三顶
+  - schema: tiger_codes    # 🐯官方虎词
+  - schema: tiger_oni      # 🐯九重鬼虎
+  - schema: tiger_phrase   # 🐯赫兹虎单整句
+  - schema: tiger_phrases  # 🐯赫兹虎词整句
+  - schema: easy_en        # 智能英文
 
 switcher:
   caption: "〔方案選單〕"

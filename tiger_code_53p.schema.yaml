@@ -12,17 +12,19 @@ schema:
     - radical_flypy
     - easy_en
     - japanese
+    - tiger_codes
     - tiger_oni
     - tiger_phrase
-    - tiger_phrases
   description: |
-    官方虎词
-  name: "🐯官方虎词"
-  schema_id: tiger_codes
-  version: "2024-11-22"
+    虎码单字五三顶
+  name: "🐯虎单·五三顶"
+  schema_id: tiger_code_53p
+  version: "2024-12-14"
 
 __patch:
-  - tiger_code.custom:/patch?
+  - tiger_code_52p.custom:/patch?
+  - engine/processors/@before 4: lua_processor@*hertz.key_binder
+  - engine/processors/@before 5: lua_processor@*hertz.popping
   - engine/filters/@next: simplifier@chinese_english
 
 __include: tiger:/switches_engine_table        # Rime模块
@@ -44,21 +46,57 @@ __include: tiger:/embeded_cands_filter         # 候选嵌入
 __include: tiger:/hertz                        # Hertz定制
 
 speller:
-  auto_clear: max_length
-  auto_select: true
+  #auto_clear: max_length
+  #auto_select: true
   max_code_length: 4
-  alphabet: "~;zyxwvutsrqponmlkjihgfedcba]V"
-  auto_select_pattern: ^;\w+
+  popping:
+    - match: "[a-z]{4}"
+      accept: "[^ 2345]"
+      prefix: 3
+  alphabet: "qwertyuoipasdfghjklzxcvbnm"
+  #auto_select_pattern: ^;.$ # |^\w{4}$
+  #algebra:
+  #  __patch:
+  #    #- tiger:/algebra/core        # 核心拼算
+  #    #- tiger:/algebra/wildcard?   # 通配拼算
+  #    - tiger:/algebra/erase       # 擦除编码
 
 translator:
-  dictionary: tiger_codes
-  __include: tiger:/dict_All_false
+  dictionary: tiger_code
+  enable_user_dict: false
+  enable_charset_filter: true
+  enable_encoder: true
+  enable_sentence: false
+  encode_commit_history: true
+  enable_completion: true
 
 key_binder:
   import_preset: default
   custom_bindings:
     __append:
       # 在這裏添加只在本方案中生效的按鍵綁定
+  poping:
+    - match: "[a-z]{4}"
+      accept: "j"
+      send_sequence: "{Left}{Left}{Left}{space}{space}"
+    - match: "[a-z]{4}"
+      accept: "k"
+      send_sequence: "{Left}{Left}{space}{space}"
+    - match: "[a-z]{4}"
+      accept: "l"
+      send_sequence: "{Left}{space}{space}"
+    #- when: has_menu
+    #  accept: ;
+    #  send: '2'
+    #- when: has_menu
+    #  accept: "'"
+    #  send: '3'
+    #- when: has_menu
+    #  accept: "["
+    #  send: '4'
+    #- when: has_menu
+    #  accept: "]"
+    #  send: '5'
   bindings:
     __patch:
       - tiger:/keys/page_up_down
@@ -71,10 +109,14 @@ punctuator:
   #import_preset:
   __include: tiger:/punctuator
 
+# 默认启用语言模型
+__include: tiger:/octagram/enable_for_chars
+# 若要禁用，可直接注释掉上面的 __include
+
 tiger_spelling:
   lua:
     switch_key: "Control+c"
     cycle_key: "Shift+Control+C"
 schema_name:
   spelling: tiger_spelling_pseudo
-  code: tiger_codes
+  code: tiger_code_53p

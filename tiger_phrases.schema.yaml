@@ -16,8 +16,8 @@ schema:
     - tiger_oni
     - tiger_phrase
   description: |
-    官方虎词整句
-  name: "整活方案2-官方虎词整句"
+    赫兹虎词整句
+  name: "🐯赫兹虎词整句"
   schema_id: tiger_phrases
   version: "2024-11-22"
 

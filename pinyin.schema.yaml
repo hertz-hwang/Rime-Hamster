@@ -37,7 +37,12 @@ translator:
   dictionary: pinyin           # 字典文件
   prism: pinyin
   initial_quality: 1           # 该翻译器出字优先级别
-  __include: tiger:/dict_All_false
+  enable_user_dict: false
+  enable_charset_filter: false
+  enable_encoder: false
+  enable_sentence: true
+  encode_commit_history: true
+  enable_completion: true
 
 key_binder:
   import_preset: default

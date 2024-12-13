@@ -17,7 +17,7 @@ schema:
     - tiger_phrase
   description: |
     虎码单字
-  name: "主方案1-官方虎单"
+  name: "🐯官方虎单"
   schema_id: tiger_code
   version: "2024-10-31"
 

@@ -17,7 +17,7 @@ schema:
     - tiger_phrases
   description: |
     官虎词库+鬼虎词库
-  name: "次方案-九重鬼虎"
+  name: "🐯九重鬼虎"
   schema_id: tiger_oni
   version: "2024-11-21"
 
