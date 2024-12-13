@@ -5,6 +5,7 @@ config_version: '0.40'
 
 schema_list:
   - schema: tiger_code     # 主方案1：虎单
+  - schema: tiger_code_52p # 主方案2：虎单五二顶
   - schema: tiger_codes    # 次方案：官方虎词
   - schema: tiger_oni      # 次方案：九重鬼虎
   - schema: tiger_phrase   # 整活方案1：赫兹虎单整句

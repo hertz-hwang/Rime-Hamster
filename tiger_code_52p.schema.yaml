@@ -9,26 +9,28 @@ schema:
     - pinyin
     - fast_symbol
     - tiger_spelling_pseudo
+    - radical_flypy
     - easy_en
     - japanese
     - tiger_codes
     - tiger_oni
     - tiger_phrase
   description: |
-    虎码单字·延迟顶功
-  name: "主方案2-赫兹虎延迟顶(实验性)"
-  schema_id: tiger_code_exp
-  version: "2024-12-01"
+    虎码单字五二顶
+  name: "主方案2-虎单·五二顶"
+  schema_id: tiger_code_52p
+  version: "2024-12-13"
 
 __patch:
-  - tiger_code.custom:/patch?
+  - tiger_code_52p.custom:/patch?
+  - engine/processors/@before 5: lua_processor@*hertz.popping
   - engine/filters/@next: simplifier@chinese_english
-  - engine/processors/@before: lua_processor@*hertz.auto_select_processor
 
 __include: tiger:/switches_engine_table        # Rime模块
 __include: tiger:/fast_symbol_translator       # 快符
 __include: tiger:/easy_en_translator           # 英文
 __include: tiger:/japanese_translator          # 日文
+__include: tiger:/radical_flypy_translator     # 部件拆字
 __include: tiger:/tiger_codes_translator       # 官方虎词
 __include: tiger:/tiger_oni_translator         # 九重鬼虎
 __include: tiger:/tiger_phrase_translator      # 赫兹虎单整句
@@ -43,34 +45,24 @@ __include: tiger:/embeded_cands_filter         # 候选嵌入
 __include: tiger:/hertz                        # Hertz定制
 
 speller:
+  auto_clear: max_length
+  auto_select: true
+  max_code_length: 4
+  popping:
+    - match: "[a-z]{4}"
+      accept: "[^ 2345]"
+      prefix: 2
   alphabet: "~;'zyxwvutsrqponmlkjihgfedcbaUPOI]V"
-  #length_limit: 999
-  auto_select_phrase: true       # 是否简码自动上屏
-  #auto_select_simple_code: true  # 前两码是否自动上屏
-  #mannal_43_split: true          # 是否识别43切分为331
-  #auto_43_split: true            # 是否自动识别43切分为331
-  auto_code: 4                   # N码自动上屏
+  auto_select_pattern: ^;.$ # |^\w{4}$
   algebra:
     __patch:
-      - tiger:/algebra/core        # 核心拼算
-      - tiger:/algebra/phrase      # 整句拼算
+      #- tiger:/algebra/core        # 核心拼算
+      #- tiger:/algebra/wildcard?   # 通配拼算
       - tiger:/algebra/erase       # 擦除编码
 
 translator:
   dictionary: tiger_code
-  enable_encoder: false            # 造词
-  encode_commit_history: false     # 上屏字造词
-  enable_completion: false         # 逐码提示
-  enable_sentence: true            # 整句模式
-  sentence_over_completion: false  # 简码组句
-  enable_user_dict: false          # 记录词频
-  stop_change: false               # 停止调频造词
-  initial_quality: 9               # 出字优先级
-  #preedit_format:
-  #    - xform/([a-z])U/$1'/
-  #    - xform/([a-z][a-z])I/$1'/
-  #    - xform/([a-z][a-z][a-z])O/$1'/
-  #    - xform/([a-z][a-z][a-z][a-z])P/$1'/
+  __include: tiger:/dict_All_false
 
 key_binder:
   import_preset: default
@@ -89,10 +81,14 @@ punctuator:
   #import_preset:
   __include: tiger:/punctuator
 
+# 默认启用语言模型
+__include: tiger:/octagram/enable_for_chars
+# 若要禁用，可直接注释掉上面的 __include
+
 tiger_spelling:
   lua:
     switch_key: "Control+c"
     cycle_key: "Shift+Control+C"
 schema_name:
   spelling: tiger_spelling_pseudo
-  code: tiger_code_exp
+  code: tiger_code_52p
