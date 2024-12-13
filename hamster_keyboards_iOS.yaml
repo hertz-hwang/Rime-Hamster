@@ -65,128 +65,6 @@ keyboards:
     rows:
       - keys:
           - action:
-              shortcutCommand: "#左移"
-            width: available
-            label: 
-            swipe:
-              - action:
-                  shortcutCommand: "#行首"
-                label: " "
-                display: true
-                processByRIME: true
-                direction: down
-            lightModeStyleName: hotkeys_light
-            darkModeStyleName: hotkeys
-          - action:
-              character:
-                char: ""
-            width: available
-            label: 󰹆
-            callout:
-              - action:
-                  shortcutCommand:
-                    openURL:
-                      url: hamster://dev.fuxiao.app.hamster/uploadInputSchema
-                label: Wi-Fi上传
-              - action:
-                  shortcutCommand:
-                    openURL:
-                      url: shortcuts://run-shortcut?name=拼接图片
-                label: 拼接图片
-            lightModeStyleName: hotkeys_light
-            darkModeStyleName: hotkeys
-          - action:
-              shortcutCommand:
-                sendKeys:
-                  keys: U
-            width: available
-            label: ¹
-            callout:
-              - action:
-                  shortcutCommand:
-                    openURL:
-                      url: mqqapi://scanqrcode
-                label: 扫一扫
-            lightModeStyleName: mainkeys_light
-            darkModeStyleName: mainkeys
-          - action:
-              shortcutCommand:
-                sendKeys:
-                  keys: I
-            width: available
-            label: ²
-            callout:
-              - action:
-                  shortcutCommand:
-                    openURL:
-                      url: weixin://scanqrcode
-                label: 扫一扫
-            lightModeStyleName: mainkeys_light
-            darkModeStyleName: mainkeys
-          - action:
-              shortcutCommand:
-                sendKeys:
-                  keys: O
-            width: available
-            label: ³
-            lightModeStyleName: mainkeys_light
-            darkModeStyleName: mainkeys
-          - action:
-              shortcutCommand:
-                sendKeys:
-                  keys: P
-            width: available
-            label: ⁴
-            lightModeStyleName: mainkeys_light
-            darkModeStyleName: mainkeys
-          - action:
-              character:
-                char: ""
-            width: available
-            label: 󰹇
-            swipe:
-              - action:
-                  shortcutCommand: "#关闭键盘"
-                label: " "
-                display: true
-                processByRIME: true
-                direction: down
-            callout:
-              - action:
-                  shortcutCommand:
-                    openURL:
-                      url: bilibili://search?keyword=#pasteboardContent
-                label: B站
-              - action:
-                  shortcutCommand:
-                    openURL:
-                      url: zhihu://search?q=#pasteboardContent
-                label: 知乎
-              - action:
-                  shortcutCommand:
-                    openURL:
-                      url: xhsdiscover://search/result?keyword=#pasteboardContent
-                label: 小红书
-            lightModeStyleName: hotkeys_light
-            darkModeStyleName: hotkeys
-          - action:
-              shortcutCommand: "#右移"
-            width: available
-            label: 
-            swipe:
-              - action:
-                  shortcutCommand: "#行尾"
-                label: " "
-                display: true
-                processByRIME: true
-                direction: down
-            lightModeStyleName: hotkeys_light
-            darkModeStyleName: hotkeys
-        rowHeight:
-          portrait: 32
-          landscape: 40
-      - keys:
-          - action:
               character:
                 char: q
             width:
@@ -489,16 +367,17 @@ keyboards:
             lightModeStyleName: mainkeys_light
             darkModeStyleName: mainkeys
         rowHeight:
-          portrait: 54
-          landscape: 58
+          portrait: 50
+          landscape: 45
       - keys:
           - action:
-              characterMargin:
-                char: ""
+              character:
+                char: a
             width:
               percentage: 0.05
-            label:
-              text: ""
+            label: " "
+            lightModeStyleName: hotkeys_light
+            darkModeStyleName: hotkeys
           - action:
               character:
                 char: a
@@ -755,15 +634,16 @@ keyboards:
             lightModeStyleName: mainkeys_light
             darkModeStyleName: mainkeys
           - action:
-              characterMargin:
-                char: ""
+              character:
+                char: l
             width:
               percentage: 0.05
-            label:
-              text: ""
+            label: " "
+            lightModeStyleName: hotkeys_light
+            darkModeStyleName: hotkeys
         rowHeight:
-          portrait: 54
-          landscape: 58
+          portrait: 50
+          landscape: 45
       - keys:
           - action: shift
             width:
@@ -1039,8 +919,8 @@ keyboards:
             lightModeStyleName: shift_delete_light
             darkModeStyleName: shift_delete
         rowHeight:
-          portrait: 54
-          landscape: 58
+          portrait: 50
+          landscape: 45
       - keys:
           - action:
               keyboardType: iOS-中文数字
@@ -1098,7 +978,8 @@ keyboards:
             lightModeStyleName: shift_delete_light
             darkModeStyleName: shift_delete
           - action:
-              keyboardType: iOS-摩斯乱码
+              character:
+                char: ""
             width:
               percentage: 0.11
             label: ⚡
@@ -1229,43 +1110,137 @@ keyboards:
             lightModeStyleName: shift_delete_light
             darkModeStyleName: shift_delete
         rowHeight:
-          portrait: 54
-          landscape: 60
+          portrait: 50
+          landscape: 45
+      - keys:
+          - action:
+              shortcutCommand: "#左移"
+            width: available
+            label: 󰧙
+            swipe:
+              - action:
+                  shortcutCommand: "#行首"
+                label: " "
+                display: true
+                processByRIME: true
+                direction: down
+            lightModeStyleName: hotkeys_light
+            darkModeStyleName: hotkeys
+          - action:
+              character:
+                char: ""
+            width: available
+            label: 󰹆
+            callout:
+              - action:
+                  shortcutCommand:
+                    openURL:
+                      url: hamster://dev.fuxiao.app.hamster/uploadInputSchema
+                label: Wi-Fi上传
+              - action:
+                  shortcutCommand:
+                    openURL:
+                      url: shortcuts://run-shortcut?name=拼接图片
+                label: 拼接图片
+            lightModeStyleName: hotkeys_light
+            darkModeStyleName: hotkeys
+          - action:
+              shortcutCommand:
+                sendKeys:
+                  keys: U
+            width: available
+            label: ¹
+            callout:
+              - action:
+                  shortcutCommand:
+                    openURL:
+                      url: mqqapi://scanqrcode
+                label: 扫一扫
+            lightModeStyleName: hotkeys_light
+            darkModeStyleName: hotkeys
+          - action:
+              shortcutCommand:
+                sendKeys:
+                  keys: I
+            width: available
+            label: ²
+            callout:
+              - action:
+                  shortcutCommand:
+                    openURL:
+                      url: weixin://scanqrcode
+                label: 扫一扫
+            lightModeStyleName: hotkeys_light
+            darkModeStyleName: hotkeys
+          - action:
+              shortcutCommand:
+                sendKeys:
+                  keys: O
+            width: available
+            label: ³
+            lightModeStyleName: hotkeys_light
+            darkModeStyleName: hotkeys
+          - action:
+              shortcutCommand:
+                sendKeys:
+                  keys: P
+            width: available
+            label: ⁴
+            lightModeStyleName: hotkeys_light
+            darkModeStyleName: hotkeys
+          - action:
+              character:
+                char: ""
+            width: available
+            label: 󰹇
+            swipe:
+              - action:
+                  shortcutCommand: "#关闭键盘"
+                label: " "
+                display: true
+                processByRIME: true
+                direction: down
+            callout:
+              - action:
+                  shortcutCommand:
+                    openURL:
+                      url: bilibili://search?keyword=#pasteboardContent
+                label: B站
+              - action:
+                  shortcutCommand:
+                    openURL:
+                      url: zhihu://search?q=#pasteboardContent
+                label: 知乎
+              - action:
+                  shortcutCommand:
+                    openURL:
+                      url: xhsdiscover://search/result?keyword=#pasteboardContent
+                label: 小红书
+            lightModeStyleName: hotkeys_light
+            darkModeStyleName: hotkeys
+          - action:
+              shortcutCommand: "#右移"
+            width: available
+            label: 󰧛
+            swipe:
+              - action:
+                  shortcutCommand: "#行尾"
+                label: " "
+                display: true
+                processByRIME: true
+                direction: down
+            lightModeStyleName: hotkeys_light
+            darkModeStyleName: hotkeys
+        rowHeight:
+          portrait: 32
+          landscape: 28
     buttonInsets:
       left: 4
       bottom: 6
       top: 6
       right: 4
     keyStyle:
-      hotkeys_light: &a1
-        name: hotkeys_light
-        buttonBackgroundColor: "0x01FFFFFF"
-        pressedButtonBackgroundColor: "0x55FFFFFF"
-        buttonForegroundColor: "0x636363"
-        pressedButtonForegroundColor: "0x636363"
-        swipeForegroundColor: "0x636363"
-        pressedSwipeForegroundColor: "0x636363"
-        buttonBubbleBackgroundColor: "0xD9D3D0"
-        actionCalloutBackgroundColor: "0xD9D3D0"
-        actionCalloutSelectedBackgroundColor: "0xF57935"
-        actionCalloutSelectedForegroundColor: "0x636363"
-        cornerRadius: 4
-        fontSize: 15
-      hotkeys: &a2
-        name: hotkeys
-        buttonBackgroundColor: "0x016A6A6A"
-        pressedButtonBackgroundColor: "0x556A6A6A"
-        buttonForegroundColor: "0xFFFFFF"
-        pressedButtonForegroundColor: "0xFFFFFF"
-        swipeForegroundColor: "0xFFFFFF"
-        pressedSwipeForegroundColor: "0xFFFFFF"
-        buttonBubbleBackgroundColor: "0x6A6A6A"
-        actionCalloutBackgroundColor: "0x6A6A6A"
-        actionCalloutSelectedBackgroundColor: "0xF57935"
-        actionCalloutSelectedForegroundColor: "0xFFFFFF"
-        cornerRadius: 4
-        fontSize: 15
-      mainkeys_light: &a5
+      mainkeys_light: &a3
         name: mainkeys_light
         buttonBackgroundColor: "0xFFFFFF"
         pressedButtonBackgroundColor: "0xAFFFFFFF"
@@ -1284,7 +1259,7 @@ keyboards:
         shadowSize: 1
         fontSize: 16
         swipeFontSize: 7
-      mainkeys: &a6
+      mainkeys: &a4
         name: mainkeys
         buttonBackgroundColor: "0x6A6A6A"
         pressedButtonBackgroundColor: "0xAF6A6A6A"
@@ -1303,7 +1278,35 @@ keyboards:
         shadowSize: 1
         fontSize: 16
         swipeFontSize: 7
-      fjkeys_light: &a7
+      hotkeys_light: &a9
+        name: hotkeys_light
+        buttonBackgroundColor: "0x01FFFFFF"
+        pressedButtonBackgroundColor: "0x55FFFFFF"
+        buttonForegroundColor: "0x636363"
+        pressedButtonForegroundColor: "0x636363"
+        swipeForegroundColor: "0x636363"
+        pressedSwipeForegroundColor: "0x636363"
+        buttonBubbleBackgroundColor: "0xD9D3D0"
+        actionCalloutBackgroundColor: "0xD9D3D0"
+        actionCalloutSelectedBackgroundColor: "0xF57935"
+        actionCalloutSelectedForegroundColor: "0x636363"
+        cornerRadius: 4
+        fontSize: 15
+      hotkeys: &a10
+        name: hotkeys
+        buttonBackgroundColor: "0x016A6A6A"
+        pressedButtonBackgroundColor: "0x556A6A6A"
+        buttonForegroundColor: "0xFFFFFF"
+        pressedButtonForegroundColor: "0xFFFFFF"
+        swipeForegroundColor: "0xFFFFFF"
+        pressedSwipeForegroundColor: "0xFFFFFF"
+        buttonBubbleBackgroundColor: "0x6A6A6A"
+        actionCalloutBackgroundColor: "0x6A6A6A"
+        actionCalloutSelectedBackgroundColor: "0xF57935"
+        actionCalloutSelectedForegroundColor: "0xFFFFFF"
+        cornerRadius: 4
+        fontSize: 15
+      fjkeys_light: &a5
         name: fjkeys_light
         buttonBackgroundColor: "0xFFFFFF"
         pressedButtonBackgroundColor: "0xAFFFFFFF"
@@ -1321,7 +1324,7 @@ keyboards:
         shadowSize: 1
         fontSize: 16
         swipeFontSize: 7
-      fjkeys: &a8
+      fjkeys: &a6
         name: fjkeys
         buttonBackgroundColor: "0x6A6A6A"
         pressedButtonBackgroundColor: "0xAF6A6A6A"
@@ -1339,7 +1342,7 @@ keyboards:
         shadowSize: 1
         fontSize: 16
         swipeFontSize: 7
-      shift_delete_light: &a3
+      shift_delete_light: &a1
         name: shift_delete_light
         buttonBackgroundColor: "0xFFFFFF"
         pressedButtonBackgroundColor: "0xAFFFFFFF"
@@ -1357,7 +1360,7 @@ keyboards:
         shadowSize: 1
         fontSize: 16
         swipeFontSize: 7
-      shift_delete: &a4
+      shift_delete: &a2
         name: shift_delete
         buttonBackgroundColor: "0x464646"
         pressedButtonBackgroundColor: "0xAF464646"
@@ -1411,7 +1414,7 @@ keyboards:
         shadowSize: 1
         fontSize: 12
         swipeFontSize: 7
-      space_light: &a9
+      space_light: &a7
         name: space_light
         buttonBackgroundColor: "0xFFFFFF"
         pressedButtonBackgroundColor: "0xAFFFFFFF"
@@ -1429,7 +1432,7 @@ keyboards:
         shadowSize: 1
         fontSize: 12
         swipeFontSize: 7
-      space: &a10
+      space: &a8
         name: space
         buttonBackgroundColor: "0x6A6A6A"
         pressedButtonBackgroundColor: "0xAF6A6A6A"
@@ -1450,128 +1453,6 @@ keyboards:
   - name: iOS-中文数字
     isPrimary: false
     rows:
-      - keys:
-          - action:
-              shortcutCommand: "#左移"
-            width: available
-            label: 
-            swipe:
-              - action:
-                  shortcutCommand: "#行首"
-                label: " "
-                display: true
-                processByRIME: true
-                direction: down
-            lightModeStyleName: hotkeys_light
-            darkModeStyleName: hotkeys
-          - action:
-              character:
-                char: ""
-            width: available
-            label: 
-            callout:
-              - action:
-                  shortcutCommand:
-                    openURL:
-                      url: hamster://dev.fuxiao.app.hamster/uploadInputSchema
-                label: Wi-Fi上传
-              - action:
-                  shortcutCommand:
-                    openURL:
-                      url: shortcuts://run-shortcut?name=拼接图片
-                label: 拼接图片
-            lightModeStyleName: hotkeys_light
-            darkModeStyleName: hotkeys
-          - action:
-              shortcutCommand:
-                openURL:
-                  url: mqqapi://
-            width: available
-            label: 
-            callout:
-              - action:
-                  shortcutCommand:
-                    openURL:
-                      url: mqqapi://scanqrcode
-                label: 扫一扫
-            lightModeStyleName: hotkeys_light
-            darkModeStyleName: hotkeys
-          - action:
-              shortcutCommand:
-                openURL:
-                  url: weixin://
-            width: available
-            label: 
-            callout:
-              - action:
-                  shortcutCommand:
-                    openURL:
-                      url: weixin://scanqrcode
-                label: 扫一扫
-            lightModeStyleName: hotkeys_light
-            darkModeStyleName: hotkeys
-          - action:
-              shortcutCommand:
-                openURL:
-                  url: https://www.perplexity.ai/search/new?q=#pasteboardContent
-            width: available
-            label: 
-            lightModeStyleName: hotkeys_light
-            darkModeStyleName: hotkeys
-          - action:
-              shortcutCommand:
-                openURL:
-                  url: https://www.google.com/search?q=#pasteboardContent
-            width: available
-            label: 
-            lightModeStyleName: hotkeys_light
-            darkModeStyleName: hotkeys
-          - action:
-              character:
-                char: ""
-            width: available
-            label: 󱄅
-            swipe:
-              - action:
-                  shortcutCommand: "#关闭键盘"
-                label: " "
-                display: true
-                processByRIME: true
-                direction: down
-            callout:
-              - action:
-                  shortcutCommand:
-                    openURL:
-                      url: bilibili://search?keyword=#pasteboardContent
-                label: B站
-              - action:
-                  shortcutCommand:
-                    openURL:
-                      url: zhihu://search?q=#pasteboardContent
-                label: 知乎
-              - action:
-                  shortcutCommand:
-                    openURL:
-                      url: xhsdiscover://search/result?keyword=#pasteboardContent
-                label: 小红书
-            lightModeStyleName: hotkeys_light
-            darkModeStyleName: hotkeys
-          - action:
-              shortcutCommand: "#右移"
-            width: available
-            label: 
-            swipe:
-              - action:
-                  shortcutCommand: "#行尾"
-                label: " "
-                display: true
-                processByRIME: true
-                direction: down
-            lightModeStyleName: hotkeys_light
-            darkModeStyleName: hotkeys
-        rowHeight:
-          portrait: 32
-          landscape: 40
       - keys:
           - action:
               character:
@@ -1636,8 +1517,8 @@ keyboards:
             lightModeStyleName: shift_delete_light
             darkModeStyleName: shift_delete
         rowHeight:
-          portrait: 54
-          landscape: 58
+          portrait: 50
+          landscape: 45
       - keys:
           - action:
               character:
@@ -1690,8 +1571,8 @@ keyboards:
             lightModeStyleName: shift_delete_light
             darkModeStyleName: shift_delete
         rowHeight:
-          portrait: 54
-          landscape: 58
+          portrait: 50
+          landscape: 45
       - keys:
           - action:
               character:
@@ -1750,8 +1631,8 @@ keyboards:
             lightModeStyleName: shift_delete_light
             darkModeStyleName: shift_delete
         rowHeight:
-          portrait: 54
-          landscape: 58
+          portrait: 50
+          landscape: 45
       - keys:
           - action:
               keyboardType: iOS-中文
@@ -1813,32 +1694,13 @@ keyboards:
             lightModeStyleName: shift_delete_light
             darkModeStyleName: shift_delete
         rowHeight:
-          portrait: 54
-          landscape: 60
-    buttonInsets:
-      left: 4
-      bottom: 6
-      top: 6
-      right: 4
-    keyStyle:
-      hotkeys_light: *a1
-      hotkeys: *a2
-      shift_delete_light: *a3
-      shift_delete: *a4
-      mainkeys_light: *a5
-      mainkeys: *a6
-      fjkeys_light: *a7
-      fjkeys: *a8
-      space_light: *a9
-      space: *a10
-  - name: iOS-中文数字符号
-    isPrimary: false
-    rows:
+          portrait: 50
+          landscape: 45
       - keys:
           - action:
               shortcutCommand: "#左移"
             width: available
-            label: 
+            label: 󰧙
             swipe:
               - action:
                   shortcutCommand: "#行首"
@@ -1943,7 +1805,7 @@ keyboards:
           - action:
               shortcutCommand: "#右移"
             width: available
-            label: 
+            label: 󰧛
             swipe:
               - action:
                   shortcutCommand: "#行尾"
@@ -1955,7 +1817,26 @@ keyboards:
             darkModeStyleName: hotkeys
         rowHeight:
           portrait: 32
-          landscape: 40
+          landscape: 28
+    buttonInsets:
+      left: 4
+      bottom: 6
+      top: 6
+      right: 4
+    keyStyle:
+      shift_delete_light: *a1
+      shift_delete: *a2
+      mainkeys_light: *a3
+      mainkeys: *a4
+      fjkeys_light: *a5
+      fjkeys: *a6
+      space_light: *a7
+      space: *a8
+      hotkeys_light: *a9
+      hotkeys: *a10
+  - name: iOS-中文数字符号
+    isPrimary: false
+    rows:
       - keys:
           - action:
               character:
@@ -2050,8 +1931,8 @@ keyboards:
             lightModeStyleName: mainkeys_light
             darkModeStyleName: mainkeys
         rowHeight:
-          portrait: 54
-          landscape: 58
+          portrait: 50
+          landscape: 45
       - keys:
           - action:
               characterMargin:
@@ -2149,8 +2030,8 @@ keyboards:
             label:
               text: ""
         rowHeight:
-          portrait: 54
-          landscape: 58
+          portrait: 50
+          landscape: 45
       - keys:
           - action:
               keyboardType: classifySymbolic
@@ -2274,8 +2155,8 @@ keyboards:
             lightModeStyleName: shift_delete_light
             darkModeStyleName: shift_delete
         rowHeight:
-          portrait: 54
-          landscape: 58
+          portrait: 50
+          landscape: 45
       - keys:
           - action:
               keyboardType: iOS-中文数字
@@ -2372,32 +2253,13 @@ keyboards:
             lightModeStyleName: shift_delete_light
             darkModeStyleName: shift_delete
         rowHeight:
-          portrait: 54
-          landscape: 60
-    buttonInsets:
-      left: 4
-      bottom: 5
-      top: 6
-      right: 4
-    keyStyle:
-      hotkeys_light: *a1
-      hotkeys: *a2
-      mainkeys_light: *a5
-      mainkeys: *a6
-      shift_delete_light: *a3
-      shift_delete: *a4
-      cn_en_light: *a11
-      cn_en: *a12
-      space_light: *a9
-      space: *a10
-  - name: iOS-英文
-    isPrimary: false
-    rows:
+          portrait: 50
+          landscape: 45
       - keys:
           - action:
               shortcutCommand: "#左移"
             width: available
-            label: 
+            label: 󰧙
             swipe:
               - action:
                   shortcutCommand: "#行首"
@@ -2502,7 +2364,7 @@ keyboards:
           - action:
               shortcutCommand: "#右移"
             width: available
-            label: 
+            label: 󰧛
             swipe:
               - action:
                   shortcutCommand: "#行尾"
@@ -2514,7 +2376,26 @@ keyboards:
             darkModeStyleName: hotkeys
         rowHeight:
           portrait: 32
-          landscape: 40
+          landscape: 28
+    buttonInsets:
+      left: 4
+      bottom: 5
+      top: 6
+      right: 4
+    keyStyle:
+      mainkeys_light: *a3
+      mainkeys: *a4
+      shift_delete_light: *a1
+      shift_delete: *a2
+      cn_en_light: *a11
+      cn_en: *a12
+      space_light: *a7
+      space: *a8
+      hotkeys_light: *a9
+      hotkeys: *a10
+  - name: iOS-英文
+    isPrimary: false
+    rows:
       - keys:
           - action:
               character:
@@ -2789,16 +2670,17 @@ keyboards:
             lightModeStyleName: mainkeys_light
             darkModeStyleName: mainkeys
         rowHeight:
-          portrait: 54
-          landscape: 58
+          portrait: 50
+          landscape: 45
       - keys:
           - action:
-              characterMargin:
-                char: ""
+              character:
+                char: a
             width:
               percentage: 0.05
-            label:
-              text: ""
+            label: " "
+            lightModeStyleName: hotkeys_light
+            darkModeStyleName: hotkeys
           - action:
               character:
                 char: a
@@ -2999,15 +2881,16 @@ keyboards:
             lightModeStyleName: mainkeys_light
             darkModeStyleName: mainkeys
           - action:
-              characterMargin:
-                char: ""
+              character:
+                char: l
             width:
               percentage: 0.05
-            label:
-              text: ""
+            label: " "
+            lightModeStyleName: hotkeys_light
+            darkModeStyleName: hotkeys
         rowHeight:
-          portrait: 54
-          landscape: 58
+          portrait: 50
+          landscape: 45
       - keys:
           - action: shift
             width:
@@ -3258,8 +3141,8 @@ keyboards:
             lightModeStyleName: shift_delete_light
             darkModeStyleName: shift_delete
         rowHeight:
-          portrait: 54
-          landscape: 58
+          portrait: 50
+          landscape: 45
       - keys:
           - action:
               keyboardType: iOS-英文数字
@@ -3367,34 +3250,13 @@ keyboards:
             lightModeStyleName: shift_delete_light
             darkModeStyleName: shift_delete
         rowHeight:
-          portrait: 54
-          landscape: 60
-    buttonInsets:
-      left: 4
-      bottom: 6
-      top: 6
-      right: 4
-    keyStyle:
-      hotkeys_light: *a1
-      hotkeys: *a2
-      mainkeys_light: *a5
-      mainkeys: *a6
-      fjkeys_light: *a7
-      fjkeys: *a8
-      shift_delete_light: *a3
-      shift_delete: *a4
-      cn_en_light: *a11
-      cn_en: *a12
-      space_light: *a9
-      space: *a10
-  - name: iOS-英文数字
-    isPrimary: false
-    rows:
+          portrait: 50
+          landscape: 45
       - keys:
           - action:
               shortcutCommand: "#左移"
             width: available
-            label: 
+            label: 󰧙
             swipe:
               - action:
                   shortcutCommand: "#行首"
@@ -3499,7 +3361,7 @@ keyboards:
           - action:
               shortcutCommand: "#右移"
             width: available
-            label: 
+            label: 󰧛
             swipe:
               - action:
                   shortcutCommand: "#行尾"
@@ -3511,7 +3373,28 @@ keyboards:
             darkModeStyleName: hotkeys
         rowHeight:
           portrait: 32
-          landscape: 40
+          landscape: 28
+    buttonInsets:
+      left: 4
+      bottom: 6
+      top: 6
+      right: 4
+    keyStyle:
+      mainkeys_light: *a3
+      mainkeys: *a4
+      hotkeys_light: *a9
+      hotkeys: *a10
+      fjkeys_light: *a5
+      fjkeys: *a6
+      shift_delete_light: *a1
+      shift_delete: *a2
+      cn_en_light: *a11
+      cn_en: *a12
+      space_light: *a7
+      space: *a8
+  - name: iOS-英文数字
+    isPrimary: false
+    rows:
       - keys:
           - action:
               character:
@@ -3576,8 +3459,8 @@ keyboards:
             lightModeStyleName: shift_delete_light
             darkModeStyleName: shift_delete
         rowHeight:
-          portrait: 54
-          landscape: 58
+          portrait: 50
+          landscape: 45
       - keys:
           - action:
               character:
@@ -3630,8 +3513,8 @@ keyboards:
             lightModeStyleName: shift_delete_light
             darkModeStyleName: shift_delete
         rowHeight:
-          portrait: 54
-          landscape: 58
+          portrait: 50
+          landscape: 45
       - keys:
           - action:
               character:
@@ -3690,8 +3573,8 @@ keyboards:
             lightModeStyleName: shift_delete_light
             darkModeStyleName: shift_delete
         rowHeight:
-          portrait: 54
-          landscape: 58
+          portrait: 50
+          landscape: 45
       - keys:
           - action:
               keyboardType: iOS-英文
@@ -3754,32 +3637,13 @@ keyboards:
             lightModeStyleName: shift_delete_light
             darkModeStyleName: shift_delete
         rowHeight:
-          portrait: 54
-          landscape: 60
-    buttonInsets:
-      left: 4
-      bottom: 6
-      top: 6
-      right: 4
-    keyStyle:
-      hotkeys_light: *a1
-      hotkeys: *a2
-      shift_delete_light: *a3
-      shift_delete: *a4
-      mainkeys_light: *a5
-      mainkeys: *a6
-      fjkeys_light: *a7
-      fjkeys: *a8
-      space_light: *a9
-      space: *a10
-  - name: iOS-英文数字符号
-    isPrimary: false
-    rows:
+          portrait: 50
+          landscape: 45
       - keys:
           - action:
               shortcutCommand: "#左移"
             width: available
-            label: 
+            label: 󰧙
             swipe:
               - action:
                   shortcutCommand: "#行首"
@@ -3884,7 +3748,7 @@ keyboards:
           - action:
               shortcutCommand: "#右移"
             width: available
-            label: 
+            label: 󰧛
             swipe:
               - action:
                   shortcutCommand: "#行尾"
@@ -3896,7 +3760,26 @@ keyboards:
             darkModeStyleName: hotkeys
         rowHeight:
           portrait: 32
-          landscape: 40
+          landscape: 28
+    buttonInsets:
+      left: 4
+      bottom: 6
+      top: 6
+      right: 4
+    keyStyle:
+      shift_delete_light: *a1
+      shift_delete: *a2
+      mainkeys_light: *a3
+      mainkeys: *a4
+      fjkeys_light: *a5
+      fjkeys: *a6
+      space_light: *a7
+      space: *a8
+      hotkeys_light: *a9
+      hotkeys: *a10
+  - name: iOS-英文数字符号
+    isPrimary: false
+    rows:
       - keys:
           - action:
               character:
@@ -3991,8 +3874,8 @@ keyboards:
             lightModeStyleName: mainkeys_light
             darkModeStyleName: mainkeys
         rowHeight:
-          portrait: 54
-          landscape: 58
+          portrait: 50
+          landscape: 45
       - keys:
           - action:
               characterMargin:
@@ -4090,8 +3973,8 @@ keyboards:
             label:
               text: ""
         rowHeight:
-          portrait: 54
-          landscape: 58
+          portrait: 50
+          landscape: 45
       - keys:
           - action:
               keyboardType: classifySymbolic
@@ -4216,8 +4099,8 @@ keyboards:
             lightModeStyleName: shift_delete_light
             darkModeStyleName: shift_delete
         rowHeight:
-          portrait: 54
-          landscape: 58
+          portrait: 50
+          landscape: 45
       - keys:
           - action:
               keyboardType: iOS-英文数字
@@ -4317,32 +4200,13 @@ keyboards:
             lightModeStyleName: shift_delete_light
             darkModeStyleName: shift_delete
         rowHeight:
-          portrait: 54
-          landscape: 60
-    buttonInsets:
-      left: 4
-      bottom: 6
-      top: 6
-      right: 4
-    keyStyle:
-      hotkeys_light: *a1
-      hotkeys: *a2
-      mainkeys_light: *a5
-      mainkeys: *a6
-      shift_delete_light: *a3
-      shift_delete: *a4
-      cn_en_light: *a11
-      cn_en: *a12
-      space_light: *a9
-      space: *a10
-  - name: iOS-摩斯乱码
-    isPrimary: true
-    rows:
+          portrait: 50
+          landscape: 45
       - keys:
           - action:
               shortcutCommand: "#左移"
             width: available
-            label: 
+            label: 󰧙
             swipe:
               - action:
                   shortcutCommand: "#行首"
@@ -4356,7 +4220,18 @@ keyboards:
               character:
                 char: ""
             width: available
-            label: 󰹆
+            label: 
+            callout:
+              - action:
+                  shortcutCommand:
+                    openURL:
+                      url: hamster://dev.fuxiao.app.hamster/uploadInputSchema
+                label: Wi-Fi上传
+              - action:
+                  shortcutCommand:
+                    openURL:
+                      url: shortcuts://run-shortcut?name=拼接图片
+                label: 拼接图片
             lightModeStyleName: hotkeys_light
             darkModeStyleName: hotkeys
           - action:
@@ -4365,6 +4240,12 @@ keyboards:
                   url: mqqapi://
             width: available
             label: 
+            callout:
+              - action:
+                  shortcutCommand:
+                    openURL:
+                      url: mqqapi://scanqrcode
+                label: 扫一扫
             lightModeStyleName: hotkeys_light
             darkModeStyleName: hotkeys
           - action:
@@ -4373,29 +4254,35 @@ keyboards:
                   url: weixin://
             width: available
             label: 
+            callout:
+              - action:
+                  shortcutCommand:
+                    openURL:
+                      url: weixin://scanqrcode
+                label: 扫一扫
             lightModeStyleName: hotkeys_light
             darkModeStyleName: hotkeys
           - action:
               shortcutCommand:
-                sendKeys:
-                  keys: O
+                openURL:
+                  url: https://www.perplexity.ai/search/new?q=#pasteboardContent
             width: available
-            label: ³
-            lightModeStyleName: mainkeys_light
-            darkModeStyleName: mainkeys
+            label: 
+            lightModeStyleName: hotkeys_light
+            darkModeStyleName: hotkeys
           - action:
               shortcutCommand:
-                sendKeys:
-                  keys: P
+                openURL:
+                  url: https://www.google.com/search?q=#pasteboardContent
             width: available
-            label: ⁴
-            lightModeStyleName: mainkeys_light
-            darkModeStyleName: mainkeys
+            label: 
+            lightModeStyleName: hotkeys_light
+            darkModeStyleName: hotkeys
           - action:
               character:
                 char: ""
             width: available
-            label: 󰹇
+            label: 󱄅
             swipe:
               - action:
                   shortcutCommand: "#关闭键盘"
@@ -4403,12 +4290,28 @@ keyboards:
                 display: true
                 processByRIME: true
                 direction: down
+            callout:
+              - action:
+                  shortcutCommand:
+                    openURL:
+                      url: bilibili://search?keyword=#pasteboardContent
+                label: B站
+              - action:
+                  shortcutCommand:
+                    openURL:
+                      url: zhihu://search?q=#pasteboardContent
+                label: 知乎
+              - action:
+                  shortcutCommand:
+                    openURL:
+                      url: xhsdiscover://search/result?keyword=#pasteboardContent
+                label: 小红书
             lightModeStyleName: hotkeys_light
             darkModeStyleName: hotkeys
           - action:
               shortcutCommand: "#右移"
             width: available
-            label: 
+            label: 󰧛
             swipe:
               - action:
                   shortcutCommand: "#行尾"
@@ -4420,828 +4323,20 @@ keyboards:
             darkModeStyleName: hotkeys
         rowHeight:
           portrait: 32
-          landscape: 40
-      - keys:
-          - action:
-              character:
-                char: q
-            width:
-              percentage: 0.1
-            label: " 都"
-            swipe:
-              - action:
-                  character:
-                    char: "!"
-                label: ia
-                display: true
-                processByRIME: true
-                direction: up
-              - action:
-                  character:
-                    char: "1"
-                label: uai
-                display: true
-                processByRIME: true
-                direction: down
-            lightModeStyleName: mainkeys_light
-            darkModeStyleName: mainkeys
-          - action:
-              character:
-                char: w
-            width:
-              percentage: 0.1
-            label: X
-            swipe:
-              - action:
-                  character:
-                    char: "@"
-                label: iang
-                display: true
-                processByRIME: true
-                direction: up
-              - action:
-                  character:
-                    char: "2"
-                label: " uang"
-                display: true
-                processByRIME: true
-                direction: down
-            lightModeStyleName: mainkeys_light
-            darkModeStyleName: mainkeys
-          - action:
-              character:
-                char: e
-            width:
-              percentage: 0.1
-            label: Q
-            swipe:
-              - action:
-                  character:
-                    char: "#"
-                label: ue ve
-                display: true
-                processByRIME: true
-                direction: up
-              - action:
-                  character:
-                    char: "3"
-                label: ui
-                display: true
-                processByRIME: true
-                direction: down
-            lightModeStyleName: mainkeys_light
-            darkModeStyleName: mainkeys
-          - action:
-              character:
-                char: r
-            width:
-              percentage: 0.1
-            label: J
-            swipe:
-              - action:
-                  character:
-                    char: $
-                label: uan
-                display: true
-                processByRIME: true
-                direction: up
-              - action:
-                  character:
-                    char: "4"
-                label: " "
-                display: true
-                processByRIME: true
-                direction: down
-            lightModeStyleName: mainkeys_light
-            darkModeStyleName: mainkeys
-          - action:
-              character:
-                char: t
-            width:
-              percentage: 0.1
-            label: 啊
-            swipe:
-              - action:
-                  character:
-                    char: "%"
-                label: un
-                display: true
-                processByRIME: true
-                direction: up
-              - action:
-                  character:
-                    char: "5"
-                label: " "
-                display: true
-                processByRIME: true
-                direction: down
-            lightModeStyleName: mainkeys_light
-            darkModeStyleName: mainkeys
-          - action:
-              character:
-                char: y
-            width:
-              percentage: 0.1
-            label: R
-            swipe:
-              - action:
-                  character:
-                    char: ^
-                label: iao
-                display: true
-                processByRIME: true
-                direction: up
-              - action:
-                  character:
-                    char: "6"
-                label: " "
-                display: true
-                processByRIME: true
-                direction: down
-            lightModeStyleName: mainkeys_light
-            darkModeStyleName: mainkeys
-          - action:
-              character:
-                char: u
-            width:
-              percentage: 0.1
-            label: G
-            swipe:
-              - action:
-                  character:
-                    char: "&"
-                label: ing
-                display: true
-                processByRIME: true
-                direction: up
-              - action:
-                  character:
-                    char: "7"
-                label: " "
-                display: true
-                processByRIME: true
-                direction: down
-            lightModeStyleName: mainkeys_light
-            darkModeStyleName: mainkeys
-          - action:
-              character:
-                char: i
-            width:
-              percentage: 0.1
-            label: K
-            swipe:
-              - action:
-                  character:
-                    char: "*"
-                label: ou
-                display: true
-                processByRIME: true
-                direction: up
-              - action:
-                  character:
-                    char: "8"
-                label: iong
-                display: true
-                processByRIME: true
-                direction: down
-            lightModeStyleName: mainkeys_light
-            darkModeStyleName: mainkeys
-          - action:
-              character:
-                char: o
-            width:
-              percentage: 0.1
-            label: H
-            swipe:
-              - action:
-                  character:
-                    char: (
-                label: a
-                display: true
-                processByRIME: true
-                direction: up
-              - action:
-                  character:
-                    char: "9"
-                label: " "
-                display: true
-                processByRIME: true
-                direction: down
-            lightModeStyleName: mainkeys_light
-            darkModeStyleName: mainkeys
-          - action:
-              character:
-                char: p
-            width:
-              portrait: available
-              landscape:
-                percentage: 0.1
-            label: S
-            swipe:
-              - action:
-                  character:
-                    char: )
-                label: in
-                display: true
-                processByRIME: true
-                direction: up
-              - action:
-                  character:
-                    char: "0"
-                label: " "
-                display: true
-                processByRIME: true
-                direction: down
-            lightModeStyleName: mainkeys_light
-            darkModeStyleName: mainkeys
-        rowHeight:
-          portrait: 54
-          landscape: 58
-      - keys:
-          - action:
-              characterMargin:
-                char: ""
-            width:
-              percentage: 0.05
-            label:
-              text: ""
-          - action:
-              character:
-                char: a
-            width:
-              percentage: 0.1
-            label: T
-            swipe:
-              - action:
-                  character:
-                    char: "-"
-                label: ong
-                display: true
-                processByRIME: true
-                direction: up
-              - action:
-                  shortcutCommand: "#selectText"
-                label: " "
-                display: true
-                processByRIME: true
-                direction: down
-            lightModeStyleName: mainkeys_light
-            darkModeStyleName: mainkeys
-          - action:
-              character:
-                char: s
-            width:
-              percentage: 0.1
-            label: D
-            swipe:
-              - action:
-                  character:
-                    char: +
-                label: ang
-                display: true
-                processByRIME: true
-                direction: up
-              - action:
-                  character:
-                    char: "{"
-                label: " "
-                display: true
-                processByRIME: true
-                direction: down
-            lightModeStyleName: mainkeys_light
-            darkModeStyleName: mainkeys
-          - action:
-              character:
-                char: d
-            width:
-              percentage: 0.1
-            label: SH
-            swipe:
-              - action:
-                  character:
-                    char: ":"
-                label: e
-                display: true
-                processByRIME: true
-                direction: up
-              - action:
-                  character:
-                    char: "}"
-                label: " "
-                display: true
-                processByRIME: true
-                direction: down
-            lightModeStyleName: mainkeys_light
-            darkModeStyleName: mainkeys
-          - action:
-              character:
-                char: f
-            width:
-              percentage: 0.1
-            label: Y
-            swipe:
-              - action:
-                  character:
-                    char: ;
-                label: an
-                display: true
-                processByRIME: true
-                direction: up
-              - action:
-                  shortcutCommand: "#toggleScriptView"
-                label: " "
-                display: true
-                processByRIME: true
-                direction: down
-            lightModeStyleName: fjkeys_light
-            darkModeStyleName: fjkeys
-          - action:
-              character:
-                char: g
-            width:
-              percentage: 0.1
-            label: N
-            swipe:
-              - action:
-                  character:
-                    char: (
-                label: ai
-                display: true
-                processByRIME: true
-                direction: up
-              - action:
-                  character:
-                    char: "["
-                label:
-                  text: ""
-                display: true
-                processByRIME: true
-                direction: down
-            lightModeStyleName: mainkeys_light
-            darkModeStyleName: mainkeys
-          - action:
-              character:
-                char: h
-            width:
-              percentage: 0.1
-            label: CH
-            swipe:
-              - action:
-                  character:
-                    char: )
-                label: ian
-                display: true
-                processByRIME: true
-                direction: up
-              - action:
-                  character:
-                    char: "]"
-                label:
-                  text: ""
-                display: true
-                processByRIME: true
-                direction: down
-            lightModeStyleName: mainkeys_light
-            darkModeStyleName: mainkeys
-          - action:
-              character:
-                char: j
-            width:
-              percentage: 0.1
-            label: ZH
-            swipe:
-              - action:
-                  character:
-                    char: "~"
-                label: u
-                display: true
-                processByRIME: true
-                direction: up
-            lightModeStyleName: fjkeys_light
-            darkModeStyleName: fjkeys
-          - action:
-              character:
-                char: k
-            width:
-              percentage: 0.1
-            label: W
-            swipe:
-              - action:
-                  character:
-                    char: “
-                label: i
-                display: true
-                processByRIME: true
-                direction: up
-              - action:
-                  character:
-                    char: ;
-                label: er
-                display: true
-                processByRIME: true
-                direction: down
-            lightModeStyleName: mainkeys_light
-            darkModeStyleName: mainkeys
-          - action:
-              character:
-                char: l
-            width:
-              percentage: 0.1
-            label: L
-            swipe:
-              - action:
-                  character:
-                    char: ”
-                label: ao
-                display: true
-                processByRIME: true
-                direction: up
-              - action:
-                  character:
-                    char: "'"
-                label: " "
-                display: true
-                processByRIME: true
-                direction: down
-            lightModeStyleName: mainkeys_light
-            darkModeStyleName: mainkeys
-          - action:
-              characterMargin:
-                char: ""
-            width:
-              percentage: 0.05
-            label:
-              text: ""
-        rowHeight:
-          portrait: 54
-          landscape: 58
-      - keys:
-          - action: shift
-            width:
-              percentage: 0.1
-            label:
-              text: ""
-            swipe:
-              - action: tab
-                label:
-                  text: ""
-                display: true
-                processByRIME: true
-                direction: up
-              - action:
-                  shortcutCommand:
-                    sendKeys:
-                      keys: Control+grave
-                label:
-                  text: ""
-                display: true
-                processByRIME: true
-                direction: right
-            lightModeStyleName: shift_delete_light
-            darkModeStyleName: shift_delete
-          - action:
-              characterMargin:
-                char: ""
-            width:
-              portrait:
-                percentage: 0.02
-              landscape:
-                percentage: 0.01
-            label:
-              text: ""
-          - action:
-              character:
-                char: z
-            width:
-              percentage: 0.1
-            label: F
-            swipe:
-              - action:
-                  character:
-                    char: "*"
-                label: ei
-                display: true
-                processByRIME: true
-                direction: up
-              - action:
-                  character:
-                    char: "`"
-                label: " "
-                display: true
-                processByRIME: true
-                direction: down
-            lightModeStyleName: mainkeys_light
-            darkModeStyleName: mainkeys
-          - action:
-              character:
-                char: x
-            width:
-              percentage: 0.1
-            label: M
-            swipe:
-              - action:
-                  character:
-                    char: =
-                label: en
-                display: true
-                processByRIME: true
-                direction: up
-              - action:
-                  shortcutCommand: "#剪切"
-                label: " "
-                display: true
-                processByRIME: true
-                direction: down
-            lightModeStyleName: mainkeys_light
-            darkModeStyleName: mainkeys
-          - action:
-              character:
-                char: c
-            width:
-              percentage: 0.1
-            label: P
-            swipe:
-              - action:
-                  character:
-                    char: /
-                label: eng
-                display: true
-                processByRIME: false
-                direction: up
-              - action:
-                  shortcutCommand: "#复制"
-                label: " "
-                display: true
-                processByRIME: true
-                direction: down
-            lightModeStyleName: mainkeys_light
-            darkModeStyleName: mainkeys
-          - action:
-              character:
-                char: v
-            width:
-              percentage: 0.1
-            label: B
-            swipe:
-              - action:
-                  character:
-                    char: "?"
-                label: o
-                display: true
-                processByRIME: true
-                direction: up
-              - action:
-                  shortcutCommand: "#粘贴"
-                label: uo
-                display: true
-                processByRIME: true
-                direction: down
-            lightModeStyleName: mainkeys_light
-            darkModeStyleName: mainkeys
-          - action:
-              character:
-                char: b
-            width:
-              percentage: 0.1
-            label: 如
-            swipe:
-              - action:
-                  character:
-                    char: \
-                label: v
-                display: true
-                processByRIME: true
-                direction: up
-              - action:
-                  character:
-                    char: <
-                label: ua
-                display: true
-                processByRIME: true
-                direction: down
-            lightModeStyleName: mainkeys_light
-            darkModeStyleName: mainkeys
-          - action:
-              character:
-                char: n
-            width:
-              percentage: 0.1
-            label: Z
-            swipe:
-              - action:
-                  character:
-                    char: "!"
-                label: ie
-                display: true
-                processByRIME: true
-                direction: up
-              - action:
-                  character:
-                    char: ">"
-                label: " "
-                display: true
-                processByRIME: true
-                direction: down
-            lightModeStyleName: mainkeys_light
-            darkModeStyleName: mainkeys
-          - action:
-              character:
-                char: m
-            width:
-              percentage: 0.1
-            label: C
-            swipe:
-              - action:
-                  character:
-                    char: _
-                label: iu
-                display: true
-                processByRIME: false
-                direction: up
-              - action:
-                  character:
-                    char: /
-                label: " "
-                display: true
-                processByRIME: true
-                direction: down
-            lightModeStyleName: mainkeys_light
-            darkModeStyleName: mainkeys
-          - action:
-              characterMargin:
-                char: ""
-            width:
-              portrait:
-                percentage: 0.02
-              landscape:
-                percentage: 0.01
-            label:
-              text: ""
-          - action: backspace
-            width:
-              portrait:
-                percentage: 0.16
-              landscape:
-                percentage: 0.18
-            label: 󰁮
-            swipe:
-              - action:
-                  shortcutCommand: "#deleteText"
-                label:
-                  text: ""
-                display: false
-                processByRIME: true
-                direction: up
-              - action:
-                  shortcutCommand: "#重输"
-                label:
-                  text: ""
-                display: true
-                processByRIME: true
-                direction: left
-            lightModeStyleName: shift_delete_light
-            darkModeStyleName: shift_delete
-        rowHeight:
-          portrait: 54
-          landscape: 58
-      - keys:
-          - action:
-              keyboardType: iOS-中文数字
-            width:
-              percentage: 0.11
-            label: "123"
-            swipe:
-              - action:
-                  keyboardType: iOS-中文数字符号
-                label: 符
-                display: true
-                processByRIME: true
-                direction: up
-            lightModeStyleName: shift_delete_light
-            darkModeStyleName: shift_delete
-          - action:
-              keyboardType: iOS-中文
-            width:
-              percentage: 0.11
-            label: ⚡
-            callout:
-              - action:
-                  shortcutCommand:
-                    sendKeys:
-                      keys: Control+i
-                label: Emoji
-              - action:
-                  shortcutCommand:
-                    sendKeys:
-                      keys: Control+o
-                label: 简繁
-              - action:
-                  shortcutCommand:
-                    sendKeys:
-                      keys: Control+p
-                label: 联想预测
-              - action:
-                  shortcutCommand:
-                    sendKeys:
-                      keys: Control+e
-                label: 翻译
-              - action:
-                  shortcutCommand:
-                    sendKeys:
-                      keys: Control+b
-                label: 字集
-              - action:
-                  shortcutCommand:
-                    sendKeys:
-                      keys: Control+m
-                label: 火星文
-            lightModeStyleName: shift_delete_light
-            darkModeStyleName: shift_delete
-          - action:
-              keyboardType: iOS-英文
-            width:
-              percentage: 0.11
-            label: 中
-            swipe:
-              - action:
-                  shortcutCommand: "#三选上屏"
-                label: 英
-                display: true
-                processByRIME: true
-                direction: up
-            lightModeStyleName: cn_en_light
-            darkModeStyleName: cn_en
-          - action: space
-            width:
-              portrait:
-                percentage: 0.34
-              landscape: available
-            label: 󱇄󱥢 摩斯󰝹乱码 󱥢󱇂
-            swipe:
-              - action:
-                  shortcutCommand: "#次选上屏"
-                label:
-                  text: ""
-                display: true
-                processByRIME: true
-                direction: up
-              - action:
-                  shortcutCommand: "#关闭键盘"
-                label:
-                  text: ""
-                display: true
-                processByRIME: true
-                direction: down
-            lightModeStyleName: space_light
-            darkModeStyleName: space
-          - action:
-              character:
-                char: ，
-            width:
-              percentage: 0.11
-            label: ，
-            swipe:
-              - action:
-                  character:
-                    char: 。
-                label: 。
-                display: true
-                processByRIME: true
-                direction: up
-            lightModeStyleName: shift_delete_light
-            darkModeStyleName: shift_delete
-          - action: enter
-            width:
-              percentage: 0.22
-            label: 
-            swipe:
-              - action:
-                  shortcutCommand: "#换行"
-                label:
-                  text: ""
-                display: true
-                processByRIME: true
-                direction: up
-            lightModeStyleName: shift_delete_light
-            darkModeStyleName: shift_delete
-        rowHeight:
-          portrait: 54
-          landscape: 60
+          landscape: 28
     buttonInsets:
       left: 4
       bottom: 6
       top: 6
       right: 4
     keyStyle:
-      hotkeys_light: *a1
-      hotkeys: *a2
-      mainkeys_light: *a5
-      mainkeys: *a6
-      fjkeys_light: *a7
-      fjkeys: *a8
-      shift_delete_light: *a3
-      shift_delete: *a4
+      mainkeys_light: *a3
+      mainkeys: *a4
+      shift_delete_light: *a1
+      shift_delete: *a2
       cn_en_light: *a11
       cn_en: *a12
-      space_light: *a9
-      space: *a10
+      space_light: *a7
+      space: *a8
+      hotkeys_light: *a9
+      hotkeys: *a10

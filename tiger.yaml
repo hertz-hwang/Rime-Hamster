@@ -261,7 +261,7 @@ tiger_oni_translator:
 
 tiger_phrase_translator:
   tiger_phrase:
-    dictionary: tiger_phrase
+    dictionary: tiger_phrase_wanxiang
     tag: tiger_phrase
     prefix: "H"
     tips: "〔赫兹虎单整句〕"

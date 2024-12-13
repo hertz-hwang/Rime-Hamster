@@ -3,7 +3,7 @@
 -- 本处理器能够支持所有的规则顶功模式
 -- 根据当前编码和新输入的按键来决定是否将当前编码或其一部分的首选顶上屏
 
-local rime = require("rime.lib")
+local rime = require("hertz.lib")
 
 local this = {}
 
