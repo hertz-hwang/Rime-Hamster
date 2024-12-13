@@ -23,9 +23,9 @@ style:
   translucency: true      # 透明度總開關
 
   # 淺色主题
-  color_scheme: hertz-Q
+  color_scheme: wechat
   # 深色主题
-  color_scheme_dark: hertz-Q
+  color_scheme_dark: wechat_dark
 
   # #候选字体
   font_face: "Segoe UI Emoji, LXGW WenKai GB Screen, 98WB-0, 98WB-1, 98WB-2, 98WB-3, 98WB-U, 98WB-V"
