@@ -377,7 +377,7 @@ rec:
       tiger_phrase: "^H[a-zA-Z]*`?$"
       tiger_phrases: "^F[a-zA-Z]*`?$"
       reverse_lookup: "^`[a-z]*'?$"
-      expression: '^=.*$'
+      calculator: "^=.*$"
 
 hertz:
   predictor:

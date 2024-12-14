@@ -1,433 +1,209 @@
--- 簡易計算器（執行任何Lua表達式）
--- 来源: https://github.com/baopaau/rime-lua-collection/blob/master/calculator_translator.lua
+-- 计算器插件
+-- author: https://github.com/ChaosAlphard
+local calc = {}
 
--- Mintimate <https://github.com/Mintimate> 修改:
---   1. 解决了 鼠须管输入法 调用可能存在的问题。
---   2. 动态获取触发前缀。
---
--- 格式：=<exp>
--- Lambda語法糖：\<arg>.<exp>|
---
--- 例子：
--- =1+1 輸出 2
--- =floor(9^(8/7)*cos(deg(6))) 輸出 -3
--- =e^pi>pi^e 輸出 true
--- =max({1,7,2}) 輸出 7
--- =map({1,2,3},\x.x^2|) 輸出 {1, 4, 9}
--- =map(range(-5,5),\x.x*pi/4|,deriv(sin)) 輸出 {-0.7071, -1, -0.7071, 0, 0.7071, 1, 0.7071, 0, -0.7071, -1}
--- =$(range(-5,5,0.01))(map,\x.-60*x^2-16*x+20|)(max)() 輸出 21.066
--- =test(\x.trunc(sin(x),1e-3)==trunc(deriv(cos)(x),1e-3)|,range(-2,2,0.1)) 輸出 true
---
--- 安装：
--- - 將本文件保存至 <rime>/lua/
--- - 在 <rime>/rime.lua 新增一行：
---   `calculator_translator = require("calculator_translator")`
--- - 在 <rime>/<schema>.schema.yaml 新增：
---   `engine/translators/@next: lua_translator@calculator_translator`
---   `recognizer/patterns/expression: "^=.*$"`
--- 註：
--- - <rime> 替換爲RIME的共享目錄
--- - <schema> 替換爲自己的方案ID
--- - 如目錄／文件不存在，請自行創建
-
--- 定義全局函數、常數（注意命名空間污染）
-cos = math.cos
-sin = math.sin
-tan = math.tan
-acos = math.acos
-asin = math.asin
-atan = math.atan
-rad = math.rad
-deg = math.deg
-
-abs = math.abs
-floor = math.floor
-ceil = math.ceil
-mod = math.fmod
-trunc = function (x, dc)
-  if dc == nil then
-    return math.modf(x)
-  end
-  return x - mod(x, dc)
+function calc.init( env )
+    local config = env.engine.schema.config
+    env.prefix = config:get_string( 'calculator/prefix' ) or '='
+    env.show_prefix = config:get_bool( 'calculator/show_prefix' ) -- set to true to show prefix in preedit area
+    -- env.decimalPlaces = config:get_string('calculator/decimalPlaces') or '4'
 end
 
-round = function (x, dc)
-  dc = dc or 1
-  local dif = mod(x, dc)
-  if abs(dif) > dc / 2 then
-    return x < 0 and x - dif - dc or x - dif + dc
-  end
-  return x - dif
+local function startsWith( str, start ) return string.sub( str, 1, string.len( start ) ) == start end
+
+local function truncateFromStart( str, truncateStr ) return string.sub( str, string.len( truncateStr ) + 1 ) end
+
+local function yield_calc_cand( seg, cand_text, cand_comment, cand_preedit, show_prefix )
+    local cand = Candidate( 'calc', seg.start, seg._end, cand_text, cand_comment )
+    cand.quality = 99999
+    if not show_prefix then cand.preedit = cand_preedit end
+    yield( cand )
 end
 
-random = math.random
-randomseed = math.randomseed
+-- 函数表
+local calcPlugin = {
+    -- e, exp(1) = e^1 = e
+    e = math.exp( 1 ),
+    -- π
+    pi = math.pi,
+}
 
-inf = math.huge
-MAX_INT = math.maxinteger
-MIN_INT = math.mininteger
-pi = math.pi
-sqrt = math.sqrt
-exp = math.exp
-e = exp(1)
-ln = math.log
-log = function (x, base)
-  base = base or 10
-  return ln(x)/ln(base)
+-- random([m [,n ]]) 返回m-n之间的随机数, n为空则返回1-m之间, 都为空则返回0-1之间的小数
+local function random( ... ) return math.random( ... ) end
+-- 注册到函数表中
+calcPlugin['rdm'] = random
+calcPlugin['random'] = random
+
+-- 正弦
+local function sin( x ) return math.sin( x ) end
+calcPlugin['sin'] = sin
+
+-- 双曲正弦
+local function sinh( x ) return math.sinh( x ) end
+calcPlugin['sinh'] = sinh
+
+-- 反正弦
+local function asin( x ) return math.asin( x ) end
+calcPlugin['asin'] = asin
+
+-- 余弦
+local function cos( x ) return math.cos( x ) end
+calcPlugin['cos'] = cos
+
+-- 双曲余弦
+local function cosh( x ) return math.cosh( x ) end
+calcPlugin['cosh'] = cosh
+
+-- 反余弦
+local function acos( x ) return math.acos( x ) end
+calcPlugin['acos'] = acos
+
+-- 正切
+local function tan( x ) return math.tan( x ) end
+calcPlugin['tan'] = tan
+
+-- 双曲正切
+local function tanh( x ) return math.tanh( x ) end
+calcPlugin['tanh'] = tanh
+
+-- 反正切
+-- 返回以弧度为单位的点相对于x轴的逆时针角度。x是点的横纵坐标比值
+-- 返回范围从−π到π （以弧度为单位），其中负角度表示向下旋转，正角度表示向上旋转
+local function atan( x ) return math.atan( x ) end
+calcPlugin['atan'] = atan
+
+-- 反正切
+-- atan( y/x ) = atan2(y, x)
+-- 返回以弧度为单位的点相对于x轴的逆时针角度。y是点的纵坐标，x是点的横坐标
+-- 返回范围从−π到π （以弧度为单位），其中负角度表示向下旋转，正角度表示向上旋转
+-- 与 math.atan(y/x) 函数相比，具有更好的数学定义，因为它能够正确处理边界情况（例如x=0）
+local function atan2( y, x ) return math.atan2( y, x ) end
+calcPlugin['atan2'] = atan2
+
+-- 将角度从弧度转换为度 e.g. deg(π) = 180
+local function deg( x ) return math.deg( x ) end
+calcPlugin['deg'] = deg
+
+-- 将角度从度转换为弧度 e.g. rad(180) = π
+local function rad( x ) return math.rad( x ) end
+calcPlugin['rad'] = rad
+
+-- 返回两个值, 无法参与运算后续, 只能单独使用
+-- 返回m,e 使得x = m * 2^e
+local function frexp( x )
+    local m, e = math.frexp( x )
+    return m .. ' * 2^' .. e
+end
+calcPlugin['frexp'] = frexp
+
+-- 返回 x * 2^y
+local function ldexp( x, y ) return math.ldexp( x, y ) end
+calcPlugin['ldexp'] = ldexp
+
+-- 返回 e^x
+local function exp( x ) return math.exp( x ) end
+calcPlugin['exp'] = exp
+
+-- 返回x的平方根 e.g. sqrt(x) = x^0.5
+local function sqrt( x ) return math.sqrt( x ) end
+calcPlugin['sqrt'] = sqrt
+
+-- y为底x的对数, 使用换底公式实现
+local function log( y, x )
+    -- 不能为负数或0
+    if x <= 0 or y <= 0 then return nil end
+
+    return math.log( x ) / math.log( y )
+end
+calcPlugin['log'] = log
+
+-- e为底x的对数
+local function loge( x )
+    -- 不能为负数或0
+    if x <= 0 then return nil end
+
+    return math.log( x )
+end
+calcPlugin['loge'] = loge
+
+-- 10为底x的对数
+local function log10( x )
+    -- 不能为负数或0
+    if x <= 0 then return nil end
+
+    return math.log10( x )
+end
+calcPlugin['log10'] = log10
+
+-- 平均值
+local function avg( ... )
+    local data = { ... }
+    local n = select( '#', ... )
+    -- 样本数量不能为0
+    if n == 0 then return nil end
+
+    -- 计算总和
+    local sum = 0
+    for _, value in ipairs( data ) do sum = sum + value end
+
+    return sum / n
+end
+calcPlugin['avg'] = avg
+
+-- 方差
+local function variance( ... )
+    local data = { ... }
+    local n = select( '#', ... )
+    -- 样本数量不能为0
+    if n == 0 then return nil end
+
+    -- 计算均值
+    local sum = 0
+    for _, value in ipairs( data ) do sum = sum + value end
+    local mean = sum / n
+
+    -- 计算方差
+    local sum_squared_diff = 0
+    for _, value in ipairs( data ) do sum_squared_diff = sum_squared_diff + (value - mean) ^ 2 end
+
+    return sum_squared_diff / n
+end
+calcPlugin['var'] = variance
+
+-- 阶乘
+local function factorial( x )
+    -- 不能为负数
+    if x < 0 then return nil end
+    if x == 0 or x == 1 then return 1 end
+
+    local result = 1
+    for i = 1, x do result = result * i end
+
+    return result
+end
+calcPlugin['fact'] = factorial
+
+-- 实现阶乘计算(!)
+local function replaceToFactorial( str )
+    -- 替换[0-9]!字符为fact([0-9])以实现阶乘
+    return str:gsub( '([0-9]+)!', 'fact(%1)' )
 end
 
-min = function (arr)
-  local m = inf
-  for k, x in ipairs(arr) do
-   m = x < m and x or m
-  end
-  return m
-end
-
-max = function (arr)
-  local m = -inf
-  for k, x in ipairs(arr) do
-   m = x > m and x or m
-  end
-  return m
-end
-
-sum = function (t)
-  local acc = 0
-  for k,v in ipairs(t) do
-    acc = acc + v
-  end
-  return acc
-end
-
-avg = function (t)
-  return sum(t) / #t
-end
-
-isinteger = function (x)
-  return math.fmod(x, 1) == 0
-end
-
--- iterator . array
-array = function (...)
-  local arr = {}
-  for v in ... do
-    arr[#arr + 1] = v
-  end
-  return arr
-end
-
--- iterator <- [form, to)
-irange = function (from, to, step)
-  if to == nil then
-    to = from
-    from = 0
-  end
-  step = step or 1
-  local i = from - step
-  to = to - step
-  return function()
-    if i < to then
-      i = i + step
-      return i
-    end
-  end
-end
-
--- array <- [form, to)
-range = function (from, to, step)
-  return array(irange(from, to, step))
-end
-
--- array . reversed iterator
-irev = function (arr)
-  local i = #arr + 1
-  return function()
-    if i > 1 then
-      i = i - 1
-      return arr[i]
-    end
-  end
-end
-
--- array . reversed array
-arev = function (arr)
-  return array(irev(arr))
-end
-
-test = function (f, t)
-  for k,v in ipairs(t) do
-    if not f(v) then
-      return false
-    end
-  end
-  return true
-end
-
--- # Functional
-map = function (t, ...)
-  local ta = {}
-  for k,v in pairs(t) do
-    local tmp = v
-    for _,f in pairs({...}) do tmp = f(tmp) end
-    ta[k] = tmp
-  end
-  return ta
-end
-
-filter = function (t, ...)
-  local ta = {}
-  local i = 1
-  for k,v in pairs(t) do
-    local erase = false
-    for _,f in pairs({...}) do
-      if not f(v) then
-        erase = true
-        break
-      end
-    end
-    if not erase then
-	  ta[i] = v
-	  i = i + 1
-    end
-  end
-  return ta
-end
-
--- e.g: foldr({2,3},\n,x.x^n|,2) = 81
-foldr = function (t, f, acc)
-  for k,v in pairs(t) do
-    acc = f(acc, v)
-  end
-  return acc
-end
-
--- e.g: foldl({2,3},\n,x.x^n|,2) = 512
-foldl = function (t, f, acc)
-  for v in irev(t) do
-    acc = f(acc, v)
-  end
-  return acc
-end
-
--- 調用鏈生成函數（HOF for method chaining）
--- e.g: chain(range(-5,5))(map,\x.x/5|)(map,sin)(map,\x.e^x*10|)(map,floor)()
---    = floor(map(map(map(range(-5,5),\x.x/5|),sin),\x.e^x*10|))
---    = {4, 4, 5, 6, 8, 10, 12, 14, 17, 20}
--- 可以用 $ 代替 chain
-chain = function (t)
-  local ta = t
-  local function cf(f, ...)
-    if f ~= nil then
-      ta = f(ta, ...)
-      return cf
+-- 简单计算器
+function calc.func( input, seg, env )
+    if not seg:has_tag( 'calculator' ) or input == '' then return end
+    -- 提取算式
+    local express = truncateFromStart( input, env.prefix )
+    if express == '' then return end -- 防止用户写错了正则表达式造成错误
+    local code = replaceToFactorial( express )
+    local success, result = pcall( load( 'return ' .. code, 'calculate', 't', calcPlugin ) )
+    if success and result and (type( result ) == 'string' or type( result ) == 'number') and #tostring( result ) > 0 then
+        yield_calc_cand( seg, result, '', express, env.show_prefix )
+        yield_calc_cand( seg, express .. '=' .. result, '', express, env.show_prefix )
     else
-      return ta
+        yield_calc_cand( seg, express, '解析失败', express, env.show_prefix )
+        yield_calc_cand( seg, code, '入参', express, env.show_prefix )
     end
-  end
-  return cf
 end
 
--- # Statistics
-fac = function (n)
-  local acc = 1
-  for i = 2,n do
-    acc = acc * i
-  end
-  return acc
-end
-
-nPr = function (n, r)
-  return fac(n) / fac(n - r)
-end
-
-nCr = function (n, r)
-  return nPr(n,r) / fac(r)
-end
-
-MSE = function (t)
-  local ss = 0
-  local s = 0
-  local n = #t
-  for k,v in ipairs(t) do
-    ss = ss + v*v
-    s = s + v
-  end
-  return sqrt((n*ss - s*s) / (n*n))
-end
-
--- # Linear Algebra
-
-
--- # Calculus
--- Linear approximation
-lapproxd = function (f, delta)
-  local delta = delta or 1e-8
-  return function (x)
-           return (f(x+delta) - f(x)) / delta
-         end
-end
-
--- Symmetric approximation
-sapproxd = function (f, delta)
-  local delta = delta or 1e-8
-  return function (x)
-           return (f(x+delta) - f(x-delta)) / delta / 2
-         end
-end
-
--- 近似導數
-deriv = function (f, delta, dc)
-  dc = dc or 1e-4
-  local fd = sapproxd(f, delta)
-  return function (x)
-           return round(fd(x), dc)
-         end
-end
-
--- Trapezoidal rule
-trapzo = function (f, a, b, n)
-  local dif = b - a
-  local acc = 0
-  for i = 1, n-1 do
-    acc = acc + f(a + dif * (i/n))
-  end
-  acc = acc * 2 + f(a) + f(b)
-  acc = acc * dif / n / 2
-  return acc
-end
-
--- 近似積分
-integ = function (f, delta, dc)
-  delta = delta or 1e-4
-  dc = dc or 1e-4
-  return function (a, b)
-           if b == nil then
-             b = a
-             a = 0
-           end
-           local n = round(abs(b - a) / delta)
-           return round(trapzo(f, a, b, n), dc)
-         end
-end
-
--- Runge-Kutta
-rk4 = function (f, timestep)
-  local timestep = timestep or 0.01
-  return function (start_x, start_y, time)
-           local x = start_x
-           local y = start_y
-           local t = time
-           -- loop until i >= t
-           for i = 0, t, timestep do
-             local k1 = f(x, y)
-             local k2 = f(x + (timestep/2), y + (timestep/2)*k1)
-             local k3 = f(x + (timestep/2), y + (timestep/2)*k2)
-             local k4 = f(x + timestep, y + timestep*k3)
-             y = y + (timestep/6)*(k1 + 2*k2 + 2*k3 + k4)
-             x = x + timestep
-           end
-           return y
-         end
-end
-
-
--- # System
-date = os.date
-time = os.time
-path = function ()
-  return debug.getinfo(1).source:match("@?(.*/)")
-end
-
-
-local function serialize(obj)
-  local type = type(obj)
-  if type == "number" then
-    return isinteger(obj) and floor(obj) or obj
-  elseif type == "boolean" then
-    return tostring(obj)
-  elseif type == "string" then
-    return '"'..obj..'"'
-  elseif type == "table" then
-    local str = "{"
-    local i = 1
-    for k, v in pairs(obj) do
-      if i ~= k then  
-        str = str.."["..serialize(k).."]="
-      end
-      str = str..serialize(v)..", "  
-      i = i + 1
-    end
-    str = str:len() > 3 and str:sub(0,-3) or str
-    return str.."}"
-  elseif pcall(obj) then -- function類型
-    return "callable"
-  end
-  return obj
-end
-
--- 是否随时计算
-local ImmediateCalculation = true
-
-local function calculator_translator(input, seg, env)
-
-  -- 获取 recognizer/patterns/expression 的第 2 个字符作为触发前缀（也就是获取等于号 = 或其他自定义字符）
-  local expression_keyword = env.engine.schema.config:get_string('recognizer/patterns/expression'):sub(2, 2)
-
-  -- 如果当前输入的是触发前缀，则尝试解析输入的 Lua 表达式，其中 seg:has_tag 判断是否是候选词；否则返回
-  if not (seg:has_tag("expression") and expression_keyword ~= '' and input:sub(1, 1) == expression_keyword) then
-      return
-  end
-
-  -- 解决 鼠须管 单个 input 字直接上屏问题
-  if string.len(input) < 2 then
-      -- 输入内容太短，不做处理
-      return
-  end
-
-  -- 匹配结束标记字符
-  local expfin = ImmediateCalculation or input:sub(-1, -1) == ";"
-  if not expfin then
-      return
-  end
-
-  -- yield(Candidate("number", seg.start, seg._end, input, "输入的字符"))
-
-  local exp = (ImmediateCalculation or not expfin) and input:sub(2, -1) or input:sub(2, -2)
-
-  -- 空格输入可能
-  exp = exp:gsub("#", " ")
-
-  -- yield(Candidate("number", seg.start, seg._end, exp, "表达式"))
-
-  local expe = exp
-  -- 链式调用语法糖
-  expe = expe:gsub("%$", " chain ")
-  -- lambda語法糖
-  do
-      local count
-      repeat
-          expe, count = expe:gsub("\\%s*([%a%d%s,_]-)%s*%.(.-)|", " (function (%1) return %2 end) ")
-      until count == 0
-  end
-
-  yield(Candidate("number", seg.start, seg._end, expe, "展开"))
-
-  -- 防止危險操作，禁用os和io命名空間
-  if expe:find("i?os?%.") then
-      return
-  end
-
-  -- 表达式的计算
-  local result = load("return " .. expe)()
-  if result == nil then
-      return
-  end
-
-  result = serialize(result, seg)
-  yield(Candidate("number", seg.start, seg._end, result, "答案"))
-  yield(Candidate("number", seg.start, seg._end, exp .. " = " .. result, "等式"))
-
-end
-
-return calculator_translator
+return calc

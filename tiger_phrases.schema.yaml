@@ -17,7 +17,7 @@ schema:
     - tiger_phrase
   description: |
     赫兹虎词整句
-  name: "🐯赫兹虎词整句"
+  name: "🐯句·词"
   schema_id: tiger_phrases
   version: "2024-11-22"
 

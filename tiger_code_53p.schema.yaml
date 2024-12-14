@@ -17,7 +17,7 @@ schema:
     - tiger_phrase
   description: |
     虎码单字五三顶
-  name: "🐯虎单·五三顶"
+  name: "🐯字·五三顶"
   schema_id: tiger_code_53p
   version: "2024-12-14"
 
@@ -76,15 +76,15 @@ key_binder:
     __append:
       # 在這裏添加只在本方案中生效的按鍵綁定
   poping:
-    - match: "[a-z]{4}"
-      accept: "j"
-      send_sequence: "{Left}{Left}{Left}{space}{space}"
-    - match: "[a-z]{4}"
-      accept: "k"
-      send_sequence: "{Left}{Left}{space}{space}"
-    - match: "[a-z]{4}"
-      accept: "l"
-      send_sequence: "{Left}{space}{space}"
+    #- match: "[a-z]{4}"
+    #  accept: "j"
+    #  send_sequence: "{Left}{Left}{Left}{space}{space}"
+    #- match: "[a-z]{4}"
+    #  accept: "k"
+    #  send_sequence: "{Left}{Left}{space}{space}"
+    #- match: "[a-z]{4}"
+    #  accept: "l"
+    #  send_sequence: "{Left}{space}{space}"
     #- when: has_menu
     #  accept: ;
     #  send: '2'

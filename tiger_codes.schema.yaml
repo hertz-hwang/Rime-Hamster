@@ -17,7 +17,7 @@ schema:
     - tiger_phrases
   description: |
     官方虎词
-  name: "🐯官方虎词"
+  name: "🐯词·官方"
   schema_id: tiger_codes
   version: "2024-11-22"
 

@@ -22,7 +22,7 @@ schema:
     - tiger_phrases
   description: |
     赫兹虎单整句
-  name: "🐯赫兹虎单整句"
+  name: "🐯句·单"
   schema_id: tiger_phrase
   version: "2024-11-16"
 
