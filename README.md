@@ -11,6 +11,10 @@
 
 使用 `主方案2-虎单·五二顶` 时，可尝试第五码顶出最前两码的体验。
 
+
+https://github.com/user-attachments/assets/411b02af-181d-442b-a515-6147fe9adf8e
+
+
 ![五二顶](https://github.com/user-attachments/assets/b607d986-484c-4b29-b868-1189b2426046)
 
 ### 临时打词 `G〔九重鬼虎〕` `D〔官方虎词〕`
