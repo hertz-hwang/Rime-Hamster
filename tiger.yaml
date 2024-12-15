@@ -1,5 +1,59 @@
 # tiger-code config
 
+########################
+#        模型配置       #
+########################
+
+octagram:
+  disable:
+    __patch:
+      grammar: {}
+  enable_for_chars: #参数较极端，仅适用于虎单整句方案，其它方案不保证有效
+    __patch:
+      grammar:
+        language: amz-v1-5-zh-hans
+        collocation_max_length: 6
+        collocation_min_length: 4
+        collocation_penalty: -15
+        non_collocation_penalty: -2
+        weak_collocation_penalty: -23 # 任意值(虎码中未发现影响)
+        rear_penalty: -18             # 任意值(虎码中未发现影响)
+      translator/+:
+        contextual_suggestions: false  # 设置为false，避免二简混乱，如："kw" 首选变成 “能得” 等
+        max_homophones: 4
+        max_homographs: 0
+
+  enable_for_words: #用于词句的参数，未定
+    __patch:
+      grammar:
+        language: amz-v3n2m1-zh-hans
+      translator/+:
+        contextual_suggestions: true
+        max_homophones: 7
+        max_homographs: 7
+
+########################
+#      整句词库选择      #
+########################
+dicts:
+  __patch:
+    dictionary: tiger_phrase_wanxiang  # 也可以选择 tiger_phrase_moran，则使用魔然词库
+    prism: tiger_phrase_wanxiang
+
+########################
+# 反查方案选择，只能选一个 #
+########################
+pinyin:
+  __patch:
+    - algebra_py        # 全拼
+    #- algebra_zrm      # 自然码双拼
+    #- algebra_flypy    # 小鹤双拼
+    #- algebra_sogou    # 搜狗双拼
+    #- algebra_mspy     # 微软双拼
+    #- algebra_abc      # 智能ABC双拼
+    #- algebra_ziguang  # 紫光双拼
+    #- algebra_lx17     # 乱序17
+
 # 说明
 # xform  --改寫〔不保留原形〕
 # derive --衍生〔保留原形〕
@@ -815,30 +869,276 @@ punctuator:
       - 'https://github.com/hertz-hwang/Rime-tiger_code.git'
       - 'https://hertz-hwang.github.io/hamster-tools/'
 
-octagram:
-  disable:
-    __patch:
-      grammar: {}
-  enable_for_chars: #参数较极端，仅适用于虎单方案，其它方案不保证有效
-    __patch:
-      grammar:
-        language: amz-v3n2m1-zh-hans
-        collocation_max_length: 4
-        collocation_min_length: 2
-        collocation_penalty: -10
-        non_collocation_penalty: -48
-        weak_collocation_penalty: -24 # 任意值(虎码中未发现影响)
-        rear_penalty: -18             # 任意值(虎码中未发现影响)
-      translator/+:
-        contextual_suggestions: false  # 设置为false，避免二简混乱，如："kw" 首选变成 “能得” 等
-        max_homophones: 4
-        max_homographs: 0
+algebra_py:
+  __append:
+    - xlit/āáǎàōóǒòēéěèīíǐìūúǔùǖǘǚǜü/aaaaooooeeeeiiiiuuuuvvvvv/
+    - xform/ń|ň|ǹ/en/
+    - xform/\bn\b/en/
+    - xform/ńg|ňg|ǹg/en/
 
-  enable_for_words: #用于词句的参数，未定
-    __patch:
-      grammar:
-        language: amz-v3n2m1-zh-hans
-      translator/+:
-        contextual_suggestions: true
-        max_homophones: 7
-        max_homographs: 7
+algebra_zrm: 
+  __append:
+    - xlit/āáǎàōóǒòēéěèīíǐìūúǔùǖǘǚǜü/aaaaooooeeeeiiiiuuuuvvvvv/
+    - xform/ń|ň|ǹ/en/
+    - xform/\bn\b/en/
+    - xform/ńg|ňg|ǹg/en/
+    - derive/^([jqxy])u$/$1v/
+    - derive/^([aoe])([ioun])$/$1$1$2/
+    - xform/^([aoe])(ng)?$/$1$1$2/
+    - xform/iu$/Ⓠ/
+    - xform/[iu]a$/Ⓦ/
+    - xform/[uv]an$/Ⓡ/
+    - xform/[uv]e$/Ⓣ/
+    - xform/ing$|uai$/Ⓨ/
+    - xform/^sh/Ⓤ/
+    - xform/^ch/Ⓘ/
+    - xform/^zh/Ⓥ/
+    - xform/uo$/Ⓞ/
+    - xform/[uv]n$/Ⓟ/
+    - xform/(.)i?ong$/$1Ⓢ/
+    - xform/[iu]ang$/Ⓓ/
+    - xform/(.)en$/$1Ⓕ/
+    - xform/(.)eng$/$1Ⓖ/
+    - xform/(.)ang$/$1Ⓗ/
+    - xform/ian$/Ⓜ/
+    - xform/(.)an$/$1Ⓙ/
+    - xform/iao$/Ⓒ/
+    - xform/(.)ao$/$1Ⓚ/
+    - xform/(.)ai$/$1Ⓛ/
+    - xform/(.)ei$/$1Ⓩ/
+    - xform/ie$/Ⓧ/
+    - xform/ui$/Ⓥ/
+    - xform/(.)ou$/$1Ⓑ/
+    - xform/in$/Ⓝ/
+    - xlit/ⓆⓌⓇⓉⓎⓊⒾⓄⓅⓈⒹⒻⒼⒽⓂⒿⒸⓀⓁⓏⓍⓋⒷⓃ/qwrtyuiopsdfghmjcklzxvbn/
+
+algebra_flypy: 
+  __append:
+    - xlit/āáǎàōóǒòēéěèīíǐìūúǔùǖǘǚǜü/aaaaooooeeeeiiiiuuuuvvvvv/
+    - xform/ń|ň|ǹ/en/
+    - xform/\bn\b/en/
+    - xform/ńg|ňg|ǹg/en/
+    - derive/^([jqxy])u$/$1v/
+    - derive/^([aoe])([ioun])$/$1$1$2/
+    - xform/^([aoe])(ng)?$/$1$1$2/
+    - xform/iu$/Ⓠ/
+    - xform/(.)ei$/$1Ⓦ/
+    - xform/uan$/Ⓡ/
+    - xform/[uv]e$/Ⓣ/
+    - xform/un$/Ⓨ/
+    - xform/^sh/Ⓤ/
+    - xform/^ch/Ⓘ/
+    - xform/^zh/Ⓥ/
+    - xform/uo$/Ⓞ/
+    - xform/ie$/Ⓟ/
+    - xform/(.)i?ong$/$1Ⓢ/
+    - xform/ing$|uai$/Ⓚ/
+    - xform/(.)ai$/$1Ⓓ/
+    - xform/(.)en$/$1Ⓕ/
+    - xform/(.)eng$/$1Ⓖ/
+    - xform/[iu]ang$/Ⓛ/
+    - xform/(.)ang$/$1Ⓗ/
+    - xform/ian$/Ⓜ/
+    - xform/(.)an$/$1Ⓙ/
+    - xform/(.)ou$/$1Ⓩ/
+    - xform/[iu]a$/Ⓧ/
+    - xform/iao$/Ⓝ/
+    - xform/(.)ao$/$1Ⓒ/
+    - xform/ui$/Ⓥ/
+    - xform/in$/Ⓑ/
+    - xlit/ⓆⓌⓇⓉⓎⓊⒾⓄⓅⓈⒹⒻⒼⒽⒿⓀⓁⓏⓍⒸⓋⒷⓃⓂ/qwrtyuiopsdfghjklzxcvbnm/
+
+algebra_sogou: 
+  __append:
+    - xlit/āáǎàōóǒòēéěèīíǐìūúǔùǖǘǚǜü/aaaaooooeeeeiiiiuuuuvvvvv/
+    - xform/ń|ň|ǹ/en/
+    - xform/\bn\b/en/
+    - xform/ńg|ňg|ǹg/en/
+    - derive/^([jqxy])u$/$1v/
+    - derive/^([aoe].*)$/o$1/
+    - xform/^([ae])(.*)$/$1$1$2/
+    - xform/iu$/Ⓠ/
+    - xform/[iu]a$/Ⓦ/
+    - xform/er$|[uv]an$/Ⓡ/
+    - xform/[uv]e$/Ⓣ/
+    - xform/v$|uai$/Ⓨ/
+    - xform/^sh/Ⓤ/
+    - xform/^ch/Ⓘ/
+    - xform/^zh/Ⓥ/
+    - xform/uo$/Ⓞ/
+    - xform/[uv]n$/Ⓟ/
+    - xform/(.)i?ong$/$1Ⓢ/
+    - xform/[iu]ang$/Ⓓ/
+    - xform/(.)en$/$1Ⓕ/
+    - xform/(.)eng$/$1Ⓖ/
+    - xform/(.)ang$/$1Ⓗ/
+    - xform/ian$/Ⓜ/
+    - xform/(.)an$/$1Ⓙ/
+    - xform/iao$/Ⓒ/
+    - xform/(.)ao$/$1Ⓚ/
+    - xform/(.)ai$/$1Ⓛ/
+    - xform/(.)ei$/$1Ⓩ/
+    - xform/ie$/Ⓧ/
+    - xform/ui$/Ⓥ/
+    - xform/(.)ou$/$1Ⓑ/
+    - xform/in$/Ⓝ/
+    - xform/ing$/;/
+    - xlit/ⓆⓌⓇⓉⓎⓊⒾⓄⓅⓈⒹⒻⒼⒽⓂⒿⒸⓀⓁⓏⓍⓋⒷⓃ/qwrtyuiopsdfghmjcklzxvbn/
+
+algebra_mspy: 
+  __append:
+    - xlit/āáǎàōóǒòēéěèīíǐìūúǔùǖǘǚǜü/aaaaooooeeeeiiiiuuuuvvvvv/
+    - xform/ń|ň|ǹ/en/
+    - xform/\bn\b/en/
+    - xform/ńg|ňg|ǹg/en/
+    - derive/^([jqxy])u$/$1v/
+    - derive/^([aoe].*)$/o$1/
+    - xform/^([ae])(.*)$/$1$1$2/
+    - xform/iu$/Ⓠ/
+    - xform/[iu]a$/Ⓦ/
+    - xform/er$|[uv]an$/Ⓡ/
+    - xform/[uv]e$/Ⓣ/
+    - xform/v$|uai$/Ⓨ/
+    - xform/^sh/Ⓤ/
+    - xform/^ch/Ⓘ/
+    - xform/^zh/Ⓥ/
+    - xform/uo$/Ⓞ/
+    - xform/[uv]n$/Ⓟ/
+    - xform/(.)i?ong$/$1Ⓢ/
+    - xform/[iu]ang$/Ⓓ/
+    - xform/(.)en$/$1Ⓕ/
+    - xform/(.)eng$/$1Ⓖ/
+    - xform/(.)ang$/$1Ⓗ/
+    - xform/ian$/Ⓜ/
+    - xform/(.)an$/$1Ⓙ/
+    - xform/iao$/Ⓒ/
+    - xform/(.)ao$/$1Ⓚ/
+    - xform/(.)ai$/$1Ⓛ/
+    - xform/(.)ei$/$1Ⓩ/
+    - xform/ie$/Ⓧ/
+    - xform/ui$/Ⓥ/
+    - derive/Ⓣ$/Ⓥ/
+    - xform/(.)ou$/$1Ⓑ/
+    - xform/in$/Ⓝ/
+    - xform/ing$/;/
+    - xlit/ⓆⓌⓇⓉⓎⓊⒾⓄⓅⓈⒹⒻⒼⒽⓂⒿⒸⓀⓁⓏⓍⓋⒷⓃ/qwrtyuiopsdfghmjcklzxvbn/
+
+algebra_abc: 
+  __append:
+    - xlit/āáǎàōóǒòēéěèīíǐìūúǔùǖǘǚǜü/aaaaooooeeeeiiiiuuuuvvvvv/
+    - xform/ń|ň|ǹ/en/
+    - xform/\bn\b/en/
+    - xform/ńg|ňg|ǹg/en/
+    - xform/^zh/Ⓐ/
+    - xform/^ch/Ⓔ/
+    - xform/^sh/Ⓥ/
+    - xform/^([aoe].*)$/Ⓞ$1/
+    - xform/ei$/Ⓠ/
+    - xform/ian$/Ⓦ/
+    - xform/er$|iu$/Ⓡ/
+    - xform/[iu]ang$/Ⓣ/
+    - xform/ing$/Ⓨ/
+    - xform/uo$/Ⓞ/
+    - xform/uan$/Ⓟ/
+    - xform/(.)i?ong$/$1Ⓢ/
+    - xform/[iu]a$/Ⓓ/
+    - xform/en$/Ⓕ/
+    - xform/eng$/Ⓖ/
+    - xform/ang$/Ⓗ/
+    - xform/an$/Ⓙ/
+    - xform/iao$/Ⓩ/
+    - xform/ao$/Ⓚ/
+    - xform/in$|uai$/Ⓒ/
+    - xform/ai$/Ⓛ/
+    - xform/ie$/Ⓧ/
+    - xform/ou$/Ⓑ/
+    - xform/un$/Ⓝ/
+    - xform/[uv]e$|ui$/Ⓜ/
+    - xlit/ⓆⓌⒺⓇⓉⓎⓄⓅⒶⓈⒹⒻⒼⒽⒿⓀⓁⓏⓍⒸⓋⒷⓃⓂ/qwertyopasdfghjklzxcvbnm/
+
+algebra_ziguang: 
+  __append:
+    - xlit/āáǎàōóǒòēéěèīíǐìūúǔùǖǘǚǜü/aaaaooooeeeeiiiiuuuuvvvvv/
+    - xform/ń|ň|ǹ/en/
+    - xform/\bn\b/en/
+    - xform/ńg|ňg|ǹg/en/
+    - derive/^([jqxy])u$/$1v/
+    - xform/^([aoe].*)$/Ⓞ$1/  # 添上固定的零聲母o，先標記爲大寫O
+    - xform/en$/Ⓦ/
+    - xform/eng$/Ⓣ/
+    - xform/in$|uai$/Ⓨ/
+    - xform/^zh/Ⓤ/
+    - xform/^sh/Ⓘ/
+    - xform/uo$/Ⓞ/
+    - xform/ai$/Ⓟ/
+    - xform/^ch/Ⓐ/
+    - xform/[iu]ang$/Ⓖ/
+    - xform/ang$/Ⓢ/  # ang should be placed after iang/uang
+    - xform/ie$/Ⓓ/
+    - xform/ian$/Ⓕ/
+    - xform/(.)i?ong$/$1Ⓗ/
+    - xform/er$|iu$/Ⓙ/
+    - xform/ei$/Ⓚ/
+    - xform/uan$/Ⓛ/
+    - xform/ing$/;/
+    - xform/ou$/Ⓩ/
+    - xform/[iu]a$/Ⓧ/
+    - xform/iao$/Ⓑ/
+    - xform/ue$|ui$|ve$/Ⓝ/
+    - xform/un$/Ⓜ/
+    - xform/ao$/Ⓠ/ # ao should be placed after iao
+    - xform/an$/Ⓡ/ # an should be placed after uan/ian
+    - xlit/ⓌⓉⓎⓊⒾⓄⓅⒶⒼⓈⒹⒻⒽⒿⓀⓁⓏⓍⒷⓃⓂⓆⓇ/wtyuiopagsdfhjklzxbnmqr/
+
+algebra_lx17:
+  __append:
+    - xlit/āáǎàōóǒòēéěèīíǐìūúǔùǖǘǚǜü/aaaaooooeeeeiiiiuuuuvvvvv/
+    - xform/ń|ň|ǹ/en/
+    - xform/\bn\b/en/
+    - xform/ńg|ňg|ǹg/en/
+    - erase/^xx$/
+    - derive/^([jqxy])u$/$1Ⓥ/
+    - xform/^ch/Ⓒ/
+    - xform/^c/Ⓕ/
+    - xform/^k/Ⓙ/
+    - xform/^([aoe].*)$/Ⓠ$1/
+    - xform/^p/Ⓗ/
+    - xform/^r/Ⓝ/
+    - xform/^sh/Ⓢ/
+    - xform/^s/Ⓜ/
+    - xform/^zh/Ⓩ/
+    - xform/^z/Ⓦ/
+    - xform/uang$/Ⓠ/
+    - xform/iang$/Ⓒ/
+    - xform/iong$/Ⓑ/
+    - xform/ang$/Ⓩ/
+    - xform/eng$/Ⓨ/
+    - xform/ian$/Ⓠ/
+    - xform/iao$/Ⓩ/
+    - xform/ing$/Ⓨ/
+    - xform/ong$/Ⓣ/
+    - xform/uai$/Ⓧ/
+    - xform/uan$/Ⓧ/
+    - xform/ai$/Ⓛ/
+    - xform/an$/Ⓝ/
+    - xform/ao$/Ⓑ/
+    - xform/ei$/Ⓖ/
+    - xform/en$/Ⓢ/
+    - xform/er$/Ⓣ/
+    - xform/ua$/Ⓗ/
+    - xform/ie$/Ⓜ/
+    - xform/in$/Ⓢ/
+    - xform/iu$/Ⓕ/
+    - xform/ou$/Ⓕ/
+    - xform/ia$/Ⓗ/
+    - xform/[uv]e$/Ⓛ/
+    - xform/ui$/Ⓒ/
+    - xform/un$/Ⓖ/
+    - xform/uo$/Ⓜ/
+    - xform/a$/Ⓗ/
+    - xform/e$/Ⓦ/
+    - xform/i$/Ⓙ/
+    - xform/o$/Ⓧ/
+    - xform/u$/Ⓓ/
+    - xform/v$/Ⓧ/
+    - xlit/ⓆⓌⒺⓇⓉⓎⓄⓅⒶⓈⒹⒻⒼⒽⒿⓀⓁⓏⓍⒸⓋⒷⓃⓂ/qwertyopasdfghjklzxcvbnm/

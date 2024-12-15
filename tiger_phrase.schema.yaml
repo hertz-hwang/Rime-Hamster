@@ -1,11 +1,6 @@
 # Rime schema
 # encoding: utf-8
 
-# 词库选择
-dicts:
-  __patch:
-    dictionary: tiger_phrase_wanxiang  # 也可以选择 tiger_phrase_moran，则使用魔然词库
-
 schema:
   author:
     - Hertz Hwang <hertz@26hz.com.cn>
@@ -66,9 +61,8 @@ speller:
       - tiger:/algebra/erase       # 擦除编码
 
 translator:
-  __include: dicts
-  prism: tiger_code
-  enable_user_dict: false
+  __include: tiger:/dicts
+  enable_user_dict: true
   enable_charset_filter: false
   enable_encoder: false
   enable_sentence: false

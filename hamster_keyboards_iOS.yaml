@@ -910,6 +910,14 @@ keyboards:
                 processByRIME: true
                 direction: up
               - action:
+                  shortcutCommand:
+                    sendKeys:
+                      keys: Control+k
+                label: 删用户词
+                display: true
+                processByRIME: true
+                direction: down
+              - action:
                   shortcutCommand: "#重输"
                 label:
                   text: ""

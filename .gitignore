@@ -12,6 +12,5 @@ predict.txt
 sogou_pop.dict.yaml
 tiger_code.custom.yaml
 user.yaml
-tools/__pycache__
-tools/userdb_check.py
+*.gram
 .DS_Store
