@@ -28,6 +28,9 @@ schema:
 
 __patch:
   - tiger_code.custom:/patch?
+  - engine/processors/@next: lua_processor@*hertz.tiger_pin*pin_processor
+  - engine/translators/@next: lua_translator@*hertz.tiger_pin*panacea_translator
+  - engine/filters/@next: lua_filter@*hertz.tiger_pin*pin_filter
   - engine/filters/@next: simplifier@chinese_english
   - engine/filters/@next: lua_filter@*hertz.tiger_spelling*filter
 
@@ -53,7 +56,7 @@ speller:
   auto_clear: max_length
   auto_select: true
   max_code_length: 5
-  alphabet: ";'zyxwvutsrqponmlkjihgfedcbaUPOI]/V"
+  alphabet: ";'zyxwvutsrqponmlkjihgfedcbaUPOI[]/V"
   delimiter: "_'"
   auto_select_pattern: ^;\w+
   algebra:
@@ -64,6 +67,7 @@ speller:
 
 translator:
   __include: dicts
+  prism: tiger_code
   enable_user_dict: false
   enable_charset_filter: false
   enable_encoder: false
@@ -89,6 +93,9 @@ key_binder:
       # 在這裏添加只在本方案中生效的按鍵綁定
   bindings:
     __patch:
+      - :/key_binder/custom_bindings?
+      - tiger:/keys/emacs_mode
+      - tiger:/keys/tab
       - tiger:/keys/page_up_down
       - tiger:/keys/selector
       - tiger:/keys/options_toggle
@@ -110,3 +117,25 @@ tiger_spelling:
 schema_name:
   spelling: tiger_spelling_pseudo
   code: tiger_phrase
+
+tiger:
+  # 「置頂」功能相關設置
+  # 輸入時通過快捷鍵 Ctrl+t 可以將高亮顯示的候選置頂，被置頂的候選位置固定，不再參與調頻
+  # 對同一輸入碼最高支持8個置頂詞，當嘗試置頂第9個詞時，最早被置頂的詞將會失效
+  pin:
+    # 「置頂」功能開關
+    enable: true
+    # 置頂詞提示符
+    indicator: "📌"
+    # 「萬靈藥」加詞功能
+    # 通過輸入 「編碼A」@「編碼B」 實現造詞功能，編碼A是這個新詞的新編碼 編碼B是目前可以打出該詞的編碼
+    # 例如 輸入 tnfb 不能得到「頭腦風暴」這一候選， 此時我們可以輸入 tnfb@tbnkfgbk 按下空格 讓「頭腦風暴」候選上屏，上屏的詞會被加入用戶詞庫中，之後我們可以用 tnfb 來得到「頭腦風暴」這一候選了
+    # 造出的詞與置頂詞是等同的
+    panacea:
+      # 加詞狀態提示
+      prompt: "〔造词〕"
+      # 加詞中綴引導符
+      infix: "@"
+      # 自由加詞模式開關，開啓此模式後，輸入「編碼A」@並空格上屏後會進入加詞狀態，此時可以連續地、不受束縛地輸入，再次按下x@空格退出加詞狀態，期間輸入的內容將會被記錄爲「編碼A」的新置頂詞
+      # 此模式適合造一些混合詞，如「A4紙」、「KOS-MOS」等
+      freestyle: true

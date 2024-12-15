@@ -72,6 +72,9 @@ key_binder:
       # 在這裏添加只在本方案中生效的按鍵綁定
   bindings:
     __patch:
+      - :/key_binder/custom_bindings?
+      - tiger:/keys/emacs_mode
+      - tiger:/keys/tab
       - tiger:/keys/page_up_down
       - tiger:/keys/selector
       - tiger:/keys/options_toggle

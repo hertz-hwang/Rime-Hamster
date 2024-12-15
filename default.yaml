@@ -46,6 +46,8 @@ key_binder:
   import_preset: default
   bindings:
     __patch:
+      - tiger:/keys/emacs_mode
+      - tiger:/keys/tab
       - tiger:/keys/page_up_down
       - tiger:/keys/selector
       - tiger:/keys/options_toggle

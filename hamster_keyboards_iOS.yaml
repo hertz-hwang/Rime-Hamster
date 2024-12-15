@@ -1189,10 +1189,11 @@ keyboards:
             lightModeStyleName: hotkeys_light
             darkModeStyleName: hotkeys
           - action:
-              character:
-                char: ""
+              shortcutCommand:
+                sendKeys:
+                  keys: Control+t
             width: available
-            label: 󰹇
+            label: 󰐄
             swipe:
               - action:
                   shortcutCommand: "#关闭键盘"

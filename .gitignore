@@ -3,6 +3,7 @@
 /Fonts
 /sync
 /theme
+/*.userdb
 build_predict
 default.custom.yaml
 installation.yaml

@@ -99,6 +99,9 @@ key_binder:
     #  send: '5'
   bindings:
     __patch:
+      - :/key_binder/custom_bindings?
+      - tiger:/keys/emacs_mode
+      - tiger:/keys/tab
       - tiger:/keys/page_up_down
       - tiger:/keys/selector
       - tiger:/keys/options_toggle
