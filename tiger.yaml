@@ -8,7 +8,7 @@ octagram:
   disable:
     __patch:
       grammar: {}
-  enable_for_chars: #参数较极端，仅适用于虎单整句方案，其它方案不保证有效
+  enable_for_chars: #参数较极端，仅适用于虎单整句方案，音码方案不建议尝试
     __patch:
       grammar:
         language: amz-v1-5-zh-hans
@@ -16,8 +16,8 @@ octagram:
         collocation_min_length: 4
         collocation_penalty: -15
         non_collocation_penalty: -2
-        weak_collocation_penalty: -23 # 任意值(虎码中未发现影响)
-        rear_penalty: -18             # 任意值(虎码中未发现影响)
+        weak_collocation_penalty: -23
+        rear_penalty: -18
       translator/+:
         contextual_suggestions: false  # 设置为false，避免二简混乱，如："kw" 首选变成 “能得” 等
         max_homophones: 4

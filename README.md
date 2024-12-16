@@ -1,6 +1,9 @@
 > 所需字体下载
 > [Fonts.zip](https://github.com/hertz-hwang/Rime-tiger_code/releases/download/Fonts/Fonts.zip)
 
+> AMZ训练模型下载
+> [amz-v1-5-zh-hans.gram](https://huggingface.co/hertz-hwang/amz-v1-5-zh-hans/)
+
 ## 仿 iOS 配色
 
 ![iOS](/assets/iOS.jpg)
