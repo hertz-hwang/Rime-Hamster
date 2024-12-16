@@ -1,0 +1,22 @@
+name: Push to Gitee
+on: push
+jobs:
+  push_gitee:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Set up Git
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+
+      - name: Push to Gitee
+        run: |
+          git remote add gitee https://hertz-hwang:${{ secrets.GITEE_TOKEN }}@gitee.com/hertz-hwang/Rime-tiger_code.git
+          git fetch gitee
+          git push gitee HEAD:main --force
+        env:
+          GITEE_TOKEN: ${{ secrets.GITEE_TOKEN }}
