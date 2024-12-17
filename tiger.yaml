@@ -37,8 +37,8 @@ octagram:
 ########################
 dicts:
   __patch:
-    dictionary: tiger_phrase_ice        # 雾凇词库
-    #dictionary: tiger_phrase_wanxiang  # 万象词库
+    #dictionary: tiger_phrase_ice        # 雾凇词库
+    dictionary: tiger_phrase_wanxiang  # 万象词库
     #dictionary: tiger_phrase_moran     # 魔然词库
 
 ########################
