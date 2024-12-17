@@ -33,12 +33,13 @@ octagram:
         max_homographs: 7
 
 ########################
-#      整句词库选择      #
+# 整句词库选择，只能选一个 #
 ########################
 dicts:
   __patch:
-    dictionary: tiger_phrase_wanxiang  # 也可以选择 tiger_phrase_moran，则使用魔然词库
-    prism: tiger_phrase_wanxiang
+    dictionary: tiger_phrase_ice        # 雾凇词库
+    #dictionary: tiger_phrase_wanxiang  # 万象词库
+    #dictionary: tiger_phrase_moran     # 魔然词库
 
 ########################
 # 反查方案选择，只能选一个 #
@@ -335,7 +336,7 @@ tiger_oni_translator:
 
 tiger_phrase_translator:
   tiger_phrase:
-    dictionary: tiger_phrase_wanxiang
+    __include: dicts
     tag: tiger_phrase
     prefix: "H"
     tips: "〔赫兹虎单整句〕"
