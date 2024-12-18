@@ -1069,7 +1069,7 @@ keyboards:
                   shortcutCommand:
                     sendKeys:
                       keys: Control+k
-                label: " "
+                label: "删词"
                 display: true
                 processByRIME: true
                 direction: down
@@ -1161,23 +1161,28 @@ keyboards:
               - action:
                   shortcutCommand:
                     sendKeys:
-                      keys: Control+p
+                      keys: Control+l
                 label: 联想预测
               - action:
                   shortcutCommand:
                     sendKeys:
-                      keys: Control+e
+                      keys: Control+t
                 label: 翻译
               - action:
                   shortcutCommand:
                     sendKeys:
-                      keys: Control+b
+                      keys: Control+u
                 label: 字集
               - action:
                   shortcutCommand:
                     sendKeys:
                       keys: Control+m
                 label: 火星文
+              - action:
+                  shortcutCommand:
+                    sendKeys:
+                      keys: Shift+Return
+                label: preedit
             lightModeStyleName: shift_delete_light
             darkModeStyleName: shift_delete
           - action:
