@@ -37,9 +37,10 @@ octagram:
 ########################
 dicts:
   __patch:
+    dictionary: tiger_phrase_hertz       # 赫兹词库，基于万象词库词整词频以适应虎码字频
     #dictionary: tiger_phrase_ice        # 雾凇词库
-    dictionary: tiger_phrase_wanxiang  # 万象词库
-    #dictionary: tiger_phrase_moran     # 魔然词库
+    #dictionary: tiger_phrase_wanxiang   # 万象词库
+    #dictionary: tiger_phrase_moran      # 魔然词库
 
 ########################
 # 反查方案选择，只能选一个 #
@@ -94,6 +95,12 @@ algebra:
 
   wildcard:                                       # 通配符 （影响部署时间，默认关闭）
     __append:
+      #- derive|^.(.*)$|~$1|
+      #- derive|^(.).(.*)$|$1~$2|
+      #- derive|^(..).(.*)$|$1~$2|
+      #- derive|^(...).(.*)$|$1~$2|
+      #- derive|^(....).(.*)$|$1~$2|
+      #- derive|^(.....).$|$1~|
       - derive|^(\w)(\w)\[(\w)(\w)$|~$2$3$4|      # 1码通配
       - derive|^(\w)(\w)\[(\w)(\w)$|~$2$3|        # 1码通配
       - derive|^(\w)(\w)\[(\w)(\w)$|~$2|          # 1码通配

@@ -17,7 +17,7 @@ speller:
   alphabet: ";'zyxwvutsrqponmlkjihgfedcba]"    # 输入范围 码元
   delimiter: " '"
   algebra:
-    __include: tiger:/pinyin
+    __include: tiger:/pinyin?
 
 translator:
   dictionary: pinyin           # 字典文件
