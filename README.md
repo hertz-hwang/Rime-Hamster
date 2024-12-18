@@ -35,11 +35,11 @@ https://github.com/user-attachments/assets/411b02af-181d-442b-a515-6147fe9adf8e
 
 ![鬼虎](/assets/agzh.png)
 
-### 临式打句 `H〔赫兹虎单整句〕` `F〔官方虎词整句〕`
+### 临时打句 `H〔赫兹虎单整句〕` `F〔官方虎词整句〕`
 
 按下大写字母 `H` 键，进入 “虎单整句模式”，按下大写字母 `F` 键，进入 “虎词整句模式”。
 
-**在 [智能模型](https://github.com/amzxyz/RIME-LMDG) 加持下，日常水文基本可以不依靠分词或末位锁码打出准确的整句。**
+**在 [AMZ智能模型](https://github.com/amzxyz/RIME-LMDG) 加持下，日常水文基本可以不依靠分词或末位锁码打出准确的整句。**
 
 
 ~~末位U加强1码单字~~<br>
