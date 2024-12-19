@@ -144,16 +144,19 @@ end
 
 local function enhance_filter(input, env)
     for cand in input:iter() do
-        -- 检查是否需要分词
+        -- 检查是否需要分词：
+        -- 1. 输入完全由英文字母组成
+        -- 2. 来源是英文输入方案或带有英文标记
         local need_split = false
-        if cand.type == "table" then
-            need_split = true
-        elseif cand.comment and cand.comment:find("☯") then
-            need_split = true
+        if cand.text:match("^[%a%s]+$") then  -- 首先确保是纯英文输入
+            if (cand.type == "table" and env.engine.context:get_option("ascii_mode")) or  -- 在英文模式下
+               (cand.comment and cand.comment:find("☯")) then  -- 或带有英文标记
+                need_split = true
+            end
         end
         
-        -- 只对英文进行处理
-        if need_split and is_split_sentence and cand.text:match("^[%a%s]+$") then
+        -- 对需要分词的情况进行处理
+        if need_split and is_split_sentence then
             local sentence = wordninja_split(cand.text)
             local lower_sentence = string.lower(sentence)
             
@@ -163,7 +166,7 @@ local function enhance_filter(input, env)
             
             yield(Candidate("sentence", cand.start, cand._end, sentence .. " ", "💡"))
         else
-            -- 对于中文或其他情况，直接保持原样
+            -- 其他情况保持原样
             yield(cand)
         end
     end

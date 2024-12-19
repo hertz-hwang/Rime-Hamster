@@ -38,7 +38,7 @@ function this.init(env)
   env.redirecting = false
   ---@type Binding[]
   env.bindings = {}
-  local bindings = env.engine.schema.config:get_list("key_binder/poping")
+  local bindings = env.engine.schema.config:get_list("key_binder/popping")
   if not bindings then
     return
   end

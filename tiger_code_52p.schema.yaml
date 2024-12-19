@@ -75,7 +75,7 @@ key_binder:
   custom_bindings:
     __append:
       # 在這裏添加只在本方案中生效的按鍵綁定
-  poping:
+  popping:
     #- match: "[a-z]{4}"
     #  accept: "j"
     #  send_sequence: "{Left}{Left}{Left}{space}{space}"
