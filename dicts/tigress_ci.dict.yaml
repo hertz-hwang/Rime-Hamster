@@ -1,3 +1,8 @@
+# Rime dictionary
+# encoding: utf-8
+# CC-BY-4.0
+
+---
 name: tigress_ci
 version: "2024.08.31"
 sort: by_weight

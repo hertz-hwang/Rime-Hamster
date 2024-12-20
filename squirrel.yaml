@@ -1,5 +1,6 @@
 # Squirrel settings
 # encoding: utf-8
+# CC-BY-4.0
 
 # 要比共享目錄同名文件版本號更大方可生效
 config_version: '2023-09-01'
@@ -23,9 +24,9 @@ style:
   translucency: true      # 透明度總開關
 
   # 淺色主题
-  color_scheme: wechat
+  color_scheme: hertz-F
   # 深色主题
-  color_scheme_dark: wechat_dark
+  color_scheme_dark: hertz-F
 
   # #候选字体
   font_face: "Segoe UI Emoji, LXGW WenKai GB Screen, 98WB-0, 98WB-1, 98WB-2, 98WB-3, 98WB-U, 98WB-V"
@@ -51,6 +52,41 @@ preset_color_schemes:
   native:
     name: 系統配色
 
+  hertz-F:
+    name: "赫兹定制·F"
+    # #候选字体
+    font_face: "Segoe UI Emoji, 98WB-0, 98WB-1, 98WB-2, 98WB-3, 98WB-U, 98WB-V"
+    font_point: 16 #主字体字号
+    # #滤镜内容字体
+    comment_font_face: "Segoe UI Emoji, 98WB-0, 98WB-1, 98WB-2, 98WB-3, 98WB-U, 98WB-V"
+    comment_font_point: 14 # 滤镜内容字号
+    # #候选前编号标志字体
+    label_font_face: "Segoe UI Emoji, 98WB-0, 98WB-1, 98WB-2, 98WB-3, 98WB-U, 98WB-V"
+    label_font_point: 16 #候选前编号标志字号
+    candidate_list_layout: linear
+    text_orientation: horizontal
+    inline_preedit: false
+    translucency: true
+    mutual_exclusive: true
+    corner_radius: 10
+    hilited_corner_radius: 12.0
+    border_height: -1
+    border_width: -1
+    line_spacing: 0
+    alpha: 1
+    shadow_size: 1.0
+    color_space: display_p3
+    back_color: 0x1AFFFFFF
+    candidate_text_color: 0xB3000000
+    comment_text_color: 0x80333333
+    label_color: 0xBB333333
+    hilited_candidate_back_color: 0x4DFFFFFF
+    hilited_candidate_text_color: 0x000000
+    hilited_comment_text_color: 0xBF333333
+    hilited_candidate_label_color: 0x000000
+    preedit_back_color: 0x1A000000
+    text_color: 0xBF323232
+    hilited_text_color: 0xBF1A1A1A
   hertz-Q:
     name: "赫兹定制·Q改"
     author: Bennett S. Owen
@@ -63,10 +99,12 @@ preset_color_schemes:
     hilited_candidate_back_color: 0x736b55
     hilited_candidate_text_color: 0xd5e8ee
     hilited_comment_text_color: 0xd5e8ee
+    hilited_candidate_label_color: 0x000000
     hilited_mark_color: 0xffffff
     hilited_text_color: 0xd5e8ee
     key_symbol_color: 0x339977
     label_color: 0x919183
+    preedit_back_color: 0xe3f6fd
     preview_back_color: 0x6b55d073
     preview_text_color: 0xd5e8ee
     text_color: 0x808070
@@ -75,7 +113,15 @@ preset_color_schemes:
     candidate_format: '%c %@ '
     corner_radius: 5
     hilited_corner_radius: 5
-    inline_preedit: true
+    candidate_list_layout: linear
+    text_orientation: horizontal
+    inline_preedit: false
+    translucency: true
+    mutual_exclusive: false
+    line_spacing: 4.0
+    alpha: 100
+    shadow_size: 1.0
+    #color_space: display_p3
 
   aqua:
     name: 碧水／Aqua

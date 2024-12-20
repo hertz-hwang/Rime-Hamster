@@ -1,13 +1,6 @@
-# 配合 lua_filter 實現三重註解功能。
-
-# 介紹：
-# 本拆分表包含CJK基本區、CJK擴展A至H區、部首區、兼容區、筆畫區所有漢字的全漢字拆分。
-# 拆分後附有字集提示。
-
-# 字形:
-# 本拆分表字形標準取自：
-# -《中華人民共和國國家標準 GB 18030--2022 信息技術 中文編碼字符集》中刊載的漢字。
-# - The Unicode Standard, Version 15.0 中刊載的漢字字形。
+# Rime dictionary: tiger_spelling_pseudo
+# encoding: utf-8
+# CC-BY-4.0
 
 ---
 name: "tiger_spelling_pseudo"

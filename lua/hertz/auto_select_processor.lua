@@ -1,3 +1,7 @@
+-- auto_select_processor.lua
+-- encoding: utf-8
+-- CC-BY-4.0
+
 -- 分割字符串的辅助函数
 -- @param str 要分割的字符串
 -- @param delimiter 分隔符

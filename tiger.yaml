@@ -1,4 +1,6 @@
 # tiger-code config
+# encoding: utf-8
+# CC-BY-4.0
 
 ########################
 #        模型配置       #
@@ -398,7 +400,7 @@ radical_flypy_translator:
     dictionary: radical_flypy
     tag: radical_flypy
     prefix: "R"
-    tips: "〔部件拆字〕"
+    tips: "〔鹤音拆字〕"
     enable_user_dict: false
     enable_charset_filter: false
     enable_encoder: false

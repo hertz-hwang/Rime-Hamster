@@ -1,3 +1,7 @@
+-- easy_en.lua
+-- encoding: utf-8
+-- CC-BY-4.0
+
 local is_split_sentence
 local wordninja_split
 local dict = {}

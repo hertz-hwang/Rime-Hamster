@@ -1,3 +1,7 @@
+-- calculator_translator.lua
+-- encoding: utf-8
+-- CC-BY-4.0
+
 -- 计算器插件
 -- author: https://github.com/ChaosAlphard
 local calc = {}

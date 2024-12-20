@@ -1,3 +1,7 @@
+-- charset_filter.lua
+-- encoding: utf-8
+-- CC-BY-4.0
+
 local charsets = {
     { first = 0x4e00, last = 0x9fff }, -- 基本区
     { first = 0x3400, last = 0x4dbf }, -- 扩A

@@ -1,4 +1,7 @@
 -- tiger_spelling.lua
+-- encoding: utf-8
+-- CC-BY-4.0
+
 -- 作者：ace-who
 -- https://github.com/Ace-Who/rime-xuma/blob/master/schema/lua/ace/xuma_spelling.lua
 

@@ -1,3 +1,7 @@
+-- lib.lua
+-- encoding: utf-8
+-- CC-BY-4.0
+
 ---wafel 核心庫, 給出 librime 的類型定義
 ---
 ---# References:

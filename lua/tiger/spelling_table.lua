@@ -1,3 +1,7 @@
+-- spelling_table.lua
+-- encoding: utf-8
+-- CC-BY-4.0
+
 return {
     ["!"] = "",
     ["$"] = "",

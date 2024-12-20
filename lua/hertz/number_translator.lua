@@ -1,3 +1,7 @@
+-- number_translator.lua
+-- encoding: utf-8
+-- CC-BY-4.0
+
 --[[
 Source:http://98wb.ysepan.com/
 Modified by 惜洛

@@ -1,4 +1,8 @@
-###表內有的字纔會輸出，可自己添加，格式如下
+# Rime dictionary: charset
+# encoding: utf-8
+# CC-BY-4.0
+
+---
 name: charset
 version: "2024.08.31"
 sort: original

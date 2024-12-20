@@ -1,3 +1,7 @@
+-- inline_candidate_filter.lua
+-- encoding: utf-8
+-- CC-BY-4.0
+
 -- 加载自定义拆分表
 local spelling_table = require("tiger.spelling_table")
 

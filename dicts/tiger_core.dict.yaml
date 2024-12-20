@@ -1,4 +1,8 @@
+# Rime dictionary
+# encoding: utf-8
+# CC-BY-4.0
 
+---
 name: tiger
 version: "2024.08.31"
 sort: by_weight

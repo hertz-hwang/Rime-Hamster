@@ -1,3 +1,7 @@
+-- lunar_translator.lua
+-- encoding: utf-8
+-- CC-BY-4.0
+
  --此处获取农历的代码来自博客
  --https://blog.csdn.net/BlueMustard/article/details/120907984
  ------------------------------------------------------------------------------------

@@ -1,5 +1,6 @@
 # Rime default settings
 # encoding: utf-8
+# CC-BY-4.0
 
 config_version: '0.40'
 
@@ -37,7 +38,9 @@ switcher:
 
 menu:
   alternative_select_labels: [ ⑴, ⑵, ⑶, ⑷, ⑸, ⑹, ⑺, ⑻, ⑼, ⑽ ]
-  page_size: 9
+  #alternative_select_labels: [ 〡, 〢, 〣, 〤, 〥, 〦, 〧, 〨, 〩, 〸 ]
+  #alternative_select_labels: [ α, β, γ, δ, ε, ζ, η, θ, ι, κ ]
+  page_size: 5
 
 punctuator:
   __include: tiger:/punctuator

@@ -1,3 +1,7 @@
+-- embeded_cands.lua
+-- encoding: utf-8
+-- CC-BY-4.0
+
 -- 作者：王牌餅乾
 -- https://github.com/lost-melody/
 -- 转载请保留作者名
