@@ -150,6 +150,9 @@ local _Engine
 ---@field set_property fun(self: self, key: string, value: string) 與 `get_property` 配合使用, 在組件之間傳遞消息
 ---@field get_property fun(self: self, key: string): string 與 `set_property` 配合使用, 在組件之間傳遞消息
 ---@field clear_transient_options fun()
+---@field get_selected_text fun(self: self): string 获取当前选中的文本
+---@field get_preedit_text fun(self: self): string 获取预编辑文本
+---@field get_commit_history_text fun(self: self): string[] 获取最近提交历史
 local _Context
 
 ---@class CommitHistory
@@ -787,7 +790,51 @@ end
 function rime.input(context)
     return context.input
 end
-  
+
+---检查字符串是否为空或nil
+---@param str string|nil
+---@return boolean
+function rime.is_empty(str)
+    return str == nil or str == ''
+end
+
+---检查表是否为空
+---@param t table|nil
+---@return boolean 
+function rime.is_table_empty(t)
+    return not t or next(t) == nil
+end
+
+---安全获取表中的值,避免nil错误
+---@param t table
+---@param key any
+---@return any
+function rime.safe_get(t, key)
+    return t and t[key]
+end
+
+---获取候选词的文本,避免nil错误
+---@param cand Candidate|nil
+---@return string
+function rime.get_cand_text(cand)
+    return cand and cand.text or ''
+end
+
+---获取候选词的注释,避免nil错误 
+---@param cand Candidate|nil
+---@return string
+function rime.get_cand_comment(cand)
+    return cand and cand.comment or ''
+end
+
+---检查按键是否匹配
+---@param key KeyEvent
+---@param repr string
+---@return boolean
+function rime.key_matches(key, repr)
+    return key and key:repr() == repr
+end
+
 return rime
 
 

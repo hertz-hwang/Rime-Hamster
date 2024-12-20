@@ -284,7 +284,7 @@ keys:
       - { when: always, accept: "Control+u", toggle: extended_char }         # 字集滤镜
       - { when: always, accept: "Control+o", toggle: traditionalization }    # 简繁滤镜
       - { when: always, accept: "Control+i", toggle: emoji }                 # Emoji开关
-      - { when: always, accept: "Control+t", toggle: chinese_english }       # 翻译
+      - { when: always, accept: "Control+semicolon", toggle: chinese_english }       # 翻译
       - { when: always, accept: "Control+m", toggle: mars }                  # 火星文开关
 
 dict_All_false:
@@ -874,7 +874,7 @@ punctuator:
       - 'https://tiger-code.com/guide'
       - 'https://tiger-code.com/'
     '/hz':
-      - 'https://github.com/hertz-hwang/Rime-tiger_code.git'
+      - 'https://github.com/rimeinn/rime-tiger.git'
       - 'https://hertz-hwang.github.io/hamster-tools/'
 
 algebra_py:

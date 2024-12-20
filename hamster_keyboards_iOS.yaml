@@ -261,7 +261,7 @@ keyboards:
                   character:
                     char: "@"
                 label:
-                  text: ""
+                  text: "@造词"
                 display: true
                 processByRIME: true
                 direction: up
@@ -1166,7 +1166,7 @@ keyboards:
               - action:
                   shortcutCommand:
                     sendKeys:
-                      keys: Control+t
+                      keys: Control+semicolon
                 label: 翻译
               - action:
                   shortcutCommand:
