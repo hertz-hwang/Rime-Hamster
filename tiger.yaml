@@ -21,7 +21,7 @@ octagram:
         weak_collocation_penalty: -23
         rear_penalty: -18
       translator/+:
-        contextual_suggestions: false  # 设置为false，避免二简混乱，如："kw" 首选变成 “能得” 等
+        contextual_suggestions: true
         max_homophones: 4
         max_homographs: 0
 
@@ -39,7 +39,7 @@ octagram:
 ########################
 dicts:
   __patch:
-    dictionary: tiger_phrase_hertz       # 赫兹词库，基于万象词库词整词频以适应虎码字频
+    dictionary: tiger_phrase_hertz       # 赫兹词库，这是基于万象词库调整词频以适应虎码字频
     #dictionary: tiger_phrase_ice        # 雾凇词库
     #dictionary: tiger_phrase_wanxiang   # 万象词库
     #dictionary: tiger_phrase_moran      # 魔然词库
